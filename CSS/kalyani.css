@@ -20,15 +20,9 @@
   max-height: 780px;
   object-fit: cover;
 }
-/* 
-
 
 /* .........................footer ...........................*/
 
-/* a{
-  color: #fff;
-  text-decoration: none;
-} */
 .pg-footer {
   font-family: 'Roboto', sans-serif;
 }
@@ -336,9 +330,6 @@
   } */
 }
 
-
-
-
 /* .....................awards page kalyani ..............................*/
 
 
@@ -388,8 +379,6 @@
 
     /* ---------------------  rajat  --------------------------  */
 
-/* Base Reset */
-
 
  * {
     box-sizing: border-box;
@@ -418,6 +407,7 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(255, 20, 100, 0.2);
     transition: transform 0.3s ease;
+    height: 62%;
   }
 
   .team-card:hover {
@@ -426,18 +416,15 @@
 
   .team-card img {
     width: 100%;
-    height: auto;
+    height: 58%;
     display: block;
     border-radius: 15px 15px 0 0;
-  }
-
-  .team-info {
-    padding: 1rem;
   }
 
   .team-name {
     font-weight: 700;
     margin: 0.5rem 0 0.2rem 0;
+    
   }
 
   .team-role {
@@ -459,7 +446,6 @@
     }
   }
 
-  /*              */
 
   @media (max-width: 1000px) {
       .team-card {
@@ -491,14 +477,6 @@
       text-align: center;
       padding: 20px;
     }
-
-
-
-
-
-
-    /*              */
-
 
     .scrolling-wrapper {
       overflow-x: auto;
