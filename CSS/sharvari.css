@@ -1,24 +1,26 @@
 body{
-        background-color: #F7A8C4;
+        background-color:#F7A8C4;
      }
     nav {
+      margin-top: 0; 
+      padding-top: 0;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1;
       height:110px;
-      padding-bottom: 70px;
-      background-color: black;
+      /* padding-bottom: 80px; */
+      background-color: rgba(236, 28, 177, 0.315);
     }
-    .navimage{
+    /* .navimage{
          padding-top: 100px;
 
-    }
+    } */
     nav .nav a {
       text-decoration: none;
       color:white;
-      font-weight: 600;
+      font-weight: 600; 
       transition: color 0.3s ease;
     }
 
@@ -31,6 +33,7 @@ body{
     .nav img {
       max-width: 100%;
       height: auto;
+
     }
 
     @media (max-width: 768px) {
@@ -79,16 +82,29 @@ body{
   padding: 0.3rem 0rem;
 }
 
-#slideshow {
-      object-fit: cover;
-      border-radius: 10px;
-      transition: opacity 0.4s ease-in-out;
-      opacity: 1;
+#slider-wrapper {
+      width: 100%;
+      max-width: 100%;
+      /* margin: 40px auto; */
+      overflow: hidden;
+      position: relative;
+      /* border-radius: 12px; */
+      /* box-shadow: 0 4px 12px rgba(0,0,0,.2); */
     }
 
-#slideshow.fade-out {
-    opacity: 0;
-  }
+    /* the image */
+    #slideshow {
+      width: 100%;
+      display: block;
+      transition: opacity .8s ease;
+      object-fit: cover;       
+      aspect-ratio: 16/9;      
+    }
+
+    /* fade-out class */
+    .fade-out {
+      opacity: 0;
+    }
   
 
  .gradient-btn {
@@ -119,12 +135,15 @@ body{
   text-align: center;
   line-height: 1.4em;
   font-size: 14px;
-  box-shadow: none !important;
+  box-shadow: none; 
+  border-radius: 20px;
+  
 }
 
 .snip1515 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .snip1515 .profile-image {
@@ -193,3 +212,172 @@ body{
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
+
+.card {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background-color: #eb5eba7d;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img-bx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px) scale(0.5);
+  transform-origin: top;
+}
+
+.img-bx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.content .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content .detail h2 {
+  color: #444;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+.content .detail h2 span {
+  font-size: 0.7em;
+  color: #03a9f4;
+  font-weight: bold;
+}
+
+.sci {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.sci li {
+  list-style: none;
+  margin: 4px;
+}
+
+.sci li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.5em;
+  color: #444;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  background: #03a9f4;
+  color: #fff;
+}
+ .text{
+  text-align: justify;
+  text-justify: inter-word;
+ } 
+
+.textbox{
+   border: 2px solid #bc1060;
+   border-radius: 20px;
+   padding:40px;
+   margin:20px;
+   background-color: #eb5eba7d;
+}
+
+/* Events */
+.container2 {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .accordion {
+      flex: 1 1 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .accordion button {
+       background-image: black;
+      color: white;
+      border: none;
+      padding: 15px;
+      text-align: left;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .accordion button.active {
+      background-color: black;
+    }
+
+    .details {
+      flex: 2 1 400px;
+      background-color:black;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #6e335c;
+      color:white;
+    }
+
+    .details ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .details li::before {
+      content: "✔️ ";
+      margin-right: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .accordion, .details {
+        width: 100%;
+      }
+    }
