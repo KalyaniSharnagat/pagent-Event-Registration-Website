@@ -30,6 +30,93 @@
   object-fit: cover;
 }
 
+
+ /* ---------------------  rajat  --------------------------  */
+
+
+ * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+  }
+
+  .team-card {
+    background-color: #222;
+    border-radius: 15px;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 20, 100, 0.2);
+    transition: transform 0.3s ease;
+    height: 62%;
+  }
+
+  .team-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .team-card img {
+    width: 100%;
+    height: 58%;
+    display: block;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .team-name {
+    font-weight: 700;
+    margin: 0.5rem 0 0.2rem 0;
+    
+  }
+
+  .team-role {
+    color: #ff4d79;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .team-card {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .team-card {
+      width: 100%;
+    }
+  }
+
+
+  @media (max-width: 1000px) {
+      .team-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-card {
+        width: 100%;
+      }
+    }
+
+
+
+
+
 /* .........................footer ...........................*/
 
 .pg-footer {
