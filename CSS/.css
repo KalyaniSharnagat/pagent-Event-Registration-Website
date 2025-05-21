@@ -1,37 +1,6 @@
-/* ..............................about page start kalyani .....................................*/
- *{
-    font-family: 'Times New Roman', Times, serif;
-     margin: 0;
-     padding: 0;
- }
- body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
- }
- .backgroundColor{
-     background-color: #F7A8C4;
- }
-.about-heros-image{
-    width: 100%;
-   
-}
-
-.text-content{
-  text-align: justify;
-}
-.miss-avnitext{
-  margin-left: 11rem !important;
-}
-.miss-aahanatext{
-     margin-left: 8rem !important;
-}
-
-.about-heros-image {
-  max-height: 780px;
-  object-fit: cover;
-}
+   /* ---------------------  rajat  -------------------------- 
 
 
- /* ---------------------  rajat  --------------------------  */
 
 
  * {
@@ -51,6 +20,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 7rem;
+    
   }
 
   .team-card {
@@ -61,7 +31,6 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(255, 20, 100, 0.2);
     transition: transform 0.3s ease;
-    height: 62%;
   }
 
   .team-card:hover {
@@ -70,15 +39,18 @@
 
   .team-card img {
     width: 100%;
-    height: 58%;
+    height: 22%;
     display: block;
     border-radius: 15px 15px 0 0;
+  }
+
+  .team-info {
+    padding: 1rem;
   }
 
   .team-name {
     font-weight: 700;
     margin: 0.5rem 0 0.2rem 0;
-    
   }
 
   .team-role {
@@ -87,10 +59,11 @@
     margin: 0;
   }
 
-  /* Responsive adjustments */
+
   @media (max-width: 900px) {
     .team-card {
       width: 45%;
+    
     }
   }
 
@@ -100,6 +73,7 @@
     }
   }
 
+              
 
   @media (max-width: 1000px) {
       .team-card {
@@ -113,11 +87,61 @@
       }
     }
 
+   body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F7A8C4;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('/PUBLIC-IMAGES/contact.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
 
 
 
 
-/* .........................footer ...........................*/
+
+
+
+    .scrolling-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+
+    .card {
+      display: inline-block;
+      margin-right: 1rem;
+      width: 250px;
+      opacity: 0;
+      transform: translateX(-100px);
+      animation: slideIn 0.6s ease forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.3s; }
+    .card:nth-child(3) { animation-delay: 0.5s; }
+    .card:nth-child(4) { animation-delay: 0.7s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+   
+   
+  
+
 
 .pg-footer {
   font-family: 'Roboto', sans-serif;
@@ -421,185 +445,8 @@
   }
 }
 @media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
+ 
 }
 
-/* .....................awards page kalyani ..............................*/
 
-
-.image-container {
-      position: relative;
-      width: 100%;
-      margin: auto;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 3%;
-    }
-
-    .overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      background: rgba(0, 0, 0, 0.4);
-      padding: 20px 30px;
-      border-radius: 10px;
-      animation: fadeIn 2s ease-out;
-    }
-    
-    .sticky-banner {
-    position: sticky;
-     top: 0;
-     background: #000;
-     color: #fff;
-     padding: 15px;
-     font-size: 1.5rem;
-     text-align: center;
-     z-index: 999;
-}
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translate(-50%, -60%); }
-      to { opacity: 1; transform: translate(-50%, -50%); }
-    }
-
-
-   /* ...................contact page kalyani ..........................*/
-
-   body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #F7A8C4;
-    }
-
-    .banner {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('/PUBLIC-IMAGES/contact.png') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .banner-text {
-      color: white;
-      font-size: 7rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
-      z-index: 2;
-    }
-
-    .info-box {
-      max-width: 1000px;
-      margin: -60px auto 40px;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      padding: 30px;
-      text-align: center;
-      font-size: 1.1rem;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .info-box strong {
-      color: #111;
-    }
-
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 60px 20px;
-      background-color: #F7A8C4;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .contact-form, .contact-info {
-      flex: 1 1 400px;
-      max-width: 500px;
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-            0 8px 20px rgba(0, 0, 0, 0.15);
-
-      transition: transform 0.3s ease;
-    }
-
-    .contact-form:hover, .contact-info:hover {
-      transform: translateY(-5px);
-    }
-
-    .contact-form h2, .contact-info h2 {
-      margin-bottom: 20px;
-      color: #222;
-      font-size: 1.8rem;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: border-color 0.3s;
-    }
-
-    .contact-form input:focus, .contact-form textarea:focus {
-      border-color: #333;
-      outline: none;
-    }
-
-    .contact-form button {
-      padding: 12px 25px;
-      background-color: #111;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .contact-form button:hover {
-      background-color: #444;
-      transform: scale(1.05);
-    }
-
-    .contact-info p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .contact-info p strong {
-      display: block;
-      margin-bottom: 8px;
-      color: #222;
-    }
-
-    @media (max-width: 768px) {
-      .banner-text {
-        font-size: 3rem;
-      }
-
-      .info-box {
-        margin: 20px;
-      }
-    }
+ 
