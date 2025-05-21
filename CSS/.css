@@ -1,6 +1,6 @@
-   /* ---------------------  rajat  --------------------------  */
+   /* ---------------------  rajat  -------------------------- 
 
-/* Base Reset */
+
 
 
  * {
@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 7rem;
-    /* height: 50%; */
+    
   }
 
   .team-card {
@@ -59,7 +59,7 @@
     margin: 0;
   }
 
-  /* Responsive adjustments */
+
   @media (max-width: 900px) {
     .team-card {
       width: 45%;
@@ -73,7 +73,7 @@
     }
   }
 
-  /*              */
+              
 
   @media (max-width: 1000px) {
       .team-card {
@@ -111,8 +111,6 @@
 
 
 
-    /*              */
-
 
     .scrolling-wrapper {
       overflow-x: auto;
@@ -142,12 +140,9 @@
     }
    
    
-   /* .........................footer ...........................*/
+  
 
-/* a{
-  color: #fff;
-  text-decoration: none;
-} */
+
 .pg-footer {
   font-family: 'Roboto', sans-serif;
 }
@@ -450,10 +445,8 @@
   }
 }
 @media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
+ 
 }
 
 
-
+ 
