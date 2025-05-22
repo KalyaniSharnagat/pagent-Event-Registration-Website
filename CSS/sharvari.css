@@ -1,56 +1,58 @@
-body{
-     background-image:  rgba(236, 28, 177, 0.315);
-     }
-    nav {
-      margin-top: 0; 
-      padding-top: 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      height:110px;
-      /* padding-bottom: 80px; */
-      background-color: rgba(236, 28, 177, 0.315);
-    }
-    /* .navimage{
+body {
+  background-image: rgba(236, 28, 177, 0.315);
+}
+
+nav {
+  margin-top: 0;
+  padding-top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 110px;
+  /* padding-bottom: 80px; */
+  background-color: rgba(236, 28, 177, 0.315);
+}
+
+/* .navimage{
          padding-top: 100px;
 
     } */
-    nav .nav a {
-      text-decoration: none;
-      color:white;
-      font-weight: 600; 
-      transition: color 0.3s ease;
-    }
+nav .nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    nav .nav a:hover {
-      color:#BE5985 ;
-    }
-     
+nav .nav a:hover {
+  color: #BE5985;
+}
 
-    /* Responsive logo image */
-    .nav img {
-      max-width: 100%;
-      height: auto;
 
-    }
+/* Responsive logo image */
+.nav img {
+  max-width: 100%;
+  height: auto;
 
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
+}
 
-    .container {
-     padding: 2rem 0rem;
-    }
+@media (max-width: 768px) {
+  .nav>div {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
 
-@media (min-width: 576px){
+.container {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;
-    
+
     .modal-content {
       padding: 1rem;
     }
@@ -69,7 +71,7 @@ body{
 
 
 .delimiter {
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 .social-buttons {
@@ -83,32 +85,32 @@ body{
 }
 
 #slider-wrapper {
-      width: 100%;
-      max-width: 100%;
-      /* margin: 40px auto; */
-      overflow: hidden;
-      position: relative;
-      /* border-radius: 12px; */
-      /* box-shadow: 0 4px 12px rgba(0,0,0,.2); */
-    }
+  width: 100%;
+  max-width: 100%;
+  /* margin: 40px auto; */
+  overflow: hidden;
+  position: relative;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 4px 12px rgba(0,0,0,.2); */
+}
 
-    /* the image */
-    #slideshow {
-      width: 100%;
-      display: block;
-      transition: opacity .8s ease;
-      object-fit: cover;       
-      aspect-ratio: 16/9;      
-    }
+/* the image */
+#slideshow {
+  width: 100%;
+  display: block;
+  transition: opacity .8s ease;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
 
-    /* fade-out class */
-    .fade-out {
-      opacity: 0;
-    }
-  
+/* fade-out class */
+.fade-out {
+  opacity: 0;
+}
 
- .gradient-btn {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
+
+.gradient-btn {
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
   border: none;
   color: white;
   transition: 0.4s ease;
@@ -118,12 +120,13 @@ body{
 }
 
 .gradient-btn:hover {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-} 
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 
 @import url(https://fonts.googleapis.com/css?family=Open+sans);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
 .snip1515 {
   font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
@@ -135,9 +138,9 @@ body{
   text-align: center;
   line-height: 1.4em;
   font-size: 14px;
-  box-shadow: none; 
+  box-shadow: none;
   border-radius: 20px;
-  
+
 }
 
 .snip1515 * {
@@ -271,78 +274,80 @@ body{
   background: #03a9f4;
   color: #fff;
 }
- .text{
+
+.text {
   text-align: justify;
   text-justify: inter-word;
- } 
+}
 
-.textbox{
-   border: 2px solid #bc1060;
-   border-radius: 20px;
-   padding:40px;
-   margin:20px;
-   background-color: #eb5eba7d;
+.textbox {
+  border: 2px solid #bc1060;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 20px;
+  background-color: #eb5eba7d;
 }
 
 /* Events */
 .container2 {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      gap: 20px;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 20px;
+}
 
-    .accordion {
-      flex: 1 1 250px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.accordion {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .accordion button {
-       background-image: black;
-      color: white;
-      border: none;
-      padding: 15px;
-      text-align: left;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
+.accordion button {
+  background-image: black;
+  color: white;
+  border: none;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
 
-    .accordion button.active {
-      background-color: black;
-    }
+.accordion button.active {
+  background-color: black;
+}
 
-    .details {
-      flex: 2 1 400px;
-      background-color:black;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #6e335c;
-      color:white;
-    }
+.details {
+  flex: 2 1 400px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #6e335c;
+  color: white;
+}
 
-    .details ul {
-      list-style: none;
-      padding-left: 0;
-    }
+.details ul {
+  list-style: none;
+  padding-left: 0;
+}
 
-    .details li::before {
-      content: "✔️ ";
-      margin-right: 5px;
-    }
+.details li::before {
+  content: "✔️ ";
+  margin-right: 5px;
+}
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .accordion, .details {
-        width: 100%;
-      }
-    }
+  .accordion,
+  .details {
+    width: 100%;
+  }
+}
