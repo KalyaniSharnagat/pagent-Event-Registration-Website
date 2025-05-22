@@ -7,6 +7,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
 }
 .color{
   color:#B76E79;
@@ -14,33 +15,27 @@ body {
 .text2{
      color:#703B42;
 }
+/* navbar */
     nav {
 
       position: fixed;
       z-index: 1;
       height:110px;
-      /* margin-top: 20px; */
-      /* margin-left: 20px;
-      margin-right:40px; */
       background-color:#FADADD;
-      /* border-radius: 50px; */
-    }
-    /* .navimage{
-         padding-top: 100px;
-
-    } */
-    nav .nav a {
-      text-decoration: none;
-      color:black;
-      font-weight: 600;
-      transition: color 0.3s ease;
     }
 
-    nav .nav a:hover {
-      color:#BE5985 ;
-    }
-     
+.nav-link {
+  transition: color 0.3s ease;
+}
 
+.nav-link:hover {
+  color: #0dcaf0;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #bc1060; /* Active link color */
+}
     /* Responsive logo image */
     .nav img {
       max-width: 100%;
@@ -54,7 +49,7 @@ body {
         margin-bottom: 10px;
       }
     }
-
+ /* navbar end */
     .container {
      padding: 2rem 0rem;
     }
@@ -93,32 +88,6 @@ body {
 .signup-section {
   padding: 0.3rem 0rem;
 }
-
-#slider-wrapper {
-      width: 100%;
-      max-width: 100%;
-      /* margin: 40px auto; */
-      overflow: hidden;
-      position: relative;
-      /* border-radius: 12px; */
-      /* box-shadow: 0 4px 12px rgba(0,0,0,.2); */
-    }
-
-    /* the image */
-    #slideshow {
-      width: 100%;
-      display: block;
-      transition: opacity .8s ease;
-      object-fit: cover;       
-      aspect-ratio: 16/9;      
-    }
-
-    /* fade-out class */
-    .fade-out {
-      opacity: 0;
-    }
-  
-
  .gradient-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060); 
   border: none;
@@ -310,7 +279,7 @@ body {
     }
 
     .details ul {
-      list-style-type: disc;
+      list-style-type: none;
       padding-left: 20px;
     }
     /* event end */
@@ -431,7 +400,6 @@ body {
   margin-bottom: 20px;
   font-size: 15px;
 }
-
 .collapsed i.fas.fa-arrow-up {
     transform: rotate(180deg);
 }
