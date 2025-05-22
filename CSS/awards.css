@@ -1,199 +1,101 @@
-/* ..............................about page start kalyani .....................................*/
- *{
-     font-family: "Overpass", sans-serif;
-     margin: 0;
-     padding: 0;
- }
-   .backgroundColor {
-    background-color:#BE5985;
-    color: #151313;
-  }
-    nav {
-
-      position: fixed;
-      z-index: 1;
-      height:110px;
-      background-color:#FADADD;
-    }
-
-.nav-link {
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #0dcaf0;
-}
-
-.nav-link.active {
-  font-weight: bold;
-  color: #bc1060; /* Active link color */
-}
-.nav img {
-      max-width: 100%;
-      height: auto;
-
-    }
-
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
- /* navbar end */
-    .container {
-     padding: 2rem 0rem;
-    }
-
-@media (min-width: 576px){
-  .modal-dialog {
-    max-width: 400px;
-    
-    .modal-content {
-      padding: 1rem;
-    }
-  }
-}
-
-.modal-header {
-  .close {
-    margin-top: -1.5rem;
-  }
-}
-
-.form-title {
-  margin: -2rem 0rem 2rem;
-}
-
-
-.delimiter {
-  padding: 1rem;  
-}
-
-.social-buttons {
-  .btn {
-    margin: 0 0.5rem 1rem;
-  }
-}
-
-.signup-section {
-  padding: 0.3rem 0rem;
-}
- .gradient-btn {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-  border: none;
-  color: white;
-  transition: 0.4s ease;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 20px;
-}
-
-.gradient-btn:hover {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-} 
-
-    /* Responsive logo image */
-    /* .nav img {
-      max-width: 100%;
-      height: auto;
-
-    } */
-  /* .gradient-btn {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-  border: none;
-  color: white;
-  transition: 0.4s ease;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 20px;
-}
-
-.gradient-btn:hover {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-}  */
-
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
-
-    .container {
-     padding: 2rem 0rem;
-    }
-
-@media (min-width: 576px){
-  .modal-dialog {
-    max-width: 400px;
-    
-    .modal-content {
-      padding: 1rem;
-    }
-  }
-}
-
-.modal-header {
-  .close {
-    margin-top: -1.5rem;
-  }
-}
-
-.form-title {
-  margin: -2rem 0rem 2rem;
-}
-
-
-.delimiter {
-  padding: 1rem;  
-}
-
-.social-buttons {
-  .btn {
-    margin: 0 0.5rem 1rem;
-  }
-}
-
-.signup-section {
-  padding: 0.3rem 0rem;
-}
-.about-heros-image{
-    width: 100%;
-}
-
-.text-content{
-  text-align: justify;
-}
-
-.miss-avnitext{
-  margin-left: 11rem !important;
-}
-
-.miss-aahanatext{
-     margin-left: 8rem !important;
-}
-
-.about-heros-image {
-  max-height: 780px;
-  object-fit: cover;
-}
-
 
  /* ---------------------  rajat  --------------------------  */
-
-
  * {
     box-sizing: border-box;
   }
-
   body {
     background-color: #ffffff;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     /* padding: 2rem; */
+    }
+     .color{
+      color:#B76E79;
+     }
+     .text2{
+     color:#703B42;
+     }
+      nav {
+
+      position: fixed;
+      z-index: 1;
+      height:110px;
+      /* margin-top: 20px; */
+      /* margin-left: 20px;
+      margin-right:40px; */
+      background-color:#FADADD;
+      /* border-radius: 50px; */
+    }
+    /* .navimage{
+         padding-top: 100px;
+
+    } */
+    nav .nav a {
+      text-decoration: none;
+      color:black;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav a:hover {
+      color:#BE5985 ;
+    }
+     
+
+    /* Responsive logo image */
+    .nav img {
+      max-width: 100%;
+      height: auto;
+
+    }
+
+    @media (max-width: 768px) {
+      .nav > div {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    .container {
+     padding: 2rem 0rem;
+    }
+
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 400px;
+    
+    .modal-content {
+      padding: 1rem;
+    }
   }
+}
+
+.modal-header {
+  .close {
+    margin-top: -1.5rem;
+  }
+}
+
+.form-title {
+  margin: -2rem 0rem 2rem;
+}
+
+
+.delimiter {
+  padding: 1rem;  
+}
+
+.social-buttons {
+  .btn {
+    margin: 0 0.5rem 1rem;
+  }
+}
+
+.signup-section {
+  padding: 0.3rem 0rem;
+}
+
    .award-heros{
     width: 100%;
    }
@@ -266,8 +168,6 @@
 
 
 
-
-
 /* .........................footer ...........................*/
 
 .pg-footer {
@@ -288,7 +188,7 @@
     width: 100%;
 }
 .footer-wave-path {
-    fill: #6A1E55;
+    fill: #F7A8C4;
 }
 
 .footer-content {
@@ -426,7 +326,7 @@
 }
 
 .footer-social-amoeba-path {
-    fill: #6A1E55;
+    fill: #F7A8C4;
 }
 
 .footer-social-link.linkedin {
@@ -487,7 +387,7 @@
 }
 
 .footer-copyright {
-    background-color:#6A1E55;
+    background-color:#F7A8C4;
     color: #fff;
     padding: 15px 30px;
   text-align: center;
@@ -541,15 +441,6 @@
     position: relative;
   }
 }
-@media (min-width:801px)  { 
-
-}
-@media (min-width:1025px) { 
-
-}
-@media (min-width:1281px) { 
-
-}
 
 
 
@@ -576,212 +467,3 @@
       width: 49.99%;
   } */
 }
-
-/* .....................awards page kalyani ..............................*/
-
-
-.image-container {
-      position: relative;
-      width: 100%;
-      margin: auto;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 3%;
-    }
-
-    .overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      background: rgba(0, 0, 0, 0.4);
-      padding: 20px 30px;
-      border-radius: 10px;
-      animation: fadeIn 2s ease-out;
-    }
-    
-    .sticky-banner {
-    position: sticky;
-     top: 0;
-     background: #000;
-     color: #fff;
-     padding: 15px;
-     font-size: 1.5rem;
-     text-align: center;
-     z-index: 999;
-}
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translate(-50%, -60%); }
-      to { opacity: 1; transform: translate(-50%, -50%); }
-    }
-
-
-
-
-
-    /*-----about-----*/
-    .About{
-      display: flex;
-      justify-content: space-between;
-      margin:30px;
-      padding-top: 120px;
-    
-    }
-
-   .info h2{
-     text-shadow: 2px 2px 4px white;
-     color:#FF2E91;
-    }
-    .info{
-      padding: 10px;
-      text-align: justify;
-      display: block;
-      font-size: 20px;
-    }
-
-    .picture{
-      border-radius:5%;
-    }
-    button{
-      padding:10px 20px;
-      color:white;
-      background-color: mediumvioletred;
-    }
-    
-    .testimonals{
-      text-align: center;
-      font-style: italic;
-    }
-      .quote-section {
-      color: rgb(29, 27, 27);
-      padding: 60px 30px;
-      position: relative;
-    }
-
-    .profile-img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
-    }
-
-    .quote-text {
-      font-size: 1.2rem;
-      font-style: italic;
-    }
-
-    .quote-author {
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-
-    /*-------------------Co-Founder----------------*/
-
- 
-    .founder-name {
-      font-weight: bold;
-      font-size: 1.25rem;
-      color: #0f0f0f;
-    }
-    .co-founder {
-      color: #ff4dab;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    .card {
-      background-color: transparent;
-      border: none;
-      
-    }
-    .card:hover {
-  transform: scale(1.03);
-}
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 77, 171, 0.25);   /*semi-transparent pink*/
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-  border-radius: 15px;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card-body {
-  position: relative;
-  z-index: 2;
-}
-   
-    .card-img-top {
-      border-radius: 15px;
-      height:auto;
-      width:100%;
-      object-fit: contain;
-      padding:10px;
-    }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-    }
-    .highlight {
-      color: #ff4dab;
-    }
-
-
-    /*-------jury panel----------*/
-       .jury-card {
-      background: #000; /* black background */
-      color: white;
-      border-radius: 20px;
-      padding: 15px;
-      text-align: center;
-      height:100%;
-    }
-
-    .jury-card img {
-      border-radius: 20px;
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    /* .arrow-buttons {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .arrow-buttons button {
-      background: transparent;
-      border: 1px solid white;
-      color: white;
-      margin-left: 5px;
-      padding: 5px 10px;
-      border-radius: 5px; 
-    }*/
-
-    .role-title {
-      font-size: 0.9rem;
-      color: #FF2E91;
-      font-weight: 600;
-    }
