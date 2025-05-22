@@ -130,3 +130,115 @@
       color: white;
       margin-bottom: 20px;
     }
+
+    /* judge panel */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+
+    section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    /* Form Styling */
+    .judge-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .form-group {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-actions {
+      flex-basis: 100%;
+      margin-top: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Table Styling */
+    .judge-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .judge-list th, .judge-list td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .profile-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .judge-form {
+        flex-direction: column;
+      }
+
+      .judge-list table, .judge-list thead, .judge-list tbody, .judge-list th, .judge-list td, .judge-list tr {
+        display: block;
+      }
+
+      .judge-list tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+      }
+
+      .judge-list td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+      }
+
+      .judge-list td::before {
+        content: attr(data-label);
+        font-weight: bold;
+      }
+    }
+    /* judge panel end */

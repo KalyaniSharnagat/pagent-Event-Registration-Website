@@ -56,11 +56,89 @@
 
      <!-- navbar end -->
 
+     <!-- judege panel -->
+      <section class="judge-form-container">
+    <h2>Judge Profile</h2>
+    <form class="judge-form">
+      <div class="form-group">
+        <label for="profile-pic">Profile Picture</label>
+        <input type="file" id="profile-pic" accept="image/*" />
+      </div>
+      <div class="form-group">
+        <label for="full-name">Full Name *</label>
+        <input type="text" id="full-name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" />
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio/Credentials</label>
+        <textarea id="bio" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="category">Categories</label>
+        <select id="category" multiple>
+          <option value="talent">Talent</option>
+          <option value="interview">Interview</option>
+          <option value="evening-gown">Evening Gown</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+      <div class="form-actions">
+        <button type="submit">Save</button>
+        <button type="reset">Cancel</button>
+      </div>
+    </form>
+  </section>
 
-
-
-
-     
+  <!-- Judge List Section -->
+  <section class="judge-list">
+    <h2>All Judges</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+          <td>Jane Doe</td>
+          <td>jane@example.com</td>
+          <td>Active</td>
+          <td>
+            <button>Edit</button>
+            <button>Deactivate</button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="https://via.placeholder.com/40" alt="Judge 2" class="profile-img" /></td>
+          <td>John Smith</td>
+          <td>john@example.com</td>
+          <td>Inactive</td>
+          <td>
+            <button>Edit</button>
+            <button>Activate</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>  
     
 </body>
 </html>
