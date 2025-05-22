@@ -103,15 +103,16 @@
 }
 .about-heros-image{
     width: 100%;
-   
 }
 
 .text-content{
   text-align: justify;
 }
+
 .miss-avnitext{
   margin-left: 11rem !important;
 }
+
 .miss-aahanatext{
      margin-left: 8rem !important;
 }
@@ -310,7 +311,7 @@
 }
 
 .footer-call-to-action-button {
-    background-image: linear-gradient(to right, #f27db6, #bc1060); ;
+    /* background-color: #F7A8C4; */
     border-radius: 21px;
     color: #fffff2;
     display: inline-block;
