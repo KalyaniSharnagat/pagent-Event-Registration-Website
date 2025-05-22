@@ -695,5 +695,166 @@
 
       .info-box {
         margin: 20px;
+        
       }
+    }
+
+
+
+    /*-----about-----*/
+    .About{
+      display: flex;
+      justify-content: space-between;
+      margin:30px;
+    
+    }
+
+   .info h2{
+     text-shadow: 2px 2px 4px white;
+     color:#FF2E91;
+    }
+    .info{
+      padding: 10px;
+      text-align: justify;
+      display: block;
+      font-size: 20px;
+    }
+
+    .picture{
+      border-radius:5%;
+    }
+    button{
+      padding:10px 20px;
+      color:white;
+      background-color: mediumvioletred;
+      
+    }
+    
+    .testimonals{
+      text-align: center;
+      font-style: italic;
+    }
+      .quote-section {
+      color: rgb(29, 27, 27);
+      padding: 60px 30px;
+      position: relative;
+    }
+
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+    }
+
+    .quote-text {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .quote-author {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+
+    /*-------------------Co-Founder----------------*/
+
+ 
+    .founder-name {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #0f0f0f;
+    }
+    .co-founder {
+      color: #ff4dab;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .card {
+      background-color: transparent;
+      border: none;
+      
+    }
+    .card:hover {
+  transform: scale(1.03);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 77, 171, 0.25);   /*semi-transparent pink*/
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+   
+    .card-img-top {
+      border-radius: 15px;
+      height:auto;
+      width:100%;
+      object-fit: contain;
+      padding:10px;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .highlight {
+      color: #ff4dab;
+    }
+
+
+    /*-------jury panel----------*/
+       .jury-card {
+      background: #000; /* black background */
+      color: white;
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      height:100%;
+    }
+
+    .jury-card img {
+      border-radius: 20px;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* .arrow-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .arrow-buttons button {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      margin-left: 5px;
+      padding: 5px 10px;
+      border-radius: 5px; 
+    }*/
+
+    .role-title {
+      font-size: 0.9rem;
+      color: #FF2E91;
+      font-weight: 600;
     }
