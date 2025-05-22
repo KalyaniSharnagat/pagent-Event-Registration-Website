@@ -1,375 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="/Dashboard-Adminpanel/Dahboard-adminpanel.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pageant Admin Dashboard</title>
+  <link rel="stylesheet" href="../Dashboard-Adminpanel/Dahboard-adminpanel.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-   <div class="dashboard">
-  <div class="left">
-    <div class="sidebar">
-      <div class="wrapper">
-        <div class="menu">
-          <img src="https://i.ibb.co/B4Dn7CT/menu.png" />
-        </div>
-        <div class="items">
-          <img src="https://i.ibb.co/L8D5T60/light.png" />
-          <img src="https://i.ibb.co/zmDbMVZ/diamond.png" />
-          <img src="https://i.ibb.co/W5QZ9Fk/envelope.png" />
-          <img src="https://i.ibb.co/CnKDBxC/flask.png" />
-          <img src="https://i.ibb.co/MGs4Fyn/sent-mail.png" />
-          <img src="https://i.ibb.co/zGtDpcp/map.png" />
-        </div>
-        <div class="profile">
-          <img src="https://www.seekclipart.com/clipng/middle/103-1032140_graphic-transparent-1-vector-flat-small-user-icon.png" />
-        </div>
+
+  <!-- start the Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-gauge-high"></i><a href="" class="menu-label">Dashboard</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user"></i><a href="" class="menu-label">Contestants</a></div>
+    <div class="menu-item"><i class="fa-solid fa-users-gear"></i><a href="" class="menu-label">Judge Profiles</a></div>
+    <div class="menu-item"><i class="fa-solid fa-calendar-days"></i><a href="" class="menu-label">Event Schedule</a></div>
+    <div class="menu-item"><i class="fa-solid fa-photo-film"></i><a href="" class="menu-label">Media</a></div>
+    <div class="menu-item"><i class="fa-solid fa-bell"></i><a href="" class="menu-label">Notifications</a></div>
+    <div class="menu-item"><i class="fa-solid fa-handshake-angle"></i><a href="" class="menu-label">Sponsors</a></div>
+    <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a href="" class="menu-label">Blog & News</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user-shield"></i><a href="" class="menu-label">User Roles</a></div>
+  </div>
+
+  <!-- Main Content start -->
+  <div class="main-content">
+    <!-- Header with the Search, filter, Profile -->
+    <div class="header">
+      <div class="search-filter">
+        <input type="text" placeholder="Search here..." />
+        <select>
+          <option>All</option>
+          <option>Contestants</option>
+          <option>Judges</option>
+          <option>Events</option>
+        </select>
+      </div>
+      <div class="profile-info">
+        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png"/>
+        <span>Admin</span>
       </div>
     </div>
-    <div class="navigation">
-      <div class="wrapper2">
-        <div class="abilan">
-          <img src="https://i.ibb.co/HgJrt1p/abilan.png" />
-        </div>
-        <button class="compose"> Admin Login 
-                       & Dashboard
 
-         <span class="plus">
-            <img src="https://i.ibb.co/v1HxGWj/add-1.png"/></span></button>
-        <div class="folders">Folders</div>
-        <div class="folder-icons">
-          <div class="icon1">
-            <img src="https://i.ibb.co/qdgf3TJ/envelope.png" />
-          </div>
-          <div class="icon-name1">Contestant Management:
-            <button class="buton-span"> 20
-          </button></div>
-        </div>
-        <div class="folder-icons">
-          <div class="icon1">
-            <img src="https://i.ibb.co/2yLfX9W/sent-mail.png" />
-          </div>
-          <div class="icon-name">Send Mail</div>
-        </div>
-        <div class="folder-icons">
-          <div class="icon1">
-            <img src="https://i.ibb.co/6ZH9kK3/star.png" />
-          </div>
-          <div class="icon-name">Important</div>
-        </div>
-        <div class="folder-icons">
-          <div class="icon1">
-            <img src="https://i.ibb.co/z4QhcbD/email.png" />
-          </div>
-          <div class="icon-name">Draft</div>
-        </div>
-        <div class="folder-icons">
-          <div class="icon1">
-            <img src="https://i.ibb.co/3MzfGDF/bug.png" />
-          </div>
-          <div class="icon-name">Spam</div>
-        </div>
-        <div class="folder-icons">
-          <div class="icon1">
-            <img src="https://i.ibb.co/xfcFLCN/waste-bin.png" />
-          </div>
-          <div class="icon-name">Trash</div>
-        </div>
-        <div class="folders">
-          Online Friends
-        </div>
-        <!-- <div class="folder-icons">
-          <div class="avatar">
-            <div class="online">
-            </div>
-            <img src="https://randomuser.me/api/portraits/women/65.jpg" />
-          </div>
-          <div class="names">Don Allen
-          </div>
+    <!-- Dashboard welcome-->
+    <div class="dashboard-header">
+      <h2>Welcome Admin</h2>
+      <p>Use this panel to manage event schedules and contestant registrations.</p>
+    </div>
 
-        </div>
-        <div class="folder-icons">
-          <div class="avatar">
-            <div class="online">
-            </div>
-            <img src="https://randomuser.me/api/portraits/women/71.jpg" />
-          </div>
-          <div class="names">Aaron Tim</div>
-        </div>
-        <div class="folder-icons">
-          <div class="avatar">
-            <div class="online red">
-            </div>
-            <img src="https://randomuser.me/api/portraits/men/54.jpg" />
-          </div>
-          <div class="names">Jack Joe</div>
-        </div>
-        <div class="folders">
-          Labels
-        </div>
-        <div class="section1">
-          <button class="btn buton1"> Important
-          <span class="tag">
-            <img src="https://i.ibb.co/Zdx3jGx/tag.png"/></span>
-          </button>
-
-          <button class="btn buton2"> New
-            <span class="tag">
-            <img src="https://i.ibb.co/N1SMfgQ/tag.png"/></span>
-          </button>
-        </div>
-        <div class="section2">
-          <button class="btn buton3"> Old
-             <span class="tag">
-            <img src="https://i.ibb.co/C5q0MDM/tag.png"/></span>
-           </button>
-          <button class="btn buton4"> Priority
-             <span class="tag">
-            <img src="https://i.ibb.co/DMmSZW0/tag.png"/></span>
-           </button>
-        </div>
+    <!-- Dashboard Cards -->
+    <div class="cards">
+      <div class="card">
+        <h4>Contestant Applications</h4>
+        <p>Contestant Applications allow you to manage entries submitted by participants. You can view details, approve or reject applications, and export data for records or reports.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Judges</h4>
+        <p>Judges management allows you to add, edit, or remove judges from the system. You can assign them to specific events for evaluation purposes. This ensures fair and organized scoring throughout the competition.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Event Schedule</h4>
+        <p>Event Schedule helps you organize the flow of your pageant or event. You can define different stages, set start/end times, and assign deadlines for tasks or submissions. This ensures smooth coordination and timely execution of all activities.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Media Upload</h4>
+        <p>Media Upload allows contestants and admins to upload event-related photos and videos. You can organize media by category or event for easy access. This feature helps in managing visual content for promotions, galleries, or judging.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Send Notifications</h4>
+        <p>Send Notifications enables you to communicate important updates to participants via email. You can send announcements, reminders, or alerts about events or deadlines. This ensures everyone stays informed and engaged throughout the event.</p>
+        <button class="card-btn">Send</button>
+      </div>
+      <div class="card">
+        <h4>Blog / News</h4>
+        <p>Blog / News lets you create and manage posts about your events, sponsors, and pageant highlights. Share important news, behind-the-scenes stories, or updates with your audience. This keeps your platform active and helps build community engagement.</p>
+        <button class="card-btn">Edit</button>
       </div>
     </div>
   </div>
-  <div class="right-side">
-    <div class="right-header">
-      <div class="top-bar">
-        <div class="top-bar-justify">
-          <div class="big-inbox">
-            Inbox
-          </div>
-
-          <div class="top-bar-items">
-            <div class="notif">
-              <div class="online pink">
-              </div>
-              <img src="https://i.ibb.co/VJm73Hz/notifications-button.png" />
-            </div>
-            <img src="https://i.ibb.co/vz4HYJb/envelope.png" />
-            <img src="https://i.ibb.co/52Vkq4M/earth-globe.png" />
-            <div class="icon-name5"> English </div>
-          </div>
-        </div>
-        <div class="profile2">
-          <img src="https://www.seekclipart.com/clipng/middle/103-1032140_graphic-transparent-1-vector-flat-small-user-icon.png" />
-          <div class="icon-name5">Larry Nunez</div>
-        </div>
-      </div>
-      <hr class="new-hr">
-      <div class="right-bottom">
-        <div class="check">
-          <label class="checkbox">
-        <input type="checkbox"/>
-        </label>
-          <div class="down-arrow">
-            <img src="https://i.ibb.co/WDqrXj6/drop-down-arrow.png" />
-          </div>
-        </div>
-        <div class="middle-buttons">
-          <div class="buttons">
-            <button class="new button"> 
-      <img src="https://i.ibb.co/X4j3TZR/reload.png" />
-           </button>
-            <button class="new button"> 
-      <img src="https://i.ibb.co/L60Yr87/eye.png" />
-           </button>
-            <button class="new button"> 
-      <img src="https://i.ibb.co/Lv6TqBG/waste-bin.png" />
-           </button>
-          </div>
-          <div class="form has-search">
-            <input class="text" type="search" placeholder="Search here..." name="search" />
-            <span class="searchIcon">
-         <img src="https://i.ibb.co/sqFgRq8/search.png" />
-       </span>
-          </div>
-        </div>
-        <div class="search-arrow">
-          <img src="https://i.ibb.co/cx2t05H/scroll-arrows.png" />
-        </div>
-      </div>
-    </div>
-    <div class="right-body">
-      <div class="scroll-cards">
-        <div class="card">
-          <div class="mails">
-            <img src="https://randomuser.me/api/portraits/men/20.jpg" />
-            <div class="mail-names">
-              Louis Adkins
-            </div>
-
-          </div>
-          <div class="mail-info">
-            How To Write Better Advertising Copy Heading
-          </div>
-          <div>
-          </div>
-          <div class="bottom-info">
-            <div class="check1">
-              <label class="checkbox">
-        <input type="checkbox"/>
-        </label>
-              <div class="star">
-                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
-              </div>
-              <div class="star">
-                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
-              </div>
-
-            </div>
-            <div class="date">8:30 AM</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="mails">
-            <span class="person border1"> C</span>
-            <div class="mail-names">
-              Clarence Hogan
-            </div>
-
-          </div>
-          <div class="mail-info">
-            How To Write Better Advertising
-
-          </div>
-          <div>
-          </div>
-          <div class="bottom-info">
-            <div class="check1">
-              <label class="checkbox">
-        <input type="checkbox"/>
-        </label>
-              <div class="star">
-                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
-              </div>
-              <div class="star">
-                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
-              </div>
-
-            </div>
-            <div class="date">8:30 AM</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="mails">
-            <span class="person border2">O</span>
-            <div class="mail-names">
-              Olga Boone
-            </div>
-
-          </div>
-          <div class="mail-info">
-            Old Fashioned Recipe
-          </div>
-          <div>
-          </div>
-          <div class="bottom-info">
-            <div class="check1">
-              <label class="checkbox">
-        <input type="checkbox"/>
-        </label>
-              <div class="star">
-                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
-              </div>
-              <div class="star">
-                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
-              </div>
-
-            </div>
-            <div class="date">8:30 AM</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="mails">
-            <span class="person border3">H</span>
-            <div class="mail-names">
-              Harry Burton
-            </div>
-
-          </div>
-          <div class="mail-info">
-            How To Write Better Advertising Copy Heading
-          </div>
-          <div>
-          </div>
-          <div class="bottom-info">
-            <div class="check1">
-              <label class="checkbox">
-        <input type="checkbox"/>
-        </label>
-              <div class="star">
-                <img src="https://i.ibb.co/SN5SJ8x/star.png" />
-              </div>
-              <div class="star">
-                <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
-              </div>
-
-            </div>
-            <div class="date">8:30 AM</div>
-          </div>
-
-        </div>
-
-      </div>
-      <div class="message">
-        <div class="mes-date">
-          Dec 1, 2018
-        </div>
-        <div class="title">
-          Old Fashioned Recipe For Preventing Allergies And Chemical
-          <div class="title-icons">
-
-          </div>
-        </div>
-        <div class="from">
-          <span class="who">From: </span>ashraf@glaze.com
-        </div>
-        <div class="message-from">
-          Hello Malikan!
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptas pariatur repellat veritatis atque, tempora quasi quas facere impedit aliquam libero qui iure cumque incidunt facilis soluta necessitatibus laboriosam nemo. Delectus architecto
-            sed, excepturi natus iste vel quidem officia corrupti repudiandae!</p>
-          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, deleniti eaque eligendi minus maxime tempora eiusi.</p>
-          <p>Have a nice day</p>
-          <p>Ashraf</p>
-        </div>
-        <div class="attachment-last">
-          <img src="https://i.ibb.co/FW9tsHK/attachment.png" />
-          <div class="att-write">
-            Attachment (80MB)
-          </div>
-          <button class="btn1 buton0"> View All
-          <span class="tag">
-          </button>
-
-          <button class="btn1 buton9"> Download All
-          </button>
-
-        </div>
-        <div class="son-images">
-          <div class="inside-img">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
-            <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
-            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
-            <img src="https://images.unsplash.com/photo-1450609283058-0ec52fa7eac4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" />
-
-          </div>
-          <button class="son-buton"> 20+
-          </button>
-        </div>
-        <button class="btn2 butona"> Reply
-             <span class="tag"> 
-             <img src="https://i.ibb.co/GQf8frw/reply.png"/>
-             </span>
-          </button>
-
-        <button class="btn2 butonb"> Forward
-            <span class="tag"> 
-             <img src="https://i.ibb.co/6W40kTg/forward-arrow.png"/>
-             </span>
-          </button>
-      </div> -->
-    </div>
-  </div> 
 </body>
 </html>
