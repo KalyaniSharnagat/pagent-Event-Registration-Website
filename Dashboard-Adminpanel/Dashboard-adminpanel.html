@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pageant Admin Dashboard</title>
   <link rel="stylesheet" href="../Dashboard-Adminpanel/Dahboard-adminpanel.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
 
 </head>
+
 <body>
 
   <!-- start the Sidebar -->
-  <div class="sidebar">
-    <div class="sidebar-header">
-      <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
+  <!-- navbar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
+      </div>
+      <div class="menu-item"><i class="fa-solid fa-gauge-high"></i><a href="" class="menu-label">Dashboard</a></div>
+      <div class="menu-item"><i class="fa-solid fa-user"></i><a href="" class="menu-label">Contestants</a></div>
+      <div class="menu-item"><i class="fa-solid fa-users-gear"></i><a href="" class="menu-label">Judge Profiles</a>
+      </div>
+      <div class="menu-item"><i class="fa-solid fa-calendar-days"></i><a href="" class="menu-label">Event Schedule</a>
+      </div>
+      <div class="menu-item"><i class="fa-solid fa-photo-film"></i><a href="" class="menu-label">Media</a></div>
+      <div class="menu-item"><i class="fa-solid fa-bell"></i><a href="" class="menu-label">Notifications</a></div>
+      <div class="menu-item"><i class="fa-solid fa-handshake-angle"></i><a href="" class="menu-label">Sponsors</a></div>
+      <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a href="" class="menu-label">Blog & News</a></div>
+      <div class="menu-item"><i class="fa-solid fa-user-shield"></i><a href="" class="menu-label">User Roles</a></div>
     </div>
-    <div class="menu-item"><i class="fa-solid fa-gauge-high"></i><a href="" class="menu-label">Dashboard</a></div>
-    <div class="menu-item"><i class="fa-solid fa-user"></i><a href="" class="menu-label">Contestants</a></div>
-    <div class="menu-item"><i class="fa-solid fa-users-gear"></i><a href="" class="menu-label">Judge Profiles</a></div>
-    <div class="menu-item"><i class="fa-solid fa-calendar-days"></i><a href="" class="menu-label">Event Schedule</a></div>
-    <div class="menu-item"><i class="fa-solid fa-photo-film"></i><a href="" class="menu-label">Media</a></div>
-    <div class="menu-item"><i class="fa-solid fa-bell"></i><a href="" class="menu-label">Notifications</a></div>
-    <div class="menu-item"><i class="fa-solid fa-handshake-angle"></i><a href="" class="menu-label">Sponsors</a></div>
-    <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a href="" class="menu-label">Blog & News</a></div>
-    <div class="menu-item"><i class="fa-solid fa-user-shield"></i><a href="" class="menu-label">User Roles</a></div>
+     <!-- navbar end -->
+
+    <!-- Main Content start -->
+    <div class="main-content">
+      <!-- Header with the Search, filter, Profile -->
+      <div class="header">
+        <div class="search-filter">
+          <input type="text" placeholder="Search here..." />
+          <select>
+            <option>All</option>
+            <option>Contestants</option>
+            <option>Judges</option>
+            <option>Events</option>
+          </select>
+        </div>
+        <div class="profile-info">
+          <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" />
+          <span>Admin</span>
+        </div>
+      </div>
+
+
+  <!-- Dashboard welcome-->
+  <div class="dashboard-header">
+    <h2>Welcome Admin</h2>
+    <p>Use this panel to manage event schedules and contestant registrations.</p>
   </div>
 
-  <!-- Main Content start -->
-  <div class="main-content">
-    <!-- Header with the Search, filter, Profile -->
-    <div class="header">
-      <div class="search-filter">
-        <input type="text" placeholder="Search here..." />
-        <select>
-          <option>All</option>
-          <option>Contestants</option>
-          <option>Judges</option>
-          <option>Events</option>
-        </select>
-      </div>
-      <div class="profile-info">
-        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png"/>
-        <span>Admin</span>
-      </div>
+  <!-- Dashboard Cards -->
+  <div class="cards">
+    <div class="card">
+      <h4>Contestant Applications</h4>
+      <p>Contestant Applications allow you to manage entries submitted by participants. You can view details, approve or
+        reject applications, and export data for records or reports.</p>
+      <button class="card-btn">Manage</button>
     </div>
-
-    <!-- Dashboard welcome-->
-    <div class="dashboard-header">
-      <h2>Welcome Admin</h2>
-      <p>Use this panel to manage event schedules and contestant registrations.</p>
+    <div class="card">
+      <h4>Judges</h4>
+      <p>Judges management allows you to add, edit, or remove judges from the system. You can assign them to specific
+        events for evaluation purposes. This ensures fair and organized scoring throughout the competition.</p>
+      <button class="card-btn">Manage</button>
     </div>
-
-    <!-- Dashboard Cards -->
-    <div class="cards">
-      <div class="card">
-        <h4>Contestant Applications</h4>
-        <p>Contestant Applications allow you to manage entries submitted by participants. You can view details, approve or reject applications, and export data for records or reports.</p>
-        <button class="card-btn">Manage</button>
-      </div>
-      <div class="card">
-        <h4>Judges</h4>
-        <p>Judges management allows you to add, edit, or remove judges from the system. You can assign them to specific events for evaluation purposes. This ensures fair and organized scoring throughout the competition.</p>
-        <button class="card-btn">Manage</button>
-      </div>
-      <div class="card">
-        <h4>Event Schedule</h4>
-        <p>Event Schedule helps you organize the flow of your pageant or event. You can define different stages, set start/end times, and assign deadlines for tasks or submissions. This ensures smooth coordination and timely execution of all activities.</p>
-        <button class="card-btn">Manage</button>
-      </div>
-      <div class="card">
-        <h4>Media Upload</h4>
-        <p>Media Upload allows contestants and admins to upload event-related photos and videos. You can organize media by category or event for easy access. This feature helps in managing visual content for promotions, galleries, or judging.</p>
-        <button class="card-btn">Manage</button>
-      </div>
-      <div class="card">
-        <h4>Send Notifications</h4>
-        <p>Send Notifications enables you to communicate important updates to participants via email. You can send announcements, reminders, or alerts about events or deadlines. This ensures everyone stays informed and engaged throughout the event.</p>
-        <button class="card-btn">Send</button>
-      </div>
-      <div class="card">
-        <h4>Blog / News</h4>
-        <p>Blog / News lets you create and manage posts about your events, sponsors, and pageant highlights. Share important news, behind-the-scenes stories, or updates with your audience. This keeps your platform active and helps build community engagement.</p>
-        <button class="card-btn">Edit</button>
-      </div>
+    <div class="card">
+      <h4>Event Schedule</h4>
+      <p>Event Schedule helps you organize the flow of your pageant or event. You can define different stages, set
+        start/end times, and assign deadlines for tasks or submissions. This ensures smooth coordination and timely
+        execution of all activities.</p>
+      <button class="card-btn">Manage</button>
     </div>
+    <div class="card">
+      <h4>Media Upload</h4>
+      <p>Media Upload allows contestants and admins to upload event-related photos and videos. You can organize media by
+        category or event for easy access. This feature helps in managing visual content for promotions, galleries, or
+        judging.</p>
+      <button class="card-btn">Manage</button>
+    </div>
+    <div class="card">
+      <h4>Send Notifications</h4>
+      <p>Send Notifications enables you to communicate important updates to participants via email. You can send
+        announcements, reminders, or alerts about events or deadlines. This ensures everyone stays informed and engaged
+        throughout the event.</p>
+      <button class="card-btn">Send</button>
+    </div>
+    <div class="card">
+      <h4>Blog / News</h4>
+      <p>Blog / News lets you create and manage posts about your events, sponsors, and pageant highlights. Share
+        important news, behind-the-scenes stories, or updates with your audience. This keeps your platform active and
+        helps build community engagement.</p>
+      <button class="card-btn">Edit</button>
+    </div>
+  </div>
   </div>
 </body>
+
 </html>
