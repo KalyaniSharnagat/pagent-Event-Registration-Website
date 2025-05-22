@@ -137,7 +137,6 @@ body{
   font-size: 14px;
   box-shadow: none; 
   border-radius: 20px;
-  
 }
 
 .snip1515 * {
@@ -154,30 +153,25 @@ body{
   padding: 10px;
   border: 2px solid #e8b563;
 }
-
 .snip1515 .profile-image img {
   max-width: 100%;
   vertical-align: top;
 }
-
 .snip1515 figcaption {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-
 .info {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
 }
-
 @media (max-width: 768px) {
   .image-box {
     width: 100%;
   }
 }
-
 .card {
   position: relative;
   width: 600px;
@@ -189,7 +183,6 @@ body{
   backdrop-filter: blur(15px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
-
 .img-bx {
   position: absolute;
   top: 0;
@@ -201,7 +194,6 @@ body{
   transform: translateY(30px) scale(0.5);
   transform-origin: top;
 }
-
 .img-bx img {
   position: absolute;
   top: 0;
@@ -210,7 +202,6 @@ body{
   height: 100%;
   object-fit: cover;
 }
-
 .content {
   position: absolute;
   width: 100%;
@@ -220,7 +211,6 @@ body{
   align-items: flex-end;
   padding-bottom: 30px;
 }
-
 .content .detail {
   display: flex;
   justify-content: center;
@@ -228,30 +218,25 @@ body{
   flex-direction: column;
   text-align: center;
 }
-
 .content .detail h2 {
   color: #444;
   font-size: 1.6em;
   font-weight: bolder;
 }
-
 .content .detail h2 span {
   font-size: 0.7em;
   color: #03a9f4;
   font-weight: bold;
 }
-
 .sci {
   position: relative;
   display: flex;
   margin-top: 5px;
 }
-
 .sci li {
   list-style: none;
   margin: 4px;
 }
-
 .sci li a {
   width: 45px;
   height: 45px;
@@ -266,7 +251,6 @@ body{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: 0.5s;
 }
-
 .sci li a:hover {
   background: #03a9f4;
   color: #fff;
@@ -275,7 +259,6 @@ body{
   text-align: justify;
   text-justify: inter-word;
  } 
-
 .textbox{
    border: 2px solid #bc1060;
    border-radius: 20px;
@@ -283,7 +266,6 @@ body{
    margin:20px;
    background-color: #eb5eba7d;
 }
-
 /* Events */
 .container2 {
       display: flex;
@@ -293,16 +275,14 @@ body{
       padding: 20px;
       gap: 20px;
     }
-
     .accordion {
       flex: 1 1 250px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-
     .accordion button {
-       background-image: black;
+      background-image: black;
       color: white;
       border: none;
       padding: 15px;
@@ -312,11 +292,9 @@ body{
       border-radius: 8px;
       transition: background-color 0.3s;
     }
-
     .accordion button.active {
       background-color: black;
     }
-
     .details {
       flex: 2 1 400px;
       background-color:black;
@@ -325,23 +303,19 @@ body{
       border: 1px solid #6e335c;
       color:white;
     }
-
     .details ul {
       list-style: none;
       padding-left: 0;
     }
-
     .details li::before {
       content: "✔️ ";
       margin-right: 5px;
     }
-
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
         align-items: center;
       }
-
       .accordion, .details {
         width: 100%;
       }
