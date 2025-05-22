@@ -4,23 +4,33 @@
      margin: 0;
      padding: 0;
  }
- body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
- }
+ /* body {
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    background-image: url("/PUBLIC-IMAGES/still-life-ruler-crown\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
+
  .backgroundColor{
-     background-color: #F7A8C4;
+     background-color: rgb(252 165 148);
  }
+
 .about-heros-image{
     width: 100%;
-   
 }
 
 .text-content{
   text-align: justify;
 }
+
 .miss-avnitext{
   margin-left: 11rem !important;
 }
+
 .miss-aahanatext{
      margin-left: 8rem !important;
 }
@@ -217,7 +227,7 @@
 }
 
 .footer-call-to-action-button {
-    background-color: #F7A8C4;
+    /* background-color: #F7A8C4; */
     border-radius: 21px;
     color: #fffff2;
     display: inline-block;
