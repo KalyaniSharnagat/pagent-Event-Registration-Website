@@ -1,0 +1,49 @@
+        body {
+            background: linear-gradient(to right, #ffe6f0, #e6f2ff);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #d63384;
+        }
+
+        .accordion-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .accordion-button {
+            background: #fff0f5;
+            font-weight: bold;
+            color: #b03060;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f8e1f4;
+            color: #7a2048;
+        }
+
+        .accordion-body {
+            background-color: #ffffff;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        button[type="submit"] {
+            background-color: #d63384;
+            border: none;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #c2185b;
+        }
+
+        .status {
+            font-weight: bold;
+        }
