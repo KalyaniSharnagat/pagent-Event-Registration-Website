@@ -1,17 +1,29 @@
-body{
-        background-color:#F7A8C4;
-     }
+body {
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    background-image: url("/PUBLIC-IMAGES/background2.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.color{
+  color:#B76E79;
+}
+.text2{
+     color:#703B42;
+}
     nav {
-      margin-top: 0; 
-      padding-top: 0;
+
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
       z-index: 1;
       height:110px;
-      /* padding-bottom: 80px; */
-      background-color: rgba(236, 28, 177, 0.315);
+      /* margin-top: 20px; */
+      /* margin-left: 20px;
+      margin-right:40px; */
+      background-color:#FADADD;
+      /* border-radius: 50px; */
     }
     /* .navimage{
          padding-top: 100px;
@@ -19,8 +31,8 @@ body{
     } */
     nav .nav a {
       text-decoration: none;
-      color:white;
-      font-weight: 600; 
+      color:black;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
 
@@ -178,39 +190,18 @@ body{
   }
 }
 
-.card {
+.card2{
   position: relative;
-  width: 600px;
-  height: 600px;
-  background-color: #eb5eba7d;
+  width: 400px;
+  height: 500px;
+  background-image: url("/PUBLIC-IMAGES/Adline-Castelino2020.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(15px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
-
-.img-bx {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  transform: translateY(30px) scale(0.5);
-  transform-origin: top;
-}
-
-.img-bx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .content {
   position: absolute;
   width: 100%;
@@ -248,11 +239,14 @@ body{
 }
 
 .sci li {
+
   list-style: none;
   margin: 4px;
+ margin-top: 100px; 
 }
 
 .sci li a {
+  /* margin-top: 100px; */
   width: 45px;
   height: 45px;
   display: flex;
@@ -261,88 +255,184 @@ body{
   border-radius: 50%;
   background: transparent;
   font-size: 1.5em;
-  color: #444;
+  color:white;
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: 0.5s;
 }
 
 .sci li a:hover {
-  background: #03a9f4;
+  background: black;
   color: #fff;
 }
  .text{
   text-align: justify;
   text-justify: inter-word;
+  color:#703B42;
  } 
-
-.textbox{
-   border: 2px solid #bc1060;
-   border-radius: 20px;
-   padding:40px;
-   margin:20px;
-   background-color: #eb5eba7d;
-}
 
 /* Events */
 .container2 {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+     
     }
 
     .accordion {
-      flex: 1 1 250px;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 10px;
+      margin-bottom: 20px;
     }
 
-    .accordion button {
-       background-image: black;
-      color: white;
+    .day-btn {
+      flex: 1 1 18%;
+      padding: 10px;
+      background-color: #ddd;
       border: none;
-      padding: 15px;
-      text-align: left;
-      font-size: 16px;
       cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
     }
 
-    .accordion button.active {
-      background-color: black;
+    .day-btn.active {
+      background-color: #FF6F61;
+      color: black;
+      font-weight: bold;
     }
 
     .details {
-      flex: 2 1 400px;
-      background-color:black;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #6e335c;
-      color:white;
+      /* background-color: white; */
+      padding: 80px;
+      font-size:x-large;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
     }
 
     .details ul {
-      list-style: none;
-      padding-left: 0;
+      list-style-type: disc;
+      padding-left: 20px;
     }
+    /* event end */
+/* faq start */
+.accordion .card {
+  border: none;
+  margin-bottom: 30px;
+}
+.our-faq-wrapper .btn-link {
+  display: block;
+  width: 100%;
+  /* text-align: left; */
+  position: relative;
+  /* background: #242c42; */
+  color: #fff;
+  border-radius: 0;
+  padding: 7px 15px 12px;
+  font-size: 16px;
+  overflow: hidden;
+  border: none;
+  font-weight:600;  
+} 
+.our-faq-wrapper .btn-link:hover, .our-faq-wrapper .btn-link:focus {
+  text-decoration: none;
+}
+.our-faq-wrapper .btn-link:after {
+  position: absolute;
+  content: '\f068';
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: fontawesome;
+}
+.our-faq-wrapper .btn-link.collapsed:after {
+  content: '\f067';
+}
+.our-faq-wrapper .btn-link:before {
+  position: absolute;
+  content: '';
+  background: #86bc42;
+  -webkit-transform: skew(-35deg);
+  transform: skew(-35deg);
+  height: 100%;
+  width: 50%;
+  left: 90%;
+  top: 0;
+}
+.card-header {
+  padding: 0;
+  background: transparent;
+  border-bottom: none;
+}
+.card-body {
+  position: relative;
+}
+.card-body:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  /* background: #242c42; */
+}
+.card-body:before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  background: #86bc42;
+  z-index: 1;
+}
+/* faq section */
+.faq {
+  padding: 60px 0;
+}
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+.faq .faq-list li {
+     background-image: linear-gradient(to right, #f27db68c, #bc106078);
+    /* background-color: #ffee5a; */
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+.faq .faq-list a {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    text-decoration: none;
+}
 
-    .details li::before {
-      content: "✔️ ";
-      margin-right: 5px;
-    }
+.faq .faq-list i {
+  font-size: 16px;
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  transition: 1s;
+}
+.faq-title {
+    text-align: center;
+    font-size: 17px;
+    border-bottom: 2px dashed #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
+.faq .faq-list p {
+  padding-top: 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
 
-      .accordion, .details {
-        width: 100%;
-      }
-    }
+.collapsed i.fas.fa-arrow-up {
+    transform: rotate(180deg);
+}
+/* end faq */
