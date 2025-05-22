@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pagent Event Registration website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/CSS/sharvari.css">
-   <link rel="stylesheet" href="/CSS/aboutus.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="/CSS/aboutus.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="../Javascript/script.js"></script>
 </head>
-<body>
-<nav>
+<body class="backgroundColor">
+  <nav>
   <div class="container">
     <div class="row nav align-items-center mb-5">
         <div class="col-6 col-md-2">
@@ -72,143 +73,76 @@
   </div>
 </div>
 <div>
-  <div id="slider-wrapper">
-    <img id="slideshow" src="/PUBLIC-IMAGES/still-life-ruler-crown (1).jpg" alt="slideshow image">
+    <!-- <section>
+  <img id="slideshow" src="/PUBLIC-IMAGES/about-image.png" alt="Slideshow" width="100%" height="690px">
+</section> -->
+  <div class="container-fluid p-0">
+   
+    <img src="/PUBLIC-IMAGES/about0.png" width="100%"  height="100%"  class="img-fluid about-heros-image" draggable="false" alt="About Banner" />
   </div>
- <div class="container text-center text">
-    <h1>VEC Queen of India (Ms. & Mrs.)</h1>
-    <div class="text textbox">
-    <p> VEC Queen of India is a celebration of every woman’s unique journey, a platform where dreams meet opportunity. Designed for both Ms. and Mrs., this remarkable competition runs two pageants simultaneously, creating a shared space where women from all walks of life can step into the limelight.</p>
-    <p> This is more than just a pageant—it’s a movement that spans across India, welcoming participants from every corner of the country. Whether you’ve always dreamed of walking the ramp, showcasing your talent, or simply redefining your own boundaries, VEC Queen of India is here to make it happen.</p>
-    <p> Season 1 was a testament to the magic that happens when passion meets opportunity. With dazzling rounds, unmatched media coverage, and moments of triumph for every participant, VEC Queen of India celebrates confidence, individuality, and the pursuit of dreams.</p>
-    <p> Proudly organized by Vesna Event Crafters Pvt. Ltd., part of the illustrious Vesna Group with a rich legacy in the travel and events industry, VEC Queen of India reflects the group’s commitment to creating transformative and memorable experiences. At VEC Queen of India, we don’t just crown winners; we create legacies—a tradition upheld by Vesna’s decades of expertise and excellence.</p>
-    <p>Don't miss this chance to shine! Register now to VEC Queen Of India 2025 and start your journey to Triumph!</p>
-     </div>
-  </div>
-
-<div class="container text-center">
-  <h1>____________Why choose VEC Queen of India____________</h1>
-    <h5> VEC Queen of India: The Ultimate Pageant Experience</h5>
-    <div class="container2">
-    <div class="accordion">
-      <button class="day-btn active" onclick="showDetails(0)">DAY 1</button>
-      <button class="day-btn" onclick="showDetails(1)">DAY 2</button>
-      <button class="day-btn" onclick="showDetails(2)">DAY 3</button>
-      <button class="day-btn" onclick="showDetails(3)">DAY 4</button>
-      <button class="day-btn" onclick="showDetails(4)">DAY 5</button>
-    </div>
-
-    <div class="details" id="details-box">
-      <!-- Details for Day 1 shown by default -->
-      <ul>
-        <li>Welcome & introduction session</li>
-        <li>Grooming session</li>
-        <li>Orientation & press conference - dinner</li>
-        <li>Ramp walk & body posture training</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-
-<div class="container d-flex gap-5">
-  <div>
-       <div class="card">
-      <div class="img-bx">
-        <img src="/PUBLIC-IMAGES/ceo.png" alt="img"/>
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mt-5" data-aos="zoom-in-right">
+        <img src="/PUBLIC-IMAGES/about-image2-bgr.png" width="500" class="img-fluid" draggable="false" alt="Miss 2020">
+        <p class="h3 mt-3 ms-5  fw-bolder">Miss - Anisha Roy</p>
+        <p class="h5 ms-5 fw-bold">Miss - United Nation 2020</p>
       </div>
-      <div class="content">
-        <div class="detail">
-          <!-- <h2>Emilia Roy<br /><span>Senior Designer</span></h2> -->
-          <ul class="sci">
-            <li>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </li>
-          </ul>
-        </div>
+      <div class="col-md-6" data-aos="zoom-in-left">
+        <h1 class="display-4 fw-bold "> About Tiska Miss.India</h1>
+        <p class="lead text-justify  text-content">
+          Excelling service: providing top-notch  for hardworking companies.
+          <strong class="fw-bold">COMPANY PROFILE:</strong><br>
+          Diadem Miss & Mrs. Maharashtra® is more than a pageant—it’s a platform for empowerment, social responsibility, and personal transformation. Founded on the values of integrity, inclusivity, and fairness, it has become one of the most trusted and admired pageants in India.
+          At its core, Diadem is dedicated to highlighting not only outer beauty, but also the strength, intelligence, and compassion of modern women. It provides a meaningful space for participants to showcase their talents, advocate for causes they believe in, and become ambassadors of positive change.
+          With a commitment to social impact and ethical judgment, the organization aims to discover and support individuals who embody grace, leadership, and a strong sense of community. Diadem encourages contestants to go beyond glamour—empowering them to lead initiatives, inspire others, and contribute to building a better society.
+          Our Promise: To deliver a credible, impactful, and dignified pageant experience that celebrates every woman’s journey—on stage and beyond.
+        </p>
       </div>
     </div>
   </div>
-  <div  class="text-justify">
-     <h3>Muskaan Gairola</h3>
-     <h5 class="pb-5">(Founder & CEO)</h5>
-     <div class="text">
-     <p class="text-justify"> As the visionary entrepreneur and celebrated CEO of Vesna Event Crafters (aka VEC) and VEC Queen of India, with two decades of expertise in the travel, tourism, and events industry, Muskaan has spearheaded innovative approaches that redefine the standards of excellence in event curation and travel experiences.
 
-<p>Muskaan's accolades extend beyond her professional endeavors. Crowned 'Mrs. Charismatic' at Mrs. India Worldwide 2021 and holding the prestigious IFSA Super Woman 2021 Award in the multi-talent category, she embodies grace, intelligence, and versatility.</p>
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-2 order-md-1" data-aos="zoom-in">
+        <h1 class="display-4 fw-bold ">About Avni Miss.India</h1>
+        <p class="lead text-justify text-content">
+          Excelling service: Enabling hardworking teams fashion with solutions.
+          <strong class="fw-bold">COMPANY PROFILE:</strong><br>
+          Diadem Miss & Mrs. Maharashtra® is not just a beauty pageant—it’s a celebration of empowerment, transformation, and purpose. Rooted in the principles of integrity, inclusivity, and fairness, Diadem has earned its place as one of India’s most respected and inspiring pageant platforms.
+             More than a crown, Diadem is a journey of growth—highlighting not only the elegance and poise of today’s women but also their intellect, compassion, and resilience. It offers a powerful stage for participants to express their individuality, champion meaningful causes, and serve as role models within their communities.
+             With a deep commitment to social impact and ethical values, Diadem seeks to recognize women who embody confidence, leadership, and a genuine desire to create positive change. 
 
-<p>Her influence transcends traditional boundaries, as evidenced by her roles as a digital creator, model, and collaborator with renowned brands. Muskaan's presence on the runway has been nothing short of mesmerizing, serving as a show stopper at India Style Fashion Week New Delhi 2022 and as a show opener for Indian Maverick Fashion at International Fashion Week Goa 2021. 
-  She has also been honored by Milestone Global Award in Lifestyle and Fashion in 2022, a testament to her significant contributions to these industries.</p>
-</div>
-</div>
-</div>
-<h1 class="text-center pt-5"> Judges of Miss & Mrs Maharashtra </h1>
-<div class="container">
-  <div  class="row align-items-center py-3 d-flex">
-<figure class="snip1515 col-md-4">
-  <div class="profile-image"><img src="/PUBLIC-IMAGES/portrait-medieval-queen-with-quill-writing-paper.jpg" alt="sample47" /></div>
-  <figcaption>
-    <h3>Fleece Marigold</h3>
-    <h4>Miss Earth</h4>
-    <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
-    <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
-      <a href="#"> <i class="ion-social-twitter"></i></a>
-      <a href="#"> <i class="ion-social-vimeo"></i></a>
-    </div>
-  </figcaption>
-</figure>
-<figure class="snip1515 col-md-4">
-  <div class="profile-image"><img src="/PUBLIC-IMAGES/dressed-elegant-white-dress.jpg" alt="sample83" /></div>
-  <figcaption>
-    <h3>Norman Gordon</h3>
-    <h4>Miss  World</h4>
-    <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
-    <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
-      <a href="#"> <i class="ion-social-twitter"></i></a>
-      <a href="#"> <i class="ion-social-vimeo"></i></a>
-    </div>
-  </figcaption>
-</figure>
 
-<figure class="snip1515 col-md-4">
-  <div class="profile-image"><img src="/PUBLIC-IMAGES/miss-universe-wearing-long-silk-red-dress-crown-natural-makeup-curly-hairstyle.jpg" alt="sample70" /></div>
-  <figcaption>
-    <h3>Ruby Von Rails</h3>
-    <h4>Miss India</h4>
-    <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-    <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
-      <a href="#"> <i class="ion-social-twitter"></i></a>
-      <a href="#"> <i class="ion-social-vimeo"></i></a>
+        </p>
+      </div>
+      <div class="col-md-6 mt-5 order-1 order-md-2" data-aos="zoom-in-up">
+        <img src="/PUBLIC-IMAGES/miss-world5-bgr.png" width="1000" height="700" class="img-fluid" draggable="false" alt="Miss 2022">
+        <p class="h3  fw-bolder miss-avnitext">Miss - Avni Khanna</p>
+        <p class="h5  fw-bold  miss-avnitext">Miss - United Nation 2022</p>
+      </div>
     </div>
-  </figcaption>
-</figure>
-<figure class="snip1515 col-md-4">
-  <div class="profile-image"><img src="/PUBLIC-IMAGES/crowned-woman-like-miss-beauty-looking-camera.jpg" alt="sample83" /></div>
-  <figcaption>
-    <h3>Norman Gordon</h3>
-    <h4>Miss Maharastra</h4>
-    <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
-    <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
-      <a href="#"> <i class="ion-social-twitter"></i></a>
-      <a href="#"> <i class="ion-social-vimeo"></i></a>
-    </div>
-  </figcaption>
-</figure>
-</div>
-</div>
+  </div>
 
-</div>
-    
-<div class="pg-footer">
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mt-5 " data-aos="zoom-in-right">
+        <img src="/PUBLIC-IMAGES/missabout-bgr.png" width="900" class="img-fluid" draggable="false" alt="Miss 2023">
+        <p class="h3 mt-3 fw-bolder miss-aahanatext">Miss - Ahana Khurana</p>
+        <p class="h5 fw-bold miss-aahanatext">Miss - United Nation 2023</p>
+      </div>
+      <div class="col-md-6" data-aos="zoom-in-down">
+        <h1 class="display-4 fw-bold ">About Ahana Miss.India</h1>
+        <p class="lead text-justify  text-content ">
+          Excelling service: Empowering  with high-performance  built for success.
+          <strong class="fw-bold">COMPANY PROFILE:</strong><br>
+           Ahana Khurana represents a unique blend of grace, intellect, and purpose. As Miss United Nation 2023, she has emerged as a global ambassador for empowerment, inclusivity, and humanitarian values. With her powerful voice and magnetic presence, Ahana continues to inspire a new generation of women to lead with empathy, courage, and authenticity.
+           At the forefront of this transformative journey is a visionary Director whose mission is rooted in excellence and empowerment. With a steadfast dedication to fostering meaningful change, the leadership of this organization strives to redefine standards in pageantry—offering platforms that uplift talent, champion social causes, and inspire purposeful action.
+           Diadem Miss & Mrs. </p>
+      </div>
+    </div>
+  </div>
+  
+   <div class="pg-footer">
     <footer class="footer">
       <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
         <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
@@ -224,15 +158,15 @@
           </div>
           <div class="footer-menu">
             <h2 class="footer-menu-name"> Get Started</h2>
-            <ul id="menu-get-started" class="footer-menu-list">
+            <ul id="menu-company" class="footer-menu-list">
               <li class="menu-item menu-item-type-post_type menu-item-object-product">
                 <a href="#">Start</a>
               </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-product">
+              <li  class="menu-item menu-item-type-post_type menu-item-object-product">
                 <a href="#">Documentation</a>
               </li>
               <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                <a href="#">Installation</a>
+                <a href="#">Blogs</a>
               </li>
             </ul>
           </div>
@@ -280,7 +214,7 @@
               <li class="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="#">FAQ'S</a>
               </li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <li  id="menu-company" class="menu-item menu-item-type-post_type menu-item-object-page">
                 <a href="#">Blog</a>
               </li>
               <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
@@ -341,109 +275,12 @@
       </div>
     </footer>
   </div>
-
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-      new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-  });
-  document.addEventListener('DOMContentLoaded', () => {
-  const images = [
-    '/PUBLIC-IMAGES/still-life-ruler-crown (1).jpg',
-    '/PUBLIC-IMAGES/still-life-ruler-crown (6).jpg',
-    '/PUBLIC-IMAGES/still-life-ruler-crown (4).jpg',
-    '/PUBLIC-IMAGES/still-life-ruler-crown (2).jpg',
-    '/PUBLIC-IMAGES/about2.png',
-  ];
-
-  let current = 0;
-  const imgElement = document.getElementById('slideshow');
-
-  setInterval(() => {
-    imgElement.classList.add('fade-out');
-
-    setTimeout(() => {
-      current = (current + 1) % images.length;
-      imgElement.src = images[current];
-      imgElement.classList.remove('fade-out');
-    }, 800);
-  }, 3000);
-});
-
-
   
-  $(".hover").mouseleave(
-  function () {
-    $(this).removeClass("hover");
-  }
-);
-
-const imageContainerEl = document.querySelector(".image-container");
-const prevEl = document.getElementById("prev");
-const nextEl = document.getElementById("next");
-let x = 0,
-  timer;
-const updateGallery = (direction) => {
-  x += direction === "next" ? -45 : 45;
-  imageContainerEl.style.transform = `perspective(1000px) rotateY(${x}deg)`;
-  clearTimeout(timer);
-  timer = setTimeout(() => updateGallery(direction), 3000);
-};
-prevEl.addEventListener("click", () => updateGallery("prev"));
-nextEl.addEventListener("click", () => updateGallery("next"));
-updateGallery();
-
-const allDetails = [
-      [
-        "Welcome & introduction session",
-        "Grooming session",
-        "Orientation & press conference - dinner",
-        "Ramp walk & body posture training"
-      ],
-      [
-        "Fitness & diet session",
-        "Makeup & styling tips",
-        "Stage presentation practice"
-      ],
-      [
-        "Photo shoot day",
-        "Interview round preparation",
-        "Choreography practice"
-      ],
-      [
-        "Talent round performance",
-        "Costume rehearsal",
-        "Guest lecture on confidence"
-      ],
-      [
-        "Final rehearsal",
-        "Grand Finale",
-        "Award ceremony & dinner"
-      ]
-    ];
-
-    function showDetails(index) {
-      const buttons = document.querySelectorAll('.day-btn');
-      buttons.forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-      });
-
-      const detailsBox = document.getElementById('details-box');
-      const listItems = allDetails[index].map(item => `<li>${item}</li>`).join('');
-      detailsBox.innerHTML = `<ul>${listItems}</ul>`;
-    }
-
-</script>
-
+  <!-- <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script> -->
 </body>
 </html>
-
