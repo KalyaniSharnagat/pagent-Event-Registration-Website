@@ -21,9 +21,9 @@ body {
       position: fixed;
       z-index: 1;
       height:110px;
-      background-color:#FADADD;
+       background-color:#FADADD;
     }
-
+ 
 .nav-link {
   transition: color 0.3s ease;
 }
