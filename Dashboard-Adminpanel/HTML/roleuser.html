@@ -13,25 +13,24 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <div class="sidebar">
         <div class="sidebar-header">
             <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
         </div>
-        <div class="menu-item"><i class="fa-solid fa-user-shield"></i><a href="/Dashboard-Adminpanel/HTML/roleuser.html"
-                class="menu-label">User Roles</a></div>
-        <div class="menu-item"><i class="fa-solid fa-gauge-high"></i><a href="" class="menu-label">Dashboard</a></div>
-        <div class="menu-item"><i class="fa-solid fa-user"></i><a href="" class="menu-label">Contestants</a></div>
-        <div class="menu-item"><i class="fa-solid fa-users-gear"></i><a href="" class="menu-label">Judge Profiles</a>
+        <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a href="/Dashboard-Adminpanel/HTML/roleuser.html"
+                class="menu-label icon-link">User Roles</a></div>
+        <div class="menu-item"><i class="fa-solid fa-gauge-high  icon-link"></i><a href="" class="menu-label icon-link">Dashboard</a></div>
+        <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a href="" class="menu-label icon-link">Contestants</a></div>
+        <div class="menu-item"><i class="fa-solid fa-users-gear icon-link"></i><a href="" class="menu-label icon-link">Judge Profiles</a>
         </div>
-        <div class="menu-item"><i class="fa-solid fa-calendar-days"></i><a href="" class="menu-label">Event Schedule</a>
+        <div class="menu-item"><i class="fa-solid fa-calendar-days icon-link"></i><a href="" class="menu-label icon-link">Event Schedule</a>
         </div>
-        <div class="menu-item"><i class="fa-solid fa-photo-film"></i><a href="" class="menu-label">Media</a></div>
-        <div class="menu-item"><i class="fa-solid fa-bell"></i><a href="" class="menu-label">Notifications</a></div>
-        <div class="menu-item"><i class="fa-solid fa-handshake-angle"></i><a href="" class="menu-label">Sponsors</a>
+        <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a href="" class="menu-label icon-link">Media</a></div>
+        <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a href="" class="menu-label icon-link">Notifications</a></div>
+        <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a href="" class="menu-label icon-link">Sponsors</a>
         </div>
-        <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a href="" class="menu-label">Blog & News</a></div>
+        <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a href="" class="menu-label icon-link">Blog & News</a></div>
 
     </div>
     <!-- navbar end -->
@@ -59,45 +58,258 @@
             <h2>Welcome Admin</h2>
             <p>Use this panel to manage event schedules and contestant registrations.</p>
         </div>
-        <!-- navbar end -->
-        <!-- User Role Selection -->
-        <div class="role-selection">
-            <h2>Select User Role</h2>
-            <select id="roleSelector">
-                <option value="admin">Admin</option>
-                <option value="eventManager">Event Manager</option>
-            </select>
-            <button onclick="loadDashboard()">Load Dashboard</button>
+        <!--  dashboard navbar end -->
+
+        <body>
+    <div class="table-container" role="region" aria-label="Employee data" tabindex="0">
+        <table aria-label="Employees">
+            <caption>Role of User</caption>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <button class="sort-button" aria-label="Sort by name">
+                            Name
+                            <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <input type="text" class="column-filter" placeholder="Filter by name" aria-label="Filter by name">
+                    </th>
+                    <th scope="col">
+                        <button class="sort-button" aria-label="Sort by role">
+                            Role
+                            <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <input type="text" class="column-filter" placeholder="Filter by role" aria-label="Filter by role">
+                    </th>
+                    <th scope="col">
+                        <button class="sort-button" aria-label="Sort by department">
+                            Department
+                            <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        <input type="text" class="column-filter" placeholder="Filter by department" aria-label="Filter by department">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample data - in practice, this would be populated dynamically -->
+            </tbody>
+        </table>
+        <div class="pagination" role="navigation" aria-label="Pagination">
+            <div class="pagination-info">
+                Showing <span class="current-range">1-10</span> of <span class="total-items">0</span> items
+            </div>
+            <div class="pagination-controls">
+                <button class="prev-page" aria-label="Previous page" disabled>Previous</button>
+                <span class="current-page" aria-label="Current page">Page 1</span>
+                <button class="next-page" aria-label="Next page">Next</button>
+                <select class="page-size-select" aria-label="Items per page">
+                    <option value="5">5 per page</option>
+                    <option value="10" selected>10 per page</option>
+                    <option value="25">25 per page</option>
+                    <option value="50">50 per page</option>
+                </select>
+            </div>
         </div>
-
-
-
-        <!-- Dashboard Section -->
-        <div id="adminDashboard" class="dashboard" style="display:none;">
-            <h2>Admin Dashboard</h2>
-            <p>Welcome, Admin! Manage users, events, etc.</p>
-            <button>Manage Users</button>
-            <button>Manage Events</button>
-        </div>
-
-        <div id="eventManagerDashboard" class="dashboard" style="display:none;">
-            <h2>Event Manager Dashboard</h2>
-            <p>Welcome, Event Manager! Manage events and participants.</p>
-            <button>View Events</button>
-            <button>View Participants</button>
-        </div>
+    </div>
+</body>
+       
+     
         <script>
-            function showDashboard(role) {
-                document.getElementById('role-selector').style.display = 'none';
+             // Generate sample data
+        const sampleData = Array.from({ length: 50 }, (_, i) => ({
+            name: `User ${i + 1}`,
+            role: ['Admin', 'contestant', 'Event manager', 'Sponsorship Manager'][Math.floor(Math.random() * 4)],
+            department: [' Event Planning & Strategy Department', 'Sponsorship & Finance Department', ' Registration & Guest Management Department'][Math.floor(Math.random() * 3)]
+        }));
 
-                if (role === 'admin') {
-                    document.getElementById('admin-dashboard').style.display = 'block';
-                } else if (role === 'manager') {
-                    document.getElementById('manager-dashboard').style.display = 'block';
-                }
+        // Table state
+        let currentPage = 1;
+        let pageSize = 10;
+        let sortColumn = null;
+        let sortDirection = 'ascending';
+        let filters = {
+            name: '',
+            role: '',
+            department: ''
+        };
+
+        // DOM elements
+        const table = document.querySelector('table');
+        const tbody = table.querySelector('tbody');
+        const prevButton = document.querySelector('.prev-page');
+        const nextButton = document.querySelector('.next-page');
+        const pageSizeSelect = document.querySelector('.page-size-select');
+        const currentRange = document.querySelector('.current-range');
+        const totalItems = document.querySelector('.total-items');
+        const filterInputs = document.querySelectorAll('.column-filter');
+
+        // Filter data
+        function filterData(data) {
+            return data.filter(item => 
+                item.name.toLowerCase().includes(filters.name.toLowerCase()) &&
+                item.role.toLowerCase().includes(filters.role.toLowerCase()) &&
+                item.department.toLowerCase().includes(filters.department.toLowerCase())
+            );
+        }
+
+        // Sort data
+        function sortData(data) {
+            if (!sortColumn) return data;
+            
+            return [...data].sort((a, b) => {
+                const aValue = a[sortColumn].toLowerCase();
+                const bValue = b[sortColumn].toLowerCase();
+                const direction = sortDirection === 'ascending' ? 1 : -1;
+                return aValue.localeCompare(bValue) * direction;
+            });
+        }
+
+        // Paginate data
+        function paginateData(data) {
+            const start = (currentPage - 1) * pageSize;
+            return data.slice(start, start + pageSize);
+        }
+
+        // Update table
+        function updateTable() {
+            let filteredData = filterData(sampleData);
+            const totalFilteredItems = filteredData.length;
+            
+            filteredData = sortData(filteredData);
+            const paginatedData = paginateData(filteredData);
+            
+            // Update pagination info
+            totalItems.textContent = totalFilteredItems;
+            const start = Math.min((currentPage - 1) * pageSize + 1, totalFilteredItems);
+            const end = Math.min(currentPage * pageSize, totalFilteredItems);
+            currentRange.textContent = `${start}-${end}`;
+            
+            // Update pagination buttons
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = end >= totalFilteredItems;
+            
+            // Clear existing rows
+            tbody.innerHTML = '';
+            
+            // Add new rows
+            paginatedData.forEach(item => {
+                const row = document.createElement('tr');
+                Object.values(item).forEach(value => {
+                    const cell = document.createElement('td');
+                    cell.textContent = value;
+                    cell.setAttribute('tabindex', '0');
+                    row.appendChild(cell);
+                });
+                tbody.appendChild(row);
+            });
+
+            // Announce update to screen readers
+            announceToScreenReader(`Showing ${start} to ${end} of ${totalFilteredItems} items`);
+        }
+
+        // Event listeners
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updateTable();
             }
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentPage++;
+            updateTable();
+        });
+
+        pageSizeSelect.addEventListener('change', (e) => {
+            pageSize = parseInt(e.target.value);
+            currentPage = 1;
+            updateTable();
+        });
+
+        // Setup column filters
+        Array.from(filterInputs).forEach((input, index) => {
+            const column = ['name', 'role', 'department'][index];
+            input.addEventListener('input', (e) => {
+                filters[column] = e.target.value;
+                currentPage = 1;
+                updateTable();
+            });
+        });
+
+        // Setup sorting
+        const sortButtons = document.querySelectorAll('.sort-button');
+        Array.from(sortButtons).forEach((button, index) => {
+            const column = ['name', 'role', 'department'][index];
+            button.addEventListener('click', () => {
+                if (sortColumn === column) {
+                    sortDirection = sortDirection === 'ascending' ? 'descending' : 'ascending';
+                } else {
+                    sortColumn = column;
+                    sortDirection = 'ascending';
+                }
+                
+                // Update sort indicators
+                Array.from(sortButtons).forEach(btn => btn.removeAttribute('aria-sort'));
+                button.setAttribute('aria-sort', sortDirection);
+                
+                updateTable();
+            });
+        });
+
+        // Keyboard navigation
+        function handleTableKeyboard(e) {
+            const currentCell = e.target;
+            if (!currentCell || !currentCell.parentElement) return;
+            
+            const currentRow = currentCell.parentElement;
+            const rows = Array.from(table.rows || []);
+            const currentRowIndex = rows.indexOf(currentRow);
+            const currentCellIndex = Array.from(currentRow.cells || []).indexOf(currentCell);
+            
+            switch (e.key) {
+                case 'ArrowRight':
+                    if (currentRow.cells[currentCellIndex + 1]) {
+                        currentRow.cells[currentCellIndex + 1].focus();
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (currentRow.cells[currentCellIndex - 1]) {
+                        currentRow.cells[currentCellIndex - 1].focus();
+                    }
+                    break;
+                case 'ArrowDown':
+                    if (rows[currentRowIndex + 1]) {
+                        rows[currentRowIndex + 1].cells[currentCellIndex].focus();
+                    }
+                    break;
+                case 'ArrowUp':
+                    if (rows[currentRowIndex - 1]) {
+                        rows[currentRowIndex - 1].cells[currentCellIndex].focus();
+                    }
+                    break;
+            }
+        }
+
+        table.addEventListener('keydown', handleTableKeyboard);
+
+        // Helper function to announce changes to screen readers
+        function announceToScreenReader(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('class', 'sr-only');
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            setTimeout(() => announcement.remove(), 1000);
+        }
+
+        // Initial table render
+        updateTable();
         </script>
         <script src="/Dashboard-Adminpanel/JAVASCRIPT/script.js"></script>
 </body>
-
 </html>
