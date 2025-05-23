@@ -130,3 +130,12 @@
       color: white;
       margin-bottom: 20px;
     }
+    .notification{
+       background: linear-gradient(to right, #fff0f5);
+    }
+    .border-section{
+      border: 1px solid #ffb6c1;
+    }
+    .bg-color-button{
+      background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);    
+    }
