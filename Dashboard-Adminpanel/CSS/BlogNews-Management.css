@@ -136,21 +136,17 @@ body {
 
 .main_div{
 
-  display: flex;
-  justify-content: center;
+ display: flex;
   gap:12%;
-}
-
-
+} 
 .border {
   padding-top: 5%;
- 
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background-color:#fff0f5;
   border-radius: 3%;
-  border: 2px solid 120deg, #f093fb 0%, #f5576c 100%;
+  border: 1px solid #fff0f5;
   margin-top: 6%;
-  width: 400px;
-  height: 400px;
-
+  width: 700px;
+  height: 350px;
 }
+
 
