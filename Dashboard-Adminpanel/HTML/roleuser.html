@@ -14,39 +14,57 @@
         rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
-        </div>
-        <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a href="/Dashboard-Adminpanel/HTML/roleuser.html"
-                class="menu-label icon-link">User Roles</a></div>
-        <div class="menu-item"><i class="fa-solid fa-gauge-high  icon-link"></i><a href="" class="menu-label icon-link">Dashboard</a></div>
-        <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a href="" class="menu-label icon-link">Contestants</a></div>
-        <div class="menu-item"><i class="fa-solid fa-users-gear icon-link"></i><a href="" class="menu-label icon-link">Judge Profiles</a>
-        </div>
-        <div class="menu-item"><i class="fa-solid fa-calendar-days icon-link"></i><a href="" class="menu-label icon-link">Event Schedule</a>
-        </div>
-        <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a href="" class="menu-label icon-link">Media</a></div>
-        <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a href="" class="menu-label icon-link">Notifications</a></div>
-        <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a href="" class="menu-label icon-link">Sponsors</a>
-        </div>
-        <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a href="" class="menu-label icon-link">Blog & News</a></div>
-
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
     </div>
-    <!-- navbar end -->
+    <div class="menu-item"><i class="fa-solid fa-gauge-high"></i><a
+        href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label">Dashboard</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user-shield"></i><a href="/Dashboard-Adminpanel/HTML/roleuser.html"
+        class="menu-label">User Roles</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user"></i><a
+        href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label">Contestants</a></div>
+    <div class="menu-item"><i class="fa-solid fa-users-gear"></i><a
+        href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label">Judge Profiles</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-calendar-days"></i><a
+        href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label">Event Schedule</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-photo-film"></i><a
+        href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label">Media</a></div>
+    <div class="menu-item"><i class="fa-solid fa-bell"></i><a
+        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label">Notifications</a></div>
+    <div class="menu-item"><i class="fa-solid fa-handshake-angle"></i><a
+        href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label">Sponsors</a></div>
+    <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a
+        href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label">Blog & News</a></div>
+  </div>
+  <div class="main-content">
+    <div class="header">
+      <h3>User Role</h3>
+      <div class="profile-info">
+        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
+        <span>Admin</span>
+      </div>
+    </div>
 
-    <!-- Main Content start -->
-    <div class="main-content">
-        <!-- Header with the Search, filter, Profile -->
-        <div class="header">
-            <div class="search-filter">
-                <input type="text" placeholder="Search here..." />
-                <select>
-                    <option>All</option>
-                    <option>Contestants</option>
-                    <option>Judges</option>
-                    <option>Events</option>
-                </select>
+    <div class="container text-center mt-5">
+      <h2>Select User Role</h2>
+      <div class="btn-group mt-3">
+        <button class="btn btn-primary" onclick="showRole('admin')">Admin</button>
+        <button class="btn btn-success" onclick="showRole('manager')">Event Manager</button>
+      </div>
+
+      <!-- Dashboard Containers -->
+      <div id="admin" class="role-card mt-5">
+        <h3 class="dashboard-title">Admin Dashboard</h3>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card border-primary">
+              <div class="card-body">
+                <h5 class="card-title">Manage Users</h5>
+                <p class="card-text">Add, edit, or delete system users.</p>
+              </div>
             </div>
             <div class="profile-info">
                 <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" />
