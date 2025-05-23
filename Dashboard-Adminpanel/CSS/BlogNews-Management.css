@@ -121,7 +121,6 @@ body {
   margin: 0;
   color: rgb(0, 0, 0);
   font-weight: 600;
-}
 
 .profile-info {
   display: flex;
@@ -174,7 +173,7 @@ body {
 }
 
 .btn-add:hover {
-  background: linear-gradient(to right, #ff8c42, #ff3c7a);
+ background: linear-gradient(90deg, #ff4da6, #ff85c1);
   box-shadow: 0 8px 20px rgba(238, 9, 121, 0.3);
 }
 
