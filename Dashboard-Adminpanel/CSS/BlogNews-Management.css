@@ -1,4 +1,8 @@
-* {
+.blog-tex{
+  font-weight: lighter;
+}
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -189,7 +193,7 @@ body {
   font-family: 'Playfair Display', serif;
   color: #4a004a;
   border: none;
-  width: 80%!important;
+  width: 80% !important;
   margin: auto;
 }
 
@@ -282,3 +286,51 @@ body {
   color: #d991b2;
   font-style: italic;
 }
+
+.card3 {
+
+  float: left;
+  position: relative;
+  height: 350px;
+  width: 700px;
+  margin: 2%;
+  background-color: #fff;
+  
+}
+
+/* .blog-tex{
+  font-weight: lighter;
+} */
+
+.thumbnail {
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -30px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  
+}
+
+.thumbnail img.left {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+}
+
+.right {
+  margin-left: 400px;
+  margin-right: 20px;
+}
+
+ h1{
+  padding-top: 15px;
+  color: #4B4B4B;
+}
+
