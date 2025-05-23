@@ -246,14 +246,15 @@
     }
 
    .bg-color-button{
-      background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);    
+      background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);  
+      border-radius: 5px;  
     }
     /* judge panel end */
 
 
    /*  modal start */
    .btn-add {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);    
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
