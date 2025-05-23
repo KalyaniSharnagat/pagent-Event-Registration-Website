@@ -21,9 +21,9 @@ body {
       position: fixed;
       z-index: 1;
       height:110px;
-      background-color:#FADADD;
+       background-color:#FADADD;
     }
-
+ 
 .nav-link {
   transition: color 0.3s ease;
 }
@@ -39,9 +39,12 @@ body {
     /* Responsive logo image */
     .nav img {
       max-width: 100%;
-      height: auto;
+      height: auto;}
 
-    }
+/* Responsive logo image */
+.nav img {
+  max-width: 100%;
+  height: auto;}
 
     @media (max-width: 768px) {
       .nav > div {
@@ -54,10 +57,14 @@ body {
      padding: 2rem 0rem;
     }
 
-@media (min-width: 576px){
+.container {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;
-    
+
     .modal-content {
       padding: 1rem;
     }
@@ -76,7 +83,7 @@ body {
 
 
 .delimiter {
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 .social-buttons {
@@ -99,12 +106,13 @@ body {
 }
 
 .gradient-btn:hover {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-} 
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 
 @import url(https://fonts.googleapis.com/css?family=Open+sans);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
 .snip1515 {
   font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
@@ -116,9 +124,9 @@ body {
   text-align: center;
   line-height: 1.4em;
   font-size: 14px;
-  box-shadow: none; 
+  box-shadow: none;
   border-radius: 20px;
-  
+
 }
 
 .snip1515 * {
@@ -234,7 +242,8 @@ body {
   background: black;
   color: #fff;
 }
- .text{
+
+.text {
   text-align: justify;
   text-justify: inter-word;
   color:#703B42;
@@ -403,4 +412,3 @@ body {
 .collapsed i.fas.fa-arrow-up {
     transform: rotate(180deg);
 }
-/* end faq */
