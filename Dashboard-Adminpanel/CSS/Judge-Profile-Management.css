@@ -271,161 +271,126 @@ body {
     /* judge panel end */
 
 
-    /* modal button */
-    :root {
-    --color-facebook: #3b5998;
-    --color-google: #ea4335;
-    --color-twitter: #1da1f2;
-
-    --style-1-color: #009688;
-    }
-.modal-style-1 .modal-login {
-    width: 350px;
-    font-size: 13px;
-}
-.modal-style-1 .modal-login .modal-header {
-    border-bottom: none;
-    position: relative;
-    justify-content: center;
-}
-.modal-style-1 .modal-login h4 {
-    color: var(--style-1-color);
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-    border-bottom: 0;
-    text-transform: uppercase;
-    line-height: 1;
-    letter-spacing: 3px;
-    font-weight: 900;
-    width: 100%;
-}
-.modal-style-1 .modal-header .close{
-    position: absolute;
-    right: 20px;
-}
-.modal-style-1  .close:focus, .modal-style-1 .close:active {
-   outline: none !important;
-   box-shadow: none;
-}
-.modal-style-1 .modal-login a{
-    text-decoration: none;
+   /*  modal start */
+   .btn-add {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  transition: 0.3s;
 }
 
-.modal-style-1 .modal-login form{
-    width: 280px;
-    margin: 0 auto;
+.btn-add:hover {
+  background: linear-gradient(to right, #ff8c42, #ff3c7a);
+  box-shadow: 0 8px 20px rgba(238, 9, 121, 0.3);
 }
 
-.modal-style-1 .modal-login span.input-group-addon {
-    width: 60px;
-    text-align: center;
-    border-radius: 25px 0 0 25px;
-    border: 1px solid var(--style-1-color);
-    padding: 8px;
-    margin-right: 5px;
-    background: var(--style-1-color);
-    color: #fff;
-}
-.modal-style-1 .modal-login span.input-group-addon i{
-    font-size: 16px;
-}
-
-.modal-style-1 input.form-control {
-    border-radius: 0 25px 25px 0;
-    font-size: 13px;
-    border: 1px solid var(--style-1-color);
-}
-.modal-style-1 .btn-signin {
-    border-radius: 25px;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    background-color: var(--style-1-color);
-    border: 1px solid var(--style-1-color);
+.pageant-modal {
+  background: linear-gradient(145deg, #fdf6fb, #ffe6f0);
+  border-radius: 25px;
+  box-shadow:
+    0 4px 20px rgba(255, 77, 166, 0.3),
+    inset 0 0 10px #ff85c1;
+  font-family: 'Playfair Display', serif;
+  color: #4a004a;
+  border: none;
+  width: 80%!important;
+  margin: auto;
 }
 
-.modal-style-1 p.hint-text {
-    text-align: center;
+.pageant-modal .modal-header {
+  background: linear-gradient(90deg, #ff4da6, #ff85c1);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: white;
+  padding: 1.3rem 2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 1.7rem;
+  box-shadow: 0 4px 10px rgba(255, 77, 166, 0.4);
 }
 
-.modal-style-1 .register{
-    color: var(--style-1-color);
-    font-weight: 600px;
+.pageant-modal .btn-close-white {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.modal-style-1 .social-login a {
-    text-decoration: none;
-    color: #fff;
-    margin: 2px;
-    height: 30px;
-    display: inline-block;
-    width: 30px;
-    padding: 5px 0;
-    text-align: center;
-    cursor: pointer;
-}
-.modal-style-1 .btn-facebook{
-    background-color: var(--color-facebook);
-} 
-
-.modal-style-1 .btn-google{
-    background-color: var(--color-google);
-} 
-
-.modal-style-1 .btn-twitter{
-    background-color: var(--color-twitter);
-} 
-.dark.modal-style-1 .modal-content{
-    background: #0b0b1f;
-    color: #fff;
-}
-.dark.modal-style-1 .close, .modal-style-1.dark .modal-login h4{
-    color:#fff;
+.pageant-modal .btn-close-white:hover {
+  opacity: 1;
 }
 
-.dark .text-danger{
-    color: #777!important;
-}
-@media only screen and (max-width: 360px) {
-    .modal-style-1 .modal-login {width: 100%; margin:5px;}
-    .modal-style-1 .modal-login form{width: 100%;}
-}
-
-
-.main-container{
-    width:1140px;
-    margin: 0 auto;
-}
-.text-12{
-    font-size: 12px;
+.pageant-modal .modal-body {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
 }
 
-.button-card {
-    margin: 0 auto;
-    box-shadow: 1px 2px 5px 2px #d1d1d1;
-    padding: 20px;
-    border-radius: 5px;
-}
-.button-card img {
-    border: 1px solid #f1f1f1;
-    border-radius: 5px;
-    max-height: 350px;
-    position: relative;
+.pageant-modal .form-control,
+.pageant-modal .form-select {
+  border-radius: 15px;
+  border: 2px solid #ff85c1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  transition: border-color 0.3s ease;
 }
 
-.btn-theme{
-    width: 100px;
-    height: 35px;
-    padding: 3px;
-    border-radius: 26px;
+.pageant-modal .form-control:focus,
+.pageant-modal .form-select:focus {
+  border-color: #ff4da6;
+  box-shadow: 0 0 8px #ff4da6aa;
+  outline: none;
 }
 
-@media only screen and (max-width: 1140px) {
-    .main-container{ width: 100%; margin: 0 15px;}
+.pageant-modal .modal-footer {
+  background: transparent;
+  border-top: none;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem 2.5rem;
 }
 
-@media only screen and (max-width: 480px) {
-    .button-card img {width: 100%; height: auto;}
+.pageant-modal .btn-outline-light {
+  color: #ff4da6;
+  border-color: #ff4da6;
+  border-radius: 15px;
+  font-weight: 600;
+  padding: 0.6rem 1.8rem;
+  transition: all 0.3s ease;
 }
+
+.pageant-modal .btn-outline-light:hover {
+  background-color: #ff4da6;
+  color: white;
+}
+
+.pageant-modal .btn-gradient {
+  background: linear-gradient(90deg, #ff4da6, #ff85c1);
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 0.6rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pageant-modal .btn-gradient:hover {
+  background: linear-gradient(90deg, #ff6bb9, #ff9ecb);
+  box-shadow: 0 4px 15px #ff85c1cc;
+}
+
+.pageant-modal ::placeholder {
+  color: #d991b2;
+  font-style: italic;
+}
+
 /* modal end */
