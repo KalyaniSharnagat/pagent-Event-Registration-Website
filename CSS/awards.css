@@ -24,17 +24,9 @@ nav {
   position: fixed;
   z-index: 1;
   height: 110px;
-  /* margin-top: 20px; */
-  /* margin-left: 20px;
-      margin-right:40px; */
   background-color: #FADADD;
-  /* border-radius: 50px; */
 }
 
-/* .navimage{
-         padding-top: 100px;
-
-    } */
 nav .nav a {
   text-decoration: none;
   color: black;
@@ -45,6 +37,27 @@ nav .nav a {
 nav .nav a:hover {
   color: #BE5985;
 }
+
+.gradient-btn {
+  background-image: linear-gradient(to right, #f27db6, #bc1060); 
+  /* border: none;
+  color: white; */
+  transition: 0.4s ease;
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  /* border-radius: 20px; */
+}
+ .gradient-text{
+  border: none;
+  color: white;
+  transition: 0.4s ease;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+ }
+.gradient-btn:hover {
+  background-image: linear-gradient(to right, #f27db6, #bc1060); 
+} 
 
 
 /* Responsive logo image */
