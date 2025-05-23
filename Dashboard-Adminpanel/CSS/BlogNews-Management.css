@@ -8,15 +8,12 @@
   box-sizing: border-box;
   font-family: "Overpass", sans-serif;
 }
-body{
-   font-family: "Overpass", sans-serif;
-   font-weight: bold;
-}
-.bg_colour {
+
+body {
   display: flex;
   background: linear-gradient(to right, #ffe0f0);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -52,6 +49,7 @@ body{
   color: white;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-weight: bold;
 }
 
 .menu-item:hover {
@@ -79,46 +77,55 @@ body{
 
 .main-content {
   margin-left: 70px;
-  padding: 30px;
-  width: 100%;
-  transition: margin-left 0.3s ease;
+  width: calc(100% - 70px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  overflow: hidden;
 }
 
 .sidebar:hover~.main-content {
-  margin-left: 320px;
+  margin-left: 220px;
+  width: calc(100% - 220px);
 }
 
+.sidebar:hover~.main-content .header {
+  left: 220px;
+}
+
+.container-fluid {
+  margin-top: 90px;
+  padding: 20px;
+  /* overflow-y: auto; */
+  flex: 1;
+}
+
+
+/*/////////////////////////////////////////////////////////////////*/
+
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff0f5;
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   padding: 15px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  height: 70px;
   box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
+  transition: left 0.3s ease, width 0.3s ease;
 }
 
-.search-filter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.header h3 {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
 }
-
-.search-filter input {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  outline: none;
-}
-
-.search-filter select {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  background: white;
-}
-
 .profile-info {
   display: flex;
   align-items: center;
@@ -131,13 +138,24 @@ body{
   border-radius: 50%;
 }
 
-.dashboard-header {
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 20px;
-  border-radius: 10px;
+.profile-info span {
   color: white;
-  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .header {
+    left: 0;
+    padding: 10px 15px;
+  }
+
+  .header h3 {
+    font-size: 18px;
+  }
+}
+
+/*/////////////////////////////////////////////////////////////////*/
 
 .btn-outline-secondary {
   border-radius: 10px;
@@ -159,7 +177,7 @@ body{
 }
 
 .btn-add:hover {
-  background: linear-gradient(to right, #ff8c42, #ff3c7a);
+ background: linear-gradient(90deg, #ff4da6, #ff85c1);
   box-shadow: 0 8px 20px rgba(238, 9, 121, 0.3);
 }
 
