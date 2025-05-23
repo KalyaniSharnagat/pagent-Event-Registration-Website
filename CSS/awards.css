@@ -2,16 +2,16 @@
 * {
   box-sizing: border-box;
 }
-
 body {
-  background-color: #ffffff;
+  background-color: #F7A8C4;
   color: white !important;
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   /* padding: 2rem; */
 }
-
-
+ .background-color{
+   background-color: #F7A8C4;
+ }
 .color{
   color:#B76E79;
 }
@@ -20,11 +20,10 @@ body {
 }
 /* navbar */
     nav {
-
       position: fixed;
       z-index: 1;
       height:110px;
-      background-color:#FADADD;
+      background-color:#F7A8C4;
     }
 
 .nav-link {

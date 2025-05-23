@@ -5,7 +5,7 @@
   padding: 0;
 }
 .backgroundColor {
-  background-color: #BE5985;
+  background-color: #F7A8C4;
   color: #151313;
 }
 .color{
@@ -318,7 +318,7 @@ button {
 }
 
 .footer-wave-path {
-  fill: #6A1E55;
+  fill: #F7A8C4;
 }
 
 .footer-content {
@@ -465,7 +465,7 @@ button {
 }
 
 .footer-social-amoeba-path {
-  fill: #6A1E55;
+  fill: #F7A8C4;
 }
 
 .footer-social-link.linkedin {
@@ -526,7 +526,7 @@ button {
 }
 
 .footer-copyright {
-  background-color: #6A1E55;
+  background-color: #F7A8C4;
   color: #fff;
   padding: 15px 30px;
   text-align: center;

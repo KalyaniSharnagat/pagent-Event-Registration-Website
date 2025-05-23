@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #F7A8C4 0%, #f9cbd5 100%);
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #F7A8C4;
   color: #333;
 }
 .color{
@@ -13,11 +13,10 @@ body {
 }
 /* navbar */
     nav {
-
       position: fixed;
       z-index: 1;
       height:110px;
-      background-color:#FADADD;
+      background-color:#F7A8C4;
     }
 
 .nav-link {
@@ -250,7 +249,6 @@ body {
   gap: 6px;
   font-size: 1.15rem;
 }
-
 .contact-info .icon {
   font-size: 1.4rem;
 }
@@ -302,7 +300,7 @@ body {
 }
 
 .footer-wave-path {
-  fill: #6A1E55;
+  fill: #F7A8C4;
 }
 
 
@@ -450,7 +448,7 @@ body {
 }
 
 .footer-social-amoeba-path {
-  fill: #6A1E55;
+  fill: #F7A8C4;
 }
 
 .footer-social-link.linkedin {
@@ -511,7 +509,7 @@ body {
 }
 
 .footer-copyright {
-  background-color: #6A1E55;
+  background-color: #F7A8C4;
   color: #fff;
   padding: 15px 30px;
   text-align: center;
