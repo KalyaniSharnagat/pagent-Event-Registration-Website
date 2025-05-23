@@ -38,255 +38,244 @@
     <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a
         href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label">Blog & News</a></div>
   </div>
-  <!-- navbar end -->
-
-  <!-- Main Content start -->
   <div class="main-content">
-    <!-- Header with the Search, filter, Profile -->
     <div class="header">
-      <div class="search-filter">
-        <input type="text" placeholder="Search here..." />
-        <select>
-          <option>All</option>
-          <option>Contestants</option>
-          <option>Judges</option>
-          <option>Events</option>
-        </select>
-      </div>
+      <h3>Judge-Profile-Management</h3>
       <div class="profile-info">
-        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" />
+        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
         <span>Admin</span>
       </div>
     </div>
-    <!-- navbar end -->
 
 
-     <!-- Dashboard welcome-->
+    <!-- Dashboard welcome-->
     <div class="dashboard-header">
       <div>
-      <h2>Welcome Admin</h2>
-      <p>Use this panel to manage event schedules and contestant registrations.</p>
+        <h2>Welcome Admin</h2>
+        <p>Use this panel to manage event schedules and contestant registrations.</p>
       </div>
       <div class="text-center mt-5">
         <a href="#registerModal1" data-toggle="modal" class="btn btn-theme btn-success text-white">Register</a>
       </div>
     </div>
     <!-- dashboard welcome end -->
-      <!-- modal form -->
+    <!-- modal form -->
 
-	<!-- Register Modal -->
-<div id="registerModal1" class="modal fade">
-  <div class="modal-dialog modal-login">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <h4 class="modal-title w-100 text-center">Register</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+    <!-- Register Modal -->
+    <div id="registerModal1" class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h4 class="modal-title w-100 text-center">Register</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
 
-      <div class="modal-body">
-        <form action="#" method="post">
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-user"></i></span>
+          <div class="modal-body">
+            <form action="#" method="post">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+                </div>
               </div>
-              <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                  </div>
+                  <input type="email" class="form-control" name="email" placeholder="Enter email address" required>
+                </div>
               </div>
-              <input type="email" class="form-control" name="email" placeholder="Enter email address" required>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" name="password" placeholder="Enter password" required
+                    autocomplete="on">
+                </div>
               </div>
-              <input type="password" class="form-control" name="password" placeholder="Enter password" required autocomplete="on">
-            </div>
-          </div>
 
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-eye-slash"></i></span>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-eye-slash"></i></span>
+                  </div>
+                  <input type="password" class="form-control" name="password_confirmation" placeholder="Retype password"
+                    required autocomplete="on">
+                </div>
               </div>
-              <input type="password" class="form-control" name="password_confirmation" placeholder="Retype password" required autocomplete="on">
-            </div>
+
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+              </div>
+
+              <p class="text-center mt-3">or register with</p>
+              <div class="social-login text-center">
+                <a href="redirect/facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="redirect/google"><i class="fab fa-google"></i></a>
+                <a href="redirect/twitter"><i class="fab fa-twitter"></i></a>
+              </div>
+            </form>
           </div>
 
-          <div class="form-group text-center">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          <div class="text-center mt-3 mb-2">
+            Already have an account?
+            <a class="login" href="#loginModal1" data-dismiss="modal" data-toggle="modal">Login</a>
           </div>
-
-          <p class="text-center mt-3">or register with</p>
-          <div class="social-login text-center">
-            <a href="redirect/facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="redirect/google"><i class="fab fa-google"></i></a>
-            <a href="redirect/twitter"><i class="fab fa-twitter"></i></a>
-          </div>
-        </form>
-      </div>
-
-      <div class="text-center mt-3 mb-2">
-        Already have an account? 
-        <a class="login" href="#loginModal1" data-dismiss="modal" data-toggle="modal">Login</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-       <!-- modal form -->
+    <!-- modal form -->
 
-     <!-- judege panel -->
-      <section class="judge-form-container">
-    <h2>Judge Profile</h2>
-    <form class="judge-form">
-      <div class="form-group">
-        <label for="profile-pic">Profile Picture</label>
-        <input type="file" id="profile-pic" accept="image/*" />
-      </div>
-      <div class="form-group">
-        <label for="full-name">Full Name *</label>
-        <input type="text" id="full-name" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" required />
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" />
-      </div>
-      <div class="form-group">
-        <label for="bio">Bio/Credentials</label>
-        <textarea id="bio" rows="3"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="status">Status</label>
-        <select id="status">
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-        </select>
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="bg-color-button">Save</button>
-        <button type="reset" class="bg-color-button">Cancel</button>
-      </div>
-    </form>
-  </section>
+    <!-- judege panel -->
+    <section class="judge-form-container">
+      <h2>Judge Profile</h2>
+      <form class="judge-form">
+        <div class="form-group">
+          <label for="profile-pic">Profile Picture</label>
+          <input type="file" id="profile-pic" accept="image/*" />
+        </div>
+        <div class="form-group">
+          <label for="full-name">Full Name *</label>
+          <input type="text" id="full-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" />
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio/Credentials</label>
+          <textarea id="bio" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="bg-color-button">Save</button>
+          <button type="reset" class="bg-color-button">Cancel</button>
+        </div>
+      </form>
+    </section>
 
-  <!-- Judge List Section -->
-  <section class="judge-list">
-    <h2>All Judges</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Profile</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 2" class="profile-img" /></td>
-          <td>John Smith</td>
-          <td>john@example.com</td>
-          <td>Inactive</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Activate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Active</td>
-          <td>
-            <button class="bg-color-button">Edit</button>
-            <button class="bg-color-button">Deactivate</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>  
-  
-<!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Judge List Section -->
+    <section class="judge-list">
+      <h2>All Judges</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Profile</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 2" class="profile-img" /></td>
+            <td>John Smith</td>
+            <td>john@example.com</td>
+            <td>Inactive</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Activate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
+            <td>Jane Doe</td>
+            <td>jane@example.com</td>
+            <td>Active</td>
+            <td>
+              <button class="bg-color-button">Edit</button>
+              <button class="bg-color-button">Deactivate</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
