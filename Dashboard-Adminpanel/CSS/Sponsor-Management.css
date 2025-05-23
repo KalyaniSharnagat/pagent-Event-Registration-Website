@@ -130,3 +130,63 @@
       color: white;
       margin-bottom: 20px;
     }
+    /* content */
+     /* Table Styling */
+    .judge-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .judge-list th, .judge-list td {
+      padding: 0.75rem;
+      border: 1px solid #ffb6c1;
+      text-align: left;
+    }
+
+    .profile-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .judge-form {
+        flex-direction: column;
+      }
+
+      .judge-list table, .judge-list thead, .judge-list tbody, .judge-list th, .judge-list td, .judge-list tr {
+        display: block;
+      }
+
+      .judge-list tr {
+        margin-bottom: 1rem;
+       border: 1px solid #ffb6c1;
+        padding: 1rem;
+      }
+
+      .judge-list td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+      }
+
+      .judge-list td::before {
+        content: attr(data-label);
+        font-weight: bold;
+      }
+    }
+
+   .bg-color-button{
+      background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);    
+    }
+    button {
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    /* content end */
