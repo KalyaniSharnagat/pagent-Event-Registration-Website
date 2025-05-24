@@ -274,3 +274,81 @@ body {
     font-family: var(--lato);
 }
 /* Navbar */
+
+/* judge criteria */
+.criteria-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px #A9C9FF;
+	 margin-top: 60px;
+
+    }
+
+    .criteria-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      overflow-y: auto;
+      max-height: 400px; /* Optional: Set a fixed height for vertical scrolling */
+    }
+
+     table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Prevent cramping on small screens */
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .criteria-container h2 {
+      font-size: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    table {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .criteria-container {
+      padding: 10px;
+    }
+
+    .criteria-container h2 {
+      font-size: 18px;
+    }
+
+    th, td {
+      padding: 8px;
+      font-size: 13px;
+    }
+
+    table {
+      font-size: 13px;
+    }
+  }
+	/* judge criteria */
