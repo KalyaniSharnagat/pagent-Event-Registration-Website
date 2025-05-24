@@ -12,43 +12,46 @@
   <script defer src="/Javascript-website/script.js"></script>
 
 </head>
-<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow">
-    <div class="container ms-5">
-      <a class="navbar-brand" href="/HTML/INDEX.html">
-        <img src="/PUBLIC-IMAGES/149442286_c05e8a83-338e-4525-bd74-f6f4217ba376-removebg-preview.png" alt="Logo"
-          width="150" height="auto">
-      </a>
+<body style="background-color: #F7A8C4;;">
+<nav class="navbar navbar-expand-md  fixed-top shadow">
+  <div class="container-fluid px-4">
+    <!-- Logo on Left -->
+    <a class="navbar-brand" href="/HTML/INDEX.html">
+      <img src="/PUBLIC-IMAGES/149442286_c05e8a83-338e-4525-bd74-f6f4217ba376-removebg-preview.png" alt="Logo" width="150">
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Toggler Button (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/INDEX.html">HOME</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/aboutus.html">ABOUT</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/awards.html">AWARDS</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/contact.html">CONTACT US</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="d-flex">
-        <button type="button" class="btn btn-info rounded-pill gradient-btn" data-bs-toggle="modal"
-          data-bs-target="#loginModal">
-          Login
-        </button>
-      </div>
+    <!-- Navbar Items fully pushed to the right -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/INDEX.html">HOME</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/aboutus.html">ABOUT</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/awards.html">AWARDS</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/contact.html">CONTACT US</a>
+        </li>
+        <li class="nav-item ps-3">
+          <button type="button" class="btn  rounded-pill gradient-btn" data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+            Login
+          </button>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -91,9 +94,7 @@
       </div>
     </div>
   </div>
-  
-<body>
-  <section style="background: linear-gradient(135deg, #F7A8C4 0%, #f9cbd5 100%);">
+  <section>
     <div class="banner" role="banner" aria-label="Contact Us Banner">
       <div class="overlay"></div>
       <h1 class="banner-text" data-aos="zoom-in" data-aos-duration="1500">Contact Us</h1>
@@ -115,26 +116,41 @@
             oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')">
           <input type="email" name="email" placeholder="Your Email" required
             oninvalid="this.setCustomValidity('Please enter your email')" oninput="this.setCustomValidity('')">
-          <textarea name="message" rows="5" placeholder="Your Message" required
+          <textarea name="message" placeholder="Your Message"  required
             oninvalid="this.setCustomValidity('Please enter your message')"
             oninput="this.setCustomValidity('')"></textarea>
           <button type="submit">Send Message</button>
         </form>
         <div id="formMessage" role="alert" aria-live="polite" style="display:none;"></div>
       </div>
-
-      <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
+      <!-- <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
         <h2>Contact Information</h2>
         <p><strong><span class="icon">📞</span> Phone:</strong> +91 98765 43210 <br> +91 79721 92831</p>
         <p><strong><span class="icon">📧</span> Email:</strong> rsisteam@example.com</p>
         <p><strong><span class="icon">📍</span> Address:</strong> 10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir,
           Saubhagya Nagar, Ghogali,
           Nagpur, Maharashtra 440034</p>
-      </div>
+      </div> -->
+      <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
+  <h2>Contact Information</h2>
+  
+  <p><strong><span class="icon">📞</span> Phone:</strong><br>
+    <span class="info">+919876543210<br>+919876543210</span>
+  </p>
+  
+  <p><strong><span class="icon">📧</span> Email:</strong><br>
+    <span class="info">rsisteam@example.com</span>
+  </p>
+  
+  <p><strong><span class="icon">📍</span> Address:</strong><br>
+    <span class="info">10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir,<br>
+      Saubhagya Nagar, Ghogali,<br>
+      Nagpur, Maharashtra 440034</span>
+  </p>
+</div>
+
     </section>
   </section>
-
-
   <div class="pg-footer">
     <footer class="footer">
       <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
@@ -226,10 +242,10 @@
           <div class="footer-call-to-action">
             <h2 class="footer-call-to-action-title"> Let's Chat</h2>
             <p class="footer-call-to-action-description"> Have a support question?</p>
-            <a class="footer-call-to-action-button button" href="contact.html" target="_self"> Get in Touch </a>
+            <a class="footer-call-to-action-button button footer-button" href="contact.html" target="_self"> Get in Touch </a>
           </div>
           <div class="footer-call-to-action">
-            <h2 class="footer-call-to-action-title"> You Call Us</h2>
+                       <h2 class="footer-call-to-action-title"> You Call Us</h2>
             <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX"
                 target="_self"> 0124-64XXXX </a></p>
           </div>
@@ -240,7 +256,7 @@
               d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
             </path>
           </svg>
-          <a class="footer-social-link linkedin" href="#" target="_blank">
+          <a class="footer-social-link linkedin" href="https://www.linkedin.com/company/rsinfotechsys/posts/?feedView=all" target="_blank">
             <span class="hidden-link-text">Linkedin</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
               <path class="footer-social-icon-path"
@@ -248,7 +264,7 @@
               </path>
             </svg>
           </a>
-          <a class="footer-social-link twitter" href="https://x.com/" target="_blank">
+          <a class="footer-social-link twitter" href="https://rsinfotechsys.com/#" target="_blank">
             <span class="hidden-link-text">Twitter</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
               <path class="footer-social-icon-path"
@@ -256,7 +272,7 @@
               </path>
             </svg>
           </a>
-          <a class="footer-social-link youtube" href="#" target="_blank">
+          <a class="footer-social-link youtube" href="https://www.youtube.com/RightServe" target="_blank">
             <span class="hidden-link-text">Youtube</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
               <path class="footer-social-icon-path"
@@ -264,7 +280,7 @@
               </path>
             </svg>
           </a>
-          <a class="footer-social-link github" href="#" target="_blank">
+          <a class="footer-social-link github" href="https://github.com/RightServe" target="_blank">
             <span class="hidden-link-text">Github</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
               <path class="footer-social-icon-path"
@@ -284,17 +300,10 @@
       </div>
     </footer>
   </div>
-</body>
-
-</html>
-
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
   // Initialize AOS
   AOS.init();
-
   // Form submission handling
   const form = document.getElementById('contactForm');
   const formMessage = document.getElementById('formMessage');
@@ -307,10 +316,6 @@
       form.reportValidity();
       return;
     }
-
-    // Here you could add AJAX to send form data to server
-
-    // For now, just show a success message
     formMessage.style.display = 'block';
     formMessage.textContent = 'Thank you for contacting us! We will get back to you soon.';
     form.reset();
@@ -324,5 +329,4 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

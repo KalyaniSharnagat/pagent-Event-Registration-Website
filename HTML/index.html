@@ -8,47 +8,49 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/CSS/index1.css">
-  <link rel="stylesheet" href="/CSS/aboutus.css">
+  <!-- <link rel="stylesheet" href="/CSS/aboutus.css"> -->
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow">
-    <div class="container ms-5">
-      <a class="navbar-brand" href="/HTML/INDEX.html">
-        <img src="/PUBLIC-IMAGES/149442286_c05e8a83-338e-4525-bd74-f6f4217ba376-removebg-preview.png" alt="Logo"
-          width="150" height="auto">
-      </a>
+<nav class="navbar navbar-expand-md  fixed-top shadow">
+  <div class="container-fluid px-4">
+    <!-- Logo on Left -->
+    <a class="navbar-brand" href="/HTML/INDEX.html">
+      <img src="/PUBLIC-IMAGES/149442286_c05e8a83-338e-4525-bd74-f6f4217ba376-removebg-preview.png" alt="Logo" width="150">
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Toggler Button (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/INDEX.html">HOME</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/aboutus.html">ABOUT</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/awards.html">AWARDS</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link active" href="/HTML/contact.html">CONTACT US</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="d-flex">
-        <button type="button" class="btn btn-info rounded-pill gradient-btn" data-bs-toggle="modal"
-          data-bs-target="#loginModal">
-          Login
-        </button>
-      </div>
+    <!-- Navbar Items fully pushed to the right -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item px-3">
+          <a class="nav-link active nav-text-color" href="/HTML/INDEX.html">HOME</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/aboutus.html">ABOUT</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/awards.html">AWARDS</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/HTML/contact.html">CONTACT US</a>
+        </li>
+        <li class="nav-item ps-3">
+          <button type="button" class="btn  rounded-pill gradient-btn" data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+            Login
+          </button>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
 
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -91,10 +93,11 @@
       </div>
     </div>
   </div>
+  <img src="/PUBLIC-IMAGES/background-img.png" width="100%" draggable="false" class="background-img">
   
-     <div>
+     <!-- <div>
       <img src="/PUBLIC-IMAGES/about2.png" alt="slideshow image">
-    </div>
+    </div> -->
 
     <div class="container text-center color">
       <h1>____________OUR UPCOMMING EVENTS____________</h1>
@@ -118,8 +121,10 @@
     </div>
     <!-- events end -->
     <!-- ceo section -->
+  <section>
+   <div style="background-color:#F7A8C4">
     <h1 class="color text-center"> _________CEO & FOUNDER OF ORGANIZATION_________</h1>
-    <div class="container d-flex gap-5">
+    <div class="container d-flex gap-5 CEO-foundersection">
       <div>
         <div class="card2">
           <div class="img-bx">
@@ -138,13 +143,14 @@
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+    <div class="ceo-section">    
       <div>
         <h3>Muskaan Gairola</h3>
         <h5 class="pb-5">(Founder & CEO)</h5>
@@ -166,6 +172,8 @@
         </div>
       </div>
     </div>
+    </div>
+   </div> 
     <!-- ceo section end -->
     <!-- judges section -->
     <div>
@@ -232,7 +240,8 @@
   </div>
 
    <!-- social media start -->
-  <div class="container py-5">
+  <!-- <div class="container py-5">
+
   <h2 class="text-center mb-4 color">_________Our Social Media_________</h2>
   <div class="row g-4 mt-5">
     <div class="col-md-6">
@@ -258,8 +267,40 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- social media end -->
+<div style="background-color: #F7A8C4;" >
+ <div class="container py-5">
+  <h2 class="text-center mb-4 color">_________Our Social Media_________</h2>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/opRpZS_rafA" title="Video 1"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/dKVpe_GIh_E" title="Video 2"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/Pmv2qROwH1U" title="Video 3"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/Pmv2qROwH1U" title="Video 4"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
  <!-- faq start -->
  <section class="faq">
       <div class="container">
@@ -417,7 +458,7 @@
           <div class="footer-call-to-action">
             <h2 class="footer-call-to-action-title"> Let's Chat</h2>
             <p class="footer-call-to-action-description"> Have a support question?</p>
-            <a class="footer-call-to-action-button button" href="contact.html" target="_self"> Get in Touch </a>
+            <a class="footer-call-to-action-button button footer-button" href="contact.html" target="_self"> Get in Touch </a>
           </div>
           <div class="footer-call-to-action">
             <h2 class="footer-call-to-action-title"> You Call Us</h2>
@@ -431,7 +472,7 @@
               d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
             </path>
           </svg>
-          <a class="footer-social-link linkedin" href="#" target="_blank">
+          <a class="footer-social-link linkedin" href="https://www.linkedin.com/company/rsinfotechsys/posts/?feedView=all" target="_blank">
             <span class="hidden-link-text">Linkedin</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
               <path class="footer-social-icon-path"
@@ -439,7 +480,7 @@
               </path>
             </svg>
           </a>
-          <a class="footer-social-link twitter" href="https://x.com/" target="_blank">
+          <a class="footer-social-link twitter" href="https://rsinfotechsys.com/#" target="_blank">
             <span class="hidden-link-text">Twitter</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
               <path class="footer-social-icon-path"
@@ -447,7 +488,7 @@
               </path>
             </svg>
           </a>
-          <a class="footer-social-link youtube" href="#" target="_blank">
+          <a class="footer-social-link youtube" href="https://www.youtube.com/RightServe" target="_blank">
             <span class="hidden-link-text">Youtube</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
               <path class="footer-social-icon-path"
@@ -455,7 +496,7 @@
               </path>
             </svg>
           </a>
-          <a class="footer-social-link github" href="#" target="_blank">
+          <a class="footer-social-link github" href="https://github.com/RightServe" target="_blank">
             <span class="hidden-link-text">Github</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
               <path class="footer-social-icon-path"
@@ -492,23 +533,6 @@
         new bootstrap.Tooltip(tooltipTriggerEl);
       });
     });
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   const images = [
-    //     '/PUBLIC-IMAGES/still-life-ruler-crown (1).jpg',
-    //     '/PUBLIC-IMAGES/still-life-ruler-crown (6).jpg',
-    //     '/PUBLIC-IMAGES/still-life-ruler-crown (4).jpg',
-    //     '/PUBLIC-IMAGES/still-life-ruler-crown (2).jpg',
-    //     '/PUBLIC-IMAGES/about2.png',
-    //   ];
-
-    //   let current = 0;
-    //   const imgElement = document.getElementById('slideshow');
-
-    //   setInterval(() => {
-    //     current = (current + 1) % images.length;
-    //     imgElement.src = images[current];
-    //   }, 2000);
-    // });
 
     document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
