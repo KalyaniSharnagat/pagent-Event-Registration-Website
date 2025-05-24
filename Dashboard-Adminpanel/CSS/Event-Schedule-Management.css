@@ -52,6 +52,9 @@ body {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
 }
+ .icon-link:active{
+      color: blueviolet;
+     }
 
 .menu-item i {
   font-size: 18px;
