@@ -1,18 +1,12 @@
-/* body {
-    margin: 0; 
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    background-image: url("/PUBLIC-IMAGES/background2.jpg"); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-} */
-
-
-
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+.navbar{
+  background-color: #f27db681;
+}
+.nav-text-color{
+  color: white;
+}
 .color{
   color:#B76E79;
 }
@@ -20,64 +14,17 @@
      color:#703B42;
 }
 /* navbar */
-    nav {
-
+    nav{
       position: fixed;
       z-index: 1;
       height:110px;
-       background-color:#FADADD;
+      background-color:#f27db6;
     }
- 
-.nav-link {
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #0dcaf0;
-}
-
-.nav-link.active {
-  font-weight: bold;
-  color: #bc1060; /* Active link color */
-}
     /* Responsive logo image */
     .nav img {
       max-width: 100%;
-      height: auto;}
-
+      height: auto;
     }
-/* 
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
- 
-    .container {
-     padding: 2rem 0rem;
-    }
-
-.container {
-  padding: 2rem 0rem;
-}
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 400px;
-
-    .modal-content {
-      padding: 1rem;
-    }
-  }
-}
-
-.modal-header {
-  .close {
-    margin-top: -1.5rem;
-  }
-} */
-
 .form-title {
   margin: -2rem 0rem 2rem;
 }
@@ -85,13 +32,6 @@
 .delimiter {
   padding: 1rem;
 }
-
-.social-buttons {
-  .btn {
-    margin: 0 0.5rem 1rem;
-  }
-}
-
 .signup-section {
   padding: 0.3rem 0rem;
 }
@@ -120,7 +60,7 @@
   min-width: 230px;
   max-width: 315px;
   width: 100%;
-  color: #000000;
+  color: #fff;
   text-align: center;
   line-height: 1.4em;
   font-size: 14px;
@@ -167,6 +107,10 @@
   }
 }
 
+/* .ceo-section{
+  display: flex;
+  background-color: #F7A8C4;
+} */
 .card2{
   position: relative;
   width: 400px;
@@ -366,6 +310,11 @@
   background: #86bc42;
   z-index: 1;
 }
+.ratio iframe {
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
 /* faq section */
 .faq {
   padding: 60px 0;
@@ -522,6 +471,25 @@
 
 .button:last-of-type {
   margin-right: 0;
+}
+.footer-button{
+   background-color:  #b32e65;
+  border-radius: 21px;
+  color: #fffff2;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: 18px;
+  padding: 12px 30px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .2s;
+  cursor: pointer;
+  position: relative;
+    text-decoration: none;
+  text-transform: uppercase;
 }
 
 .footer-call-to-action-button {

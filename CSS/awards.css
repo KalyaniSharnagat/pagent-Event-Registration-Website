@@ -1,30 +1,39 @@
 /* ---------------------  rajat  --------------------------  */
 * {
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
 }
+
 body {
   background-color: #F7A8C4;
   color: white !important;
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
-  /* padding: 2rem; */
 }
- .background-color{
-   background-color: #F7A8C4;
- }
-.color{
-  color:#B76E79;
+
+.background-color {
+  background-color: #F7A8C4;
 }
-.text2{
-     color:#703B42;
+
+.color {
+  color: #B76E79;
 }
+
+.text2 {
+  color: #703B42;
+}
+
 /* navbar */
-    nav {
-      position: fixed;
-      z-index: 1;
-      height:110px;
-      background-color:#F7A8C4;
-    }
+.navbar{
+  background-color: #f27db681;
+  color: #fff;
+}
+nav {
+  position: fixed;
+  z-index: 1;
+  height: 110px;
+  background-color: #F7A8C4;
+}
 
 .nav-link {
   transition: color 0.3s ease;
@@ -36,30 +45,33 @@ body {
 
 .nav-link.active {
   font-weight: bold;
-  color: #bc1060; /* Active link color */
+  color: #bc1060;
+  /* Active link color */
 }
-    /* Responsive logo image */
-    .nav img {
-      max-width: 100%;
-      height: auto;
 
-    }
+/* Responsive logo image */
+.nav img {
+  max-width: 100%;
+  height: auto;
 
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
- /* navbar end */
-    .container {
-     padding: 2rem 0rem;
-    }
+}
 
-@media (min-width: 576px){
+@media (max-width: 768px) {
+  .nav>div {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* navbar end */
+.container {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;
-    
+
     .modal-content {
       padding: 1rem;
     }
@@ -78,7 +90,7 @@ body {
 
 
 .delimiter {
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 .social-buttons {
@@ -90,6 +102,7 @@ body {
 .signup-section {
   padding: 0.3rem 0rem;
 }
+
  .gradient-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060); 
   border: none;
@@ -101,16 +114,17 @@ body {
 }
 
 .gradient-btn:hover {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-} 
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 
 .award-heros {
   width: 100%;
 }
 
-.image-container{
+.image-container {
   margin-top: 100px;
 }
+
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -286,8 +300,8 @@ body {
   margin-right: 0;
 }
 
-.footer-call-to-action-button {
-  /* background-color: #F7A8C4; */
+.footer-button {
+  background-color: #b32e65;
   border-radius: 21px;
   color: #fffff2;
   display: inline-block;

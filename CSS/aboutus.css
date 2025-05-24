@@ -15,6 +15,10 @@
      color:#703B42;
 }
 /* navbar */
+.navbar{
+  background-color: #f27db681;
+  color: #fff;
+}
     nav {
       position: fixed;
       z-index: 1;
@@ -40,33 +44,7 @@
       height: auto;
 
     }
-/* 
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
- 
-    .container {
-     padding: 2rem 0rem;
-    }
 
-@media (min-width: 576px){
-  .modal-dialog {
-    max-width: 400px;
-    
-    .modal-content {
-      padding: 1rem;
-    }
-  }
-}
-
-.modal-header {
-  .close {
-    margin-top: -1.5rem;
-  }
-} */
 
 .form-title {
   margin: -2rem 0rem 2rem;
@@ -77,15 +55,10 @@
   padding: 1rem;  
 }
 
-.social-buttons {
-  .btn {
-    margin: 0 0.5rem 1rem;
-  }
-}
-
 .signup-section {
   padding: 0.3rem 0rem;
 }
+
  .gradient-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060); 
   border: none;
@@ -97,8 +70,8 @@
 }
 
 .gradient-btn:hover {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
-} 
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 
 .about-heros-image {
   width: 100%;
@@ -147,11 +120,32 @@
   border-radius: 5%;
 }
 
-button {
+/* button {
   padding: 10px 20px;
   color: white;
-  background-color: mediumvioletred;
+  border-radius: 10px;
+  border: 2px solid violet;
+  background-color: violet;
+} */
+.register-button{
+  padding: 10px 25px;
+  color: #fff;
+  background: linear-gradient(135deg, #e040fb, #7c4dff); 
+  border: 1px solid #F7A8C4;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(124, 77, 255, 0.4);
+  transition: all 0.3s ease;
 }
+
+.register-button:hover {
+  background: #fff;
+  color: #7c4dff;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); 
+}
+
 
 .testimonals {
   text-align: center;
@@ -195,16 +189,15 @@ button {
   font-weight: 600;
   font-size: 0.9rem;
 }
-
 .card {
-  background-color: transparent;
-  border: none;
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* optional shadow */
 }
+
 
 .card::before {
   content: "";
@@ -245,8 +238,6 @@ button {
 .highlight {
   color: #ff4dab;
 }
-
-
 /*-------jury panel----------*/
 .jury-card {
   background: #000;
@@ -257,57 +248,25 @@ button {
   text-align: center;
   height: 100%;
 }
-
 .jury-card img {
   border-radius: 20px;
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
-
 .role-title {
   font-size: 0.9rem;
   color: #FF2E91;
   font-weight: 600;
 }
-/* Responsive adjustments */
-/* @media (max-width: 900px) {
-  .team-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  .team-card {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 1000px) {
-  .team-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  .team-card {
-    width: 100%;
-  }
-} */
-
 /* .........................footer ...........................*/
-
 .pg-footer {
   font-family: 'Roboto', sans-serif;
 }
-
-
 .footer {
   background-color: #000;
   color: #fff;
 }
-
 .footer-wave-svg {
   background-color: transparent;
   display: block;
@@ -316,11 +275,9 @@ button {
   top: -1px;
   width: 100%;
 }
-
 .footer-wave-path {
   fill: #F7A8C4;
 }
-
 .footer-content {
   margin-left: auto;
   margin-right: auto;
@@ -328,7 +285,6 @@ button {
   padding: 40px 15px 450px;
   position: relative;
 }
-
 .footer-content-column {
   box-sizing: border-box;
   float: left;
@@ -337,20 +293,16 @@ button {
   width: 100%;
   color: #fff;
 }
-
 .footer-content-column ul li a {
   color: #fff;
   text-decoration: none;
 }
-
 .footer-logo-link {
   display: inline-block;
 }
-
 .footer-menu {
   margin-top: 30px;
 }
-
 .footer-menu-name {
   color: #F7A8C4;
   font-size: 20px;
@@ -361,31 +313,25 @@ button {
   margin-top: 0;
   text-transform: uppercase;
 }
-
 .footer-menu-list {
   list-style: none;
   margin-bottom: 0;
   margin-top: 10px;
   padding-left: 0;
 }
-
 .footer-menu-list li {
   margin-top: 5px;
 }
-
-
 #menu-company a {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 #menu-company a:hover {
   color: #F7A8C4;
   transform: scale(1.05);
   text-decoration: none;
 }
-
 
 .footer-call-to-action-description {
   color: #fffff2;
@@ -402,6 +348,25 @@ button {
   margin-right: 0;
 }
 
+.footer-button{
+   background-color:  #b32e65;
+  border-radius: 21px;
+  color: #fffff2;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: 18px;
+  padding: 12px 30px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .2s;
+  cursor: pointer;
+  position: relative;
+    text-decoration: none;
+  text-transform: uppercase;
+}
 .footer-call-to-action-button {
   /* background-color: #F7A8C4; */
   border-radius: 21px;
