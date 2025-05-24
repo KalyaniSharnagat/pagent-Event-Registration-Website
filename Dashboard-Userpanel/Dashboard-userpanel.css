@@ -156,6 +156,8 @@ body {
 #sidebar .side-menu.bottom li:nth-last-of-type(2) {
   bottom: 40px; 
 }
+/* SIDEBAR */
+/* CONTENT */
 #content {
 	position: relative;
 	width: calc(100% - 220px);
@@ -166,6 +168,7 @@ body {
 	width: calc(100% - 60px);
 	left: 60px;
 }
+/* NAVBAR */
 #content nav {
 	height: 56px;
 	background-image: linear-gradient(135deg, #A9C9FF 10%, #FFBBEC 100%);
@@ -274,3 +277,201 @@ body {
     font-family: var(--lato);
 }
 /* Navbar */
+
+/* Media Query for Smaller Screens */
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1028px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 200px; 
+    }
+
+    #sidebar {
+        width: 200px; /* Slightly narrower sidebar */
+    }
+
+    #content {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+
+    #content nav .nav-link {
+        display: inline-block; /* Show nav links */
+    }
+}
+
+/* Tablets se upar (larger devices like desktops) ke liye responsive layout */
+@media screen and (min-width: 1029px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 250px; /* Bigger width for desktop view */
+    }
+
+    #sidebar {
+        width: 250px; /* Wider sidebar */
+    }
+
+    #content {
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+
+    #content nav .nav-link {
+        display: inline-block; /* Show nav links again */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 180px;
+    }
+	#sidebar {
+		width: 200px;
+	}
+
+	#content {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+	#content nav .nav-link {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 150px;
+    }
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 36px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content nav form.show ~ .notification,
+	#content nav form.show ~ .profile {
+		display: none;
+	}
+}
+
+/* Devices between 768px and 1028px (Tablets) */
+@media screen and (min-width: 768px) and (max-width: 1028px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 200px;
+    }
+
+    #sidebar {
+        width: 200px;
+    }
+
+    #content {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+
+    #content nav .nav-link {
+        display: inline-block;
+    }
+}
+
+/* Devices 1029px and above (Desktops) */
+@media screen and (min-width: 1029px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 250px;
+    }
+
+    #sidebar {
+        width: 250px;
+    }
+
+    #content {
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+
+    #content nav .nav-link {
+        display: inline-block;
+    }
+}
+
+/* Devices below 768px (Small Tablets & Mobiles) */
+@media screen and (max-width: 767px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 180px;
+    }
+
+    #sidebar {
+        width: 200px;
+    }
+
+    #content {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+
+    #content nav .nav-link {
+        display: none;
+    }
+}
+
+/* Devices below 576px (Mobiles) */
+@media screen and (max-width: 575px) {
+    #content nav .notification-menu,
+    #content nav .profile-menu {
+        width: 150px;
+    }
+
+    #content nav form .form-input input {
+        display: none;
+    }
+
+    #content nav form .form-input button {
+        width: auto;
+        height: auto;
+        background: transparent;
+        border-radius: 0;
+        color: var(--dark);
+    }
+
+    #content nav form.show .form-input input {
+        display: block;
+        width: 100%;
+    }
+
+    #content nav form.show .form-input button {
+        width: 36px;
+        height: 100%;
+        border-radius: 0 36px 36px 0;
+        color: var(--light);
+        background: var(--red);
+    }
+
+    #content nav form.show ~ .notification,
+    #content nav form.show ~ .profile {
+        display: none;
+    }
+}
