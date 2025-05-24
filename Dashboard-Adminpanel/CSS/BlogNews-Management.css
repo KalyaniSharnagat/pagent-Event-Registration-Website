@@ -10,7 +10,8 @@
 }
 
 body {
-  display: flex;
+
+  padding-top:8%;
   background: linear-gradient(to right, #ffe0f0);
   min-height: 100vh;
   overflow: hidden;
@@ -42,7 +43,7 @@ body {
 }
 
 .menu-item {
-  display: flex;
+display: flex;
   align-items: center;
   gap: 15px;
   padding: 12px 20px;
@@ -161,9 +162,11 @@ body {
   border-radius: 10px;
   padding: 10px 20px;
   font-weight: 500;
+  float: inline-end;
 }
 
 .btn-add {
+  float: inline-end;
   background: linear-gradient(to right, #ff6a00, #ee0979);
   color: white;
   padding: 12px 28px;
@@ -285,49 +288,53 @@ body {
 }
 
 .card3 {
-
+  overflow: auto;
   float: left;
   position: relative;
-  height: 350px;
-  width: 700px;
-  margin: 2%;
+  height: 300px;
+  width: 400px;
+  margin-top:10%;
   background-color: #fff;
   
 }
 
-/* .blog-tex{
-  font-weight: lighter;
-} */
 
 .thumbnail {
+  /* padding-top: 50%; */
   float: left;
   position: relative;
   left: 30px;
-  top: -30px;
-  height: 250px;
+  top: px;
+  height: px;
   width: 350px;
-  overflow: hidden;
+  /* overflow: hidden; */
   
 }
 
 .thumbnail img.left {
+  /* position:fixed; */
+  padding-top:60%;
   position: absolute;
-  left: 50%;
+  left: 60%;
   top: 60%;
-  width: 100%;
+  width: 114%;
   height: auto;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  /* object-fit: cover; */
   object-position: center;
 }
 
+h2{
+
+  text-align: center;
+}
+
 .right {
-  margin-left: 400px;
+  margin-left: 40px;
   margin-right: 20px;
 }
 
- h1{
-  padding-top: 15px;
-  color: #4B4B4B;
-}
+ .blog-tex{
 
+  text-align: center;
+ }
