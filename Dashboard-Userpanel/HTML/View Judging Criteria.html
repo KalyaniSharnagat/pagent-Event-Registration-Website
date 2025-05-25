@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
-    <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/View Judging Criteria.css">
+    <link rel="stylesheet" href="/Dashboard-Userpanel/Dashboard-userpanel.css">
+         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Dashboard-Userpanel</title>
 </head>
+
 <body>
     <section id="sidebar">
         <a href="#" class="brand iconlink">
-            <img src="/Dashboard-Userpanel/public/user-i-removebg-preview.png" class="user-image" width="30px" height="30px">
+            <img src="/Dashboard-Userpanel/public/user-i-removebg-preview.png" class="user-image" width="30px"
+                height="30px">
             <span class="text-user">User</span>
         </a>
         <ul class="side-menu top">
@@ -46,6 +50,7 @@
                 </a>
             </li>
         </ul>
+
     </section>
     <section id="content">
         <nav>
@@ -58,97 +63,18 @@
                 </div>
             </form>
             <input type="checkbox" class="checkbox" id="switch-mode" hidden />
-            <label class="swith-lm" for="switch-mode">
-                <i class="bx bxs-moon"></i>
-                <i class="bx bx-sun"></i>
-                <div class="ball"></div>
+            <label class="switch-lm" for="switch-mode">
+                <div class="ball">
+                    <i class="bx bx-sun"></i> 
+                </div>
             </label>
+
             <a href="#" class="notification" id="notificationIcon">
                 <i class='bx bxs-bell bx-tada-hover'></i>
                 <span class="num">8</span>
             </a>
     </section>
     <!-- end navbar -->
-     <div class="criteria-container">
-    <h2>Judging Criteria</h2>
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Criteria</th>
-            <th>Description</th>
-            <th>Weight (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Physical Appearance</td>
-            <td>While it’s not the only criterion, physical appearance often plays a significant role.</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td> Talent</td>
-            <td>Many pageants include a talent portion where contestants perform a specific skill, such as singing, dancing, playing a musical instrument, or performing a dramatic monologue.</td>
-            <td>25</td>
-          </tr>
-          <tr>
-            <td>Evening Wear</td>
-            <td>This segment evaluates how contestants carry themselves in evening attire. It is not only about the gown itself but how well the contestant wears it, moves in it, and overall how elegantly they present themselves.</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>Swimwear</td>
-            <td>In pageants that include this segment, the focus is often on fitness and health.</td>
-            <td>15</td>
-          </tr>
-
-           <tr>
-            <td>Question and Answer</td>
-            <td>During this segment, contestants are asked questions on a variety of topics ranging from personal beliefs and experiences to views on current events and societal issues.</td>
-            <td>15</td>
-          </tr>
-
-          <tr>
-            <td> Community Involvement and Social Awareness</td>
-            <td>Contestants may also be judged based on their involvement in their community and awareness of social issues. </td>
-            <td>15</td>
-          </tr>
-
-          <tr>
-            <td>Overall Impression and Personality</td>
-            <td>Judges often consider the overall impression that a contestant makes throughout the competition.</td>
-            <td>15</td>
-          </tr>
-
-          <tr>
-            <td>Poise and Grace</td>
-            <td>The interview portion of a beauty pageant plays a crucial role in selecting the winner, often considered equally important or even more important than the traditional aspects like appearance and stage presence. </td>
-            <td>15</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-    </body>
-    </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -173,21 +99,17 @@
                 li.classList.add('active');
             })
         });
-
-        // TOGGLE SIDEBAR
         const menuBar = document.querySelector('#content nav .bx.bx-menu');
         const sidebar = document.getElementById('sidebar');
-
-        // Sidebar toggle işlemi
         menuBar.addEventListener('click', function () {
             sidebar.classList.toggle('hide');
         });
         function adjustSidebar() {
             if (window.innerWidth <= 576) {
-                sidebar.classList.add('hide'); 
+                sidebar.classList.add('hide');
                 sidebar.classList.remove('show');
             } else {
-                sidebar.classList.remove('hide'); 
+                sidebar.classList.remove('hide');
                 sidebar.classList.add('show');
             }
         }
@@ -205,5 +127,4 @@
     </script>
     <script src="script.js"></script>
 </body>
-
 </html>
