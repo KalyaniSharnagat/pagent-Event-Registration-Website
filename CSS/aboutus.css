@@ -1,53 +1,66 @@
-/* ..............................about page start kalyani .....................................*/
+/* ..............................about page  .....................................*/
 * {
-  font-family: "Overpass", sans-serif;
+  font-family:'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
 }
-
 .backgroundColor {
-  background-color: #BE5985;
+  background-color: #F7A8C4;
   color: #151313;
 }
-
-nav {
-  margin-top: 0;
-  padding-top: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  height: 110px;
-  /* padding-bottom: 80px; */
-  background-color: rgba(236, 28, 177, 0.315);
+.color{
+  color:#B76E79;
 }
+.text2{
+     color:#703B42;
+}
+/* navbar */
+.navbar{
+  background-color: #f27db681;
+  color: #fff;
+}
+    nav {
+      position: fixed;
+      z-index: 1;
+      height:110px;
+      background-color:#FADADD;
+    }
 
-/* .navimage{
-         padding-top: 100px;
-
-    } */
-nav .nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+.nav-link {
   transition: color 0.3s ease;
 }
 
-nav .nav a:hover {
-  color: #BE5985;
+.nav-link:hover {
+  color: #0dcaf0;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #bc1060; /* Active link color */
+}
+    /* Responsive logo image */
+    .nav img {
+      max-width: 100%;
+      height: auto;
+
+    }
+
+
+.form-title {
+  margin: -2rem 0rem 2rem;
 }
 
 
-/* Responsive logo image */
-.nav img {
-  max-width: 100%;
-  height: auto;
-
+.delimiter {
+  padding: 1rem;  
 }
 
-.gradient-btn {
-  background-image: linear-gradient(to right, #f27db6, #bc1060);
+.signup-section {
+  padding: 0.3rem 0rem;
+}
+
+ .gradient-btn {
+  background-image: linear-gradient(to right, #f27db6, #bc1060); 
   border: none;
   color: white;
   transition: 0.4s ease;
@@ -58,52 +71,6 @@ nav .nav a:hover {
 
 .gradient-btn:hover {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
-}
-
-@media (max-width: 768px) {
-  .nav>div {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
-
-.container {
-  padding: 2rem 0rem;
-}
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 400px;
-
-    .modal-content {
-      padding: 1rem;
-    }
-  }
-}
-
-.modal-header {
-  .close {
-    margin-top: -1.5rem;
-  }
-}
-
-.form-title {
-  margin: -2rem 0rem 2rem;
-}
-
-
-.delimiter {
-  padding: 1rem;
-}
-
-.social-buttons {
-  .btn {
-    margin: 0 0.5rem 1rem;
-  }
-}
-
-.signup-section {
-  padding: 0.3rem 0rem;
 }
 
 .about-heros-image {
@@ -127,109 +94,179 @@ nav .nav a:hover {
   object-fit: cover;
 }
 
+/* hdfjh */
 
-/* ---------------------  rajat  --------------------------  */
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #ffffff;
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  /* padding: 2rem; */
-}
-
-.award-heros {
-  width: 100%;
-}
-
-.team-container {
+/*-----about-----*/
+.About {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 7rem;
+  justify-content: space-between;
+  margin: 30px;
+  padding-top: 102px;
 }
 
-.team-card {
-  background-color: #222;
-  border-radius: 15px;
-  width: 300px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(255, 20, 100, 0.2);
-  transition: transform 0.3s ease;
-  height: 62%;
+.info h2 {
+  text-shadow: 2px 2px 4px white;
+  color: #FF2E91;
 }
 
-.team-card:hover {
-  transform: translateY(-10px);
-}
-
-.team-card img {
-  width: 100%;
-  height: 58%;
+.info {
+  padding: 10px;
+  text-align: justify;
   display: block;
-  border-radius: 15px 15px 0 0;
+  font-size: 20px;
 }
 
-.team-name {
-  font-weight: 700;
-  margin: 0.5rem 0 0.2rem 0;
-
+.picture {
+  border-radius: 5%;
 }
 
-.team-role {
-  color: #ff4d79;
+/* button {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid violet;
+  background-color: violet;
+} */
+.register-button{
+  padding: 10px 25px;
+  color: #fff;
+  background: linear-gradient(135deg, #e040fb, #7c4dff); 
+  border: 1px solid #F7A8C4;
+  border-radius: 20px;
   font-weight: 600;
-  margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(124, 77, 255, 0.4);
+  transition: all 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .team-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  .team-card {
-    width: 100%;
-  }
+.register-button:hover {
+  background: #fff;
+  color: #7c4dff;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); 
 }
 
 
-@media (max-width: 1000px) {
-  .team-card {
-    width: 45%;
-  }
+.testimonals {
+  text-align: center;
+  font-style: italic;
 }
 
-@media (max-width: 600px) {
-  .team-card {
-    width: 100%;
-  }
+.quote-section {
+  color: rgb(29, 27, 27);
+  padding: 60px 30px;
+  position: relative;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.quote-author {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+/*-------------------Co-Founder----------------*/
+.founder-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #0f0f0f;
+}
+
+.co-founder {
+  color: #ff4dab;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* optional shadow */
 }
 
 
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 77, 171, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 15px;
+}
 
+.card:hover::before {
+  opacity: 1;
+}
 
+.card-body {
+  position: relative;
+  z-index: 2;
+}
 
+.card-img-top {
+  border-radius: 15px;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #ff4dab;
+}
+/*-------jury panel----------*/
+.jury-card {
+  background: #000;
+  /* black background */
+  color: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  height: 100%;
+}
+.jury-card img {
+  border-radius: 20px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.role-title {
+  font-size: 0.9rem;
+  color: #FF2E91;
+  font-weight: 600;
+}
 /* .........................footer ...........................*/
-
 .pg-footer {
   font-family: 'Roboto', sans-serif;
 }
-
-
 .footer {
   background-color: #000;
   color: #fff;
 }
-
 .footer-wave-svg {
   background-color: transparent;
   display: block;
@@ -238,11 +275,9 @@ body {
   top: -1px;
   width: 100%;
 }
-
 .footer-wave-path {
-  fill: #6A1E55;
+  fill: #F7A8C4;
 }
-
 .footer-content {
   margin-left: auto;
   margin-right: auto;
@@ -250,7 +285,6 @@ body {
   padding: 40px 15px 450px;
   position: relative;
 }
-
 .footer-content-column {
   box-sizing: border-box;
   float: left;
@@ -259,20 +293,16 @@ body {
   width: 100%;
   color: #fff;
 }
-
 .footer-content-column ul li a {
   color: #fff;
   text-decoration: none;
 }
-
 .footer-logo-link {
   display: inline-block;
 }
-
 .footer-menu {
   margin-top: 30px;
 }
-
 .footer-menu-name {
   color: #F7A8C4;
   font-size: 20px;
@@ -283,31 +313,25 @@ body {
   margin-top: 0;
   text-transform: uppercase;
 }
-
 .footer-menu-list {
   list-style: none;
   margin-bottom: 0;
   margin-top: 10px;
   padding-left: 0;
 }
-
 .footer-menu-list li {
   margin-top: 5px;
 }
-
-
 #menu-company a {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 #menu-company a:hover {
   color: #F7A8C4;
   transform: scale(1.05);
   text-decoration: none;
 }
-
 
 .footer-call-to-action-description {
   color: #fffff2;
@@ -324,6 +348,25 @@ body {
   margin-right: 0;
 }
 
+.footer-button{
+   background-color:  #b32e65;
+  border-radius: 21px;
+  color: #fffff2;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: 18px;
+  padding: 12px 30px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .2s;
+  cursor: pointer;
+  position: relative;
+    text-decoration: none;
+  text-transform: uppercase;
+}
 .footer-call-to-action-button {
   /* background-color: #F7A8C4; */
   border-radius: 21px;
@@ -387,7 +430,7 @@ body {
 }
 
 .footer-social-amoeba-path {
-  fill: #6A1E55;
+  fill: #F7A8C4;
 }
 
 .footer-social-link.linkedin {
@@ -448,7 +491,7 @@ body {
 }
 
 .footer-copyright {
-  background-color: #6A1E55;
+  background-color: #F7A8C4;
   color: #fff;
   padding: 15px 30px;
   text-align: center;
@@ -473,8 +516,59 @@ body {
   color: #fff;
   text-decoration: none;
 }
+/* start media */
+    @media (max-width: 768px) {
+      .nav > div {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+ /* navbar end */
+    .container {
+     padding: 2rem 0rem;
+    }
+
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 400px;
+    
+    .modal-content {
+      padding: 1rem;
+    }
+  }
+}
+
+.modal-header {
+  .close {
+    margin-top: -1.5rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .team-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-card {
+    width: 100%;
+  }
+}
 
 
+@media (max-width: 1000px) {
+  .team-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-card {
+    width: 100%;
+  }
+}
 @media (min-width:320px) and (max-width:479px) {
   .footer-content {
     margin-left: auto;
@@ -505,14 +599,6 @@ body {
   }
 }
 
-@media (min-width:801px) {}
-
-@media (min-width:1025px) {}
-
-@media (min-width:1281px) {}
-
-
-
 
 @media (min-width: 760px) {
   .footer-content {
@@ -536,288 +622,4 @@ body {
   /* .footer-content-column {
       width: 49.99%;
   } */
-}
-
-/* .....................awards page kalyani ..............................*/
-
-
-.image-container {
-  position: relative;
-  width: 100%;
-  margin: auto;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 3%;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px 30px;
-  border-radius: 10px;
-  animation: fadeIn 2s ease-out;
-}
-
-.sticky-banner {
-  position: sticky;
-  top: 0;
-  background: #000;
-  color: #fff;
-  padding: 15px;
-  font-size: 1.5rem;
-  text-align: center;
-  z-index: 999;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-
-
-    /*-----about-----*/
-    .About{
-      display: flex;
-      justify-content: space-between;
-      margin:30px;
-      padding-top: 120px;
-    
-    }
-
-   .info h2{
-     text-shadow: 2px 2px 4px white;
-     color:#FF2E91;
-    }
-    .info{
-      padding: 10px;
-      text-align: justify;
-      display: block;
-      font-size: 20px;
-    }
-
-    .picture{
-      border-radius:5%;
-    }
-    button{
-      padding:10px 20px;
-      color:white;
-      background-color: mediumvioletred;
-      
-    }
-    
-    .testimonals{
-      text-align: center;
-      font-style: italic;
-    }
-      .quote-section {
-      color: rgb(29, 27, 27);
-      padding: 60px 30px;
-      position: relative;
-    }
-
-    .profile-img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
-    }
-
-    .quote-text {
-      font-size: 1.2rem;
-      font-style: italic;
-    }
-
-    .quote-author {
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-
-/*-----about-----*/
-.About {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px;
-  padding-top: 102px;
-}
-
-.info h2 {
-  text-shadow: 2px 2px 4px white;
-  color: #FF2E91;
-}
-
-.info {
-  padding: 10px;
-  text-align: justify;
-  display: block;
-  font-size: 20px;
-}
-
-.picture {
-  border-radius: 5%;
-}
-
-button {
-  padding: 10px 20px;
-  color: white;
-  background-color: mediumvioletred;
-}
-
-.testimonals {
-  text-align: center;
-  font-style: italic;
-}
-
-.quote-section {
-  color: rgb(29, 27, 27);
-  padding: 60px 30px;
-  position: relative;
-}
-
-.profile-img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-}
-
-.quote-text {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-.quote-author {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-
-/*-------------------Co-Founder----------------*/
-
-
-.founder-name {
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: #0f0f0f;
-}
-
-.co-founder {
-  color: #ff4dab;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.card {
-  background-color: transparent;
-  border: none;
-
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 77, 171, 0.25);
-  /*semi-transparent pink*/
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-  border-radius: 15px;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card-body {
-  position: relative;
-  z-index: 2;
-}
-
-.card-img-top {
-  border-radius: 15px;
-  height: auto;
-  width: 100%;
-  object-fit: contain;
-  padding: 10px;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.highlight {
-  color: #ff4dab;
-}
-
-
-/*-------jury panel----------*/
-.jury-card {
-  background: #000;
-  /* black background */
-  color: white;
-  border-radius: 20px;
-  padding: 15px;
-  text-align: center;
-  height: 100%;
-}
-
-.jury-card img {
-  border-radius: 20px;
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-/* .arrow-buttons {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .arrow-buttons button {
-      background: transparent;
-      border: 1px solid white;
-      color: white;
-      margin-left: 5px;
-      padding: 5px 10px;
-      border-radius: 5px; 
-    }*/
-
-.role-title {
-  font-size: 0.9rem;
-  color: #FF2E91;
-  font-weight: 600;
 }
