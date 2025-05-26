@@ -1,6 +1,7 @@
-*{
+* {
   font-family: 'Times New Roman', Times, serif;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -8,40 +9,76 @@ body {
   /* background-color: #F7A8C4; */
   color: #333;
 }
-.color{
-  color:#B76E79;
-}
-.text2{
-     color:#703B42;
-}
-/* navbar */
-.navbar{
-  background-color: #f27db681;
-  color: #fff;
-}
-    nav {
-      position: fixed;
-      z-index: 1;
-      height:110px;
-      color:#fff;
-    }
 
-.nav-link {
+.color {
+  color: #B76E79;
+}
+
+.text2 {
+  color: #703B42;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  z-index: 1030;
+}
+
+.nav-link-custom {
+  font-weight: 600 !important;
+  color: #00246b !important;
+  padding: 0.5rem 1rem;
+  position: relative;
   transition: color 0.3s ease;
-  color: #fff;
 }
+
+.nav-link-custom:hover {
+  color: #011c5a;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #00246b;
+  transition: 0.3s;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
 .nav-link.active {
-  font-weight: bold;
-  color: #bc1060; /* Active link color */
+  color: #00246b !important;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
-    .nav img {
-      max-width: 100%;
-      height: auto;
-     
-    }
-     .container {
-     padding: 2rem 0rem;
-    }
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #1b263b, #415a77);
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+  border-color: #00246b;
+}
+
+.container {
+  padding: 2rem 0rem;
+}
 
 
 .form-title {
@@ -50,15 +87,15 @@ body {
 
 
 .delimiter {
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 .signup-section {
   padding: 0.3rem 0rem;
 }
 
- .gradient-btn {
-  background-image: linear-gradient(to right, #f27db6, #bc1060); 
+.gradient-btn {
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
   border: none;
   color: white;
   transition: 0.4s ease;
@@ -70,6 +107,7 @@ body {
 .gradient-btn:hover {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 }
+
 .banner {
   position: relative;
   width: 100%;
@@ -116,9 +154,10 @@ body {
   font-weight: 700;
 }
 
-.contact-form-section{
+.contact-form-section {
   background: linear-gradient(135deg, #F7A8C4 0%, #f9cbd5 100%);
 }
+
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -163,10 +202,10 @@ body {
 }
 
 
-textarea{
-max-height: 100px;
-overflow: hidden; 
-  resize: none; 
+textarea {
+  max-height: 100px;
+  overflow: hidden;
+  resize: none;
 }
 
 .contact-form input,
@@ -230,6 +269,7 @@ overflow: hidden;
   gap: 6px;
   font-size: 1.15rem;
 }
+
 .contact-info .icon {
   font-size: 1.4rem;
 }
@@ -241,6 +281,7 @@ overflow: hidden;
   text-align: center;
   font-weight: 600;
 }
+
 /* .........................footer ...........................*/
 
 .pg-footer {
@@ -346,8 +387,9 @@ overflow: hidden;
 .button:last-of-type {
   margin-right: 0;
 }
-.footer-button{
-   background-color:  #b32e65;
+
+.footer-button {
+  background-color: #b32e65;
   border-radius: 21px;
   color: #fffff2;
   display: inline-block;
@@ -499,17 +541,17 @@ overflow: hidden;
 
 /* start media query */
 
-    @media (max-width: 768px) {
-      .nav > div {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
+@media (max-width: 768px) {
+  .nav>div {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;
-    
+
     .modal-content {
       padding: 1rem;
     }
@@ -521,7 +563,8 @@ overflow: hidden;
     margin-top: -1.5rem;
   }
 }
- @media (max-width: 700px) {
+
+@media (max-width: 700px) {
   .contact-section {
     flex-direction: column;
     padding: 30px 15px;
@@ -538,7 +581,7 @@ overflow: hidden;
     font-size: 1.1rem;
     padding: 25px 20px;
   }
-} 
+}
 
 
 @media (min-width:320px) and (max-width:479px) {
