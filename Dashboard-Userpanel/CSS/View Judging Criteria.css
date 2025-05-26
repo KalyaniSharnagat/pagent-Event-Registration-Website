@@ -163,17 +163,29 @@ header p {
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.2rem;
 }
+
 .card {
   background: white;
   padding: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: justify;
+
+  /* Fixed height and scroll on overflow */
+  height: 320px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Optional: make inner layout consistent */
+  display: flex;
+  flex-direction: column;
 }
+
 body.dark .card {
   background: #2a2a3d;
   color: white;
 }
+
 .card h3 {
   font-size: 1.1rem;
   display: flex;
@@ -181,6 +193,7 @@ body.dark .card {
   gap: 8px;
   margin-bottom: 0.5rem;
 }
+
 .card button {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
@@ -190,8 +203,23 @@ body.dark .card {
   border-radius: 6px;
   cursor: pointer;
 }
+
 .card .status.pending {
   color: orange;
+}
+
+/* Optional: Scrollbar styling for Chrome, Edge */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Responsive */
@@ -199,27 +227,35 @@ body.dark .card {
   .dashboard {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
-    height: auto;
     position: relative;
     flex-direction: row;
     overflow-x: auto;
     justify-content: space-around;
   }
+
   .main {
     margin-left: 0;
     width: 100%;
   }
+
   .topbar {
     left: 0;
     width: 100%;
   }
+
   .search-bar input {
     width: 100%;
   }
+
+  .card {
+    height: 280px; /* Slightly smaller height on tablets/mobiles */
+  }
 }
-/* judging criteria */
+
+/* Judging Criteria Card */
 .criteria-card {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -231,10 +267,11 @@ body.dark .card {
 }
 
 .scrollable-criteria {
-  max-height: 500px; /* adjust based on your layout */
+  max-height: 500px;
   overflow-y: auto;
-  padding-right: 10px; /* optional: space for scrollbar */
-  border: 1px solid #ddd; /* optional: visual separation */
+  padding-right: 10px;
+  border: 1px solid #ddd;
   border-radius: 8px;
 }
+
 /* judging criteria */

@@ -59,6 +59,13 @@
       </button>
     </div>
 
+    <!-- navbar end -->
+
+    <div class="container text-end">
+      <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+        <i class="bi bi-plus-circle me-1"></i> Add Media</button>
+    </div>
+
     <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content pageant-modal">
@@ -68,23 +75,15 @@
           </div>
           <form id="blogForm">
             <div class="modal-body">
-              <!-- <input type="text" class="form-control" name="title" placeholder="Enter Title" required>
-              <textarea class="form-control" name="description" rows="4" placeholder="Enter Description"
-                required></textarea> -->
+            
               <select class="form-select" name="category" required>
                 <option value="" disabled selected>Select Category</option>
                 <option>Fashion</option>
                 <option>Event</option>
                 <option>Contestant</option>
-                <option>Announcement</option>
               </select>
 
-              <select class="form-select mb-2" name="gallery" required>
-                <option value="" disabled selected>Choose Gallery</option>
-                <option value="homepage">Homepage</option>
-                <option value="event_gallery">Event Gallery</option>
-                <option value="sponsor_gallery">Sponsor Gallery</option>
-              </select>
+  
 
 
               <select class="form-select mb-2" id="mediaType" required>
@@ -102,12 +101,6 @@
               <input type="file" class="form-control mb-2" id="videoInput" name="video[]" multiple accept="video/*"
                 style="display: none;">
 
-
-              <!-- <input type="file" name="image[]" multiple accept="image/*">
-<input type="file" name="video[]" multiple accept="video/*"> -->
-
-              <!-- <input type="file" class="form-control" name="image" accept="image/*">
-<input type="text" class="form-control" name="author" placeholder="Author Name" required> -->
             </div>
 
             <div class="modal-footer">
