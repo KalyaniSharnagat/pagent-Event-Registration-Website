@@ -1,3 +1,4 @@
+/* --- Base styles (unchanged) --- */
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,9 @@
 
 body {
   display: flex;
-  background: linear-gradient(to right, #ffe0f0);
+  flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
+  background: linear-gradient(to right, #ffe0f0, #ffffff);
 }
 
 .sidebar {
@@ -52,6 +53,10 @@ body {
   border-radius: 8px;
 }
 
+.icon-link:active {
+  color: blueviolet;
+}
+
 .menu-item i {
   font-size: 18px;
   min-width: 25px;
@@ -72,44 +77,42 @@ body {
 
 .main-content {
   margin-left: 70px;
-  padding: 30px;
-  width: 100%;
-  transition: margin-left 0.3s ease;
+  width: calc(100% - 70px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar:hover~.main-content {
-  margin-left: 320px;
+  margin-left: 220px;
+  width: calc(100% - 220px);
+}
+
+.sidebar:hover~.main-content .header {
+  left: 220px;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff0f5;
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   padding: 15px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  height: 70px;
   box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
+  transition: left 0.3s ease, width 0.3s ease;
 }
 
-.search-filter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.search-filter input {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  outline: none;
-}
-
-.search-filter select {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  background: white;
+.header h3 {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .profile-info {
@@ -124,16 +127,17 @@ body {
   border-radius: 50%;
 }
 
-.dashboard-header {
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 20px;
-  border-radius: 10px;
+.profile-info span {
   color: white;
-  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-/* content */
-/* Table Styling */
+.judge-list {
+  margin-top: 80px;
+  padding: 12px;
+}
+
 .judge-list table {
   width: 100%;
   border-collapse: collapse;
@@ -144,12 +148,6 @@ body {
   padding: 0.75rem;
   border: 1px solid #ffb6c1;
   text-align: left;
-}
-
-.profile-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }
 
 /* Responsive Design */
@@ -322,9 +320,9 @@ button {
   font-style: italic;
 }
 
-.status{
+.status {
   font-size: 20px;
-  margin-right:50px;
-  opacity:0.7;
-  color:#ee0979;
+  margin-right: 50px;
+  opacity: 0.7;
+  color: #ee0979;
 }
