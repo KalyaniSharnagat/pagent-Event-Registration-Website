@@ -1,3 +1,4 @@
+/* --- Base styles (unchanged) --- */
 * {
   margin: 0;
   padding: 0;
@@ -51,9 +52,10 @@ body {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
 }
- .icon-link:active{
-      color: blueviolet;
-     }
+
+.icon-link:active {
+  color: blueviolet;
+}
 
 .menu-item i {
   font-size: 18px;
@@ -82,12 +84,12 @@ body {
   flex-direction: column;
 }
 
-.sidebar:hover ~ .main-content {
+.sidebar:hover~.main-content {
   margin-left: 220px;
   width: calc(100% - 220px);
 }
 
-.sidebar:hover ~ .main-content .header {
+.sidebar:hover~.main-content .header {
   left: 220px;
 }
 
@@ -207,7 +209,117 @@ tbody tr:hover {
   background-color: #c82333;
 }
 
-@media (max-width: 992px) {
+/* --- Responsive Updates --- */
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar:hover {
+    width: 220px;
+  }
+
+  .menu-label {
+    opacity: 0;
+  }
+
+  .sidebar:hover .menu-label {
+    opacity: 1;
+  }
+
+  .main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .sidebar:hover~.main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .header {
+    left: 60px;
+  }
+
+  .sidebar:hover~.main-content .header {
+    left: 220px;
+  }
+
+  /* Reduce table min-width for tablets */
+  table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px 12px;
+  }
+
+  .btn-approve,
+  .btn-reject {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar:hover {
+    width: 220px;
+  }
+
+  .menu-label {
+    opacity: 0;
+  }
+
+  .sidebar:hover .menu-label {
+    opacity: 1;
+  }
+
+  .main-content {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+
+  .sidebar:hover~.main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .header {
+    left: 70px;
+  }
+
+  .sidebar:hover~.main-content .header {
+    left: 220px;
+  }
+
+  table {
+    min-width: 700px;
+    font-size: 1rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: 14px 20px;
+  }
+
+  .btn-approve,
+  .btn-reject {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smaller devices (below 768px, kept as is) */
+@media (max-width: 767px) {
   .header h3 {
     font-size: 1rem;
   }
@@ -233,13 +345,11 @@ tbody tr:hover {
     width: calc(100% - 60px) !important;
   }
 
-  .sidebar:hover ~ .main-content {
+  .sidebar:hover~.main-content {
     margin-left: 200px !important;
     width: calc(100% - 200px) !important;
   }
-}
 
-@media (max-width: 768px) {
   .container-fluid {
     padding: 10px;
   }
@@ -261,6 +371,7 @@ tbody tr:hover {
   }
 }
 
+/* Extra small devices (below 480px) */
 @media (max-width: 480px) {
   .header h3 {
     font-size: 0.9rem;
