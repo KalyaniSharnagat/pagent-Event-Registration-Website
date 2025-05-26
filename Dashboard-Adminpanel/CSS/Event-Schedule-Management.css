@@ -200,15 +200,10 @@ body {
 
 
 .btn-gradient {
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(135deg, #d837cb 0%, #d80d94 100%);
   color: #fff;
   border: none;
   transition: all 0.3s ease;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
-  transform: scale(1.05);
 }
 
 .card-header.bg-gradient {
