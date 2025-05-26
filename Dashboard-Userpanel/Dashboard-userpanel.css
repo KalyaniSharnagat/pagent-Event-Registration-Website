@@ -60,6 +60,9 @@ body.dark {
   font-weight: bold;
   border-left: 4px solid white;
 }
+.sun-icon{
+  color: #fff;
+}
 #toggle-theme {
   margin-top: 1rem;
   padding: 10px;
