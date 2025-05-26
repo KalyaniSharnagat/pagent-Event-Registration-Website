@@ -219,3 +219,14 @@ body.dark .card {
     width: 100%;
   }
 }
+/* judging criteria */
+.criteria-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.criteria-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+/* judging criteria */
