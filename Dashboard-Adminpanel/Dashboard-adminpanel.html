@@ -2,108 +2,104 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pageant Admin Dashboard</title>
-  <link rel="stylesheet" href="/Dashboard-Adminpanel/Dahboard-adminpanel.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Dashboard-Adminpanel/Dahboard-adminpanel.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-
-  <!-- start the Sidebar -->
-  <!-- navbar -->
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
-      </div>
-      <div class="menu-item"><i class="fa-solid fa-user-shield"></i><a href="" class="menu-label">User Roles</a></div>
-      <div class="menu-item"><i class="fa-solid fa-gauge-high"></i><a href="" class="menu-label">Dashboard</a></div>
-      <div class="menu-item"><i class="fa-solid fa-user"></i><a href="" class="menu-label">Contestants</a></div>
-      <div class="menu-item"><i class="fa-solid fa-users-gear"></i><a href="" class="menu-label">Judge Profiles</a>
-      </div>
-      <div class="menu-item"><i class="fa-solid fa-calendar-days"></i><a href="" class="menu-label">Event Schedule</a>
-      </div>
-      <div class="menu-item"><i class="fa-solid fa-photo-film"></i><a href="" class="menu-label">Media</a></div>
-      <div class="menu-item"><i class="fa-solid fa-bell"></i><a href="" class="menu-label">Notifications</a></div>
-      <div class="menu-item"><i class="fa-solid fa-handshake-angle"></i><a href="" class="menu-label">Sponsors</a></div>
-      <div class="menu-item"><i class="fa-solid fa-newspaper"></i><a href="" class="menu-label">Blog & News</a></div>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
     </div>
-     <!-- navbar end -->
+    <div class="menu-item"><i class="fa-solid fa-gauge-high icon-link"></i><a
+        href="/Dashboard-Adminpanel/Dashboard-adminpanel.html" class="menu-label icon-link">Dashboard</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link icon-link">User Roles</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label">Contestants</a></div>
+    <div class="menu-item"><i class="fa-solid fa-users-gear icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label">Judge Profiles</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-calendar-days icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link">Event Schedule</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link">Media</a></div>
+    <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link">Sponsors</a></div>
+    <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link">Blog & News</a></div>
+  </div>
+  <!-- navbar end -->
 
-    <!-- Main Content start -->
-    <div class="main-content">
-      <!-- Header with the Search, filter, Profile -->
-      <div class="header">
-        <div class="search-filter">
-          <input type="text" placeholder="Search here..." />
-          <select>
-            <option>All</option>
-            <option>Contestants</option>
-            <option>Judges</option>
-            <option>Events</option>
-          </select>
-        </div>
-        <div class="profile-info">
-          <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" />
-          <span>Admin</span>
-        </div>
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header d-flex justify-content-between align-items-center px-4 py-2 bg-light shadow-sm">
+      <h3 class="m-0">Welcome to Dashboard</h3>
+      <div class="profile-info d-flex align-items-center gap-2">
+        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" width="40" height="40"
+          style="border-radius: 50%;" />
+        <span>Admin</span>
       </div>
+    </div>
+    <div class="dashboard-header">
+      <h2>Welcome Admin</h2>
+      <p class="para-line">Use this panel to manage event schedules and contestant registrations.</p>
+    </div>
 
-
-  <!-- Dashboard welcome-->
-  <div class="dashboard-header">
-    <h2>Welcome Admin</h2>
-    <p>Use this panel to manage event schedules and contestant registrations.</p>
+    <div class="cards">
+      <div class="card">
+        <h4>Contestant</h4>
+        <p>Manage entries submitted by participants. View, approve, or reject applications.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Judges</h4>
+        <p>Add, edit, or remove judges. Assign them to specific events for scoring.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Event Schedule</h4>
+        <p>Organize event flow, define stages, set deadlines, and ensure coordination.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Media Upload</h4>
+        <p>Upload event-related photos/videos categorized for easy access and promotion.</p>
+        <button class="card-btn">Manage</button>
+      </div>
+      <div class="card">
+        <h4>Send Notifications</h4>
+        <p>Send announcements or alerts to participants. Keep everyone informed.</p>
+        <button class="card-btn">Send</button>
+      </div>
+      <div class="card">
+        <h4>Blog / News</h4>
+        <p>Manage posts and share updates, stories, and highlights to boost engagement.</p>
+        <button class="card-btn">Edit</button>
+      </div>
+    </div>
   </div>
 
-  <!-- Dashboard Cards -->
-  <div class="cards">
-    <div class="card">
-      <h4>Contestant Applications</h4>
-      <p>Contestant Applications allow you to manage entries submitted by participants. You can view details, approve or
-        reject applications, and export data for records or reports.</p>
-      <button class="card-btn">Manage</button>
-    </div>
-    <div class="card">
-      <h4>Judges</h4>
-      <p>Judges management allows you to add, edit, or remove judges from the system. You can assign them to specific
-        events for evaluation purposes. This ensures fair and organized scoring throughout the competition.</p>
-      <button class="card-btn">Manage</button>
-    </div>
-    <div class="card">
-      <h4>Event Schedule</h4>
-      <p>Event Schedule helps you organize the flow of your pageant or event. You can define different stages, set
-        start/end times, and assign deadlines for tasks or submissions. This ensures smooth coordination and timely
-        execution of all activities.</p>
-      <button class="card-btn">Manage</button>
-    </div>
-    <div class="card">
-      <h4>Media Upload</h4>
-      <p>Media Upload allows contestants and admins to upload event-related photos and videos. You can organize media by
-        category or event for easy access. This feature helps in managing visual content for promotions, galleries, or
-        judging.</p>
-      <button class="card-btn">Manage</button>
-    </div>
-    <div class="card">
-      <h4>Send Notifications</h4>
-      <p>Send Notifications enables you to communicate important updates to participants via email. You can send
-        announcements, reminders, or alerts about events or deadlines. This ensures everyone stays informed and engaged
-        throughout the event.</p>
-      <button class="card-btn">Send</button>
-    </div>
-    <div class="card">
-      <h4>Blog / News</h4>
-      <p>Blog / News lets you create and manage posts about your events, sponsors, and pageant highlights. Share
-        important news, behind-the-scenes stories, or updates with your audience. This keeps your platform active and
-        helps build community engagement.</p>
-      <button class="card-btn">Edit</button>
-    </div>
-  </div>
-  </div>
+    <!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
+    <script src="/Dashboard-Adminpanel/JAVASCRIPT/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 </body>
 
 </html>

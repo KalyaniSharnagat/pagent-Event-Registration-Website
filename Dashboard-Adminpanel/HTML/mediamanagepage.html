@@ -42,15 +42,22 @@
     <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link">Blog & News</a></div>
   </div>
+
   <div class="main-content">
-    <div class="header">
-      <h3>Media Manage</h3>
-      <div class="profile-info">
-        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
+    <div class="header d-flex justify-content-between align-items-center px-4 py-2 bg-light shadow-sm">
+      <h3 class="m-0">Media Management</h3>
+      <div class="profile-info d-flex align-items-center gap-2">
+        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" width="40" height="40"
+          style="border-radius: 50%;" />
         <span>Admin</span>
       </div>
     </div>
 
+    <div class="container text-end">
+      <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+        <i class="bi bi-plus-circle me-1"></i> Add Media
+      </button>
+    </div>
 
     <!-- navbar end -->
 

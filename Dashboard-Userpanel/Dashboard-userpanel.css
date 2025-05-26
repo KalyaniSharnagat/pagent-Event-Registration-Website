@@ -3,17 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 body.light {
   background: #ffbbec7e;
   color: #333;
 }
+
 body.dark {
   background: #1e1e2f;
   color: #fff;
 }
+
 .dashboard {
   display: flex;
   flex-direction: row;
@@ -35,13 +39,30 @@ body.dark {
   left: 0;
   z-index: 1000;
 }
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+}
+
 .sidebar h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
+
 .nav-list {
   list-style: none;
 }
+
 .nav-list li {
   display: flex;
   align-items: center;
@@ -52,17 +73,25 @@ body.dark {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .nav-list li:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
 .nav-list li.active {
   background: rgba(255, 255, 255, 0.3);
   font-weight: bold;
   border-left: 4px solid white;
 }
-.sun-icon{
+
+.sun-icon {
   color: #fff;
 }
+
+a {
+  text-decoration: none;
+}
+
 #toggle-theme {
   margin-top: 1rem;
   padding: 10px;
@@ -71,6 +100,7 @@ body.dark {
   color: #ec407a;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Main Section */
@@ -96,26 +126,35 @@ body.dark {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
+
 body.dark .topbar {
   background: #2a2a3d;
   color: #fff;
 }
+
 .search-bar {
   display: flex;
   gap: 0.5rem;
+  flex: 1;
+  max-width: 400px; /* Default max-width */
 }
+
 .search-bar input {
   padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  width: 100%;
 }
+
 .search-bar button {
   padding: 6px 10px;
   background: #ec407a;
   color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
+
 .profile-icon i {
   font-size: 1.6rem;
 }
@@ -125,21 +164,25 @@ body.dark .topbar {
   margin-top: 40px;
   padding: 2rem;
 }
+
 header h1 {
   font-size: 2rem;
   margin-bottom: 0.3rem;
 }
+
 header p {
   color: gray;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for flexibility */
   gap: 1.2rem;
 }
+
 .card {
   background: white;
   padding: 1.2rem;
@@ -147,10 +190,12 @@ header p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: justify;
 }
+
 body.dark .card {
   background: #2a2a3d;
   color: white;
 }
+
 .card h3 {
   font-size: 1.1rem;
   display: flex;
@@ -158,6 +203,7 @@ body.dark .card {
   gap: 8px;
   margin-bottom: 0.5rem;
 }
+
 .card button {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
@@ -167,32 +213,250 @@ body.dark .card {
   border-radius: 6px;
   cursor: pointer;
 }
+
 .card .status.pending {
   color: orange;
 }
 
-/* Responsive */
-@media screen and (max-width: 1024px) {
+/* Responsive Breakpoints */
+
+/* Tablets (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Slightly narrower sidebar */
+  }
+
+  .main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  .topbar {
+    left: 200px;
+    padding: 0 1.5rem;
+  }
+
+  .search-bar {
+    max-width: 350px; /* Slightly smaller search bar */
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.85rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller cards for tablets */
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Laptops (1024px - 1440px) */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .sidebar {
+    width: 240px; /* Default width */
+  }
+
+  .main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+
+  .topbar {
+    left: 240px;
+    padding: 0 2rem;
+  }
+
+  .search-bar {
+    max-width: 400px;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger cards */
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Big Screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+  .dashboard {
+    max-width: 1920px; /* Cap max width for ultra-wide screens */
+    margin: 0 auto; /* Center the layout */
+  }
+
+  .sidebar {
+    width: 260px; /* Slightly wider for better spacing */
+  }
+
+  .main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+  }
+
+  .topbar {
+    left: 260px;
+    padding: 0 3rem; /* More padding for larger screens */
+  }
+
+  .search-bar {
+    max-width: 500px; /* Larger search bar */
+  }
+
+  .search-bar input,
+  .search-bar button {
+    padding: 8px 12px; /* Slightly larger inputs */
+    font-size: 1rem;
+  }
+
+  .profile-icon i {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 2.5rem; /* More padding for breathing room */
+  }
+
+  header h1 {
+    font-size: 2.2rem; /* Larger headings */
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Larger cards for big screens */
+    gap: 1.5rem; /* More spacing */
+  }
+
+  .card {
+    padding: 1.5rem; /* More padding */
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Existing Mobile Breakpoints (unchanged for context) */
+@media screen and (max-width: 767px) {
   .dashboard {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
     flex-direction: row;
     overflow-x: auto;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 0.5rem;
   }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-list li {
+    margin: 0 5px;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
   .main {
     margin-left: 0;
     width: 100%;
   }
+
   .topbar {
     left: 0;
     width: 100%;
+    height: 50px;
+    padding: 0 0.5rem;
   }
-  .search-bar input {
-    width: 100%;
+
+  .search-bar {
+    max-width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .profile-icon i {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  .card h3 {
+    font-size: 0.9rem;
+  }
+
+  .card button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }

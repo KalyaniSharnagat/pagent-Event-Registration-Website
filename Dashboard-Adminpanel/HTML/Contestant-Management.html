@@ -19,10 +19,10 @@
     <div class="sidebar-header">
       <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
     </div>
-   <div class="menu-item"><i class="fa-solid fa-gauge-high icon-link"></i><a
-        href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label icon-link">Dashboard</a></div>
-    <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a href="/Dashboard-Adminpanel/HTML/roleuser.html"
-        class="menu-label icon-link icon-link">User Roles</a></div>
+    <div class="menu-item"><i class="fa-solid fa-gauge-high icon-link"></i><a
+        href="/Dashboard-Adminpanel/Dashboard-adminpanel.html" class="menu-label icon-link">Dashboard</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link icon-link">User Roles</a></div>
     <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label">Contestants</a></div>
     <div class="menu-item"><i class="fa-solid fa-users-gear icon-link"></i><a
@@ -34,7 +34,8 @@
     <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link">Media</a></div>
     <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a
-        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a></div>
+        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a>
+    </div>
     <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link">Sponsors</a></div>
     <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a
@@ -52,146 +53,148 @@
 
 
     <div class="container-fluid">
-      <div class="text-end mb-3">
-        <button class="btn btn-primary" onclick="exportCSV()">Export Data</button>
-      </div>
-      <div class="table-responsive" style="overflow-y: scroll;">
-        <table class="table table-bordered table-hover" id="contestantTable">
-          <thead>
-            <tr>
-              <th>Sr No</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Document</th>
-              <th>Photo</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Vishal Mirase</td>
-              <td>Vishal@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-1">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(1)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(1)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Kalyani Sharnagat</td>
-              <td>Kalyani@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-2">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(2)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(2)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Priya Verma</td>
-              <td>Priya@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-3">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(3)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(3)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Rajat Malve</td>
-              <td>Rajat@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-4">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(4)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(4)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Sharvari Malve</td>
-              <td>Sharvari@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-5">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(5)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(5)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Arjun Mehta</td>
-              <td>Arjun@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-6">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(6)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(6)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Mrunali Vaidya</td>
-              <td>Mrunali@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-7">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(7)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(7)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Ravi Shankar</td>
-              <td>Ravi@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-8">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(8)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(8)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>Nikita Joshi</td>
-              <td>Nikita@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-9">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(9)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(9)">Reject</button>
-              </td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>Ruchita Sharnagat</td>
-              <td>Ruchita@gmail.com</td>
-              <td><a href="#" download>Download</a></td>
-              <td><a href="#" download>Download</a></td>
-              <td id="status-10">Pending</td>
-              <td>
-                <button class="btn btn-approve btn-sm" onclick="approveEntry(10)">Approve</button>
-                <button class="btn btn-reject btn-sm" onclick="rejectEntry(10)">Reject</button>
-              </td>
-            </tr>
-          </tbody>
+      <div class="table-responsive">
+        <div class="text-end mb-3">
+          <button class="btn btn-primary" onclick="exportCSV()">Export Data</button>
+        </div>
+        <div style="overflow-y: scroll;">
+          <table class="table table-bordered table-hover" id="contestantTable">
+            <thead>
+              <tr>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Document</th>
+                <th>Photo</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Vishal Mirase</td>
+                <td>Vishal@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-1">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(1)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(1)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kalyani Sharnagat</td>
+                <td>Kalyani@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-2">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(2)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(2)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Priya Verma</td>
+                <td>Priya@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-3">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(3)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(3)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Rajat Malve</td>
+                <td>Rajat@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-4">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(4)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(4)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Sharvari Malve</td>
+                <td>Sharvari@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-5">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(5)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(5)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Arjun Mehta</td>
+                <td>Arjun@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-6">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(6)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(6)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Mrunali Vaidya</td>
+                <td>Mrunali@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-7">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(7)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(7)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Ravi Shankar</td>
+                <td>Ravi@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-8">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(8)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(8)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Nikita Joshi</td>
+                <td>Nikita@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-9">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(9)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(9)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Ruchita Sharnagat</td>
+                <td>Ruchita@gmail.com</td>
+                <td><a href="#" download>Download</a></td>
+                <td><a href="#" download>Download</a></td>
+                <td id="status-10">Pending</td>
+                <td>
+                  <button class="btn btn-approve btn-sm" onclick="approveEntry(10)">Approve</button>
+                  <button class="btn btn-reject btn-sm" onclick="rejectEntry(10)">Reject</button>
+                </td>
+              </tr>
+            </tbody>
 
-        </table>
+          </table>
+        </div>
       </div>
     </div>
 
