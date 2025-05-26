@@ -7,9 +7,9 @@
 
 body {
   display: flex;
-  background: linear-gradient(to right, #ffe0f0);
+  flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  background: linear-gradient(to right, #ffe0f0, #ffffff);
 }
 
 .sidebar {
@@ -76,32 +76,20 @@ body {
 .main-content {
   margin-left: 70px;
   width: calc(100% - 70px);
-  height: 100vh;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  transition: margin-left 0.3s ease, width 0.3s ease;
-  overflow: hidden;
 }
 
-.sidebar:hover~.main-content {
+.sidebar:hover ~ .main-content {
   margin-left: 220px;
   width: calc(100% - 220px);
 }
 
-.sidebar:hover~.main-content .header {
+.sidebar:hover ~ .main-content .header {
   left: 220px;
 }
-
-.container-fluid {
-  margin-top: 90px;
-  padding: 20px;
-  /* overflow-y: auto; */
-  flex: 1;
-}
-
-
-/*/////////////////////////////////////////////////////////////////*/
-
 
 .header {
   position: fixed;
@@ -120,9 +108,9 @@ body {
 }
 
 .header h3 {
-  margin: 0;
   color: rgb(0, 0, 0);
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .profile-info {
@@ -143,40 +131,15 @@ body {
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
-  .header {
-    left: 0;
-    padding: 10px 15px;
-  }
-
-  .header h3 {
-    font-size: 18px;
-  }
-}
-
-/*/////////////////////////////////////////////////////////////////*/
-
-.btn-approve {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-reject {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
+.container-fluid {
+  margin-top: 90px;
+  padding: 20px;
+  flex: 1;
+  overflow-x: auto;
 }
 
 .table-responsive {
-  max-height: 65vh;
-  overflow-y: auto;
+  overflow-x: auto;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(215, 50, 120, 0.15);
   background: #fff0f7;
@@ -188,22 +151,21 @@ table {
   border-collapse: separate;
   border-spacing: 0 12px;
   font-family: "Overpass", sans-serif;
+  min-width: 700px;
 }
 
 thead tr {
   background: linear-gradient(90deg, #c94f9c, #e574b7);
-  border-radius: 12px;
   color: white;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1rem;
   box-shadow: 0 4px 15px rgba(197, 50, 100, 0.35);
 }
 
-thead th {
+thead th,
+tbody td {
   padding: 14px 20px;
   text-align: center;
-  position: relative;
-  user-select: none;
 }
 
 tbody tr {
@@ -211,92 +173,111 @@ tbody tr {
   box-shadow: 0 4px 10px rgba(197, 50, 100, 0.1);
   border-radius: 12px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
 }
 
 tbody tr:hover {
-  background: #e574b7;
-  color: #fff;
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(197, 50, 100, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(197, 50, 100, 0.2);
 }
 
-tbody td {
-  padding: 15px 20px;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 600;
-  color: #8a2169;
-}
-
-tbody a {
-  color: #b4348a;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-tbody a:hover {
-  color: #d94aa3;
-  text-decoration: underline;
-}
-
-td[id^="status-"] {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #d94aa3;
-  transition: color 0.3s ease;
+.btn-approve,
+.btn-reject {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-approve {
-  background: #d94aa3;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 30px;
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(217, 74, 163, 0.5);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background-color: #28a745;
 }
 
 .btn-approve:hover {
-  background: #b62e7f;
-  box-shadow: 0 6px 18px rgba(182, 46, 127, 0.6);
+  background-color: #218838;
 }
 
 .btn-reject {
-  background: #b2407f;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 30px;
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(178, 64, 127, 0.5);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background-color: #dc3545;
 }
 
 .btn-reject:hover {
-  background: #7a2557;
-  box-shadow: 0 6px 18px rgba(122, 37, 87, 0.6);
+  background-color: #c82333;
 }
 
-.table-responsive::-webkit-scrollbar {
-  width: 10px;
+@media (max-width: 992px) {
+  .header h3 {
+    font-size: 1rem;
+  }
+
+  .profile-info span {
+    display: none;
+  }
+
+  .sidebar {
+    width: 60px !important;
+  }
+
+  .sidebar:hover {
+    width: 200px;
+  }
+
+  .menu-label {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 60px !important;
+    width: calc(100% - 60px) !important;
+  }
+
+  .sidebar:hover ~ .main-content {
+    margin-left: 200px !important;
+    width: calc(100% - 200px) !important;
+  }
 }
 
-.table-responsive::-webkit-scrollbar-track {
-  background: #ffe4f2;
-  border-radius: 12px;
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+    min-width: 100%;
+  }
+
+  .header {
+    padding: 10px 15px;
+    height: 60px;
+  }
+
+  .btn-approve,
+  .btn-reject {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
 }
 
-.table-responsive::-webkit-scrollbar-thumb {
-  background: #d94aa3;
-  border-radius: 12px;
-}
+@media (max-width: 480px) {
+  .header h3 {
+    font-size: 0.9rem;
+  }
 
-.table-responsive::-webkit-scrollbar-thumb:hover {
-  background: #b62e7f;
+  .btn-approve,
+  .btn-reject {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .table-responsive {
+    padding: 10px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px;
+  }
 }
