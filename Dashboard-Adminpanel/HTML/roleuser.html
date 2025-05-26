@@ -5,15 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Roles - Admin Dashboard</title>
-    <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/roleuser.css" />
-    <script src="/Dashboard-Adminpanel/JAVASCRIPT/roleuser.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/roleuser.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:wght@300;400;700;900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:wght@400..900&family=Raleway:wght@100..900&family=Roboto:wght@100..900&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
@@ -40,7 +38,8 @@
                 href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link">Media</a></div>
         <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a
                 href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html"
-                class="menu-label icon-link">Notifications</a></div>
+                class="menu-label icon-link">Notifications</a>
+        </div>
         <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a
                 href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link">Sponsors</a>
         </div>
@@ -50,93 +49,83 @@
     </div>
 
     <div class="main-content">
-        <div class="header" data-aos="fade-down">
-            <h3 class="section-title" data-aos="fade-up" style="text-align:center;">Role of User</h3>
+        <div class="header">
+            <h3>Role Of User</h3>
             <div class="profile-info">
-                <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin profile image" />
+                <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
                 <span>Admin</span>
             </div>
         </div>
 
-
-
-        <div class="table-container" role="region" aria-label="Employee data" tabindex="0" data-aos="fade-up">
-            <table aria-label="Employees">
+        <div class="table-container-fluid" data-aos="fade-up">
+            <table class="scrollable-table" aria-label="Employees">
                 <thead>
                     <tr>
-                        <th scope="col">
-                            <button class="sort-button" aria-label="Sort by name">
-                                Name
-                                <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <th>
+                            <button class="sort-button">Name<svg class="sort-icon" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </button>
-                            <input type="text" class="column-filter" placeholder="Filter by name"
-                                aria-label="Filter by name" />
+                                </svg></button>
+                            <input type="text" class="column-filter" placeholder="Filter by name" />
                         </th>
-                        <th scope="col">
-                            <button class="sort-button" aria-label="Sort by role">
-                                Role
-                                <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <th>
+                            <button class="sort-button">Role<svg class="sort-icon" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </button>
-                            <input type="text" class="column-filter" placeholder="Filter by role"
-                                aria-label="Filter by role" />
+                                </svg></button>
+                            <input type="text" class="column-filter" placeholder="Filter by role" />
                         </th>
-                        <th scope="col">
-                            <button class="sort-button" aria-label="Sort by department">
-                                Department
-                                <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <th>
+                            <button class="sort-button">Department<svg class="sort-icon" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </button>
-                            <input type="text" class="column-filter" placeholder="Filter by department"
-                                aria-label="Filter by department" />
+                                </svg></button>
+                            <input type="text" class="column-filter" placeholder="Filter by department" />
                         </th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
-            <div class="pagination" role="navigation" aria-label="Pagination">
-                <div class="pagination-info">
-                    Showing <span class="current-range">1-10</span> of <span class="total-items">0</span> items
-                </div>
-                <div class="pagination-controls">
-                    <button class="prev-page" aria-label="Previous page" disabled>Previous</button>
-                    <span class="current-page" aria-label="Current page">Page 1</span>
-                    <button class="next-page" aria-label="Next page">Next</button>
-                    <select class="page-size-select" aria-label="Items per page">
-                        <option value="5">5 per page</option>
-                        <option value="10" selected>10 per page</option>
-                        <option value="25">25 per page</option>
-                        <option value="50">50 per page</option>
-                    </select>
-                </div>
+        </div>
+
+        <div class="pagination">
+            <div class="pagination-info">
+                Showing <span class="current-range">1-10</span> of <span class="total-items">0</span> items
+            </div>
+            <div class="pagination-controls">
+                <button class="prev-page" disabled>Previous</button>
+                <span class="current-page">Page 1</span>
+                <button class="next-page">Next</button>
+                <select class="page-size-select">
+                    <option value="5">5 per page</option>
+                    <option value="10" selected>10 per page</option>
+                    <option value="25">25 per page</option>
+                    <option value="50">50 per page</option>
+                </select>
             </div>
         </div>
     </div>
 
     <script>
         AOS.init();
+
         const sampleData = Array.from({ length: 50 }, (_, i) => ({
             name: `User ${i + 1}`,
-            role: ['Admin', 'contestant', 'Event manager', 'Sponsorship Manager'][Math.floor(Math.random() * 4)],
-            department: [' Event Planning & Strategy Department', 'Sponsorship & Finance Department', ' Registration & Guest Management Department'][Math.floor(Math.random() * 3)]
+            role: ['Admin', 'Contestant', 'Event Manager', 'Sponsorship Manager'][Math.floor(Math.random() * 4)],
+            department: ['Event Planning & Strategy Department', 'Sponsorship & Finance Department', 'Registration & Guest Management Department'][Math.floor(Math.random() * 3)]
         }));
+
         let currentPage = 1;
         let pageSize = 10;
         let sortColumn = null;
         let sortDirection = 'ascending';
         let filters = { name: '', role: '', department: '' };
-        const table = document.querySelector('table');
-        const tbody = table.querySelector('tbody');
+
+        const tbody = document.querySelector('tbody');
         const prevButton = document.querySelector('.prev-page');
         const nextButton = document.querySelector('.next-page');
         const pageSizeSelect = document.querySelector('.page-size-select');
         const currentRange = document.querySelector('.current-range');
         const totalItems = document.querySelector('.total-items');
         const filterInputs = document.querySelectorAll('.column-filter');
+        const sortButtons = document.querySelectorAll('.sort-button');
 
         function filterData(data) {
             return data.filter(item =>
@@ -166,31 +155,46 @@
             const totalFilteredItems = filteredData.length;
             filteredData = sortData(filteredData);
             const paginatedData = paginateData(filteredData);
+
             totalItems.textContent = totalFilteredItems;
             const start = Math.min((currentPage - 1) * pageSize + 1, totalFilteredItems);
             const end = Math.min(currentPage * pageSize, totalFilteredItems);
             currentRange.textContent = `${start}-${end}`;
+
             prevButton.disabled = currentPage === 1;
             nextButton.disabled = end >= totalFilteredItems;
+
             tbody.innerHTML = '';
             paginatedData.forEach(item => {
                 const row = document.createElement('tr');
-                Object.entries(item).forEach(([key, value]) => {
+                Object.values(item).forEach(value => {
                     const cell = document.createElement('td');
                     cell.textContent = value;
-                    cell.setAttribute('tabindex', '0');
-                    cell.setAttribute('data-label', key.charAt(0).toUpperCase() + key.slice(1));
                     row.appendChild(cell);
                 });
                 tbody.appendChild(row);
             });
         }
 
-        filterInputs.forEach(input => {
-            input.addEventListener('input', e => {
-                const column = e.target.previousElementSibling.textContent.trim().toLowerCase();
-                filters[column] = e.target.value;
+        filterInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                const keys = ['name', 'role', 'department'];
+                filters[keys[index]] = input.value;
                 currentPage = 1;
+                updateTable();
+            });
+        });
+
+        sortButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                const keys = ['name', 'role', 'department'];
+                const selectedColumn = keys[index];
+                if (sortColumn === selectedColumn) {
+                    sortDirection = sortDirection === 'ascending' ? 'descending' : 'ascending';
+                } else {
+                    sortColumn = selectedColumn;
+                    sortDirection = 'ascending';
+                }
                 updateTable();
             });
         });
@@ -211,19 +215,6 @@
             pageSize = Number(e.target.value);
             currentPage = 1;
             updateTable();
-        });
-
-        document.querySelectorAll('.sort-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const column = button.textContent.trim().toLowerCase();
-                if (sortColumn === column) {
-                    sortDirection = sortDirection === 'ascending' ? 'descending' : 'ascending';
-                } else {
-                    sortColumn = column;
-                    sortDirection = 'ascending';
-                }
-                updateTable();
-            });
         });
 
         updateTable();

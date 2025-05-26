@@ -25,3 +25,16 @@ navbarNav.addEventListener('show.bs.collapse', () => {
 navbarNav.addEventListener('hide.bs.collapse', () => {
   navbarNav.style.backgroundColor = 'transparent';
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.split("/").pop(); // Get the page name from the URL
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop(); // Get the page name from the href attribute
+    if (currentPage === linkPage) {
+      link.classList.add("active"); // Add active class if the link matches the current page
+    }
+  });
+});
