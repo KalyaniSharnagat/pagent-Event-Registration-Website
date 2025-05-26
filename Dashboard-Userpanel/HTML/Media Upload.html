@@ -2,129 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
-    <link rel="stylesheet" href="/Dashboard-Userpanel/Dashboard-userpanel.css">
-         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <title>Dashboard-Userpanel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contestant Dashboard</title>
+    <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/Media Upload.css" />
+    <script src="user.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 
-<body>
-    <section id="sidebar">
-        <a href="#" class="brand iconlink">
-            <img src="/Dashboard-Userpanel/public/user-i-removebg-preview.png" class="user-image" width="30px"
-                height="30px">
-            <span class="text-user">User</span>
-        </a>
-        <ul class="side-menu top">
-            <li class="active">
-                <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class=" iconlink">
-                    <i class='bx bxs-dashboard bx-sm'></i>
-                    <span class="text">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="iconlink">
-                    <i class='bx bxs-shopping-bag-alt bx-sm'></i>
-                    <span class="text">Contestant Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class=" iconlink">
-                    <i class='bx bxs-doughnut-chart bx-sm'></i>
-                    <span class="text">Media Upload</span>
-                </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class=" iconlink">
-                    <i class='bx bxs-message-dots bx-sm'></i>
-                    <span class="text">View Judging Criteria</span>
-                </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class=" iconlink">
-                    <i class='bx bxs-group bx-sm'></i>
-                    <span class="text">Get Newsletters </span>
-                </a>
-            </li>
-        </ul>
-
-    </section>
-    <section id="content">
-        <nav>
-            <i class='bx bx-menu bx-sm'></i>
-            <a href="#" class="nav-link iconlink">Categories</a>
-            <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Search...">
-                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-                </div>
-            </form>
-            <input type="checkbox" class="checkbox" id="switch-mode" hidden />
-            <label class="switch-lm" for="switch-mode">
-                <div class="ball">
-                    <i class="bx bx-sun"></i> 
-                </div>
-            </label>
-
-            <a href="#" class="notification" id="notificationIcon">
-                <i class='bx bxs-bell bx-tada-hover'></i>
-                <span class="num">8</span>
+<body class="light">
+    <div class="dashboard">
+       <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <h2>🎀 Pageant</h2>
+        <ul class="nav-list">
+          <li class="active">
+            <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
+              <i class="fas fa-home"></i><span>Dashboard</span>
             </a>
-    </section>
-    <!-- end navbar -->
+          </li>
+          <li>
+            <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
+              <i class="fas fa-user-edit"></i><span>Contestant</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
+              <i class="fas fa-photo-video"></i><span>Media Upload</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
+              <i class="fas fa-balance-scale"></i><span>Judging Criteria</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
+              <i class="fas fa-newspaper"></i><span>Newsletters</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Theme Toggle Button -->
+      <button id="toggle-theme" class="sun-icon">☀️</button>
+    </aside>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Topbar -->
+            <nav class="topbar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+            </nav>
 
 
 
 
 
+            
+              <!-- javascript -->
+            <script>
+                const toggleBtn = document.getElementById("toggle-theme");
+                const body = document.body;
 
+                toggleBtn.addEventListener("click", () => {
+                    body.classList.toggle("dark");
+                    toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+                });
 
-
-
-
-    <!-- javascript -->
-    <script>
-        const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
-
-        allSideMenu.forEach(item => {
-            const li = item.parentElement;
-
-            item.addEventListener('click', function () {
-                allSideMenu.forEach(i => {
-                    i.parentElement.classList.remove('active');
-                })
-                li.classList.add('active');
-            })
-        });
-        const menuBar = document.querySelector('#content nav .bx.bx-menu');
-        const sidebar = document.getElementById('sidebar');
-        menuBar.addEventListener('click', function () {
-            sidebar.classList.toggle('hide');
-        });
-        function adjustSidebar() {
-            if (window.innerWidth <= 576) {
-                sidebar.classList.add('hide');
-                sidebar.classList.remove('show');
-            } else {
-                sidebar.classList.remove('hide');
-                sidebar.classList.add('show');
-            }
-        }
-        window.addEventListener('load', adjustSidebar);
-        window.addEventListener('resize', adjustSidebar);
-        // Dark Mode Switch
-        const switchMode = document.getElementById('switch-mode');
-        switchMode.addEventListener('change', function () {
-            if (this.checked) {
-                document.body.classList.add('dark');
-            } else {
-                document.body.classList.remove('dark');
-            }
-        })
-    </script>
-    <script src="script.js"></script>
+                // Sidebar Active State
+                const items = document.querySelectorAll(".nav-list li");
+                items.forEach(item => {
+                    item.addEventListener("click", () => {
+                        items.forEach(i => i.classList.remove("active"));
+                        item.classList.add("active");
+                    });
+                });
+            </script>
 </body>
+
 </html>
