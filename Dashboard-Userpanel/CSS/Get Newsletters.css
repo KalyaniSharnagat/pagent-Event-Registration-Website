@@ -1,8 +1,8 @@
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .iconlink {
@@ -25,11 +25,9 @@
 	--orange: #FD7238;
 	--light-orange: #FFE0D3;
 }
-
 body.dark {
-	--light: #0C0C1E;
-	--grey: #060714;
-	--dark: #FBFBFB;
+  background: #1e1e2f;
+  color: #fff;
 }
 
 body {

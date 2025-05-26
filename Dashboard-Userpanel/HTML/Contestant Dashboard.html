@@ -1,147 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
-    <link rel="stylesheet" href="/Dashboard-Userpanel/Dashboard-userpanel.css">
-    <title>Dashboard-Userpanel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contestant Dashboard</title>
+    <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/Contestant Dashboard.css" />
+    <script src="user.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <section id="sidebar">
-        <a href="#" class="brand iconlink">
-            <img src="/Dashboard-Userpanel/public/user-i-removebg-preview.png" class="user-image" width="30px" height="30px">
-            <span class="text-user">User</span>
-        </a>
-        <ul class="side-menu top">
-            <li class="active">
-                <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class=" iconlink">
-                    <i class='bx bxs-dashboard bx-sm'></i>
-                    <span class="text">Dashboard</span>
+
+<body class="light">
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>🎀 Pageant</h2>
+            <ul class="nav-list">
+                <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
+                    <li class="active"><i class="fas fa-home"></i><span>Dashboard</span></li>
                 </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="iconlink">
-                    <i class='bx bxs-shopping-bag-alt bx-sm'></i>
-                    <span class="text">Contestant Dashboard</span>
+                <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
+                    <li><i class="fas fa-user-edit"></i><span>Contestant</span></li>
                 </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class=" iconlink">
-                    <i class='bx bxs-doughnut-chart bx-sm'></i>
-                    <span class="text">Media Upload</span>
+                <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
+                    <li><i class="fas fa-photo-video"></i><span>Media Upload</span></li>
                 </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class=" iconlink">
-                    <i class='bx bxs-message-dots bx-sm'></i>
-                    <span class="text">View Judging Criteria</span>
+                <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
+                    <li><i class="fas fa-balance-scale"></i><span>Judging Criteria</span></li>
                 </a>
-            </li>
-            <li>
-                <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class=" iconlink">
-                    <i class='bx bxs-group bx-sm'></i>
-                    <span class="text">Get Newsletters </span>
+                <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
+                    <li><i class="fas fa-newspaper"></i><span>Newsletters</span></li>
                 </a>
-            </li>
-        </ul>
-    </section>
-    <section id="content">
-        <nav>
-            <i class='bx bx-menu bx-sm'></i>
-            <a href="#" class="nav-link iconlink">Categories</a>
-            <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Search...">
-                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+            </ul>
+            <button id="toggle-theme">☀️</button>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Topbar -->
+            <nav class="topbar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
                 </div>
-            </form>
-            <input type="checkbox" class="checkbox" id="switch-mode" hidden />
-            <label class="swith-lm" for="switch-mode">
-                <i class="bx bxs-moon"></i>
-                <i class="bx bx-sun"></i>
-                <div class="ball"></div>
-            </label>
-            <a href="#" class="notification" id="notificationIcon">
-                <i class='bx bxs-bell bx-tada-hover'></i>
-                <span class="num">8</span>
-            </a>
-    </section>
-    <!-- end navbar -->
+                <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+            </nav>
+            <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h2><i class="fas fa-user-circle"></i> Contestant Dashboard</h2>
+    </div>
+
+    <!-- Profile Section -->
+    <div>
+      <h5 class="section-title"><i class="fas fa-id-card"></i> View/Edit Profile</h5>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Full Name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Phone Number">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="City">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Application Form -->
+    <div>
+      <h5 class="section-title"><i class="fas fa-file-alt"></i> Submit Application</h5>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Upload Photo</label>
+          <input type="file" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Upload Document</label>
+          <input type="file" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-pink btn-sm btn-outline-info">
+          Submit Application
+        </button>
+      </form>
+    </div>
+
+    <!-- Application Status -->
+    <div>
+      <h5 class="section-title"><i class="fas fa-check-circle"></i> Application Status</h5>
+      <p>Status: <span class="status-badge">Pending</span></p>
+    </div>
+
+    <!-- Notifications -->
+    <div>
+      <h5 class="section-title"><i class="fas fa-bell"></i> Event Updates & Notifications</h5>
+      <ul class="list-group">
+        <li class="list-group-item">📢 Your application has been received.</li>
+        <li class="list-group-item">🎉 Event schedule will be shared soon.</li>
+      </ul>
+    </div>
+
+    <!-- Event Schedule -->
+    <div>
+      <h5 class="section-title"><i class="fas fa-calendar-alt"></i> Event Schedule</h5>
+      <ul class="list-group">
+        <li class="list-group-item">🗓️ Orientation: June 10, 2025</li>
+        <li class="list-group-item">📍 Venue: Grand Hall, City Center</li>
+      </ul>
+    </div>
+
+    <!-- FAQs -->
+    <div>
+      <h5 class="section-title"><i class="fas fa-question-circle"></i> FAQs & Instructions</h5>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              What documents are required?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              You need to upload a recent photo and a valid ID proof (Aadhar/Passport/Driver’s License).
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Can I edit my profile after submission?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, you can edit your profile before the application deadline. After that, changes won’t be allowed.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              How will I know if I am selected?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              You will receive an email notification and a message will appear in your dashboard.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
 
+            
+              <!-- javascript -->
+            <script>
+                const toggleBtn = document.getElementById("toggle-theme");
+                const body = document.body;
 
+                toggleBtn.addEventListener("click", () => {
+                    body.classList.toggle("dark");
+                    toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+                });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- javascript -->
-    <script>
-        const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
-
-        allSideMenu.forEach(item => {
-            const li = item.parentElement;
-
-            item.addEventListener('click', function () {
-                allSideMenu.forEach(i => {
-                    i.parentElement.classList.remove('active');
-                })
-                li.classList.add('active');
-            })
-        });
-
-        // TOGGLE SIDEBAR
-        const menuBar = document.querySelector('#content nav .bx.bx-menu');
-        const sidebar = document.getElementById('sidebar');
-
-        // Sidebar toggle işlemi
-        menuBar.addEventListener('click', function () {
-            sidebar.classList.toggle('hide');
-        });
-        function adjustSidebar() {
-            if (window.innerWidth <= 576) {
-                sidebar.classList.add('hide'); 
-                sidebar.classList.remove('show');
-            } else {
-                sidebar.classList.remove('hide'); 
-                sidebar.classList.add('show');
-            }
-        }
-        window.addEventListener('load', adjustSidebar);
-        window.addEventListener('resize', adjustSidebar);
-        // Dark Mode Switch
-        const switchMode = document.getElementById('switch-mode');
-        switchMode.addEventListener('change', function () {
-            if (this.checked) {
-                document.body.classList.add('dark');
-            } else {
-                document.body.classList.remove('dark');
-            }
-        })
-    </script>
-    <script src="script.js"></script>
+                // Sidebar Active State
+                const items = document.querySelectorAll(".nav-list li");
+                items.forEach(item => {
+                    item.addEventListener("click", () => {
+                        items.forEach(i => i.classList.remove("active"));
+                        item.classList.add("active");
+                    });
+                });
+            </script>
 </body>
 
 </html>
