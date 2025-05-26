@@ -60,9 +60,8 @@ body.dark {
   font-weight: bold;
   border-left: 4px solid white;
 }
-.link-none{
-	text-decoration: none;
-	color: #1e1e2f;
+.sun-icon{
+  color: #fff;
 }
 #toggle-theme {
   margin-top: 1rem;
@@ -121,7 +120,56 @@ body.dark .topbar {
   font-size: 1.6rem;
 }
 
+/* Content */
+.content {
+  margin-top: 40px;
+  padding: 2rem;
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+header p {
+  color: gray;
+  margin-bottom: 1rem;
+}
 
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.2rem;
+}
+.card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+body.dark .card {
+  background: #2a2a3d;
+  color: white;
+}
+.card h3 {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ec407a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.card .status.pending {
+  color: orange;
+}
 
 /* Responsive */
 @media screen and (max-width: 1024px) {

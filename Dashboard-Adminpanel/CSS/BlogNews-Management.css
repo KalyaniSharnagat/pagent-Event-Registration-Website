@@ -39,7 +39,7 @@ body {
 }
 
 .menu-item {
-  display: flex;
+display: flex;
   align-items: center;
   gap: 15px;
   padding: 12px 20px;
