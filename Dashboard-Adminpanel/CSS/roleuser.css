@@ -1,3 +1,4 @@
+/* --- Base styles (unchanged) --- */
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,9 @@
 
 body {
   display: flex;
-  background: linear-gradient(to right, #ffe0f0);
+  flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
+  background: linear-gradient(to right, #ffe0f0, #ffffff);
 }
 
 .sidebar {
@@ -24,7 +25,6 @@ body {
   left: 0;
   padding-top: 20px;
   z-index: 1000;
-  user-select: none;
 }
 
 .sidebar:hover {
@@ -36,7 +36,6 @@ body {
   font-size: 1.2rem;
   padding: 10px;
   font-weight: 600;
-  white-space: nowrap;
 }
 
 .menu-item {
@@ -47,14 +46,11 @@ body {
   color: white;
   cursor: pointer;
   transition: background 0.3s ease;
-  white-space: nowrap;
 }
 
-.menu-item:hover,
-.menu-item:focus {
+.menu-item:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  outline: none;
 }
 
 .icon-link:active {
@@ -65,102 +61,91 @@ body {
   font-size: 18px;
   min-width: 25px;
   text-align: center;
-  pointer-events: none;
 }
 
 .menu-label {
+  white-space: nowrap;
   opacity: 0;
   transition: opacity 0.3s ease;
   text-decoration: none;
   color: #fff;
-  pointer-events: none;
 }
 
 .sidebar:hover .menu-label {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .main-content {
   margin-left: 70px;
-  padding: 5px 15px;
-  width: 100%;
-  transition: margin-left 0.3s ease;
+  width: calc(100% - 70px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar:hover~.main-content {
   margin-left: 220px;
+  width: calc(100% - 220px);
+}
+
+.sidebar:hover~.main-content .header {
+  left: 220px;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff0f5;
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   padding: 15px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  height: 70px;
   box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
+  transition: left 0.3s ease, width 0.3s ease;
 }
 
-.search-filter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.search-filter input,
-.search-filter select {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  outline-offset: 2px;
-  outline-color: transparent;
-  transition: outline-color 0.2s ease;
-  background: white;
-  font-size: 1rem;
-  min-width: 150px;
-}
-
-.search-filter input:focus,
-.search-filter select:focus {
-  outline-color: #ff85c1;
+.header h3 {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .profile-info {
   display: flex;
   align-items: center;
   gap: 10px;
-  float: right;
 }
 
 .profile-info img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
-.dashboard-header {
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 20px;
-  border-radius: 10px;
+.profile-info span {
   color: white;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-.table-container {
-  max-width: 100%;
-  overflow-x: auto;
-  margin: 2rem auto;
-  background: #fff0f5;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* ✅ Updated for scroll support */
+.table-container-fluid {
+  padding: 80px 20px 20px 20px;
   position: relative;
-  max-height: 500px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scrollable-table {
+  width: 100%;
+  min-width: 700px;
+  /* Force scroll if screen smaller */
+  border-collapse: collapse;
 }
 
 table {
@@ -324,4 +309,73 @@ td:focus {
   .sidebar:hover~.main-content {
     margin-left: 220px;
   }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar:hover {
+    width: 180px;
+  }
+
+  .main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .sidebar:hover~.main-content {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+
+  .header {
+    left: 60px;
+  }
+
+  .sidebar:hover~.main-content .header {
+    left: 180px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .column-filter {
+    font-size: 0.75rem;
+  }
+
+  .sort-button {
+    font-size: 0.85rem;
+  }
+
+  .pagination-controls {
+    justify-content: center;
+  }
+
+  .profile-info span {
+    display: none;
+  }
+}
+
+/* ✅ Mobile/tablet horizontal scroll support */
+@media (max-width: 768px) {
+  .scrollable-table {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .table-container-fluid {
+    overflow-x: auto;
+  }
+}
+
+tbody tr {
+  transition: all 0.2s ease-in-out;
+}
+
+tbody tr:hover {
+  transform: scale(1.01);
+  background-color: #fff5f8;
 }
