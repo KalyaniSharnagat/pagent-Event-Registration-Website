@@ -13,179 +13,161 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/modal.css">
+
 </head>
+
 <body class="backgroundColor">
-<nav class="navbar navbar-expand-md fixed-top shadow">
-  <div class="container-fluid px-4">
-    <!-- Logo on Left -->
-    <a class="navbar-brand" href="/HTML/INDEX.html">
-      <img src="/PUBLIC-IMAGES/149442286_c05e8a83-338e-4525-bd74-f6f4217ba376-removebg-preview.png" alt="Logo" width="150">
-    </a>
 
-    <!-- Toggler Button (for mobile) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <header>
 
-    <!-- Navbar Items fully pushed to the right -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item px-3">
-          <a class="nav-link active" href="/HTML/INDEX.html">HOME</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link active" href="/HTML/aboutus.html">ABOUT</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link active" href="/HTML/awards.html">AWARDS</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link active" href="/HTML/contact.html">CONTACT US</a>
-        </li>
-        <li class="nav-item ps-3">
-          <button type="button" class="btn  rounded-pill gradient-btn" data-bs-toggle="modal"
-            data-bs-target="#loginModal">
-            Login
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-transparent">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/PUBLIC-IMAGES/149442286_c05e8a83-338e-4525-bd74-f6f4217ba376-removebg-preview.png"
+            alt="Company Logo" height="100" width="200" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="/HTML/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="/HTML/aboutus.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="/HTML/awards.html">Awards</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="/HTML/contact.html">Contact Us</a></li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-dark ms-lg-3 mt-2 mt-lg-0 px-4 rounded-pill" data-bs-toggle="modal"
+                data-bs-target="#loginModal">Login</button>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <div class="modal-body">
-          <div class="form-title text-center mb-3">
-            <h4>Login</h4>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content glassmorphic-modal p-3">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold text-pink" id="exampleModalLabel">Welcome Back</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form>
-            <div class="form-group mb-3">
-              <input type="email" class="form-control" id="email1" placeholder="Your email address...">
-            </div>
-            <div class="form-group mb-3">
-              <input type="password" class="form-control" id="password1" placeholder="Your password...">
-            </div>
-            <button type="submit" class="btn btn-info btn-block w-100 btn-round mb-3 gradient-btn">Login</button>
-          </form>
+          <div class="modal-body text-center">
+            <!-- <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45458?auto=format&fit=crop&w=200&q=80"
+              alt="Fashion Model" class="img-fluid mb-3 rounded shadow" style="max-height: 150px;">  -->
+            <h4 class="mb-3 text-gradient fw-bold">Login to Your Account</h4>
+            <form id="loginForm">
+              <input type="email" id="email" class="form-control form-control-lg fancy-input mb-3" required
+                placeholder="Email address">
+              <input type="password" id="password" class="form-control form-control-lg fancy-input mb-3" required
+                placeholder="Password">
+              <button type="submit" class="btn gradient-btn w-100 mb-3">Login</button>
+            </form>
 
-          <div class="text-center text-muted mb-2">or use a social network</div>
-          <div class="d-flex justify-content-center gap-2">
-            <button type="button" class="btn btn-secondary btn-round" data-bs-toggle="tooltip" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-bs-toggle="tooltip" title="Facebook">
-              <i class="fab fa-facebook"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-bs-toggle="tooltip" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </button>
+            <p class="text-white mb-2">Or login with</p>
+            <div class="d-flex justify-content-center gap-2">
+              <button class="btn social-btn"><i class="fab fa-facebook-f"></i></button>
+              <button class="btn social-btn"><i class="fab fa-google"></i></button>
+              <button class="btn social-btn"><i class="fab fa-instagram"></i></button>
+            </div>
           </div>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-          <div class="signup-section">Not a member yet? <a href="#a" class="text-info">Sign Up</a>.</div>
+          <div class="modal-footer border-0 justify-content-center">
+            <small class="text-white">Not a member yet?
+              <a href="#" class="text-pink fw-bold" data-bs-dismiss="modal" onclick="openRegisterModal()">Sign Up</a>
+            </small>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-body">
-          <div class="form-title text-center mb-3">
-            <h4>Login</h4>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true" aria-labelledby="registerModalLabel">
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content"
+          style="background: #121212; border-radius: 15px; border: none; box-shadow: 0 8px 20px rgba(0,0,0,0.7); color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold fs-4 text-gold" id="registerModalLabel" style="letter-spacing: 2px;">Register
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form>
-            <div class="form-group mb-3">
-              <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+          <div class="modal-body px-4 pt-1 pb-4">
+            <div class="form-title text-center mb-4">
+              <h4 class="fw-semibold" style="letter-spacing: 1.5px; color: #f5c518;">Create Your Account</h4>
+              <p class="text-light" style="font-size: 0.9rem;">Join the fashion elite and stay updated on upcoming
+                shows.</p>
             </div>
-            <div class="form-group mb-3">
-              <input type="password" class="form-control" id="password1" placeholder="Your password...">
+            <form>
+              <div class="form-group mb-3">
+                <input type="text" class="form-control form-control-lg rounded-pill px-4" placeholder="Full Name"
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+              </div>
+              <div class="form-group mb-3">
+                <input type="email" class="form-control form-control-lg rounded-pill px-4" placeholder="Email address"
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+              </div>
+              <div class="form-group mb-3">
+                <input type="password" class="form-control form-control-lg rounded-pill px-4" placeholder="Password"
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+              </div>
+              <div class="form-group mb-4">
+                <input type="password" class="form-control form-control-lg rounded-pill px-4"
+                  placeholder="Confirm Password"
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+              </div>
+              <button type="submit" class="btn btn-gold btn-lg w-100 rounded-pill fw-bold"
+                style="background: linear-gradient(45deg, #f5c518, #d4af37); border: none; box-shadow: 0 4px 15px #f5c518;">Sign
+                Up</button>
+            </form>
+            <div class="text-center mt-3" style="font-weight: 500; font-size: 0.9rem;">
+              Already have an account?
+              <a href="#" class="text-gold fw-semibold" data-bs-dismiss="modal" onclick="openLoginModal()"
+                style="text-decoration: underline;">Login</a>
             </div>
-            <button type="submit" class="btn btn-info btn-block w-100 btn-round mb-3">Login</button>
-          </form>
-
-          <div class="text-center text-muted mb-2">or use a social network</div>
-          <div class="d-flex justify-content-center gap-2">
-            <button type="button" class="btn btn-secondary btn-round" data-bs-toggle="tooltip" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-bs-toggle="tooltip" title="Facebook">
-              <i class="fab fa-facebook"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-bs-toggle="tooltip" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </button>
           </div>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-          <div class="signup-section">Not a member yet? <a href="#" class="text-info">Sign Up</a>.</div>
         </div>
       </div>
     </div>
-  </div>
+
+  </header>
+
+
   <div>
-    <!-- <section>
-  <img id="slideshow" src="/PUBLIC-IMAGES/about-image.png" alt="Slideshow" width="100%" height="690px">
-</section> -->
 
-    <!-- 
-<div class="container-fluid p-0">
-<img src="/PUBLIC-IMAGES/about0.png" width="100%"  height="100%"  class="img-fluid about-heros-image" draggable="false" alt="About Banner" />
-  </div> -->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 mt-1" data-aos="fade-right">
+          <h2>About CrownVista 2025</h2>
+          <p>CrownVista Miss India is a tribute to the strength, beauty, and brilliance of Indian women. As one of the
+            country’s most esteemed beauty pageants, it celebrates women who embody grace, intelligence, talent, and
+            compassion.</p>
 
-    <div class="About">
-      <div class="info">
-        <h2>About CrownVista 2025</h2>
-        <p>CrownVista Miss India is a tribute to the strength, beauty, and brilliance of Indian women. As one of the
-          country’s most esteemed beauty pageants, it celebrates women who embody grace, intelligence, talent, and
-          compassion.
+          <p>Held annually, the pageant offers a powerful platform for aspiring women to express themselves, build
+            confidence, and inspire others. It’s not just about the crown — it’s about the journey, the purpose, and the
+            pride of representing modern Indian womanhood.</p>
 
-          Held annually, the pageant offers a powerful platform for aspiring women to express themselves, build
-          confidence, and inspire others. It’s not just about the crown it’s about the journey, the purpose, and the
-          pride of representing modern Indian womanhood.
+          <p>At CrownVista, we don't just find a winner — we discover role models. An Indian woman plays many essential
+            roles throughout her life — as a nurturing mother, a supportive wife, and a bold entrepreneur. She balances
+            family and ambition with resilience and determination, inspiring everyone around her.</p>
 
-          At CrownVista, we don't just find a winner, we discover role models.</p>
-        <p>
-          An Indian woman plays many essential roles throughout her life as a nurturing mother, a supportive wife, and a
-          bold entrepreneur. She balances family and ambition with resilience and determination, inspiring everyone
-          around her.
-        </p>
+          <p>More than a crown, this pageant is a platform to empower women, celebrate their journey, and recognize
+            their
+            power to lead and inspire.</p>
 
-        <p>
-          More than a crown, this pageant is a platform to empower women, celebrate their journey, and recognize their
-          power to lead and inspire.
-        </p>
-        <p>After the great success of our first event, CrownVista Miss India 2024, we are excited to bring you our
-          second season CrownVista Miss India 2025. We look forward to making this year even more special and inspiring
-          for all participants.</p>
+          <p>After the great success of our first event, CrownVista Miss India 2024, we are excited to bring you our
+            second season — CrownVista Miss India 2025. We look forward to making this year even more special and
+            inspiring
+            for all participants.</p>
 
-        <form>
-          <button class="register-button">Register Now</button>
-        </form>
-      </div>
+          <button class="btn btn-primary rounded-pill mt-3">Register Now</button>
+        </div>
 
-      <!-- Image -->
-      <div class="picture">
-        <img src="/PUBLIC-IMAGES/abt2.jpg" height="500px" width="500px">
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <img src="/PUBLIC-IMAGES/abt2.jpg" class="img-fluid rounded shadow" alt="About Us">
+        </div>
       </div>
     </div>
-
 
     <div class="testimonals">
       <h1>Testimonals</h1>
@@ -199,7 +181,6 @@
           <div class="col-md-4 text-center">
             <img src="/PUBLIC-IMAGES/testCEO.jpg" alt="Muskaan Gairola" class="profile-img">
           </div>
-          <!-- quote -->
           <div class="col-md-8">
             <p class="quote-text">
               "At CrownVista, we believe the right platform can truly change lives. CrownVista Miss India is not just a
@@ -217,10 +198,10 @@
     <section class="quote-section">
       <div class="container">
         <div class="row align-items-center">
-
-
-          <!-- quote -->
-          <div class="col-md-8">
+          <div class="col-md-4 text-center order-lg-2">
+            <img src="/PUBLIC-IMAGES/contestant.jpg" alt="Muskaan Gairola" class="profile-img">
+          </div>
+          <div class="col-md-8 order-lg-1">
             <p class="quote-text">
               "This platform gave me confidence and taught me to believe in myself. It was a memorable experience in my
               life. I got to know myself better, made wonderful friends, and learned something new every day. This
@@ -231,9 +212,6 @@
             <p class="quote-author">Mrunal Verma, Finalist</p>
           </div>
 
-          <div class="col-md-4 text-center">
-            <img src="/PUBLIC-IMAGES/contestant.jpg" alt="Muskaan Gairola" class="profile-img">
-          </div>
         </div>
       </div>
     </section>
@@ -245,7 +223,6 @@
           <div class="col-md-4 text-center">
             <img src="/PUBLIC-IMAGES/test-contestant.webp" alt="Muskaan Gairola" class="profile-img">
           </div>
-          <!-- quote -->
           <div class="col-md-8">
             <p class="quote-text">
               "Winning the CrownVista Miss India 2024 title was like a dream come true for me. This journey not only
@@ -263,10 +240,10 @@
     <section class="quote-section">
       <div class="container">
         <div class="row align-items-center">
-
-
-          <!-- quote -->
-          <div class="col-md-8">
+          <div class="col-md-4 text-center order-lg-2">
+            <img src="/PUBLIC-IMAGES/testJudge.jpg" alt="Muskaan Gairola" class="profile-img">
+          </div>
+          <div class="col-md-8 order-lg-1">
             <p class="quote-text">
               "The confidence, talent, and grace I saw in every participant was truly inspiring. This is not just a
               beauty pageant, but a journey of self-growth. Each contestant brought her own story, strength, and spark
@@ -275,17 +252,10 @@
             </p>
             <p class="quote-author">Vedant Shrivastava, Jury Panel Member</p>
           </div>
-          <div class="col-md-4 text-center">
-            <img src="/PUBLIC-IMAGES/testJudge.jpg" alt="Muskaan Gairola" class="profile-img">
-          </div>
         </div>
 
       </div>
     </section>
-
-
-    <!-------CO-FOUNDER--------->
-
 
     <div class="container text-center py-5">
       <div class="mb-5">
@@ -324,14 +294,8 @@
         </div>
       </div>
     </div>
-    <!----------Judges------------->
 
     <div class="container position-relative py-5">
-      <!-- Navigation Arrows -->
-      <!-- <div class="arrow-buttons">
-    <button>&lt;</button>
-    <button>&gt;</button>
-  </div> -->
 
       <h3 class="text-white fw-bold mb-4">
         <i class="fa-solid fa-people-group"></i>
@@ -373,7 +337,6 @@
   </div>
   </div>
 
-
   <div class="pg-footer">
     <footer class="footer">
       <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
@@ -387,7 +350,6 @@
             <img src="/PUBLIC-IMAGES/logo-bgr.png" width="110" height="90">
             <a class="footer-logo-link" href="">
               <span class="hidden-link-text"></span>
-              <!-- <h1>LOGO</h1> -->
             </a>
           </div>
           <div class="footer-menu">
@@ -465,10 +427,11 @@
           <div class="footer-call-to-action">
             <h2 class="footer-call-to-action-title"> Let's Chat</h2>
             <p class="footer-call-to-action-description"> Have a support question?</p>
-            <a class="footer-call-to-action-button button  footer-button" href="contact.html" target="_self"> Get in Touch </a>
+            <a class="footer-call-to-action-button button  footer-button" href="contact.html" target="_self"> Get in
+              Touch </a>
           </div>
           <div class="footer-call-to-action">
-                        <h2 class="footer-call-to-action-title"> You Call Us</h2>
+            <h2 class="footer-call-to-action-title"> You Call Us</h2>
             <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX"
                 target="_self"> 0124-64XXXX </a></p>
           </div>
@@ -479,7 +442,8 @@
               d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
             </path>
           </svg>
-          <a class="footer-social-link linkedin" href="https://www.linkedin.com/company/rsinfotechsys/posts/?feedView=all" target="_blank">
+          <a class="footer-social-link linkedin"
+            href="https://www.linkedin.com/company/rsinfotechsys/posts/?feedView=all" target="_blank">
             <span class="hidden-link-text">Linkedin</span>
             <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
               <path class="footer-social-icon-path"
@@ -523,14 +487,47 @@
       </div>
     </footer>
   </div>
- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+  <script>
+    function openRegisterModal() {
+      const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+      registerModal.show();
+    }
+
+    function openLoginModal() {
+      const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+      loginModal.show();
+    }
+
+    document.getElementById('loginForm').onsubmit = function (event) {
+      event.preventDefault();
+
+      var email = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value;
+
+      if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      var passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*()_\-+={}[\]|\\:;"'<>,.?/~`]).{8,}$/;
+
+      if (!passwordPattern.test(password)) {
+        alert('Password must be at least 8 characters long and include at least one number and one special character.');
+        return;
+      }
+
+      alert('Login successful! Redirecting to dashboard...');
+      window.location.href = '/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html';
+    }
+  </script>
+
 </body>
 
 </html>
