@@ -229,4 +229,12 @@ body.dark .card {
   font-size: 1.25rem;
   font-weight: 600;
 }
+
+.scrollable-criteria {
+  max-height: 500px; /* adjust based on your layout */
+  overflow-y: auto;
+  padding-right: 10px; /* optional: space for scrollbar */
+  border: 1px solid #ddd; /* optional: visual separation */
+  border-radius: 8px;
+}
 /* judging criteria */
