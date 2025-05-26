@@ -22,52 +22,70 @@ body {
 .text2 {
   color: #703B42;
 }
-
-/* navbar */
-.navbar{
-  background-color: #f27db681;
-  color: #fff;
-}
-nav {
-  position: fixed;
-  z-index: 1;
-  height: 110px;
-  background-color: #F7A8C4;
+.navbar {
+  background-color: rgba(255, 255, 255, 0) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  z-index: 1030;
 }
 
-.nav-link {
+.nav-link-custom {
+  font-weight: 600 !important;
+  color: #00246b !important;
+  padding: 0.5rem 1rem;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #0dcaf0;
+.nav-link-custom:hover {
+  color: #011c5a;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #00246b;
+  transition: 0.3s;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
 }
 
 .nav-link.active {
-  font-weight: bold;
-  color: #bc1060;
-  /* Active link color */
+  color: #00246b !important;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Responsive logo image */
-.nav img {
-  max-width: 100%;
-  height: auto;
-
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #1b263b, #415a77);
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .nav>div {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+.navbar-toggler {
+  border-color: #00246b;
 }
+
 
 /* navbar end */
 .container {
   padding: 2rem 0rem;
 }
-
+/* 
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;
@@ -82,9 +100,9 @@ nav {
   .close {
     margin-top: -1.5rem;
   }
-}
+} */
 
-.form-title {
+/* .form-title {
   margin: -2rem 0rem 2rem;
 }
 
@@ -115,15 +133,15 @@ nav {
 
 .gradient-btn:hover {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
-}
+} */
 
 .award-heros {
   width: 100%;
 }
 
-.image-container {
+/* .image-container {
   margin-top: 100px;
-}
+} */
 
 .team-container {
   display: flex;

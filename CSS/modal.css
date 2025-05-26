@@ -1,0 +1,111 @@
+/* Glassmorphic background */
+.glassmorphic-modal {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    color: white;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #f72585, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-pink {
+    color: #f72585;
+}
+
+.gradient-btn {
+    background: linear-gradient(to right, #f72585, #7209b7);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(to right, #7209b7, #4361ee);
+    transform: scale(1.03);
+}
+
+.fancy-input {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.fancy-input::placeholder {
+    color: #ccc;
+}
+
+.social-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.modal-body h4 {
+    font-weight: 600;
+    color: #fff;
+}
+
+.modal-footer {
+    font-size: 0.9rem;
+}
+
+/* body {
+    background: linear-gradient(135deg, #7209b7, #3a0ca3, #4361ee);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+} */
+
+.text-gold {
+    color: #f5c518 !important;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+    background: linear-gradient(45deg, #d4af37, #f5c518);
+    box-shadow: 0 6px 20px #d4af37;
+    color: #121212;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+}
+
+.form-control:focus {
+    background: #2a2a2a;
+    box-shadow: 0 0 8px #f5c518;
+    color: #fff;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
