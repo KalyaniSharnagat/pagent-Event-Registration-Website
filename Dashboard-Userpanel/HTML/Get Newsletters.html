@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
     <link rel="stylesheet" href="/Dashboard-Userpanel/Dashboard-userpanel.css">
+    <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/Get Newsletters.css">
     <title>Dashboard-Userpanel</title>
 </head>
+
 <body>
     <section id="sidebar">
         <a href="#" class="brand iconlink">
-            <img src="/Dashboard-Userpanel/public/user-i-removebg-preview.png" class="user-image" width="30px" height="30px">
+            <img src="/Dashboard-Userpanel/public/user-i-removebg-preview.png" class="user-image" width="30px"
+                height="30px">
             <span class="text-user">User</span>
         </a>
         <ul class="side-menu top">
@@ -69,79 +73,73 @@
             </a>
     </section>
     <!-- end navbar -->
+    <!-- newsletter -->
+    <!-- <div class="middle">
+
+        <img src="/PUBLIC-IMAGES/gmail (1).ico" alt="gmail ico"> -->
+
+        <!-- HTML -->
+        <section class="newsletter-section">
+            <img src="/PUBLIC-IMAGES/gmail (1).ico" alt="Gmail Icon" class="gmail-icon">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>
+                Stay connected with the glamour and grace of Miss Pageant updates. Get exclusive insights,
+                behind-the-scenes moments, and highlights. Be the first to know about upcoming events, auditions,
+                and results. Receive beauty tips, style trends, and inspiration from the queens. Join our
+                community and celebrate confidence, charm, and elegance!
+            </p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter email address">
+                <button>Subscribe</button>
+            </div>
+        </section>
 
 
+        <!-- javascript -->
+        <script>
+            const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
+            allSideMenu.forEach(item => {
+                const li = item.parentElement;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- javascript -->
-    <script>
-        const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
-
-        allSideMenu.forEach(item => {
-            const li = item.parentElement;
-
-            item.addEventListener('click', function () {
-                allSideMenu.forEach(i => {
-                    i.parentElement.classList.remove('active');
+                item.addEventListener('click', function () {
+                    allSideMenu.forEach(i => {
+                        i.parentElement.classList.remove('active');
+                    })
+                    li.classList.add('active');
                 })
-                li.classList.add('active');
+            });
+
+            // TOGGLE SIDEBAR
+            const menuBar = document.querySelector('#content nav .bx.bx-menu');
+            const sidebar = document.getElementById('sidebar');
+
+            // Sidebar toggle işlemi
+            menuBar.addEventListener('click', function () {
+                sidebar.classList.toggle('hide');
+            });
+            function adjustSidebar() {
+                if (window.innerWidth <= 576) {
+                    sidebar.classList.add('hide');
+                    sidebar.classList.remove('show');
+                } else {
+                    sidebar.classList.remove('hide');
+                    sidebar.classList.add('show');
+                }
+            }
+            window.addEventListener('load', adjustSidebar);
+            window.addEventListener('resize', adjustSidebar);
+            // Dark Mode Switch
+            const switchMode = document.getElementById('switch-mode');
+            switchMode.addEventListener('change', function () {
+                if (this.checked) {
+                    document.body.classList.add('dark');
+                } else {
+                    document.body.classList.remove('dark');
+                }
             })
-        });
-
-        // TOGGLE SIDEBAR
-        const menuBar = document.querySelector('#content nav .bx.bx-menu');
-        const sidebar = document.getElementById('sidebar');
-
-        // Sidebar toggle işlemi
-        menuBar.addEventListener('click', function () {
-            sidebar.classList.toggle('hide');
-        });
-        function adjustSidebar() {
-            if (window.innerWidth <= 576) {
-                sidebar.classList.add('hide'); 
-                sidebar.classList.remove('show');
-            } else {
-                sidebar.classList.remove('hide'); 
-                sidebar.classList.add('show');
-            }
-        }
-        window.addEventListener('load', adjustSidebar);
-        window.addEventListener('resize', adjustSidebar);
-        // Dark Mode Switch
-        const switchMode = document.getElementById('switch-mode');
-        switchMode.addEventListener('change', function () {
-            if (this.checked) {
-                document.body.classList.add('dark');
-            } else {
-                document.body.classList.remove('dark');
-            }
-        })
-    </script>
-    <script src="script.js"></script>
+        </script>
+        <script src="script.js"></script>
 </body>
 
 </html>
