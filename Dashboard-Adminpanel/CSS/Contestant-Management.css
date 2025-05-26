@@ -181,7 +181,9 @@ tbody tr:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(197, 50, 100, 0.2);
 }
-
+.add-event{
+   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
 .btn-approve,
 .btn-reject {
   padding: 6px 12px;
@@ -208,6 +210,7 @@ tbody tr:hover {
 .btn-reject:hover {
   background-color: #c82333;
 }
+
 
 /* --- Responsive Updates --- */
 

@@ -48,6 +48,7 @@ display: flex;
   white-space: nowrap;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 .menu-item:hover {
@@ -65,7 +66,19 @@ display: flex;
   opacity: 0;
   color: #fff;
   transition: opacity 0.3s ease;
+  text-decoration: none;
 }
+.menu-label:active{
+  color: #4a004a;
+  border-bottom: 2px solied black;
+  cursor: pointer;
+      padding: 10px 15px;
+      color: black;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+}
+
+
 
 .sidebar:hover .menu-label {
   opacity: 1;
@@ -243,6 +256,9 @@ display: flex;
   background: linear-gradient(45deg, #ff4da6, #ff85c1);
   font-weight: 700;
   border: none;
+}
+.add-event {
+    background: linear-gradient(45deg, #ff4da6, #ff85c1);
 }
 
 /* Responsive Design */
