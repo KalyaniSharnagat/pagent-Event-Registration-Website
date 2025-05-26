@@ -233,6 +233,7 @@ body {
 }
 .para-line{
   padding-left: 20px;
+  padding-top: 15px;
 }
 
 @media (max-width: 768px) {
