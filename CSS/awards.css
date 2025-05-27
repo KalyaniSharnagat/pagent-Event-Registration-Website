@@ -23,6 +23,9 @@ body {
   color: #703B42;
 }
 
+.login-btn{
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 .image-container img {
   height: auto;
   max-height: 400px;
@@ -118,8 +121,9 @@ h1.section-title {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 } */
 
-.award-heros {
+.awards-heros-img {
   width: 100%;
+  background-size: cover;
 }
 
 /* .image-container {

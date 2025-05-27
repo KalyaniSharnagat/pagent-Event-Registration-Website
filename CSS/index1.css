@@ -59,6 +59,9 @@ body {
 .gradient-btn:hover {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 }
+.login-btn{
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 
 @media (max-width: 768px) {
   h1 {
@@ -103,7 +106,7 @@ body {
   z-index: 1;
   position: relative;
   padding: 10px;
-  border: 2px solid #e8b563;
+  border: 2px solid #bc1060;
 }
 
 .snip1515 .profile-image img {
