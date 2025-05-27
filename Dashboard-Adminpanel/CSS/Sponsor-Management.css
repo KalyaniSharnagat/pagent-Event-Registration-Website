@@ -1,4 +1,3 @@
-/* --- Base styles (unchanged) --- */
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +7,9 @@
 
 body {
   display: flex;
-  flex-direction: column;
+  background: linear-gradient(to right, #ffe0f0);
   min-height: 100vh;
-  background: linear-gradient(to right, #ffe0f0, #ffffff);
+  overflow: hidden;
 }
 
 .sidebar {
@@ -46,15 +45,12 @@ body {
   color: white;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-weight: bold;
 }
 
 .menu-item:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-}
-
-.icon-link:active {
-  color: blueviolet;
 }
 
 .menu-item i {
@@ -78,10 +74,11 @@ body {
 .main-content {
   margin-left: 70px;
   width: calc(100% - 70px);
-  transition: margin-left 0.3s ease, width 0.3s ease;
-  flex: 1;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  overflow: hidden;
 }
 
 .sidebar:hover~.main-content {
@@ -93,63 +90,16 @@ body {
   left: 220px;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 70px;
-  right: 0;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 15px 20px;
-  height: 70px;
-  box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
-  transition: left 0.3s ease, width 0.3s ease;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.profile-info img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.profile-info span {
-  color: white;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.judge-list {
-  margin-top: 10px;
-  padding: 12px;
-}
-
-.judge-list table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.judge-list th,
-.judge-list td {
-  padding: 0.75rem;
-  border: 1px solid #ffb6c1;
-  text-align: left;
-}
-
-img{
-  border-radius: 50%;
+.container-fluid {
+  margin-top: 90px;
+  padding: 20px;
+  /* overflow-y: auto; */
+  flex: 1;
 }
 
 
-/*////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+
 
 .header {
   position: fixed;
@@ -194,8 +144,9 @@ img{
 
 }
 
+/*/////////////////////////////////////////////////////////////////*/
 
-/* sponsor panel */
+/* judge panel */
 body {
   font-family: Arial, sans-serif;
   padding: 1rem;
@@ -215,7 +166,53 @@ h2 {
   color: #333;
 }
 
+/* Form Styling */
+.judge-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: scroll;
+}
+.judges-body{
+  overflow: scroll;
+}
+.form-group {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
 
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ffb6c1;
+  border-radius: 5px;
+}
+
+.form-actions {
+  flex-basis: 100%;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
 
 /* Table Styling */
 .judge-list table {
@@ -271,24 +268,15 @@ h2 {
 
 .bg-color-button {
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-}
-
-button {
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
 }
 
-/* content end */
+/* judge panel end */
 
-/*---------Modal---------*/
 
+/*  modal start */
 .btn-add {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
@@ -408,9 +396,4 @@ button {
   font-style: italic;
 }
 
-.status {
-  font-size: 20px;
-  margin-right: 50px;
-  opacity: 0.7;
-  color: #ee0979;
-}
+/* modal end */
