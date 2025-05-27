@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contestant Dashboard</title>
+  <title>Media Dashboard</title>
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/Media Upload.css" />
   <script src="user.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -14,31 +14,39 @@
 <body class="light">
   <div class="dashboard">
     <!-- Sidebar -->
-    <aside class="sidebar">
-      <div>
-        <h2>🎀 Pageant</h2>
-          <ul class="nav-list">
-                <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
-                    <li class="active btn"><i class="fas fa-home"></i><span>Dashboard</span></li>
-                </a>
-                <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none  btn">
-                    <li class=" btn" ><i class="fas fa-user-edit"></i><span>Contestant</span></li>
-                </a>
-                <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
-                    <li class=" btn"><i class="fas fa-photo-video"></i><span>Media Upload</span></li>
-                </a>
-                <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
-                    <li class=" btn"><i class="fas fa-balance-scale"></i><span>Judging Criteria</span></li>
-                </a>
-                <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
-                    <li class=" btn"><i class="fas fa-newspaper"></i><span>Newsletters</span></li>
-                </a>
-            </ul>
-      </div>
+  <aside class="sidebar">
+    <h2>🎀 Pageant</h2>
+    <ul class="nav-list">
+        <li class="btn active">
+            <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
+                <i class="fas fa-home"></i><span>Dashboard</span>
+            </a>
+        </li>
+        <li class="btn">
+            <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
+                <i class="fas fa-user-edit"></i><span>Contestant</span>
+            </a>
+        </li>
+        <li class="btn">
+            <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
+                <i class="fas fa-photo-video"></i><span>Media Upload</span>
+            </a>
+        </li>
+        <li class="btn">
+            <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
+                <i class="fas fa-balance-scale"></i><span>Judging Criteria</span>
+            </a>
+        </li>
+        <li class="btn">
+            <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
+                <i class="fas fa-newspaper"></i><span>Newsletters</span>
+            </a>
+        </li>
+    </ul>
+    <button id="toggle-theme" class="sun-icon">🌙</button>
+</aside>
 
-      <!-- Theme Toggle Button -->
-      <button id="toggle-theme" class="sun-icon">🌙</button>
-    </aside>
+
 
     <!-- Main Content -->
     <div class="main">
@@ -109,6 +117,7 @@
           <img src="/PUBLIC-IMAGES/contestant_4.jpg" draggable="false" />
         </div>
       </div>
+    </div>
 
       <script>
         const tabs = document.querySelectorAll('#category-tabs span');

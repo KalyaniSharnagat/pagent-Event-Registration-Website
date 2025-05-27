@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -44,33 +45,10 @@ body.dark {
 	text-align: center;
 	margin-bottom: 2rem;
 }
-/* Sidebar */
-.sidebar {
-  width: 240px;
-  min-height: 100vh;
-  background-image: linear-gradient(135deg, #A9C9FF 10%, #FFBBEC 100%);
-  color: #fff;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
 
 .nav-list {
 	list-style: none;
+	padding: 0;
 }
 
 .nav-list li {
@@ -94,20 +72,24 @@ body.dark {
 	border-left: 4px solid white;
 }
 
-.link-none {
+.nav-list li a {
+	color: #fff;
 	text-decoration: none;
-	color: #1e1e2f;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
 }
 
-.link-none {
-	text-decoration: none;
-	color: #1e1e2f;
-}
-a{
-  text-decoration: none!important;
-  color: #000;
-}
 
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
 
 #toggle-theme {
   margin-top: 1rem;
@@ -117,7 +99,6 @@ a{
   color: #ec407a;
   border-radius: 6px;
   cursor: pointer;
-  text-decoration: none;
 }
 
 /* Main Section */
@@ -143,19 +124,23 @@ a{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
+
 body.dark .topbar {
   background: #2a2a3d;
   color: #fff;
 }
+
 .search-bar {
   display: flex;
   gap: 0.5rem;
 }
+
 .search-bar input {
   padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+
 .search-bar button {
   padding: 6px 10px;
   background: #ec407a;
@@ -163,19 +148,18 @@ body.dark .topbar {
   border: none;
   border-radius: 6px;
 }
-.profile-icon i {
-  font-size: 1.6rem;
-}
 
 /* Content */
 .content {
   margin-top: 40px;
   padding: 2rem;
 }
+
 header h1 {
   font-size: 2rem;
   margin-bottom: 0.3rem;
 }
+
 header p {
   color: gray;
   margin-bottom: 1rem;
@@ -246,8 +230,8 @@ body.dark .card {
   background: transparent;
 }
 
-/* Responsive */
-@media screen and (max-width: 1024px) {
+/* Only apply layout stacking for small screens (like mobiles) */
+@media screen and (max-width: 767px) {
   .dashboard {
     flex-direction: column;
   }
@@ -258,11 +242,13 @@ body.dark .card {
     flex-direction: row;
     overflow-x: auto;
     justify-content: space-around;
+    height: auto;
   }
 
   .main {
     margin-left: 0;
     width: 100%;
+    padding-top: 80px;
   }
 
   .topbar {
@@ -275,9 +261,10 @@ body.dark .card {
   }
 
   .card {
-    height: 280px; /* Slightly smaller height on tablets/mobiles */
+    height: 280px;
   }
 }
+
 
 /* Judging Criteria Card */
 .criteria-card {
