@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -80,23 +81,24 @@ body.dark {
 	width: 100%;
 }
 
+
 .sidebar a {
-	color: #fff;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	width: 100%;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 #toggle-theme {
-	margin-top: 1rem;
-	padding: 10px;
-	border: none;
-	background: #fff;
-	color: #ec407a;
-	border-radius: 6px;
-	cursor: pointer;
+  margin-top: 1rem;
+  padding: 10px;
+  border: none;
+  background: #fff;
+  color: #ec407a;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* Topbar */
@@ -173,7 +175,7 @@ body.dark {
 .media-card {
 	background-color: #fff;
 	border-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	height: 300px;
 	display: flex;
