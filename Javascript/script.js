@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// contact page  kalyani
+// contact page  
 AOS.init({
   once: true,
   duration: 1200
@@ -17,6 +17,7 @@ AOS.init({
 
 const navbarNav = document.getElementById('navbarNav');
 const navbarToggler = document.querySelector('.navbar-toggler');
+console.log('test',navbarNav)
 
 navbarNav.addEventListener('show.bs.collapse', () => {
   navbarNav.style.backgroundColor = '#f8f9fa';
@@ -32,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href").split("/").pop(); // Get the page name from the href attribute
+    const linkPage = link.getAttribute("href").split("/").pop();
+    // Get the page name from the href attribute
+    console.log(currentPage, linkPage);
+
     if (currentPage === linkPage) {
       link.classList.add("active"); // Add active class if the link matches the current page
     }

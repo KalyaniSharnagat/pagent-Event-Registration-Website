@@ -86,14 +86,15 @@
       toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
     });
 
-    // Sidebar Active State
-    const items = document.querySelectorAll(".nav-list li");
-    items.forEach(item => {
-      item.addEventListener("click", () => {
-        items.forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-      });
-    });
+     // Sidebar Active State
+        const items = document.querySelectorAll(".nav-list li");
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                items.forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
+            });
+        });
+         const currentPage = window.location.pathname.split("/").pop();
   </script>
 </body>
 
