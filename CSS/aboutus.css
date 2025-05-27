@@ -17,6 +17,10 @@
 .text2 {
   color: #703B42;
 }
+  
+.login-btn{
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
+}
 
 /* .form-title {
   margin: -2rem 0rem 2rem;
@@ -172,8 +176,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   /* optional shadow */
 }
-
-
 .card::before {
   content: "";
   position: absolute;
@@ -187,7 +189,6 @@
   z-index: 1;
   border-radius: 15px;
 }
-
 .card:hover::before {
   opacity: 1;
 }
