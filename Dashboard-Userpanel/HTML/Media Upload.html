@@ -15,25 +15,29 @@
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>🎀 Pageant</h2>
-      <ul class="nav-list">
-        <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
-          <li class="active"><i class="fas fa-home"></i><span>Dashboard</span></li>
-        </a>
-        <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
-          <li><i class="fas fa-user-edit"></i><span>Contestant</span></li>
-        </a>
-        <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
-          <li><i class="fas fa-photo-video"></i><span>Media Upload</span></li>
-        </a>
-        <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
-          <li><i class="fas fa-balance-scale"></i><span>Judging Criteria</span></li>
-        </a>
-        <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
-          <li><i class="fas fa-newspaper"></i><span>Newsletters</span></li>
-        </a>
-      </ul>
-      <button id="toggle-theme">🌙</button>
+      <div>
+        <h2>🎀 Pageant</h2>
+          <ul class="nav-list">
+                <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
+                    <li class="active btn"><i class="fas fa-home"></i><span>Dashboard</span></li>
+                </a>
+                <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none  btn">
+                    <li class=" btn" ><i class="fas fa-user-edit"></i><span>Contestant</span></li>
+                </a>
+                <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
+                    <li class=" btn"><i class="fas fa-photo-video"></i><span>Media Upload</span></li>
+                </a>
+                <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
+                    <li class=" btn"><i class="fas fa-balance-scale"></i><span>Judging Criteria</span></li>
+                </a>
+                <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
+                    <li class=" btn"><i class="fas fa-newspaper"></i><span>Newsletters</span></li>
+                </a>
+            </ul>
+      </div>
+
+      <!-- Theme Toggle Button -->
+      <button id="toggle-theme" class="sun-icon">🌙</button>
     </aside>
 
     <!-- Main Content -->
@@ -152,6 +156,16 @@
             item.classList.add("active");
           });
         });
+
+         var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
       </script>
 </body>
 
