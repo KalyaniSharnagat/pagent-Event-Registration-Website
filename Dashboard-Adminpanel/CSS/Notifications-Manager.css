@@ -121,11 +121,6 @@ body {
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-.header h3 {
-  margin: 0;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-}
 
 .profile-info {
   display: flex;
@@ -149,10 +144,6 @@ body {
   .header {
     left: 0;
     padding: 10px 15px;
-  }
-
-  .header h3 {
-    font-size: 18px;
   }
 }
 

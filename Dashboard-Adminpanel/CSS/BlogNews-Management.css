@@ -117,13 +117,6 @@ display: flex;
   z-index: 999;
 }
 
-.header h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
 .profile-info {
   display: flex;
   align-items: center;

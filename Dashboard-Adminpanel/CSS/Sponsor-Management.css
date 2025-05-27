@@ -109,12 +109,6 @@ body {
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-.header h3 {
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  margin:0;
-}
-
 .profile-info {
   display: flex;
   align-items: center;
@@ -173,11 +167,6 @@ img{
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-.header h3 {
-  margin: 0;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-}
 
 .profile-info {
   display: flex;
@@ -203,9 +192,6 @@ img{
     padding: 10px 15px;
   }
 
-  .header h3 {
-    font-size: 18px;
-  }
 }
 
 
