@@ -175,6 +175,9 @@ body {
     background-color: transparent;
   }
 }
+.add-event{
+   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
 
 .card:hover {
   box-shadow: 0 10px 20px rgba(111, 66, 193, 0.25);
