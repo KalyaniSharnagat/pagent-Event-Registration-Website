@@ -318,47 +318,49 @@ body.dark .card {
 
 
 /* 768-931*/
-@media (min-width: 768px) and (max-width: 931px) {
+@media (min-width: 768px) and (max-width: 930px) {
   .dashboard {
-    flex-direction: column;
+    flex-direction:row;
   }
 
   .sidebar {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem;
     position: relative;
+    width:300px;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
   }
 
   .sidebar h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  
   }
 
   .nav-list {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+    /* justify-content: center;
+    padding: 0;
+    margin: 0; */
   }
 
   .nav-list li {
     font-size: 0.9rem;
-    padding: 8px 12px;
+    padding: 10px 12px;
   }
 
   #toggle-theme {
-    margin-top: 0.5rem;
+    margin-top: 0;
   }
 
   .main {
     margin-left: 0;
     width: 100%;
-    padding: 80px 10px 20px;
+    padding: 80px 15px 20px;
   }
 
   .topbar {
@@ -371,47 +373,20 @@ body.dark .card {
   }
 
   .search-bar {
-    width: 100%;
-    flex-direction: row;
-    gap: 10px;
+    width: 600px;
+    padding-left:300px;
+    margin-top:20px;
   }
 
   .search-bar input {
-    flex: 1;
     width: 100%;
   }
 
-  .tabs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  .tabs span {
-    flex: 1 1 auto;
-    min-width: 100px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    padding: 10px;
-    border: 1px solid transparent;
-    transition: background 0.3s, border 0.3s;
-  }
-
-  .tabs span.active {
-    font-weight: bold;
-    background: white;
-    color: #1e1e2f;
-    border: 1px solid #ccc;
-  }
-
   .gallery {
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
   }
 
   .media-card {
@@ -426,7 +401,23 @@ body.dark .card {
     height: 100%;
     object-fit: cover;
   }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .tabs span {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .profile-icon i {
+    font-size: 1.3rem;
+  }
 }
+
 
 
  @media (min-width: 931px) and (max-width: 1024px) {
