@@ -109,11 +109,6 @@ body {
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-.header h3 {
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  font-size: 1.2rem;
-}
 
 .profile-info {
   display: flex;
@@ -323,9 +318,7 @@ tbody tr:hover {
 
 /* Smaller devices (below 768px, kept as is) */
 @media (max-width: 767px) {
-  .header h3 {
-    font-size: 1rem;
-  }
+  
 
   .profile-info span {
     display: none;
@@ -376,9 +369,7 @@ tbody tr:hover {
 
 /* Extra small devices (below 480px) */
 @media (max-width: 480px) {
-  .header h3 {
-    font-size: 0.9rem;
-  }
+
 
   .btn-approve,
   .btn-reject {

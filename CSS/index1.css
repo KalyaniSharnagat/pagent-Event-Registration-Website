@@ -2,86 +2,41 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
-.navbar {
-  background-color: #f27db681;
-}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  /* background-color: #F7A8C4; */
+  color: #333;
+  overflow-x: hidden;
 
-.nav-text-color {
-  color: white;
+
 }
 
 .color {
   color: #B76E79;
 }
 
+.custom-navbar {
+  background-color: rgb(247, 168, 196);
+  z-index: 1030;
+}
+
 .text2 {
   color: #703B42;
 }
 
-.navbar {
-  background-color: rgba(255, 255, 255, 0) !important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
-  z-index: 1030;
+
+
+.container {
+  padding: 2rem 0rem;
 }
 
-.nav-link-custom {
-  font-weight: 600 !important;
-  color: #00246b !important;
-  padding: 0.5rem 1rem;
-  position: relative;
-  transition: color 0.3s ease;
-}
-.navbar-bg{
-  background-color: #F7A8C4;;
-}
-
-.nav-link-custom:hover {
-  color: #011c5a;
-}
-
-.nav-link-custom::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background-color: #00246b;
-  transition: 0.3s;
-}
-
-.nav-link-custom:hover::after {
-  width: 100%;
-}
-
-.nav-link.active {
-  color: #00246b !important;
-  font-weight: 700;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, #1b263b, #415a77);
-  border-radius: 2px;
-  transition: width 0.3s ease-in-out;
-}
-
-.navbar-toggler {
-  border-color: #00246b;
-}
 
 .form-title {
   margin: -2rem 0rem 2rem;
 }
+
 
 .delimiter {
   padding: 1rem;
@@ -729,33 +684,6 @@
   text-decoration: none;
 }
 
-/* start mediaquery */
-@media (max-width: 768px) {
-  .nav>div {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
-
-.container {
-  padding: 2rem 0rem;
-}
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 400px;
-
-    .modal-content {
-      padding: 1rem;
-    }
-  }
-}
-
-.modal-header {
-  .close {
-    margin-top: -1.5rem;
-  }
-}
 
 /* footer  mediaquery*/
 @media (min-width:320px) and (max-width:479px) {
@@ -804,10 +732,4 @@
   .footer-content-column {
     width: 24.99%;
   }
-}
-
-@media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
 }
