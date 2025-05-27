@@ -109,11 +109,6 @@ body {
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-.header h3 {
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  font-size: 1.2rem;
-}
 
 .profile-info {
   display: flex;
