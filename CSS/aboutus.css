@@ -551,6 +551,12 @@
   .team-card {
     width: 100%;
   }
+  .quote-section{
+    padding: 0;
+  }
+  .quote-text{
+    padding-top: 20px;
+  }
 }
 
 
