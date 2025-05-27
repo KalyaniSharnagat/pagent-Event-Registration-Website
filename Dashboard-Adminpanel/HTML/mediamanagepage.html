@@ -52,18 +52,17 @@
         <span>Admin</span>
       </div>
     </div>
-
-    <div class="container text-end">
-      <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
-        <i class="bi bi-plus-circle me-1"></i> Add Media
-      </button>
-    </div>
+   
 
     <!-- navbar end -->
 
-    <div class="container text-end">
-      <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
-        <i class="bi bi-plus-circle me-1"></i> Add Media</button>
+
+    <div class="container-fluid" style="margin-top: 40px;">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+          <i class="bi bi-plus-circle me-1"></i>Add Media
+        </button>
+      </div>
     </div>
 
     <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
@@ -75,7 +74,7 @@
           </div>
           <form id="blogForm">
             <div class="modal-body">
-            
+
               <select class="form-select" name="category" required>
                 <option value="" disabled selected>Select Category</option>
                 <option>Fashion</option>
@@ -83,7 +82,7 @@
                 <option>Contestant</option>
               </select>
 
-  
+
 
 
               <select class="form-select mb-2" id="mediaType" required>
@@ -114,10 +113,10 @@
 
     <div class="media" style="display: flex; justify-content: center;gap:20px;">
       <div class="image">
-        <img src="/PUBLIC-IMAGES/abt3.jpg" alt="image" height="400px" width="400px border-radius:10px solid white">
+        <img src="/PUBLIC-IMAGES/abt3.jpg" alt="image" height="400px" width="400px">
       </div>
       <div class="video">
-        <iframe width="636" height="400" src="https://www.youtube.com/embed/opRpZS_rafA"
+        <iframe width="636" height="100" src="https://www.youtube.com/embed/opRpZS_rafA"
           title="बॉलीवुड अभिनेत्री चित्रांगदा सिंह पहुंची वीईसी क्वीन ऑफ इंडिया सीजन 1 में" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
