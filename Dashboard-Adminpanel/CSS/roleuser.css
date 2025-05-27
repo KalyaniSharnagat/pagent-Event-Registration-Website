@@ -12,7 +12,10 @@ body {
   min-height: 100vh;
   background: linear-gradient(to right, #ffe0f0, #ffffff);
 }
-
+.active{
+  background-color: rgba(255, 255, 255, 0.253);
+  color: #4a004a;
+}
 .sidebar {
   background: linear-gradient(180deg, #ff4da6, #ff85c1);
   color: #fff;
@@ -128,7 +131,7 @@ body {
   font-size: 16px;
 }
 
-/* ✅ Updated for scroll support */
+/* scroll  */
 .table-container-fluid {
   padding: 80px 20px 20px 20px;
   position: relative;

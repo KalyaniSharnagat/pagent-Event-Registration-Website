@@ -81,6 +81,10 @@ body.dark {
 	width: 100%;
 }
 
+.link-none {
+	text-decoration: none;
+	color: #1e1e2f;
+}
 .sidebar a {
   color: #fff;
   text-decoration: none;
@@ -89,6 +93,7 @@ body.dark {
   gap: 10px;
   width: 100%;
 }
+
 
 #toggle-theme {
   margin-top: 1rem;
@@ -206,41 +211,7 @@ body.dark .card {
   color: orange;
 }
 
-/* Responsive */
-@media screen and (max-width: 1024px) {
-  .dashboard {
-    flex-direction: column;
-  }
 
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: space-around;
-  }
-
-  .main {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .topbar {
-    left: 0;
-    width: 100%;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-}
-
-
-body {
-  background: #f8f9fa;
-  font-family: 'Segoe UI', sans-serif;
-}
 
 .dashboard-container {
   max-width: 700px;
@@ -254,6 +225,7 @@ body {
 .dashboard-header {
   text-align: center;
   margin-bottom: 30px;
+  color:#ec407a;
 }
 
 .section-title {
@@ -284,4 +256,35 @@ body {
 
 .accordion-body {
   background-color: #fffafc;
+}
+
+
+
+/* Tablets (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px; 
+  }
+
+  .main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  .topbar {
+    left: 200px;
+    padding: 0 1.5rem;
+  }
+
+  .search-bar {
+    max-width: 350px; 
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}
+.form-label{
+
+  color:#344a8f;
 }

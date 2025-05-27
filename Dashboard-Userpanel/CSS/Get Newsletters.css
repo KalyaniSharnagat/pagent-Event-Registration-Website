@@ -46,6 +46,7 @@ body.dark {
 	margin-bottom: 2rem;
 }
 
+
 .nav-list {
 	list-style: none;
 	padding: 0;
@@ -79,6 +80,11 @@ body.dark {
 	align-items: center;
 	gap: 10px;
 	width: 100%;
+}
+
+.link-none {
+	text-decoration: none;
+	color: #1e1e2f;
 }
 
 .sidebar a {

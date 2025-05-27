@@ -81,6 +81,10 @@ body.dark {
 	width: 100%;
 }
 
+.link-none {
+	text-decoration: none;
+	color: #1e1e2f;
+}
 
 .sidebar a {
   color: #fff;
@@ -90,6 +94,7 @@ body.dark {
   gap: 10px;
   width: 100%;
 }
+
 
 #toggle-theme {
   margin-top: 1rem;

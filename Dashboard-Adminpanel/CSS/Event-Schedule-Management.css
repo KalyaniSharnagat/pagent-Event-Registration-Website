@@ -11,7 +11,10 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
-
+.active{
+  background-color: rgba(255, 255, 255, 0.253);
+  color: #4a004a;
+}
 .sidebar {
   background: linear-gradient(180deg, #ff4da6, #ff85c1);
   color: #fff;
