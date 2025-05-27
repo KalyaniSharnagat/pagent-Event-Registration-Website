@@ -1,8 +1,9 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -10,10 +11,12 @@ body {
   color: #333;
 }
 
+
 body.dark {
-  background: #1e1e2f;
-  color: #fff;
+	background: #1e1e2f;
+	color: #fff;
 }
+
 
 .dashboard {
   display: flex;
@@ -36,6 +39,7 @@ body.dark {
   z-index: 1000;
 }
 
+
 .sidebar h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -45,20 +49,23 @@ body.dark {
   list-style: none;
 }
 
+
 .nav-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.3s ease;
 }
+
 
 .nav-list li:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
 
 .nav-list li.active {
   background: rgba(255, 255, 255, 0.3);
