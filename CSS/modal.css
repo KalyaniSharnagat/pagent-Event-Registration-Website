@@ -1,4 +1,65 @@
-/* Glassmorphic background */
+body{
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    z-index: 1030;
+}
+
+.nav-link-custom {
+    font-weight: 600 !important;
+    color: #00246b !important;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #011c5a;
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #00246b;
+    transition: 0.3s;
+}
+
+.nav-link-custom:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #00246b !important;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #1b263b, #415a77);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+    border-color: #00246b;
+}
+
 .glassmorphic-modal {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
