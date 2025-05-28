@@ -66,9 +66,9 @@
 
             <p class="text-white mb-2">Or login with</p>
             <div class="d-flex justify-content-center gap-2">
-              <button class="btn social-btn"><i class="fab fa-facebook-f"></i></button>
-              <button class="btn social-btn"><i class="fab fa-google"></i></button>
-              <button class="btn social-btn"><i class="fab fa-instagram"></i></button>
+              <a href="#" class="btn social-btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn social-btn"><i class="fab fa-google"></i></a>
+              <a href="#" class="btn social-btn"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
           <div class="modal-footer border-0 justify-content-center">
@@ -79,6 +79,8 @@
         </div>
       </div>
     </div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
     <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true" aria-labelledby="registerModalLabel">
       <div class="modal-dialog modal-dialog-centered modal-md">
@@ -170,15 +172,15 @@
       <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
         <h2>Contact Information</h2>
 
-        <p><strong><span class="icon">📞</span> Phone:</strong><br>
-          <span class="info">+919876543210<br>+919876543210</span>
+        <p><strong class="contact-inforphone"><span class="icon">📞</span> Phone:</strong><br>
+          <span class="contact-infornumber" class="info">+919876543210<br>+919876543210</span>
         </p>
 
         <p><strong><span class="icon">📧</span> Email:</strong><br>
-          <span class="info">rsisteam@info.com</span>
+          <span class="contact-inforemail" class="info">rsisteam@info.com</span>
         </p>
 
-        <p><strong><span class="icon">📍</span> Address:</strong><br>
+        <p><strong class="contact-inforaddress"><span class="icon">📍</span> Address:</strong><br>
           <span class="info">10, Saurabh Nagar-2, Besa Rd, near Hanuman Mandir,<br>
             Saubhagya Nagar, Ghogali,<br>
             Nagpur, Maharashtra 440034</span>
@@ -226,13 +228,13 @@
                 <a href="/index.html">Home</a>
               </li>
               <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                <a href="aboutus.html">About Us</a>
+                <a href="/HTML/aboutus.html">About Us</a>
               </li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="">Awards</a>
+                <a href="/HTML/awards.html">Awards</a>
               </li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="contact.html">Contact</a>
+                <a href="/HTML/contact.html">Contact</a>
               </li>
             </ul>
           </div>
@@ -278,7 +280,7 @@
           <div class="footer-call-to-action">
             <h2 class="footer-call-to-action-title"> Let's Chat</h2>
             <p class="footer-call-to-action-description"> Have a support question?</p>
-            <a class="footer-call-to-action-button button footer-button" href="contact.html" target="_self"> Get in
+            <a class="footer-call-to-action-button button footer-button" href="/HTML/contact.html" target="_self"> Get in
               Touch </a>
           </div>
           <div class="footer-call-to-action">
@@ -331,7 +333,7 @@
       <div class="footer-copyright">
         <div class="footer-copyright-wrapper">
           <p class="footer-copyright-text">
-            <a class="footer-copyright-link" href="#" target="_self"> ©2025.|Website Developed by RSIS Team| All rights
+            <a class="footer-copyright-link" href="https://rsinfotechsys.com/" target="_self"> ©2025.|Website Developed by RSIS Team| All rights
               reserved. </a>
           </p>
         </div>
@@ -397,7 +399,7 @@
       }
 
       alert('Login successful! Redirecting to dashboard...');
-      window.location.href = '/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html';
+      window.location.href = '/Dashboard-Userpanel/Dashboard-userpanel.html';
     }
   </script>
   <script src="/Javascript/navbar.js"></script>

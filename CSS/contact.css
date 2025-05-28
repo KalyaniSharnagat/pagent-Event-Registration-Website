@@ -201,8 +201,29 @@ textarea {
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
+
+.contact-inforaddress{
+
+  margin-bottom: 25%;
+}
+
+.contact-inforphone{
+
+  margin-bottom: 8%;
+}
+
+.contact-inforemail{
+
+  margin-left: 4%;
+}
+
+.contact-infornumber{
+
+  margin-left: 3%;
+}
+
 
 .contact-info p strong {
   color: #b32e65;
@@ -590,4 +611,5 @@ textarea {
     margin: 20px;
 
   }
+
 }
