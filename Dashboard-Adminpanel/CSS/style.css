@@ -26,9 +26,9 @@ body {
   z-index: 1000;
 }
 
-.sidebar:hover {
+/* .sidebar:hover {
   width: 220px;
-}
+} */
 
 .sidebar-header {
   text-align: center;
