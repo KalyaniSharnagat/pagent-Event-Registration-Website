@@ -1,5 +1,4 @@
 // aboutus page kalyani
-
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 1200,

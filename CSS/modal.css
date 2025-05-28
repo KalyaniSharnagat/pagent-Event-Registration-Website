@@ -36,7 +36,7 @@ html,body{
 }
 
 .nav-link.active {
-    color: #00246b !important;
+    color: #bc1060 !important;
     font-weight: 700;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -48,7 +48,7 @@ html,body{
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #1b263b, #415a77);
+    background: linear-gradient(to right, #bc1060);
     border-radius: 2px;
     transition: width 0.3s ease-in-out;
 }
