@@ -1,4 +1,4 @@
-body{
+html,body{
     overflow-x: hidden!important;   
 }
 
@@ -163,4 +163,23 @@ body{
     100% {
         background-position: 0% 50%;
     }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    /* bottom: -5px; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(to right, #1b263b, #415a77);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+  }
 }
