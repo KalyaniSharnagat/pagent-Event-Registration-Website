@@ -14,6 +14,7 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/CSS/modal.css">
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -58,9 +59,11 @@
             <h4 class="mb-3 text-gradient fw-bold">Login to Your Account</h4>
             <form id="loginForm">
               <input type="email" id="email" class="form-control form-control-lg fancy-input mb-3" required
+                oninvalid="this.setCustomValidity('Please Fill out your  Email')" oninput="this.setCustomValidity('')"
                 placeholder="Email address">
               <input type="password" id="password" class="form-control form-control-lg fancy-input mb-3" required
-                placeholder="Password">
+                oninvalid="this.setCustomValidity('Please fill out your correct Password')"
+                oninput="this.setCustomValidity('')" placeholder="Password">
               <button type="submit" class="btn gradient-btn w-100 mb-3">Login</button>
             </form>
 
@@ -102,23 +105,30 @@
             <form>
               <div class="form-group mb-3">
                 <input type="text" class="form-control form-control-lg rounded-pill px-4" placeholder="Full Name"
-                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;" required
+                  oninvalid="this.setCustomValidity('Please fill out your Full Name')"
+                  oninput="this.setCustomValidity('')">
               </div>
               <div class="form-group mb-3">
                 <input type="email" class="form-control form-control-lg rounded-pill px-4" placeholder="Email address"
-                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;" required
+                  oninvalid="this.setCustomValidity('Please fill out your Email')" oninput="this.setCustomValidity('')">
               </div>
               <div class="form-group mb-3">
                 <input type="password" class="form-control form-control-lg rounded-pill px-4" placeholder="Password"
-                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;" required
+                  oninvalid="this.setCustomValidity('Please fill out your correct Password')"
+                  oninput="this.setCustomValidity('')">
               </div>
               <div class="form-group mb-4">
                 <input type="password" class="form-control form-control-lg rounded-pill px-4"
                   placeholder="Confirm Password"
-                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;">
+                  style="background: #222; border: none; color: #fff; box-shadow: inset 0 0 10px #333;" required
+                  oninvalid="this.setCustomValidity('Please Confirm Your Password')"
+                  oninput="this.setCustomValidity('')">
               </div>
               <button type="submit" class="btn btn-gold btn-lg w-100 rounded-pill fw-bold"
-                style="background: linear-gradient(45deg,  #f27db6, #bc1060); border: none; box-shadow: 0 4px 15px  #f27db6, #bc1060;">Sign
+                style="background: linear-gradient(45deg, #f27db6, #bc1060); border: none; box-shadow: 0 4px 15px #f27db6, #bc1060;">Sign
                 Up</button>
             </form>
             <div class="text-center mt-3" style="font-weight: 500; font-size: 0.9rem;">
@@ -130,6 +140,7 @@
         </div>
       </div>
     </div>
+
 
   </header>
   <section>
