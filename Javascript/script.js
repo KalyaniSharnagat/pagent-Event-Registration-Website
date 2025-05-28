@@ -1,5 +1,4 @@
 // aboutus page kalyani
-
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 1200,
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// contact page  kalyani
+// contact page  
 AOS.init({
   once: true,
   duration: 1200
