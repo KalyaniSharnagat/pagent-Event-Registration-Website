@@ -27,18 +27,18 @@ body.dark {
 
 /* Sidebar */
 .sidebar {
-	width: 240px;
-	min-height: 100vh;
-	background-image: linear-gradient(135deg, #A9C9FF 10%, #FFBBEC 100%);
-	color: #fff;
-	padding: 2rem 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
+  width: 240px;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #A9C9FF 10%, #FFBBEC 100%);
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .sidebar h2 {
@@ -49,6 +49,7 @@ body.dark {
 .nav-list {
 	list-style: none;
 	padding: 0;
+  padding-top: 40px;
 }
 
 .nav-list li {
@@ -81,6 +82,10 @@ body.dark {
 	width: 100%;
 }
 
+.link-none {
+	text-decoration: none;
+	color: #1e1e2f;
+}
 
 .sidebar a {
   color: #fff;
@@ -90,6 +95,7 @@ body.dark {
   gap: 10px;
   width: 100%;
 }
+
 
 #toggle-theme {
   margin-top: 1rem;

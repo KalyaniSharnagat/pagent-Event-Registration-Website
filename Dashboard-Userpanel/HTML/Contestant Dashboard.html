@@ -16,37 +16,37 @@
 <body class="light">
   <div class="dashboard">
     <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>🎀 Pageant</h2>
-    <ul class="nav-list">
+    <aside class="sidebar">
+      <h2>🎀 Pageant</h2>
+      <ul class="nav-list">
         <li class="btn">
-            <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
-                <i class="fas fa-home"></i><span>Dashboard</span>
-            </a>
+          <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
+            <i class="fas fa-home"></i><span>Dashboard</span>
+          </a>
         </li>
         <li class="btn active">
-            <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
-                <i class="fas fa-user-edit"></i><span>Contestant</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
+            <i class="fas fa-user-edit"></i><span>Contestant</span>
+          </a>
         </li>
         <li class="btn">
-            <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
-                <i class="fas fa-photo-video"></i><span>Media Upload</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
+            <i class="fas fa-photo-video"></i><span>Media Upload</span>
+          </a>
         </li>
         <li class="btn">
-            <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
-                <i class="fas fa-balance-scale"></i><span>Judging Criteria</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
+            <i class="fas fa-balance-scale"></i><span>Judging Criteria</span>
+          </a>
         </li>
         <li class="btn">
-            <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
-                <i class="fas fa-newspaper"></i><span>Newsletters</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
+            <i class="fas fa-newspaper"></i><span>Newsletters</span>
+          </a>
         </li>
-    </ul>
-    <button id="toggle-theme" class="sun-icon">🌙</button>
-</aside>
+      </ul>
+      <button id="toggle-theme" class="sun-icon">🌙</button>
+    </aside>
 
     <!-- Main Content -->
     <div class="main">
@@ -58,120 +58,123 @@
         </div>
         <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
       </nav>
-       <div class="dashboard-container">
-    <div class="dashboard-header">
-      <h2><i class="fas fa-user-circle"></i> Contestant Dashboard</h2>
-    </div>
-
-    <!-- Profile Section -->
-    <div>
-      <h5 class="section-title"><i class="fas fa-id-card"></i> View/Edit Profile</h5>
-      <form>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Full Name">
-          </div>
-          <div class="col-md-6">
-            <input type="email" class="form-control" placeholder="Email Address">
-          </div>
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Phone Number">
-          </div>
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="City">
-          </div>
+      <div class="dashboard-container">
+        <div class="dashboard-header">
+          <h2><i class="fas fa-user-circle"></i> Contestant Dashboard</h2>
         </div>
-      </form>
-    </div>
 
-    <!-- Application Form -->
-    <div>
-      <h5 class="section-title"><i class="fas fa-file-alt"></i> Submit Application</h5>
-      <form>
-        <div class="mb-3">
-          <label class="form-label">Upload Photo</label>
-          <input type="file" class="form-control">
+        <!-- Profile Section -->
+        <div>
+          <h5 class="section-title"><i class="fas fa-id-card"></i> View/Edit Profile</h5>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Full Name">
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Email Address">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Upload Document</label>
-          <input type="file" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-pink btn-sm btn-outline-primary">
-          Submit Application
-        </button>
-      </form>
-    </div>
 
-    <!-- Application Status -->
-    <div>
-      <h5 class="section-title"><i class="fas fa-check-circle"></i> Application Status</h5>
-      <p style="color:rgb(41, 120, 189)">Status: <span class="status-badge">Pending</span></p>
-    </div>
-
-    <!-- Notifications -->
-    <div>
-      <h5 class="section-title"><i class="fas fa-bell"></i> Event Updates & Notifications</h5>
-      <ul class="list-group">
-        <li class="list-group-item">📢 Your application has been received.</li>
-        <li class="list-group-item">🎉 Event schedule will be shared soon.</li>
-      </ul>
-    </div>
-
-    <!-- Event Schedule -->
-    <div>
-      <h5 class="section-title"><i class="fas fa-calendar-alt"></i> Event Schedule</h5>
-      <ul class="list-group">
-        <li class="list-group-item">🗓️ Orientation: June 10, 2025</li>
-        <li class="list-group-item">📍 Venue: Grand Hall, City Center</li>
-      </ul>
-    </div>
-
-    <!-- FAQs -->
-    <div>
-      <h5 class="section-title"><i class="fas fa-question-circle"></i> FAQs & Instructions</h5>
-      <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faqOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              What documents are required?
+        <!-- Application Form -->
+        <div>
+          <h5 class="section-title"><i class="fas fa-file-alt"></i> Submit Application</h5>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Upload Photo</label>
+              <input type="file" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Upload Document</label>
+              <input type="file" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-pink btn-sm btn-outline-primary">
+              Submit Application
             </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              You need to upload a recent photo and a valid ID proof (Aadhar/Passport/Driver's License).
+          </form>
+        </div>
+
+        <!-- Application Status -->
+        <div>
+          <h5 class="section-title"><i class="fas fa-check-circle"></i> Application Status</h5>
+          <p style="color:rgb(41, 120, 189)">Status: <span class="status-badge">Pending</span></p>
+        </div>
+
+        <!-- Notifications -->
+        <div>
+          <h5 class="section-title"><i class="fas fa-bell"></i> Event Updates & Notifications</h5>
+          <ul class="list-group">
+            <li class="list-group-item">📢 Your application has been received.</li>
+            <li class="list-group-item">🎉 Event schedule will be shared soon.</li>
+          </ul>
+        </div>
+
+        <!-- Event Schedule -->
+        <div>
+          <h5 class="section-title"><i class="fas fa-calendar-alt"></i> Event Schedule</h5>
+          <ul class="list-group">
+            <li class="list-group-item">🗓️ Orientation: June 10, 2025</li>
+            <li class="list-group-item">📍 Venue: Grand Hall, City Center</li>
+          </ul>
+        </div>
+
+        <!-- FAQs -->
+        <div>
+          <h5 class="section-title"><i class="fas fa-question-circle"></i> FAQs & Instructions</h5>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne">
+                  What documents are required?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You need to upload a recent photo and a valid ID proof (Aadhar/Passport/Driver's License).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo">
+                  Can I edit my profile after submission?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, you can edit your profile before the application deadline. After that, changes won't be allowed.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree">
+                  How will I know if I am selected?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You will receive an email notification and a message will appear in your dashboard.
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faqTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-              Can I edit my profile after submission?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Yes, you can edit your profile before the application deadline. After that, changes won't be allowed.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faqThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-              How will I know if I am selected?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              You will receive an email notification and a message will appear in your dashboard.
-            </div>
-          </div>
-        </div>
+
       </div>
-    </div>
 
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
@@ -186,25 +189,16 @@
           toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
         });
 
-        // Sidebar Active State
+         // Sidebar Active State
         const items = document.querySelectorAll(".nav-list li");
         items.forEach(item => {
-          item.addEventListener("click", () => {
-            items.forEach(i => i.classList.remove("active"));
-            item.classList.add("active");
-          });
-        });
-
-         var header = document.getElementById("myDIV");
-        var btns = header.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
+            item.addEventListener("click", () => {
+                items.forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
             });
-        }
+        });
+       const currentPage = window.location.pathname.split("/").pop();
       </script>
 </body>
-
+  
 </html>
