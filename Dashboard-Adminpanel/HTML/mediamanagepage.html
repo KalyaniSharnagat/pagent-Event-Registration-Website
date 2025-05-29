@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Management</title>
   <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/mediamanege.css" />
+  <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -22,8 +23,8 @@
     </div>
     <div class="menu-item"><i class="fa-solid fa-gauge-high icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label icon-link">Dashboard</a></div>
-    <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a href="/Dashboard-Adminpanel/HTML/roleuser.html"
-        class="menu-label icon-link icon-link">User Roles</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link icon-link">User Roles</a></div>
     <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label">Contestants</a></div>
     <div class="menu-item"><i class="fa-solid fa-users-gear icon-link"></i><a
@@ -32,20 +33,23 @@
     <div class="menu-item"><i class="fa-solid fa-calendar-days icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link">Event Schedule</a>
     </div>
-    <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a
+    <div class="menu-item active"><i class="fa-solid fa-photo-film icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link">Media</a></div>
     <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a
-        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a></div>
+        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a>
+    </div>
     <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link">Sponsors</a></div>
     <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link">Blog & News</a></div>
   </div>
+
   <div class="main-content">
-    <div class="header">
-      <h3>Media Manage</h3>
-      <div class="profile-info">
-        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
+    <div class="header d-flex justify-content-between align-items-center px-4 py-2 bg-light shadow-sm">
+      <h1>Media Management</h1>
+      <div class="profile-info d-flex align-items-center gap-2">
+        <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" width="40" height="40"
+          style="border-radius: 50%;" />
         <span>Admin</span>
       </div>
     </div>
@@ -53,61 +57,51 @@
 
     <!-- navbar end -->
 
-      <div class="container text-end">
-        <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
-          <i class="bi bi-plus-circle me-1"></i> Add Media
+
+    <div class="container-fluid" style="margin-top: 40px;">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+          <i class="bi bi-plus-circle me-1"></i>Add Media
         </button>
       </div>
+    </div>
 
- <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+    <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content pageant-modal">
           <div class="modal-header">
             <h5 class="modal-title" id="blogModalLabel">Media Management</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form id="blogForm">
             <div class="modal-body">
-              <!-- <input type="text" class="form-control" name="title" placeholder="Enter Title" required>
-              <textarea class="form-control" name="description" rows="4" placeholder="Enter Description"
-                required></textarea> -->
+
               <select class="form-select" name="category" required>
                 <option value="" disabled selected>Select Category</option>
                 <option>Fashion</option>
                 <option>Event</option>
                 <option>Contestant</option>
-                <option>Announcement</option>
               </select>
 
-  <select class="form-select mb-2" name="gallery" required>
-    <option value="" disabled selected>Choose Gallery</option>
-    <option value="homepage">Homepage</option>
-    <option value="event_gallery">Event Gallery</option>
-    <option value="sponsor_gallery">Sponsor Gallery</option>
-  </select>
 
 
-  <select class="form-select mb-2" id="mediaType" required>
-    <option value="" disabled selected>Select Media Type</option>
-    <option value="image">Image</option>
-    <option value="video">Video</option>
-    <option value="both">Both</option>
-  </select>
+
+              <select class="form-select mb-2" id="mediaType" required>
+                <option value="" disabled selected>Select Media Type</option>
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+                <option value="both">Both</option>
+              </select>
 
 
-<input type="file" class="form-control mb-2" id="imageInput" name="image[]" multiple accept="image/*" style="display: none;">
+              <input type="file" class="form-control mb-2" id="imageInput" name="image[]" multiple accept="image/*"
+                style="display: none;">
 
 
-<input type="file" class="form-control mb-2" id="videoInput" name="video[]" multiple accept="video/*" style="display: none;">
+              <input type="file" class="form-control mb-2" id="videoInput" name="video[]" multiple accept="video/*"
+                style="display: none;">
 
-
-  <!-- <input type="file" name="image[]" multiple accept="image/*">
-<input type="file" name="video[]" multiple accept="video/*"> -->
-
-<!-- <input type="file" class="form-control" name="image" accept="image/*">
-<input type="text" class="form-control" name="author" placeholder="Author Name" required> -->
-</div>
+            </div>
 
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
@@ -118,38 +112,69 @@
       </div>
     </div>
 
-<div class="media" style="display: flex; justify-content: center;gap:20px;">
-  <div class="image">
-<img src="/PUBLIC-IMAGES/abt3.jpg" alt="image" height="400px" width="400px border-radius:10px solid white">
-</div>
-<div class="video">
- <iframe width="636" height="400" src="https://www.youtube.com/embed/opRpZS_rafA" title="बॉलीवुड अभिनेत्री चित्रांगदा सिंह पहुंची वीईसी क्वीन ऑफ इंडिया सीजन 1 में" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-</div>
-</div>
-<!--    
+    <div class="media" style="display: flex; justify-content: center;gap:20px;">
+      <div class="image">
+        <img src="/PUBLIC-IMAGES/abt3.jpg" alt="image" height="400px" width="400px">
+      </div>
+      <div class="video">
+        <iframe width="636" height="100" src="https://www.youtube.com/embed/opRpZS_rafA"
+          title="बॉलीवुड अभिनेत्री चित्रांगदा सिंह पहुंची वीईसी क्वीन ऑफ इंडिया सीजन 1 में" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!--    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> -->
 
 
     <script>
-  document.getElementById('mediaType').addEventListener('change', function () {
-    const type = this.value;
-    const imageInput = document.getElementById('imageInput');
-    const videoInput = document.getElementById('videoInput');
+      document.getElementById('mediaType').addEventListener('change', function () {
+        const type = this.value;
+        const imageInput = document.getElementById('imageInput');
+        const videoInput = document.getElementById('videoInput');
 
-    if (type === 'image') {
-      imageInput.style.display = 'block';
-      videoInput.style.display = 'none';
-    } else if (type === 'video') {
-      imageInput.style.display = 'none';
-      videoInput.style.display = 'block';
-    } else if (type === 'both') {
-      imageInput.style.display = 'block';
-      videoInput.style.display = 'block';
-    }
-  });
-</script>
+        if (type === 'image') {
+          imageInput.style.display = 'block';
+          videoInput.style.display = 'none';
+        } else if (type === 'video') {
+          imageInput.style.display = 'none';
+          videoInput.style.display = 'block';
+        } else if (type === 'both') {
+          imageInput.style.display = 'block';
+          videoInput.style.display = 'block';
+        }
+      });
+
+      document.getElementById("blogForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        Swal.fire({
+          title: '✨ Images/videos Added!',
+          text: 'Your fashion post is now live.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#ff4da6',
+          backdrop: `rgba(255, 192, 203, 0.3)`,
+          showClass: {
+            popup: 'animate__animated animate__zoomIn'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        }).then(() => {
+          const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
+          modal.hide();
+
+          this.reset();
+
+          location.reload();
+        });
+      });
+
+
+    </script>
 
 
 </body>

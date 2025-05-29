@@ -1,138 +1,75 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
-}
 
+
+/*/////////////////////////////////////////////////////////////////*/
+
+/* judge panel */
 body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+section {
+  background: #fff0f5;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Form Styling */
+.judge-form {
   display: flex;
-  background: linear-gradient(to right, #ffe0f0);
-  min-height: 100vh;
-  overflow-x: hidden;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: scroll;
 }
-
-.sidebar {
-  background: linear-gradient(180deg, #ff4da6, #ff85c1);
-  color: #fff;
-  width: 70px;
-  transition: width 0.3s ease;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
-  z-index: 1000;
+.judges-body{
+  overflow: scroll;
 }
-
-.sidebar:hover {
-  width: 220px;
-}
-
-.sidebar-header {
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 10px;
-  font-weight: 600;
-}
-
-.menu-item {
+.form-group {
+  flex: 1 1 300px;
   display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 20px;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ffb6c1;
+  border-radius: 5px;
+}
+
+.form-actions {
+  flex-basis: 100%;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
   color: white;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
+button:hover {
+  background-color: #0056b3;
 }
 
-.menu-item i {
-  font-size: 18px;
-  min-width: 25px;
-  text-align: center;
-}
-
-.menu-label {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
-  color: #fff;
-}
-
-.sidebar:hover .menu-label {
-  opacity: 1;
-}
-
-.main-content {
-  margin-left: 70px;
-  padding: 30px;
-  width: 100%;
-  transition: margin-left 0.3s ease;
-}
-
-.sidebar:hover~.main-content {
-  margin-left: 320px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff0f5;
-  padding: 15px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
-}
-
-.search-filter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.search-filter input {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  outline: none;
-}
-
-.search-filter select {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  background: white;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.profile-info img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.dashboard-header {
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  margin-bottom: 20px;
-}
-
-/* content */
 /* Table Styling */
 .judge-list table {
   width: 100%;
@@ -187,22 +124,15 @@ body {
 
 .bg-color-button {
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-}
-
-button {
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
 }
 
-/* content end */
+/* judge panel end */
 
+
+/*  modal start */
 .btn-add {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
@@ -322,9 +252,4 @@ button {
   font-style: italic;
 }
 
-.status{
-  font-size: 20px;
-  margin-right:50px;
-  opacity:0.7;
-  color:#ee0979;
-}
+/* modal end */

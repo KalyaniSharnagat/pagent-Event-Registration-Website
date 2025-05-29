@@ -1,13 +1,13 @@
 /* ---------------------  rajat  --------------------------  */
 * {
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Overpass", sans-serif;
 }
 
 body {
   background-color: #F7A8C4;
   color: white !important;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Overpass", sans-serif;
   margin: 0;
 }
 
@@ -22,62 +22,48 @@ body {
 .text2 {
   color: #703B42;
 }
-.navbar {
-  background-color: rgba(255, 255, 255, 0) !important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
-  z-index: 1030;
+
+.login-btn {
+  background-image: linear-gradient(to right, #f27db6, #bc1060);
 }
 
-.nav-link-custom {
-  font-weight: 600 !important;
-  color: #00246b !important;
-  padding: 0.5rem 1rem;
-  position: relative;
-  transition: color 0.3s ease;
+.image-container img {
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
-.nav-link-custom:hover {
-  color: #011c5a;
+.award-card {
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.nav-link-custom::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background-color: #00246b;
-  transition: 0.3s;
+.award-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.nav-link-custom:hover::after {
-  width: 100%;
+.award-card img {
+  height: 300px;
+  object-fit: cover;
 }
 
-.nav-link.active {
-  color: #00246b !important;
-  font-weight: 700;
-  position: relative;
-  transition: all 0.3s ease-in-out;
+.card-title {
+  font-weight: 600;
+  color: #212529;
 }
 
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, #1b263b, #415a77);
-  border-radius: 2px;
-  transition: width 0.3s ease-in-out;
+.card-text {
+  color: #6c757d;
 }
 
-.navbar-toggler {
-  border-color: #00246b;
+h1.section-title {
+  background-color: rgb(124, 112, 112);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0;
+  margin-bottom: 30px;
 }
 
 
@@ -85,6 +71,7 @@ body {
 .container {
   padding: 2rem 0rem;
 }
+
 /* 
 @media (min-width: 576px) {
   .modal-dialog {
@@ -135,8 +122,9 @@ body {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 } */
 
-.award-heros {
+.awards-heros-img {
   width: 100%;
+  background-size: cover;
 }
 
 /* .image-container {

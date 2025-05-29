@@ -1,137 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
-}
-
-body {
-  display: flex;
-  background: linear-gradient(to right, #ffe0f0);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.sidebar {
-  background: linear-gradient(180deg, #ff4da6, #ff85c1);
-  color: #fff;
-  width: 70px;
-  transition: width 0.3s ease;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
-  z-index: 1000;
-}
-
-.sidebar:hover {
-  width: 220px;
-}
-
-.sidebar-header {
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 10px;
-  font-weight: 600;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 20px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-}
-
-.menu-item i {
-  font-size: 18px;
-  min-width: 25px;
-  text-align: center;
-}
-
-.menu-label {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
-  color: #fff;
-}
-
-.sidebar:hover .menu-label {
-  opacity: 1;
-}
-
-.main-content {
-  margin-left: 70px;
-  padding: 30px;
-  width: 100%;
-  transition: margin-left 0.3s ease;
-}
-
-.sidebar:hover~.main-content {
-  margin-left: 320px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff0f5;
-  padding: 15px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
-}
-
-.search-filter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.search-filter input {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  outline: none;
-}
-
-.search-filter select {
-  padding: 8px 12px;
-  border: 1px solid #ffb6c1;
-  border-radius: 6px;
-  background: white;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.profile-info img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-.dashboard-header {
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  margin-bottom: 20px;
-}
-
 
 .btn-add {
   background: linear-gradient(to right, #ff6a00, #ee0979);
@@ -144,6 +10,7 @@ body {
   letter-spacing: 1px;
   margin: 20px 0;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn-add:hover {
@@ -225,6 +92,7 @@ body {
   font-weight: 600;
   padding: 0.6rem 1.8rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .pageant-modal .btn-outline-light:hover {
@@ -253,9 +121,176 @@ body {
   color: #d991b2;
   font-style: italic;
 }
-.image img{
-  border-radius: 15px;
+
+/* Media section */
+.media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* Responsive wrapping */
+  padding: 20px;
 }
-.video iframe{
- border-radius: 15px;
+
+.image img {
+  border-radius: 15px;
+  border: 2px solid white;
+  width: 100%;
+  height:100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video iframe {
+  border-radius: 15px;
+  width: 100%;
+ border: 2px solid white; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.video iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+  }
+
+  .sidebar:hover {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .sidebar:hover~.main-content {
+    margin-left: 220px;
+  }
+
+  .media {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video iframe {
+    height: 300px;
+  }
+}
+
+/* Fix Add Media button margin */
+.container.text-end {
+  margin-right: 20px;
+}
+
+/* Base adjustments for tablet (>=768px) and up */
+@media (min-width: 768px) {
+
+  /* Sidebar: wider on hover, but normal width otherwise */
+  .sidebar {
+    width: 70px;
+    /* same */
+  }
+
+  .sidebar:hover {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 20px 30px;
+  }
+
+  .sidebar:hover~.main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  /* Media section layout: side by side */
+  .media {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 30px 50px;
+  }
+
+  .image,
+  .video {
+    flex: 1 1 45%;
+    /* each takes about half width */
+    max-width: 45%;
+  }
+
+  .image img,
+  .video iframe {
+    height: 400px;
+    max-width: 100%;
+  }
+}
+
+/* Larger desktops (>=1200px) */
+@media (min-width: 1200px) {
+  .media {
+    gap: 40px;
+    padding: 40px 80px;
+  }
+
+  .image,
+  .video {
+    max-width: 45%;
+  }
+
+  .btn-add {
+    padding: 14px 36px;
+    font-size: 1.1rem;
+  }
+
+  .header {
+    padding: 20px 40px;
+    height: 80px;
+  }
+
+
+  .profile-info span {
+    font-size: 18px;
+  }
+}
+
+/* Fix image inline style typo */
+.image img {
+  border-radius: 15px;
+  border: 2px solid white;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* Removed wrong inline style from HTML */
+}
+
+/* For landscape tablets (like iPads) */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .media {
+    gap: 25px;
+    padding: 25px 40px;
+  }
+
+  .image,
+  .video {
+    max-width: 48%;
+  }
+
+  .image img,
+  .video iframe {
+    height: 380px;
+  }
 }
