@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Overpass", sans-serif;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -15,15 +14,15 @@ body {
 .sidebar {
   background: linear-gradient(180deg, #ff4da6, #ff85c1);
   color: #fff;
-  width: 70px;
+  width: 220px;
   transition: width 0.3s ease;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 20px;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 /* .sidebar:hover {
@@ -44,7 +43,7 @@ body {
   padding: 12px 20px;
   color: white;
   cursor: pointer;
-  transition: background 0.3s ease;
+  /* transition: background 0.3s ease; */
 }
 
 .menu-item:hover {
@@ -53,7 +52,9 @@ body {
 }
 
 .icon-link:active {
-  color: blueviolet;
+ background-color: blueviolet;
+ /* width: 250px; */
+ /* border-radius: 8px; */
 }
 
 .menu-item i {
@@ -63,46 +64,48 @@ body {
 }
 
 .menu-label {
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  /* white-space: nowrap; */
+  /* opacity: 0; */
+  /* transition: opacity 0.3s ease; */
   text-decoration: none;
   color: #fff;
 }
 
-.sidebar:hover .menu-label {
+/* .sidebar:hover .menu-label {
   opacity: 1;
-}
+} */
 
 .main-content {
-  margin-left: 70px;
+  margin-left: 370px;
   width: calc(100% - 70px);
   transition: margin-left 0.3s ease, width 0.3s ease;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
-.sidebar:hover~.main-content {
+.logout-btn{
+  padding-top: inherit;
+}
+/* .sidebar:hover~.main-content {
   margin-left: 220px;
   width: calc(100% - 220px);
-}
+} */
 
-.sidebar:hover~.main-content .header {
+/* .sidebar:hover~.main-content .header {
   left: 220px;
-}
+} */
 
 .header {
   position: fixed;
   top: 0;
-  left: 70px;
+  left: 220px;
   right: 0;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 15px 20px;
+  padding: 50px 20px;
   height: 70px;
   box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
   transition: left 0.3s ease, width 0.3s ease;
