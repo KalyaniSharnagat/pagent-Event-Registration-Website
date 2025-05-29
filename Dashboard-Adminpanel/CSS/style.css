@@ -50,7 +50,7 @@ body {
   border-radius: 8px;
 }
 
-.icon-link::active {
+.icon-link:active {
  background-color: red;
  /* width: 250px; */
  /* border-radius: 8px; */

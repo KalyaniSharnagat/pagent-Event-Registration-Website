@@ -58,6 +58,7 @@ section {
   border-radius: 10px;
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-left: -270px;
 }
 
 h2 {
@@ -70,11 +71,9 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  overflow: scroll;
+ 
 }
-.judges-body{
-  overflow: scroll;
-}
+
 .form-group {
   flex: 1 1 300px;
   display: flex;
