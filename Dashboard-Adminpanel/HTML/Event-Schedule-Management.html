@@ -68,7 +68,7 @@
 
   <div class="main-content">
     <div class="header">
-      <h1>Event-Schedule-Management</h1>
+      <h1 class="header-heading">Event-Schedule-Management</h1>
       <div class="profile-info">
         <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
         <span>Admin</span>
@@ -78,18 +78,21 @@
     <div class="container-fluid pt-5 mt-5">
 
       <div class="d-flex justify-content-end mb-3">
-        <button class="btn add-event" data-bs-toggle="modal" data-bs-target="#eventModal">
+         <div class="text-end mb-3">
+          <button class="btn text-white add-event" onclick="exportCSV()">Export Data</button>
+        </div>
+        <!-- <button class="btn add-event" data-bs-toggle="modal" data-bs-target="#eventModal">
           <i class="fas fa-calendar-plus me-1"></i> Add Event
-        </button>
+        </button> -->
       </div>
 
-      <div class="card shadow-lg border-0" data-aos="fade-up">
-        <div class="card-header bg-gradient text-white">
+      <div class="card shadow-lg border-0 tablebody" data-aos="fade-up" style="background-color: #ffeaf5;">
+        <div class="card-header ">
           <h5 class="mb-0 text-dark fw-bold text-center">Scheduled Events</h5>
         </div>
-        <div class="card-body">
+        <div class="card-body" style="background-color: #ffeaf5;">
           <table class="table table-bordered table-hover text-center align-middle" id="eventTable">
-            <thead class="table-dark">
+            <thead class="table-Danger">
               <tr>
                 <th>Event Name</th>
                 <th>Date</th>
@@ -98,7 +101,7 @@
                 <th>Actions</th>
               </tr>
             </thead>
-            <tbody id="eventBody"></tbody>
+            <tbody id="eventBody" style="background-color: #ffeaf5;"></tbody>
           </table>
         </div>
       </div>
