@@ -42,7 +42,7 @@ body.dark {
 
 .sidebar h2 {
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 2rem !important;
 }
 
 .nav-list {
@@ -67,7 +67,7 @@ body.dark {
 
 .nav-list li.active {
 	background: rgba(255, 255, 255, 0.3);
-	font-weight: bold;
+	font-weight: bold !important;
 	border-left: 4px solid white;
 }
 
@@ -82,22 +82,22 @@ body.dark {
 
 
 .sidebar a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
 }
 
 #toggle-theme {
-  margin-top: 1rem;
-  padding: 10px;
-  border: none;
-  background: #fff;
-  color: #ec407a;
-  border-radius: 6px;
-  cursor: pointer;
+	margin-top: 1rem;
+	padding: 10px;
+	border: none;
+	background: #fff;
+	color: #ec407a;
+	border-radius: 6px;
+	cursor: pointer;
 }
 
 /* Topbar */
@@ -107,7 +107,10 @@ body.dark {
 	border-bottom: 1px solid #ddd;
 	position: fixed;
 	top: 0;
-	width: 100%;
+	left: 240px;
+	/* Start after sidebar */
+	width: calc(100% - 240px);
+	/* Adjust width accordingly */
 	z-index: 999;
 	display: flex;
 	justify-content: space-between;
@@ -116,23 +119,31 @@ body.dark {
 
 .search-bar {
 	display: flex;
+	align-items: center; /* Align vertically */
 	gap: 10px;
-   }
+}
 
-/* .search-bar input {
-	padding: 5px 10px;
+.search-bar input {
+	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-} */
+	height: 40px; /* Fixed height */
+	font-size: 14px;
+}
 
 .search-bar button {
-	padding: 6px 10px;
+	padding: 0 16px; /* Horizontal padding only */
+	height: 40px; /* Match input height */
 	border: none;
 	background-color: #2c3e50;
 	color: #fff;
 	border-radius: 4px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
 
 .profile-icon {
 	font-size: 24px;
@@ -163,3 +174,11 @@ body.dark {
 	background-color: #2c3e50;
 	color: #fff;
 }
+
+.main {
+	margin-left: 240px;
+	padding: 80px 20px 20px;
+	flex: 1;
+}
+
+
