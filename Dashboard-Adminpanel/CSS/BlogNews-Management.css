@@ -160,6 +160,9 @@ display: flex;
 
 
 /* Blog Card */
+.card3::-webkit-scrollbar {
+    display: none;
+}
 .card3 {
   display: flex;
   flex-direction: row;
@@ -167,10 +170,12 @@ display: flex;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(255, 77, 166, 0.2);
   margin: 40px auto;
+  margin-left: -90px;
   max-width: 900px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .card3:hover {
@@ -212,6 +217,7 @@ display: flex;
   color: #ff4da6;
   letter-spacing: 1px;
   font-family: "Playfair Display", serif;
+  text-align: justify;
 }
 
 .right p.blog-tex {
