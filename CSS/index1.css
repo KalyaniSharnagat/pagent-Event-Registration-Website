@@ -1,11 +1,11 @@
 * {
-  font-family: 'Times New Roman', Times, serif;
+   font-family: "Overpass", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, serif;
+   font-family: "Overpass", sans-serif;
   /* background-color: #F7A8C4; */
   color: #333;
   overflow-x: hidden;
@@ -59,7 +59,8 @@ body {
 .gradient-btn:hover {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 }
-.login-btn{
+
+.login-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 }
 
@@ -150,9 +151,10 @@ body {
 }
 
 .content {
+  
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 108%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -245,7 +247,7 @@ body {
 
 .day-btn.active {
   background-color: #FF6F61;
-  color: black;
+  color: #a9a9a9;
   font-weight: bold;
 }
 

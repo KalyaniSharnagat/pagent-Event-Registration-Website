@@ -102,16 +102,14 @@
         </div>
     </div>
     <script>
-        // Theme Toggle
+        // Toggle 
         const toggleBtn = document.getElementById("toggle-theme");
         const body = document.body;
-
         toggleBtn.addEventListener("click", () => {
             body.classList.toggle("dark");
             toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
         });
-
-        // Sidebar Active State
+        // Sidebar Active 
         const items = document.querySelectorAll(".nav-list li");
         items.forEach(item => {
             item.addEventListener("click", () => {
@@ -119,8 +117,6 @@
                 item.classList.add("active");
             });
         });
-
     </script>
 </body>
-
 </html>

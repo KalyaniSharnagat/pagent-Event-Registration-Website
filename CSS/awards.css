@@ -1,13 +1,13 @@
 /* ---------------------  rajat  --------------------------  */
 * {
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Overpass", sans-serif;
 }
 
 body {
   background-color: #F7A8C4;
   color: white !important;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Overpass", sans-serif;
   margin: 0;
 }
 
@@ -23,9 +23,10 @@ body {
   color: #703B42;
 }
 
-.login-btn{
+.login-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
 }
+
 .image-container img {
   height: auto;
   max-height: 400px;
