@@ -24,7 +24,9 @@ body {
   padding-top: 20px;
   /* z-index: 1000; */
 }
-
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
 /* .sidebar:hover {
   width: 220px;
 } */
