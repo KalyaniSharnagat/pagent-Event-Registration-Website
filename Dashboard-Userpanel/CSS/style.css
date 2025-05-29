@@ -119,11 +119,11 @@ body.dark {
 	gap: 10px;
    }
 
-.search-bar input {
+/* .search-bar input {
 	padding: 5px 10px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-}
+} */
 
 .search-bar button {
 	padding: 6px 10px;
