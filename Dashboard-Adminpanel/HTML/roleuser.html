@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/roleuser.css">
+    <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:wght@300;400;700;900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:wght@400..900&family=Raleway:wght@100..900&family=Roboto:wght@100..900&display=swap"
         rel="stylesheet">
@@ -16,13 +17,39 @@
 
 <body>
     <div class="sidebar">
-        <div class="sidebar-header">
-            <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
-        </div>
+      <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50" alt="Logo" /><br>
+        <P class="h4">CrownVista</P>
+      </div>
+      <div class="menu-item "><a
+          href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label"><i class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i class="fa-solid fa-user icon-link"></i>Contestants</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
+          Schedule</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link"><i class="fa-solid fa-photo-film icon-link"></i>Media</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link"><i class="fa-solid fa-bell icon-link"></i>Notifications</a>
+      </div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link"><i class="fa-solid fa-handshake-angle icon-link"></i>Sponsors</a></div>
+      <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link"><i class="fa-solid fa-newspaper icon-link"></i>Blog & News</a></div>
+         <div class="menu-item"><a
+          href="/Dashboard-Adminpanel/HTML/admin-login.html" class="menu-label icon-link"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ec0909;"></i>Log Out</a>
+     </div>
+     </div>
         <div class="menu-item"><i class="fa-solid fa-gauge-high icon-link"></i><a
                 href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label icon-link">Dashboard</a>
         </div>
-        <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a
+        <div class="menu-item active"><i class="fa-solid fa-user-shield icon-link"></i><a
                 href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link icon-link">User Roles</a>
         </div>
         <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a
@@ -50,7 +77,7 @@
 
     <div class="main-content">
         <div class="header">
-            <h3>Role Of User</h3>
+            <h1>Role Of User</h1>
             <div class="profile-info">
                 <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
                 <span>Admin</span>
