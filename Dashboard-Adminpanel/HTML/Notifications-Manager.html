@@ -64,7 +64,9 @@
     </div>
     <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a
         href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link">Media</a></div>
+
     <div class="menu-item active"><i class="fa-solid fa-bell icon-link"></i><a
+
         href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a>
     </div>
     <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a
@@ -86,8 +88,10 @@
     <!-- navbar end -->
 
     <!-- modal button -->
+
     <div class="container-fluid pt-5" style="margin-top: 40px;">
       <div class="d-flex justify-content-end">
+
         <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
           <i class="bi bi-plus-circle me-1"></i>Add
         </button>
@@ -105,11 +109,12 @@
           <form id="blogForm" enctype="multipart/form-data">
             <div class="modal-body">
               <input type="file" class="form-control" name="image" accept="image/*">
-              <input type="text" class="form-control" name="title" placeholder="Enter Judge Name" required>
-              <input type="email" class="form-control" name="email" placeholder="Enter Judge Email" required />
+              <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+              <input type="email" class="form-control" name="text" placeholder="Write your announcement here..."
+                required />
               <select class="form-select" name="category" required>
-                <option value="" disabled selected>Select Status</option>
-                <option>Active</option>
+                <option value="" disabled selected>Select team</option>
+                <option>Team A</option>
                 <option>Deactive</option>
 
               </select>
@@ -125,96 +130,390 @@
     </div>
 
     <section class="judge-list  judges-body">
-      <h2>All Judges</h2>
+      <h2>Notifications Manager</h2>
       <table>
         <thead>
           <tr>
-            <th>Profile</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Status</th>
-            <th>Actions</th>
+            <th>Subject</th>
+            <th>Messaage</th>
+            <th>Team Name</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td> Sharvari Malve</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+            <td>New Registration: Sharvari Malve</td>
+            <td>Registration submitted by SharvariMalve@example.com</td>
+            <td>Team A</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 2" class="profile-img" /></td>
-            <td>Kalyani Sharnagat</td>
-            <td>john@example.com</td>
-            <td>Inactive</td>
+
+            <td>Payment Issue: Kalyani Sharnagat</td>
+            <td>john@example.com – Payment failed, please verify</td>
+            <td>Team B</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Activate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td>Vishal Mirase</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+            <td>Missing Document: Riya Mehta</td>
+            <td>riya.mehta@example.com – ID proof not uploaded</td>
+            <td>Team B</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div >
+                <div class="d-flex ">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td>Ruchita Sharnagat</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+            <td>Approval Needed: Tanmay Joshi</td>
+            <td>tanmay.j@example.com – Awaiting review by jury.</td>
+            <td>Team A</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td>Mrunali Vaidya</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+
+            <td>Approval Needed: Tanmay Joshi</td>
+            <td>tanmay.j@example.com – Awaiting review by jury.</td>
+            <td>Team B</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td>Rajat Malve</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+
+            <td>Approval Needed: Tanmay Joshi</td>
+            <td>tanmay.j@example.com – Awaiting review by jury.</td>
+            <td>Team A</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td>Jayashree Bawankar</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+
+            <td>Approval Needed: Tanmay Joshi</td>
+            <td>tanmay.j@example.com – Awaiting review by jury.</td>
+            <td>Team A</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           <tr>
-            <td><img src="https://via.placeholder.com/40" alt="Judge 1" class="profile-img" /></td>
-            <td>Priya Sharma</td>
-            <td>jane@example.com</td>
-            <td>Active</td>
+
+            <td>Approval Needed: Tanmay Joshi</td>
+            <td>tanmay.j@example.com – Awaiting review by jury.</td>
+            <td>Team B</td>
             <td>
-              <button class="bg-color-button">Edit</button>
-              <button class="bg-color-button">Deactivate</button>
+              <div>
+                <div class="d-flex">
+                  <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#blogModal">
+                    <i class="bi bi-plus-circle me-1"></i>Edit
+                  </button>
+                </div>
+              </div>
+
+              <!-- modal start-->
+              <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content pageant-modal">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="blogModalLabel">Add Judge Information</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <form id="blogForm" enctype="multipart/form-data">
+                      <div class="modal-body">
+                        <input type="file" class="form-control" name="image" accept="image/*">
+                        <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
+                        <input type="email" class="form-control" name="text"
+                          placeholder="Write your announcement here..." required />
+                        <select class="form-select" name="category" required>
+                          <option value="" disabled selected>Select team</option>
+                          <option>Team A</option>
+                          <option>Deactive</option>
+
+                        </select>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-gradient">Publish</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
         </tbody>
