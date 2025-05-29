@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Get Newsletter</title>
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/Get Newsletters.css" />
+  <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/style.css" />
   <script src="/Dashboard-Userpanel/JS/user.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -14,7 +15,7 @@
 <body class="light">
   <div class="dashboard">
     <!-- Sidebar -->
-<aside class="sidebar">
+      <aside class="sidebar">
     <h2>🎀 Pageant</h2>
     <ul class="nav-list">
         <li class="btn">
@@ -86,14 +87,15 @@
       toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
     });
 
-    // Sidebar Active State
-    const items = document.querySelectorAll(".nav-list li");
-    items.forEach(item => {
-      item.addEventListener("click", () => {
-        items.forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-      });
-    });
+     // Sidebar Active State
+        const items = document.querySelectorAll(".nav-list li");
+        items.forEach(item => {
+            item.addEventListener("click", () => {
+                items.forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
+            });
+        });
+         const currentPage = window.location.pathname.split("/").pop();
   </script>
 </body>
 
