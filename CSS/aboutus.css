@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 .backgroundColor {
   font-family: "Overpass", sans-serif;
   background-color: #F7A8C4;
@@ -20,6 +21,7 @@
 
 .login-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
+  color: white!important;
 }
 
 /* .form-title {

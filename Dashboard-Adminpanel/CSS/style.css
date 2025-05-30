@@ -5,24 +5,24 @@
   font-family: "Overpass", sans-serif;
 }
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(to right, #ffe0f0, #ffffff);
+  overflow-x: hidden;
 }
 
+/* Sidebar */
 .sidebar {
   background: linear-gradient(180deg, #ff4da6, #ff85c1);
   color: #fff;
   width: 220px;
-  transition: width 0.3s ease;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 20px;
-
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  padding: 20px 10px;
+  z-index: 1000;
 }
 .sidebar::-webkit-scrollbar {
     display: none;
@@ -35,6 +35,12 @@ body {
   font-weight: 600;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .menu-item {
   display: flex;
   align-items: center;
@@ -42,11 +48,11 @@ body {
   padding: 12px 20px;
   color: white;
   cursor: pointer;
+  /* transition: background 0.3s ease; */
 }
 
-
-.menu-item:active {
- background-color:rgba(255, 255, 255, 0.311) ;
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .menu-item i {
@@ -56,25 +62,15 @@ body {
 }
 
 .menu-label {
+  /* white-space: nowrap; */
+  /* opacity: 0; */
+  /* transition: opacity 0.3s ease; */
   text-decoration: none;
   color: #fff;
 }
 
 
-.main-content {
-  margin-left: 270px;
-  margin-top: 30px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.logout-btn{
-  padding-top: inherit;
-}
-.header-heading{
-  color: #000;
-  font-size: 40px;
-}
+/* Topbar/Header */
 .header {
   position: fixed;
   top: 0;
@@ -85,12 +81,16 @@ body {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  padding: 50px 20px;
+  padding: 0 20px;
   height: 70px;
   box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
   transition: left 0.3s ease, width 0.3s ease;
 }
 
+.header-heading {
+  color: #000;
+  font-size: 24px;
+}
 
 .profile-info {
   display: flex;
@@ -110,81 +110,69 @@ body {
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
-  .header {
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding-top: 80px;
+  /* Avoid overlap with fixed header */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Common Styles: Already fixed in your CSS */
+
+/* Tablet to Large Screen View (>=768px) */
+@media (min-width: 768px) {
+  .sidebar {
     left: 0;
-    padding: 10px 15px;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 220px;
+    right: 0;
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    z-index: 999;
+    transition: left 0.3s ease;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    padding: 90px 20px 20px;
+    /* Push content below fixed header */
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  .profile-info {
+    display: flex;
   }
 }
 
+/* Desktop Wide Screens (>=992px) */
+@media (min-width: 992px) {
+  .sidebar {
+    width: 220px;
+  }
 
-/* Mobile and Tablet View */
-    @media (max-width: 768px) {
-      .sidebar {
-        left: -220px;
-        width: 220px;
-      }
+  .header {
+    left: 220px;
+  }
 
-      .header {
-        left: 0;
-        padding: 10px 15px;
-        height: 60px;
-      }
-
-      .main-content {
-        margin-left: 0; 
-      }
-
-      /* Menu Items */
-      .menu-item {
-        padding: 12px 15px;
-      }
-
-      /* Profile Info on Mobile */
-      .profile-info {
-        display: none; 
-      }
-
-      /* Sidebar toggle button */
-      .toggle-btn {
-        display: block;
-        background-color: #ff4da6;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        left: 15px;
-        z-index: 1100;
-      }
-
-      .toggle-btn i {
-        font-size: 24px;
-      }
-
-      .sidebar.open {
-        left: 0;
-      }
-    }
-
-    /* Large Screen View */
-    @media (min-width: 769px) {
-      .sidebar {
-        left: 0;
-      }
-
-      .header {
-        padding: 50px 20px;
-        height: 70px;
-      }
-
-      .main-content {
-        margin-left: 270px;
-      }
-
-      .profile-info {
-        display: flex;
-      }
-    }
-
+  .main-content {
+    margin-left: 220px;
+  }
+}

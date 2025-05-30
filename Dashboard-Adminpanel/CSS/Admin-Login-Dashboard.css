@@ -10,13 +10,14 @@
   animation: slideIn 1s ease;
 }
 
+
 .cards {
   display: grid;
 
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin: 10px;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 
 
@@ -71,8 +72,9 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-content {
+    margin-left: 60px;
     padding: 80px 20px 20px 20px;
   }
 
@@ -84,78 +86,28 @@
     width: 200px;
   }
 
-  .sidebar:hover~.main-content {
+  .sidebar:hover ~ .main-content {
     margin-left: 200px;
   }
 
-  .sidebar:hover~.main-content .fixed-header {
-    left: 200px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .search-filter,
-  .profile-info {
-    width: 100%;
-  }
-
-  .search-filter input,
-  .search-filter select {
-    width: 100%;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .dashboard-header{
-    margin-top: 38px;
-  }
-
-  .main-content {
-    padding: 80px 15px 20px 15px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .main-content {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .sidebar {
-    width: 60px;
-  }
-
-  .sidebar:hover {
-    width: 200px;
-  }
-
-  .sidebar:hover~.main-content {
-    margin-left: 200px;
-  }
-
-  .sidebar:hover~.main-content .fixed-header {
-    left: 200px;
-  }
 }
 
+/* Small Laptop (1025px - 1439px) */
 @media screen and (min-width: 1025px) and (max-width: 1439px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .main-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
+/* Large Laptop / Desktop (≥1440px) */
 @media screen and (min-width: 1440px) {
   .cards {
     grid-template-columns: repeat(4, 1fr);
@@ -164,5 +116,28 @@
   .main-content {
     padding-left: 50px;
     padding-right: 50px;
+  }
+}
+
+/* Mobile (≤ 767px) */
+@media screen and (max-width: 767px) {
+  .main-content {
+    margin-left: 0;
+    padding: 80px 15px 20px 15px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 }
