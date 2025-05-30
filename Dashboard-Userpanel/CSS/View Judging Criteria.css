@@ -1,4 +1,3 @@
-
 /* Cards */
 .cards {
   display: grid;
@@ -101,22 +100,43 @@ body.dark .card {
 
 
 /* Judging Criteria Card */
-.criteria-card {
+/* .criteria-card {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .criteria-title {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.scrollable-criteria {
-  max-height: 500px;
-  overflow-y: auto;
-  padding-right: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+/* Ensure uniform height for all cards */
+.criteria-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 100%;
 }
 
+body.dark .criteria-card {
+  background-color: #2a2a3d;
+  color: white;
+}
+
+/* Stretch grid columns vertically */
+.row.g-4>div {
+  display: flex;
+}
+
+/* Optional scrollbar if content overflows */
+.criteria-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+
+
+
 /* judging criteria */
+
