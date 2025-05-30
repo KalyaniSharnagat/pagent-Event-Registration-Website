@@ -549,7 +549,7 @@ body {
   font-weight: 900;
   letter-spacing: .1em;
   line-height: 18px;
-  padding: 12px 30px;
+  padding: 12px 14px;
   margin: 0 10px 10px 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -738,6 +738,7 @@ body {
   .footer-content-column {
     width: 24.99%;
   }
+
 }
 
 @media (max-width: 760px) {
@@ -754,16 +755,24 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 1230px;
-    padding: 40px 15px 600px;
+    padding: 40px 15px 580px;
     /* position: relative; */
   }
 
-  .footer-logo{
-  display: flex;
-  justify-content: center;
-}
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
 
-.footer-menu-name{
-  font-size: 15px !important;
-}
+  .footer-menu-name {
+    font-size: 15px !important;
+  }
+
+  .faq-title{
+    margin-bottom: 0;
+  }
+
+  .faq {
+    padding: 11px;
+  }
 }
