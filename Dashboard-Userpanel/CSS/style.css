@@ -187,7 +187,7 @@ body.dark {
 
 /* Dark theme for sidebar */
 body.dark .sidebar {
-	background: #1e1e2f !important;
+	/* background: #1e1e2f !important; */
 	/* Remove gradient by setting solid color */
 	color: #ffffff !important;
 }
