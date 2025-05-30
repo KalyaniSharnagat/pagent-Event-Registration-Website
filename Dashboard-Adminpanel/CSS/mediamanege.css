@@ -1,6 +1,6 @@
 
 .btn-add {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   color: white;
   padding: 12px 28px;
   border-radius: 30px;
@@ -10,7 +10,6 @@
   letter-spacing: 1px;
   margin: 20px 0;
   transition: 0.3s;
-  cursor: pointer;
 }
 
 .btn-add:hover {
