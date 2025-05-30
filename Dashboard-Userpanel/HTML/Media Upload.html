@@ -18,6 +18,7 @@
     <aside class="sidebar">
       <h2>🎀 Pageant</h2>
       <ul class="nav-list">
+
         <li class="btn">
           <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
             <i class="fas fa-home"></i><span>Dashboard</span>
@@ -84,7 +85,7 @@
         </div>
 
         <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)"  />
+          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
 
         <div class="media-card" data-category="fashion">
@@ -107,10 +108,10 @@
         </div>
 
         <div class="media-card" data-category="fashion">
-       
-            <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
-              frameborder="0" scrolling="no" onclick="openLightbox(this.src)" ></iframe>
-         
+
+          <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
+            frameborder="0" scrolling="no" onclick="openLightbox(this.src)"></iframe>
+
         </div>
 
         <div class="media-card" data-category="contestant">
@@ -147,30 +148,9 @@
       filterCategory('all');
     </script>
 
-    <!-- Galllery End -->
+   
 
 
-
-    <!-- javascript -->
-    <script>
-      const toggleBtn = document.getElementById("toggle-theme");
-      const body = document.body;
-
-      toggleBtn.addEventListener("click", () => {
-        body.classList.toggle("dark");
-        toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
-      });
-
-      // Sidebar Active State
-      const items = document.querySelectorAll(".nav-list li");
-      items.forEach(item => {
-        item.addEventListener("click", () => {
-          items.forEach(i => i.classList.remove("active"));
-          item.classList.add("active");
-        });
-      });
-      const currentPage = window.location.pathname.split("/").pop();
-    </script>
 </body>
 
 </html>
