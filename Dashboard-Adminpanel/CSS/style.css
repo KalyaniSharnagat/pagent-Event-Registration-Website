@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Overpass", sans-serif;
 }
-
 body {
   min-height: 100vh;
   background: linear-gradient(to right, #ffe0f0, #ffffff);
@@ -25,9 +24,8 @@ body {
   padding: 20px 10px;
   z-index: 1000;
 }
-
 .sidebar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .sidebar-header {
@@ -50,12 +48,10 @@ body {
   padding: 12px 20px;
   color: white;
   cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  /* transition: background 0.3s ease; */
 }
 
-.menu-item:hover,
-.menu-item.active {
+.menu-item:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -66,9 +62,13 @@ body {
 }
 
 .menu-label {
+  /* white-space: nowrap; */
+  /* opacity: 0; */
+  /* transition: opacity 0.3s ease; */
   text-decoration: none;
   color: #fff;
 }
+
 
 /* Topbar/Header */
 .header {
