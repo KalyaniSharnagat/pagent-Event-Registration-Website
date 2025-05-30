@@ -208,7 +208,14 @@ body.dark .tabs span.active {
 body.dark .media-card {
 	background-color: #2e2e2e;
 }
-
+body.dark .topbar {
+  background: #2a2a3d;
+  color: #fff;
+}
+body.dark .sidebar {
+	background: linear-gradient(135deg, #2f3a57 10%, #3e2b47 100%);
+	color: #ffffff;
+}
 /* Responsive Sidebar for Tab to Big Screen */
 @media (min-width: 768px) {
 	.dashboard {
