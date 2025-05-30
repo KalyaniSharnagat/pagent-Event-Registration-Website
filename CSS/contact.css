@@ -206,22 +206,22 @@ textarea {
   gap: 16px;
 }
 
-.contact-inforaddress{
+.contact-inforaddress {
 
   margin-bottom: 24%;
 }
 
-.contact-inforphone{
+.contact-inforphone {
 
   margin-bottom: 8%;
 }
 
-.contact-inforemail{
+.contact-inforemail {
 
   margin-left: 5%;
 }
 
-.contact-infornumber{
+.contact-infornumber {
 
   margin-left: 3%;
 }
@@ -364,7 +364,7 @@ textarea {
   font-weight: 900;
   letter-spacing: .1em;
   line-height: 18px;
-  padding: 12px 30px;
+  padding: 12px 14px;
   margin: 0 10px 10px 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -632,16 +632,16 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     max-width: 1230px;
-    padding: 40px 15px 600px;
+    padding: 40px 15px 580px;
     /* position: relative; */
   }
 
-  .footer-logo{
-  display: flex;
-  justify-content: center;
-}
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
 
-.footer-menu-name{
-  font-size: 15px !important;
-}
+  .footer-menu-name {
+    font-size: 15px !important;
+  }
 }
