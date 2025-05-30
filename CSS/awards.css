@@ -50,13 +50,17 @@ body {
 }
 
 .card-title {
+  font-size: 20px;
   font-weight: 600;
   color: #212529;
 }
 
-.card-text {
-  color: #6c757d;
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color:#FF2E91;
 }
+
 
 h1.section-title {
   background-color: rgb(124, 112, 112);
@@ -512,4 +516,23 @@ h1.section-title {
   /* .footer-content-column {
       width: 49.99%;
   } */
+}
+
+@media (max-width: 760px) {
+  .footer-content-column {
+    box-sizing: border-box;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%;
+    color: #fff;
+  }
+
+  .footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 660px;
+    /* position: relative; */
+  }
 }

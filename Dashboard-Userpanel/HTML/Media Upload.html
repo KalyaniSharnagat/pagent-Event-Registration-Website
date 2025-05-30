@@ -15,37 +15,40 @@
 <body class="light">
   <div class="dashboard">
     <!-- Sidebar -->
-       <aside class="sidebar">
-    <h2>🎀 Pageant</h2>
-    <ul class="nav-list">
+    <aside class="sidebar">
+      <h2>🎀 Pageant</h2>
+      <ul class="nav-list">
         <li class="btn">
-            <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
-                <i class="fas fa-home"></i><span>Dashboard</span>
-            </a>
+          <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
+            <i class="fas fa-home"></i><span>Dashboard</span>
+          </a>
         </li>
         <li class="btn">
-            <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
-                <i class="fas fa-user-edit"></i><span>Contestant</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/Contestant Dashboard.html" class="link-none">
+            <i class="fas fa-user-edit"></i><span>Contestant</span>
+          </a>
         </li>
         <li class="btn active">
-            <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
-                <i class="fas fa-photo-video"></i><span>Media Upload</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/Media Upload.html" class="link-none">
+            <i class="fas fa-photo-video"></i><span>Media Upload</span>
+          </a>
         </li>
         <li class="btn">
-            <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
-                <i class="fas fa-balance-scale"></i><span>Judging Criteria</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/View Judging Criteria.html" class="link-none">
+            <i class="fas fa-balance-scale"></i><span>Judging Criteria</span>
+          </a>
         </li>
         <li class="btn">
-            <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
-                <i class="fas fa-newspaper"></i><span>Newsletters</span>
-            </a>
+          <a href="/Dashboard-Userpanel/HTML/Get Newsletters.html" class="link-none">
+            <i class="fas fa-newspaper"></i><span>Newsletters</span>
+          </a>
         </li>
-    </ul>
-    <button id="toggle-theme" class="sun-icon" style="width: 100%;margin-top: 110px;">🌙</button>
-</aside>
+      </ul>
+      <button id="toggle-theme" class="btn btn-light w-100 mt-5 d-flex align-items-center justify-content-center">
+        <span class="me-2" id="theme-icon">🌙</span>
+      </button>
+
+    </aside>
 
 
 
@@ -73,19 +76,19 @@
 
       <div class="gallery" id="media-gallery">
         <div class="media-card" data-category="fashion">
-          <img src="/PUBLIC-IMAGES/fashion7.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/fashion7.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
 
         <div class="media-card" data-category="event">
-          <img src="/PUBLIC-IMAGES/about1.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/about1.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
 
         <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)"  />
         </div>
 
         <div class="media-card" data-category="fashion">
-          <img src="/PUBLIC-IMAGES/fasshion5.jpeg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/fasshion5.jpeg" draggable="false" onclick="openLightbox(this.src)" />
           <video>
             <source src="/PUBLIC-IMAGES/fashionvideo1.mp4" type="video/tag">
             <source src="/PUBLIC-IMAGES/fashionvideo1.ogg" type="video/ogg">
@@ -93,81 +96,81 @@
 
         </div>
         <div class="media-card" data-category="event">
-          <img src="/PUBLIC-IMAGES/abt3.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/abt3.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
         <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/contestant.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/contestant.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
 
         <div class="media-card" data-category="fashion">
-          <img src="/PUBLIC-IMAGES/fashion6.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/fashion6.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
 
         <div class="media-card" data-category="fashion">
-          <div class="media-card" data-category="fashion">
+       
             <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
-              frameborder="0" scrolling="no"></iframe>
-          </div>
+              frameborder="0" scrolling="no" onclick="openLightbox(this.src)" ></iframe>
+         
         </div>
 
         <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/contestant7.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/contestant7.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
 
         <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/contestant_4.jpg" draggable="false" />
+          <img src="/PUBLIC-IMAGES/contestant_4.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
       </div>
     </div>
 
-      <script>
-        const tabs = document.querySelectorAll('#category-tabs span');
-        const cards = document.querySelectorAll('.media-card');
+    <script>
+      const tabs = document.querySelectorAll('#category-tabs span');
+      const cards = document.querySelectorAll('.media-card');
 
-        function filterCategory(category) {
-          cards.forEach(card => {
-            const match = card.getAttribute('data-category') === category || category === 'all';
-            card.style.display = match ? 'block' : 'none';
-          });
-        }
-
-        tabs.forEach(tab => {
-          tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            const category = tab.getAttribute('data-category');
-            filterCategory(category);
-          });
+      function filterCategory(category) {
+        cards.forEach(card => {
+          const match = card.getAttribute('data-category') === category || category === 'all';
+          card.style.display = match ? 'block' : 'none';
         });
+      }
 
-        // Initialize to show all
-        filterCategory('all');
-      </script>
-
-      <!-- Galllery End -->
-
-
-
-      <!-- javascript -->
-      <script>
-        const toggleBtn = document.getElementById("toggle-theme");
-        const body = document.body;
-
-        toggleBtn.addEventListener("click", () => {
-          body.classList.toggle("dark");
-          toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const category = tab.getAttribute('data-category');
+          filterCategory(category);
         });
+      });
 
-        // Sidebar Active State
-        const items = document.querySelectorAll(".nav-list li");
-        items.forEach(item => {
-          item.addEventListener("click", () => {
-            items.forEach(i => i.classList.remove("active"));
-            item.classList.add("active");
-          });
+      // Initialize to show all
+      filterCategory('all');
+    </script>
+
+    <!-- Galllery End -->
+
+
+
+    <!-- javascript -->
+    <script>
+      const toggleBtn = document.getElementById("toggle-theme");
+      const body = document.body;
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+      });
+
+      // Sidebar Active State
+      const items = document.querySelectorAll(".nav-list li");
+      items.forEach(item => {
+        item.addEventListener("click", () => {
+          items.forEach(i => i.classList.remove("active"));
+          item.classList.add("active");
         });
-         const currentPage = window.location.pathname.split("/").pop();
-  </script>
+      });
+      const currentPage = window.location.pathname.split("/").pop();
+    </script>
 </body>
 
 </html>
