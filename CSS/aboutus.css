@@ -612,7 +612,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1230px;
-    padding: 40px 15px 450px;
+    padding: 40px 15px 390px;
     position: relative;
   }
 
@@ -623,12 +623,6 @@
   .footer-content-column {
     width: 24.99%;
   }
-}
-
-@media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
 }
 
 @media (max-width: 760px) {
@@ -645,7 +639,16 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1230px;
-    padding: 40px 15px 660px;
+    padding: 40px 15px 600px;
     /* position: relative; */
   }
+
+  .footer-logo{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu-name{
+  font-size: 15px !important;
+}
 }
