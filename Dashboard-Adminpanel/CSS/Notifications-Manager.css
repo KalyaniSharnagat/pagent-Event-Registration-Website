@@ -141,7 +141,6 @@ button:hover {
 
 .pageant-modal {
   background: linear-gradient(145deg, #fdf6fb, #ffe6f0);
-  border-radius: 25px;
   box-shadow:
     0 4px 20px rgba(255, 77, 166, 0.3),
     inset 0 0 10px #ff85c1;
@@ -154,8 +153,6 @@ button:hover {
 
 .pageant-modal .modal-header {
   background: linear-gradient(90deg, #ff4da6, #ff85c1);
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
   color: white;
   padding: 1.3rem 2rem;
   font-weight: 700;
