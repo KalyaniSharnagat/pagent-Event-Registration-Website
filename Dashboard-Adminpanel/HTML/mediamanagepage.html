@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Management</title>
   <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/mediamanege.css" />
-  <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Overpass:wght@800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,43 +16,36 @@
 </head>
 
 <body>
- <div class="sidebar">
-      <div class="sidebar-header">
-        <img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50" alt="Logo" /><br>
-        <P class="h4">CrownVista</P>
-      </div>
-      <div class="menu-item "><a
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <span><img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50"></span>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-gauge-high icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label icon-link">Dashboard</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user-shield icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link icon-link">User Roles</a></div>
+    <div class="menu-item"><i class="fa-solid fa-user icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label">Contestants</a></div>
+    <div class="menu-item"><i class="fa-solid fa-users-gear icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label">Judge Profiles</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-calendar-days icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link">Event Schedule</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-photo-film icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link">Media</a></div>
+    <div class="menu-item"><i class="fa-solid fa-bell icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link">Notifications</a>
+    </div>
+    <div class="menu-item"><i class="fa-solid fa-handshake-angle icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link">Sponsors</a></div>
+    <div class="menu-item"><i class="fa-solid fa-newspaper icon-link"></i><a
+        href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link">Blog & News</a></div>
+  </div>
 
-          href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label"><i class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
-      <div class="menu-item "><a
-          href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i class="fa-solid fa-user icon-link"></i>Contestants</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
-          Schedule</a></div>
-          <div class="menu">
-      <div class="menu-item active"><a
-          href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link"><i class="fa-solid fa-photo-film icon-link"></i>Media</a></div>
-      </div>
-          <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link"><i class="fa-solid fa-bell icon-link"></i>Notifications</a>
-      </div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link"><i class="fa-solid fa-handshake-angle icon-link"></i>Sponsors</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link"><i class="fa-solid fa-newspaper icon-link"></i>Blog & News</a></div>
-         <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/admin-login.html" class="menu-label icon-link"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ec0909;"></i>Log Out</a>
-     </div>
-     </div>
-
- 
   <div class="main-content">
-    <div class="header">
-      <h1 class="header-heading">Media Management</h1>
+    <div class="header d-flex justify-content-between align-items-center px-4 py-2 bg-light shadow-sm">
+      <h3 class="m-0">Media Management</h3>
       <div class="profile-info d-flex align-items-center gap-2">
         <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" width="40" height="40"
           style="border-radius: 50%;" />
@@ -61,16 +53,18 @@
       </div>
     </div>
 
+    <div class="container text-end">
+      <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+        <i class="bi bi-plus-circle me-1"></i> Add Media
+      </button>
+    </div>
 
     <!-- navbar end -->
 
-
-   <div class="container-fluid" style="margin-top: 40px;">
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn text-white btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
-            <i class="bi bi-plus-circle me-1"></i>Add Media</button>
-        </div>
-      </div>
+    <div class="container text-end">
+      <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+        <i class="bi bi-plus-circle me-1"></i> Add Media</button>
+    </div>
 
     <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -81,7 +75,7 @@
           </div>
           <form id="blogForm">
             <div class="modal-body">
-
+            
               <select class="form-select" name="category" required>
                 <option value="" disabled selected>Select Category</option>
                 <option>Fashion</option>
@@ -89,7 +83,7 @@
                 <option>Contestant</option>
               </select>
 
-
+  
 
 
               <select class="form-select mb-2" id="mediaType" required>
@@ -120,10 +114,10 @@
 
     <div class="media" style="display: flex; justify-content: center;gap:20px;">
       <div class="image">
-        <img src="/PUBLIC-IMAGES/abt3.jpg" alt="image" height="400px" width="400px">
+        <img src="/PUBLIC-IMAGES/abt3.jpg" alt="image" height="400px" width="400px border-radius:10px solid white">
       </div>
       <div class="video">
-        <iframe width="636" height="100" src="https://www.youtube.com/embed/opRpZS_rafA"
+        <iframe width="636" height="400" src="https://www.youtube.com/embed/opRpZS_rafA"
           title="बॉलीवुड अभिनेत्री चित्रांगदा सिंह पहुंची वीईसी क्वीन ऑफ इंडिया सीजन 1 में" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -152,32 +146,9 @@
           videoInput.style.display = 'block';
         }
       });
-
-      document.getElementById("blogForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-        Swal.fire({
-          title: '✨ Images/videos Added!',
-          text: 'Your fashion post is now live.',
-          icon: 'success',
-          confirmButtonText: 'OK',
-          confirmButtonColor: '#ff4da6',
-          backdrop: `rgba(255, 192, 203, 0.3)`,
-          showClass: {
-            popup: 'animate__animated animate__zoomIn'
-          },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-          }
-        }).then(() => {
-          const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
-          modal.hide();
-
-          this.reset();
-
-          location.reload();
-        });
-      });
     </script>
+
+
 </body>
-  <!-- <script src="/Dashboard-Adminpanel/JAVASCRIPT/script.js"></script> -->
+
 </html>
