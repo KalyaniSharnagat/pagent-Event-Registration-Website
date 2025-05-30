@@ -77,32 +77,39 @@
 
     <div class="main-content">
         <div class="header">
-            <h1>Role Of User</h1>
+            <h1 class="header-heading">Role Of User</h1>
             <div class="profile-info">
                 <img src="/Dashboard-Adminpanel/public-admin/admin-image.png" alt="Admin Profile" />
                 <span>Admin</span>
             </div>
         </div>
-
         <div class="table-container-fluid" data-aos="fade-up">
             <table class="scrollable-table" aria-label="Employees">
                 <thead>
                     <tr>
                         <th>
                             <button class="sort-button">Name<svg class="sort-icon" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg></button>
+                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                            </svg></button>
+                            <!-- ///////////////////////////////////////////////////////////////////////////// code of line up-down -->
                             <input type="text" class="column-filter" placeholder="Filter by name" />
                         </th>
                         <th>
                             <button class="sort-button">Role<svg class="sort-icon" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M7 10l5 5 5-5z" />
                                 </svg></button>
-                            <input type="text" class="column-filter" placeholder="Filter by role" />
+                             <select class="column-filter" name="category" required>
+                <option value="" disabled selected>Select Role</option>
+                <option>Contestant</option>
+                <option>Sponsorship Manager</option>
+                <option>Admin</option>
+                <option>Event Manager</option>
+
+              </select>
                         </th>
                         <th>
                             <button class="sort-button">Department<svg class="sort-icon" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
                                 </svg></button>
                             <input type="text" class="column-filter" placeholder="Filter by department" />
                         </th>
@@ -144,7 +151,6 @@
         let sortColumn = null;
         let sortDirection = 'ascending';
         let filters = { name: '', role: '', department: '' };
-
         const tbody = document.querySelector('tbody');
         const prevButton = document.querySelector('.prev-page');
         const nextButton = document.querySelector('.next-page');
@@ -245,6 +251,7 @@
         });
 
         updateTable();
+
     </script>
 </body>
 
