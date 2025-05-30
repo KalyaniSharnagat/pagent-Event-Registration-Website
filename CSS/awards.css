@@ -25,6 +25,7 @@ body {
 
 .login-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
+  color: white! important;
 }
 
 .image-container img {
