@@ -123,25 +123,25 @@
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="eventName" placeholder="Event Name" required />
+                    <input type="text" class="form-control" id="eventName" placeholder="Event Name" required oninvalid="this.setCustomValidity('Please Fill out Event Name')" oninput="this.setCustomValidity('')"/>
                     <label for="eventName">Event Name</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="date" class="form-control" id="eventDate" required />
+                    <input type="date" class="form-control" id="eventDate" required oninvalid="this.setCustomValidity('Please Fill out Date')" oninput="this.setCustomValidity('')"/>
                     <label for="eventDate">Event Date</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="eventStage" placeholder="Stage" required />
+                    <input type="text" class="form-control" id="eventStage" placeholder="Stage" required oninvalid="this.setCustomValidity('Please Fill out Stage Name')" oninput="this.setCustomValidity('')"/>
                     <label for="eventStage">Stage</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="date" class="form-control" id="eventDeadline" required />
+                    <input type="date" class="form-control" id="eventDeadline" required oninvalid="this.setCustomValidity('Please Fill out Date')" oninput="this.setCustomValidity('')"/>
                     <label for="eventDeadline">Deadline</label>
                   </div>
                 </div>

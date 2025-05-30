@@ -1,5 +1,3 @@
-
-
 /*/////////////////////////////////////////////////////////////////*/
 
 /* judge panel */
@@ -8,7 +6,6 @@ body {
   padding: 1rem;
   background: #f9f9f9;
 }
-
 section {
   background: #fff0f5;
   padding: 1.5rem;
@@ -16,12 +13,10 @@ section {
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-
 h2 {
   margin-bottom: 1rem;
   color: #333;
 }
-
 /* Form Styling */
 .judge-form {
   display: flex;
@@ -42,7 +37,6 @@ h2 {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
-
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -164,8 +158,8 @@ button:hover {
 
 .pageant-modal .modal-header {
   background: linear-gradient(90deg, #ff4da6, #ff85c1);
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  /* border-top-left-radius: 25px; */
+  /* border-top-right-radius: 25px; */
   color: white;
   padding: 1.3rem 2rem;
   font-weight: 700;
