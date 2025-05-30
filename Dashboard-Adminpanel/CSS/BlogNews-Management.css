@@ -1,168 +1,9 @@
-/* Base Reset & Fonts */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
+/* Hide scrollbar */
+.card3::-webkit-scrollbar {
+  display: none;
 }
-
-body {
-  background: linear-gradient(to right, #ffe0f0);
-  min-height: 100vh;
-  overflow-x: hidden;
-} */
-
-/* Sidebar */
-/* .sidebar {
-  background: linear-gradient(180deg, #ff4da6, #ff85c1);
-  color: #fff;
-  width: 70px;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 20px;
-  transition: width 0.3s ease;
-  z-index: 1000;
-}
-
-.sidebar:hover {
-  width: 220px;
-}
-
-.sidebar-header {
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 10px;
-  font-weight: 600;
-}
-
-.menu-item {
-display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 12px 20px;
-  color: white;
-  font-weight: bold;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  text-decoration: none;
-}
-
-.menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-}
-
-.menu-item i {
-  font-size: 18px;
-  min-width: 25px;
-  text-align: center;
-}
-
-.menu-label {
-  opacity: 0;
-  color: #fff;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
-}
-.menu-label:active{
-  color: #4a004a;
-  border-bottom: 2px solied black;
-  cursor: pointer;
-      padding: 10px 15px;
-      color: black;
-      border-bottom: 2px solid transparent;
-      transition: 0.3s;
-}
-
-
-
-.sidebar:hover .menu-label {
-  opacity: 1;
-} */
-
-/* Main Content Layout */
-/* .main-content {
-  margin-left: 70px;
-  width: calc(100% - 70px);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  padding-bottom: 2rem;
-  transition: margin-left 0.3s ease, width 0.3s ease;
-}
-
-.sidebar:hover ~ .main-content {
-  margin-left: 220px;
-  width: calc(100% - 220px);
-} */
-
-/* Header */
-/* .header {
-  top: 0;
-  left: 70px;
-  right: 0;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
-  transition: left 0.3s ease, width 0.3s ease;
-  z-index: 999;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.profile-info span {
-  font-weight: 500;
-}
-
-.profile-info img {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(255, 77, 166, 0.7);
-} */
-
-/* Add Blog Button */
-/* .container.text-end {
-  margin-top: 100px;
-  margin-right: 30px;
-}
-
-.btn-add {
-  background: linear-gradient(45deg, #ff4da6, #ff85c1);
-  color: white;
-  font-weight: 600;
-  border-radius: 25px;
-  padding: 10px 18px;
-  border: none;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 77, 166, 0.4);
-}
-
-.btn-add:hover {
-  background: linear-gradient(45deg, #ff85c1, #ff4da6);
-} */
-/* header end */
-
-
 
 /* Blog Card */
-.card3::-webkit-scrollbar {
-    display: none;
-}
 .card3 {
   display: flex;
   flex-direction: row;
@@ -170,12 +11,10 @@ display: flex;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(255, 77, 166, 0.2);
   margin: 40px auto;
-  margin-left: -90px;
   max-width: 900px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .card3:hover {
@@ -183,6 +22,7 @@ display: flex;
   box-shadow: 0 16px 40px rgba(255, 77, 166, 0.35);
 }
 
+/* Thumbnail */
 .thumbnail {
   flex: 1;
   max-width: 350px;
@@ -201,6 +41,7 @@ display: flex;
   transform: scale(1.05);
 }
 
+/* Content Right */
 .right {
   flex: 2;
   padding: 30px 35px;
@@ -227,7 +68,7 @@ display: flex;
   color: #6b2e6d;
 }
 
-/* Modal */
+/* Modal Styling */
 .pageant-modal {
   background: linear-gradient(45deg, #ff4da6, #ff85c1);
   border-radius: 20px;
@@ -282,7 +123,6 @@ display: flex;
   .card3 {
     flex-direction: column;
     max-width: 700px;
-    margin: 30px auto;
     border-radius: 20px;
   }
 
@@ -301,16 +141,6 @@ display: flex;
 
   .right p.blog-tex {
     font-size: 16px;
-  }
-
-  .header {
-    left: 70px;
-    width: calc(100% - 70px);
-  }
-
-  .sidebar:hover ~ .main-content .header {
-    left: 220px;
-    width: calc(100% - 220px);
   }
 }
 
