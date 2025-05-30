@@ -18,41 +18,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-Z4R5u9QeZQ5uD4CePV5iZ3GL6EBg69TvYj2VLNSrPhcZpQ+qO6JLRl2b8WnYz6o6DhMWtA4Rz+2tLQ3u2vCjzA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="/PUBLIC-IMAGES/logo-bgr.png">
 
 </head>
 
 <body>
- <div class="sidebar">
-      <div class="sidebar-header">
-        <img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50" alt="Logo" /><br>
-        <P class="h4">CrownVista</P>
-      </div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label"><i class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
-      <div class="menu-item active"><a
-          href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i class="fa-solid fa-user icon-link"></i>Contestants</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
-          Schedule</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link"><i class="fa-solid fa-photo-film icon-link"></i>Media</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link"><i class="fa-solid fa-bell icon-link"></i>Notifications</a>
-      </div>
-      <div class="menu">
-      <div class="menu-item active"><a
-          href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link"><i class="fa-solid fa-handshake-angle icon-link"></i>Sponsors</a></div>
-      </div>
-          <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link"><i class="fa-solid fa-newspaper icon-link"></i>Blog & News</a></div>
-         <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/admin-login.html" class="menu-label icon-link"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ec0909;"></i>Log Out</a>
-     </div>
-     </div>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50" alt="Logo" /><br>
+      <P class="h4">CrownVista</P>
+    </div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label"><i
+          class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i
+          class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i
+          class="fa-solid fa-user icon-link"></i>Contestants</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i
+          class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html"
+        class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
+        Schedule</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link"><i
+          class="fa-solid fa-photo-film icon-link"></i>Media</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html"
+        class="menu-label icon-link"><i class="fa-solid fa-bell icon-link"></i>Notifications</a>
+    </div>
+    <div class="menu">
+      <div class="menu-item active"><a href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html"
+          class="menu-label icon-link"><i class="fa-solid fa-handshake-angle icon-link"></i>Sponsors</a></div>
+    </div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link"><i
+          class="fa-solid fa-newspaper icon-link"></i>Blog & News</a></div>
+    <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/admin-login.html" class="menu-label icon-link"><i
+          class="fa-solid fa-arrow-right-from-bracket" style="color: #ec0909;"></i>Log Out</a>
+    </div>
+  </div>
   <!-- navbar end -->
 
 
@@ -67,11 +68,10 @@
     </div>
 
     <!--Modal Button     -->
-    <div class="container-fluid" style="margin-top: 60px;">
+    <div class="container-fluid">
       <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
-          <i class="bi bi-plus-circle me-1"></i>Add Sponsors
-        </button>
+        <button type="button" class="btn text-white btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+          <i class="bi bi-plus-circle me-1"></i>Add Sponsers</button>
       </div>
     </div>
 
@@ -106,7 +106,6 @@
           </form>
         </div>
       </div>
-
     </div>
 
     <!-- table -->
@@ -130,15 +129,10 @@
             <td>SharvariMalve@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
           <tr>
@@ -148,15 +142,11 @@
             <td>KalyaniSharnagat@example.com</td>
             <td>Inactive</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
           <tr>
@@ -166,15 +156,10 @@
             <td>VishalMirase@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
           <tr>
@@ -184,15 +169,10 @@
             <td>RuchitaSharnagat@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
           <tr>
@@ -202,15 +182,10 @@
             <td>MrunaliVaidya@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
           <tr>
@@ -220,18 +195,13 @@
             <td>RajatMalve@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
-
           </tr>
+
           <tr>
             <td><img src="/PUBLIC-IMAGES/Walmart-logo.webp" alt="Sponsor 7" class="profile-img" width="100"
                 height="100" /></td>
@@ -239,15 +209,10 @@
             <td>JayashreeBawankar@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
           <tr>
@@ -258,15 +223,10 @@
             <td>PriyaSharma@example.com</td>
             <td>Active</td>
             <td>
-              <button class="bg-color-button">
-                <i class="fas fa-edit"></i>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
               </button>
-              <button class="bg-color-button">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="bg-color-button">
-                <i class="fas fa-trash-alt"></i>
-              </button>
+              <i class="fas fa-trash-alt icon delete"></i>
             </td>
           </tr>
         </tbody>
@@ -274,38 +234,84 @@
     </section>
     </section>
     <!-- Your existing table and content -->
-     <script>
+    <script>
       document.getElementById("blogForm").addEventListener("submit", function (e) {
-          e.preventDefault();
+        e.preventDefault();
 
-          Swal.fire({
-            title: '✨ sponsor Added!',
-            text: 'Your fashion post is now live.',
-            icon: 'success',
-            confirmButtonText: 'OK',
-            confirmButtonColor: '#ff4da6',
-            backdrop: `rgba(255, 192, 203, 0.3)`,
-            showClass: {
-              popup: 'animate__animated animate__zoomIn'
-            },
-            hideClass: {
-              popup: 'animate__animated animate__fadeOutUp'
-            }
-          }).then(() => {
-            const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
-            modal.hide();
+        Swal.fire({
+          title: '✨ sponsor Added!',
+          text: 'Your fashion post is now live.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#ff4da6',
+          backdrop: `rgba(255, 192, 203, 0.3)`,
+          showClass: {
+            popup: 'animate__animated animate__zoomIn'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        }).then(() => {
+          const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
+          modal.hide();
 
-            this.reset();
+          this.reset();
 
-            location.reload();
+          location.reload();
+        });
+      });
+
+
+
+    </script>
+
+    <script>
+      // Attach confirmation logic to all delete buttons
+      document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".delete");
+
+        deleteButtons.forEach(button => {
+          button.addEventListener("click", function () {
+            Swal.fire({
+              title: 'Are you sure?',
+              text: "Do you really want to delete this sponsor?",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#d33',
+              cancelButtonColor: '#3085d6',
+              confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Optionally remove the row
+                const row = button.closest("tr");
+                if (row) row.remove();
+
+                // You can also send a request to the backend here
+                Swal.fire('Deleted!', 'Sponsor has been removed.', 'success');
+              }
+            });
           });
         });
+      });
+    </script>
 
 
-     </script>
+    <!-- <script>
+  function confirmDelete() {
+    if (confirm("Are you sure you want to delete this content?")) {
+      // Proceed with delete logic (e.g., call backend, remove row)
+      alert("Content deleted.");
+    } else {
+      // Cancel action
+      alert("Delete cancelled.");
+    }
+  }
+</script> -->
     <!-- <script src="/Dashboard-Adminpanel/JAVASCRIPT/script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </body>
+
+
 </html>
