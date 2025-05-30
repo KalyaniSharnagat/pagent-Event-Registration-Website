@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
 </head>
 
 <body class="light">
@@ -46,7 +47,10 @@
           </a>
         </li>
       </ul>
-      <button id="toggle-theme" class="sun-icon">🌙</button>
+      <button id="toggle-theme" class="btn btn-light w-100 mt-5 d-flex align-items-center justify-content-center">
+        <span class="me-2" id="theme-icon">🌙</span>
+      </button>
+
     </aside>
 
     <!-- Main Content -->
@@ -54,8 +58,8 @@
       <!-- Topbar -->
       <nav class="topbar">
         <div class="search-bar">
-          <!-- <input type="text" placeholder="Search...">
-          <button><i class="fas fa-search"></i></button> -->
+          <input type="text" placeholder="Search...">
+          <button><i class="fas fa-search"></i></button>
         </div>
         <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
       </nav>
@@ -67,9 +71,6 @@
         <!-- Profile Section -->
         <div>
           <h5 class="section-title"><i class="fas fa-id-card"></i> View/Edit Profile</h5>
-          <!-- Include Font Awesome & Bootstrap CSS -->
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
           <div class="container mt-4">
 

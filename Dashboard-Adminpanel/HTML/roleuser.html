@@ -95,9 +95,16 @@
                         </th>
                         <th>
                             <button class="sort-button">Role<svg class="sort-icon" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                            </svg></button>
-                            <input type="text" class="column-filter" placeholder="Filter by role" />
+                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                </svg></button>
+                             <select class="column-filter" name="category" required>
+                <option value="" disabled selected>Select Role</option>
+                <option>Contestant</option>
+                <option>Sponsorship Manager</option>
+                <option>Admin</option>
+                <option>Event Manager</option>
+
+              </select>
                         </th>
                         <th>
                             <button class="sort-button">Department<svg class="sort-icon" viewBox="0 0 24 24">
@@ -143,7 +150,6 @@
         let sortColumn = null;
         let sortDirection = 'ascending';
         let filters = { name: '', role: '', department: '' };
-
         const tbody = document.querySelector('tbody');
         const prevButton = document.querySelector('.prev-page');
         const nextButton = document.querySelector('.next-page');
@@ -244,6 +250,7 @@
         });
 
         updateTable();
+
     </script>
 </body>
 
