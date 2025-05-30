@@ -83,10 +83,10 @@ body {
 .logout-btn{
   padding-top: inherit;
 }
-.header-heading{
+/* .header-heading{
   color: #000;
   font-size: 40px;
-}
+} */
 .header {
   position: fixed;
   top: 0;
@@ -123,11 +123,11 @@ body {
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .header {
     left: 0;
     padding: 10px 15px;
   }
-}
+} */
 
 
