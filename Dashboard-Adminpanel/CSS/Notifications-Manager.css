@@ -18,9 +18,11 @@ h2 {
   gap: 1rem;
   overflow: scroll;
 }
-.judges-body{
+
+.judges-body {
   overflow: scroll;
 }
+
 .form-group {
   flex: 1 1 300px;
   display: flex;
@@ -240,3 +242,11 @@ button:hover {
 }
 
 /* modal end */
+
+
+/*icons*/
+.icon {
+  font-size: 26px;
+  color: rgb(246, 95, 120);
+  margin: 30px 10px;
+}
