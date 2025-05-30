@@ -90,9 +90,8 @@
           </div>
           <form id="blogForm">
             <div class="modal-body">
-              <input type="text" class="form-control" name="title" placeholder="Enter Title" required />
-              <textarea class="form-control" name="description" rows="4" placeholder="Enter Description"
-                required></textarea>
+              <input type="text" class="form-control" name="title" placeholder="Enter Title" required oninvalid="this.setCustomValidity('Please Fill out your  Title')" oninput="this.setCustomValidity('')" />
+              <textarea class="form-control" name="description" rows="4" placeholder="Enter Description" required  oninvalid="this.setCustomValidity('Please Fill out Description')" oninput="this.setCustomValidity('')"></textarea>
               <select class="form-select" name="category" required>
                 <option value="" disabled selected>Select Category</option>
                 <option>Fashion</option>
@@ -100,8 +99,8 @@
                 <option>Contestant</option>
                 <option>Announcement</option>
               </select>
-              <input type="file" class="form-control" name="image" accept="image/*" />
-              <input type="text" class="form-control" name="author" placeholder="Author Name" required />
+              <input type="file" class="form-control" name="image" accept="image/*" required  oninvalid="this.setCustomValidity('Please Select a file')" oninput="this.setCustomValidity('')"/>
+              <input type="text" class="form-control" name="author" placeholder="Author Name" required oninvalid="this.setCustomValidity('Please Fill out Author Name')" oninput="this.setCustomValidity('')"/>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>

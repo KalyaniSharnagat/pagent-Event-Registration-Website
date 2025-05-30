@@ -87,6 +87,11 @@
 
 
     <!-- navbar end -->
+
+    <!-- modal button -->
+  
+
+
     <div class="container-fluid pt-5" style="margin-top: 40px;">
       <div class="d-flex justify-content-end">
         <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
@@ -105,10 +110,10 @@
           </div>
           <form id="blogForm" enctype="multipart/form-data">
             <div class="modal-body">
-              <input type="text" class="form-control" name="title" placeholder="Enter Subject" required>
-              <input type="text" class="form-control" name="text" placeholder="Write your announcement here..."
-                required />
-              <select class="form-select" name="category" required>
+              <input type="file" class="form-control" name="image" accept="image/*">
+              <input type="text" class="form-control" name="title" placeholder="Enter Subject" required oninvalid="this.setCustomValidity('Please Fill out Subject')" oninput="this.setCustomValidity('')">
+              <input type="text" class="form-control" name="text" placeholder="Write your announcement here..."required oninvalid="this.setCustomValidity('Please Fill out Your Announcement')" oninput="this.setCustomValidity('')"/>
+              <select class="form-select" name="category" required oninvalid="this.setCustomValidity('Please Fill out Select Team')" oninput="this.setCustomValidity('')">
                 <option value="" disabled selected>Select team</option>
                 <option>Team A</option>
                 <option>Team B</option>
