@@ -27,6 +27,10 @@ body.dark .card {
   background: #2a2a3d;
   color: white;
 }
+body.dark .topbar {
+  background: #2a2a3d;
+  color: #fff;
+}
 
 .card h3 {
   font-size: 1.1rem;
@@ -62,6 +66,10 @@ body.dark .card {
 
 .card::-webkit-scrollbar-track {
   background: transparent;
+}
+body.dark .sidebar {
+	background: linear-gradient(135deg, #2f3a57 10%, #3e2b47 100%);
+	color: #ffffff;
 }
 
 /* Only apply layout stacking for small screens (like mobiles) */
