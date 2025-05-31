@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,5 +31,58 @@
 <script>
   
 </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Baby Pink Theme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Dashboard-Adminpanel/CSS/admin-login.css">
+  <link rel="icon" type="image/x-icon" href="/PUBLIC-IMAGES/logo-bgr.png">
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="forgot">
+      Forgot your password? <a href="#">Click here</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      // Define valid admin credentials
+      const adminUsername = 'admin';
+      const adminPassword = 'admin123';
+
+      if (username === adminUsername && password === adminPassword) {
+        // Redirect to admin dashboard on successful login
+        window.location.href = '/Dashboard-Adminpanel/admin-dashboard.html';
+      } else {
+        // Show alert on invalid credentials
+        alert('Invalid username or password. Please try again.');
+      }
+    });
+  </script>
+
 </body>
 </html>
