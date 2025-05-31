@@ -307,6 +307,24 @@ h1.section-title {
   color: #00bef0;
 }
 
+.footer-call-to-action-button {
+  /* background-color: #F7A8C4; */
+  border-radius: 21px;
+  color: #fffff2;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: 18px;
+  padding: 12px 14px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .2s;
+  cursor: pointer;
+  position: relative;
+}
+
 .button:last-of-type {
   margin-right: 0;
 }
