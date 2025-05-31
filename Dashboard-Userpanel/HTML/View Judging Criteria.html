@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/View Judging Criteria.css" />
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/style.css" />
-  <script src="user.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -18,9 +17,9 @@
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>🎀 Pageant</h2>
+      <h2>🎀 CrownVista</h2>
       <ul class="nav-list">
-        <li class="btn">
+        <li class="btn ">
           <a href="/Dashboard-Userpanel/Dashboard-userpanel.html" class="link-none">
             <i class="fas fa-home"></i><span>Dashboard</span>
           </a>
@@ -46,12 +45,9 @@
           </a>
         </li>
       </ul>
-      <button id="toggle-theme" class="btn btn-light w-100 mt-5 d-flex align-items-center justify-content-center">
-        <span class="me-2" id="theme-icon">🌙</span>
-      </button>
-
+      <button id="toggle-theme" class="sun-icon">🌙</button>
     </aside>
-
+  </div>
     <!-- Main Content -->
     <div class="main ps-5">
       <!-- Topbar -->
@@ -60,12 +56,13 @@
           <input type="text" placeholder="Search...">
           <button><i class="fas fa-search"></i></button>
         </div>
-        <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+        <div class="profile-icon"><i class="fas fa-user-circle"></i>
+         <a href="/index.html"><img src="/Dashboard-Userpanel/public/logout-btn-bgr.png" width="20" height="20"></a></div>
       </nav>
       <!-- navbar end -->
       <!-- judging criteria -->
       <div class="container py-5">
-        <h2 class="text-center mb-4">Judging Criteria - Pageant Registration</h2>
+      
         <div class="row g-4">
           <!-- Card 1 -->
           <div class="col-md-6 col-lg-4 d-flex">

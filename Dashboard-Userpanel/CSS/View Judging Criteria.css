@@ -11,13 +11,9 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: justify;
-
-  /* Fixed height and scroll on overflow */
   height: 320px;
   overflow-y: auto;
   overflow-x: hidden;
-
-  /* Optional: make inner layout consistent */
   display: flex;
   flex-direction: column;
 }
@@ -53,7 +49,7 @@ body.dark .topbar {
   color: orange;
 }
 
-/* Optional: Scrollbar styling for Chrome, Edge */
+/* scrollbar */
 .card::-webkit-scrollbar {
   width: 6px;
 }
