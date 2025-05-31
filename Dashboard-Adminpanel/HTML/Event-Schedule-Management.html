@@ -84,7 +84,11 @@
                         <th scope="col">Actions</th>
                       </tr>
                     </thead>
-                    <tbody id="eventBody"></tbody>
+                    <tbody id="eventBody"> 
+                      <tr id="noDataRow">
+                      <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
+                      </tr>   
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -158,81 +162,132 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Script -->
+
     <script>
-      document.getElementById('eventForm').addEventListener('submit', function (e) {
-        e.preventDefault();
+    document.getElementById('eventForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-        // Get values
-        const name = document.getElementById('eventName').value;
-        const date = document.getElementById('eventDate').value;
-        const stage = document.getElementById('eventStage').value;
-        const deadline = document.getElementById('eventDeadline').value;
+    // Get values
+    const name = document.getElementById('eventName').value;
+    const date = document.getElementById('eventDate').value;
+    const stage = document.getElementById('eventStage').value;
+    const deadline = document.getElementById('eventDeadline').value;
 
-        // Add to table
-        const tableBody = document.getElementById('eventBody');
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-        <td>${name}</td>
-        <td>${date}</td>
-        <td>${stage}</td>
-        <td>${deadline}</td>
-        <td><button class="btn btn-sm btn-danger" onclick="deleteRow(this)">Delete</button></td>
+    // Add to table
+    const tableBody = document.getElementById('eventBody');
+
+    // Remove "No data" row if it exists
+    const noDataRow = document.getElementById('noDataRow');
+    if (noDataRow) {
+      noDataRow.remove();
+    }
+
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td>${name}</td>
+      <td>${date}</td>
+      <td>${stage}</td>
+      <td>${deadline}</td>
+      <td><button class="btn btn-sm btn-danger" onclick="deleteRow(this)">Delete</button></td>
+    `;
+    tableBody.appendChild(newRow);
+
+    // Reset form
+    e.target.reset();
+
+    // Hide modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('eventModal'));
+    modal.hide();
+
+    // Show toast
+    showToast('Event added successfully!');
+  });
+
+  function deleteRow(btn) {
+    const row = btn.closest('tr');
+    row.remove();
+
+    const tableBody = document.getElementById('eventBody');
+    if (tableBody.rows.length === 0) {
+      const noDataRow = document.createElement('tr');
+      noDataRow.id = 'noDataRow';
+      noDataRow.innerHTML = `
+        <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
       `;
-        tableBody.appendChild(newRow);
+      tableBody.appendChild(noDataRow);
+    }
 
-        // Reset form
-        e.target.reset();
+    showToast('Event deleted.', 'danger');
+  }
 
-        // Hide modal
-        const modal = bootstrap.Modal.getInstance(document.getElementById('eventModal'));
-        modal.hide();
+  function showToast(message, type = 'success') {
+    const toastEl = document.createElement('div');
+    toastEl.className = `toast align-items-center text-bg-${type} border-0 show`;
+    toastEl.setAttribute('role', 'alert');
+    toastEl.setAttribute('aria-live', 'assertive');
+    toastEl.setAttribute('aria-atomic', 'true');
 
-        // Show toast
-        showToast('Event added successfully!');
+    toastEl.innerHTML = `
+      <div class="d-flex">
+        <div class="toast-body">${message}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    `;
+
+    document.getElementById('toastContainer').appendChild(toastEl);
+
+    setTimeout(() => {
+      toastEl.remove();
+    }, 3000);
+  }
+
+  function exportCSV() {
+    const table = document.getElementById("eventTable");
+    let csvContent = "";
+    for (let row of table.rows) {
+      const cols = [...row.cells].map(cell => `"${cell.innerText}"`).join(",");
+      csvContent += cols + "\n";
+    }
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "scheduled_events.csv";
+    link.click();
+  }
+
+  function loadEvents(events) {
+    const tbody = document.getElementById("eventBody");
+    tbody.innerHTML = "";
+
+    if (events.length === 0) {
+      const noDataRow = document.createElement("tr");
+      noDataRow.id = "noDataRow";
+      noDataRow.innerHTML = `
+        <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
+      `;
+      tbody.appendChild(noDataRow);
+    } else {
+      events.forEach(event => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${event.name}</td>
+          <td>${event.date}</td>
+          <td>${event.stage}</td>
+          <td>${event.deadline}</td>
+          <td>
+            <button class="btn btn-sm btn-danger" onclick="deleteRow(this)">Delete</button>
+          </td>
+        `;
+        tbody.appendChild(row);
       });
+    }
+  }
 
-      function deleteRow(btn) {
-        const row = btn.closest('tr');
-        row.remove();
-        showToast('Event deleted.', 'danger');
-      }
+  // Call this to start with empty or fetched data
+  loadEvents([]);
+</script>
 
-      function showToast(message, type = 'success') {
-        const toastEl = document.createElement('div');
-        toastEl.className = `toast align-items-center text-bg-${type} border-0 show`;
-        toastEl.setAttribute('role', 'alert');
-        toastEl.setAttribute('aria-live', 'assertive');
-        toastEl.setAttribute('aria-atomic', 'true');
-
-        toastEl.innerHTML = `
-        <div class="d-flex">
-          <div class="toast-body">${message}</div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      `;
-
-        document.getElementById('toastContainer').appendChild(toastEl);
-
-        setTimeout(() => {
-          toastEl.remove();
-        }, 3000);
-      }
-
-      function exportCSV() {
-        const table = document.getElementById("eventTable");
-        let csvContent = "";
-        for (let row of table.rows) {
-          const cols = [...row.cells].map(cell => `"${cell.innerText}"`).join(",");
-          csvContent += cols + "\n";
-        }
-
-        const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "scheduled_events.csv";
-        link.click();
-      }
-    </script>
 </body>
 
 </html>
