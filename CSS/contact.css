@@ -24,7 +24,7 @@ body {
 
 .login-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
-  color: white!important;
+  color: white !important;
 }
 
 .form-title {
@@ -644,5 +644,9 @@ textarea {
 
   .footer-menu-name {
     font-size: 15px !important;
+  }
+
+  .footer-copyright-text {
+    font-size: 9px;
   }
 }
