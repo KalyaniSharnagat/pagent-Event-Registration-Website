@@ -102,7 +102,7 @@
 }
 .btn-add {
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  color: white!important;
   padding: 12px 28px;
   border-radius: 30px;
   border: none;
