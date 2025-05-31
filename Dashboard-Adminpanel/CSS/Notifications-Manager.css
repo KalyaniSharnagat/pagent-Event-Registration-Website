@@ -11,7 +11,10 @@ h2 {
   margin-bottom: 1rem;
   color: #333;
 }
-
+.text-crownvista{
+  margin-left: -60px;
+  margin-top: -80px;
+}
 /* Form Styling */
 .judge-form {
   display: flex;
