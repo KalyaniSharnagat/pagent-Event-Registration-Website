@@ -182,7 +182,7 @@ body.dark .sidebar {
 }
 
 .nav-list li a {
-	color: inherit; /* Auto adjust for light/dark */
+	color: inherit; 
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -210,16 +210,7 @@ body.dark .sidebar {
 	width: 100%;
 	transition: background 0.3s, color 0.3s;
 }
-/* 
-body.dark #toggle-theme {
-	background: #444;
-	color: #ffbbec;
-} */
 
-
-/* Responsive Breakpoints */
-
-/* Tablets (768px - 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sidebar {
     width: 200px; 
@@ -264,10 +255,10 @@ body.dark #toggle-theme {
   }
 }
 
-/* Laptops (1024px - 1440px) */
+
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .sidebar {
-    width: 240px; /* Default width */
+    width: 240px; 
   }
 
   .main {
@@ -305,7 +296,7 @@ body.dark #toggle-theme {
   }
 }
 
-/* Big Screens (1440px and above) */
+
 @media screen and (min-width: 1440px) {
   .dashboard {
     max-width: 1920px; 
@@ -327,12 +318,12 @@ body.dark #toggle-theme {
   }
 
   .search-bar {
-    max-width: 500px; /* Larger search bar */
+    max-width: 500px; 
   }
 
   .search-bar input,
   .search-bar button {
-    padding: 8px 12px; /* Slightly larger inputs */
+    padding: 8px 12px;
     font-size: 1rem;
   }
 

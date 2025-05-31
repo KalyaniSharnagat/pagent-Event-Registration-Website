@@ -43,7 +43,7 @@
       </ul>
        
       <button id="toggle-theme" class="sun-icon">🌙</button>
-      <!-- <button ><img src="/Dashboard-Userpanel/public/logout-btn.png" width="20" height="20"></button> -->
+      
     </aside>
   </div>
     <!-- Main Content -->
@@ -91,7 +91,7 @@
   </div>
 
   <script>
-    // Theme Toggle
+    
     const toggleBtn = document.getElementById("toggle-theme");
     const body = document.body;
     toggleBtn.addEventListener("click", () => {
@@ -99,7 +99,7 @@
       toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
     });
 
-    // Sidebar Active State
+    
     const items = document.querySelectorAll(".nav-list li");
     items.forEach(item => {
       item.addEventListener("click", () => {
