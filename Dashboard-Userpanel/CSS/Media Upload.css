@@ -66,6 +66,11 @@ body.dark .tabs span.active {
 	color: #fff;
 }
 
+body.dark .tabs span{
+	color: black;
+	font-weight: bold;
+}
+
 body.dark .media-card {
 	background-color: #2e2e2e;
 }
