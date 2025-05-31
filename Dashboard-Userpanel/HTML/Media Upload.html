@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+   <link rel="icon" type="image/x-icon" href="/PUBLIC-IMAGES/logo-bgr.png">
 </head>
 
 <body class="light">
@@ -65,7 +67,7 @@
 
       <!-- <h2>Gallery</h2> -->
 
-      <div class="tabs" id="category-tabs"></div>
+      <div class="tabs" id="category-tabs">
         <span data-category="all" class="active">All</span>
         <span data-category="fashion">Fashion</span>
         <span data-category="event">Event</span>
@@ -82,7 +84,7 @@
         </div>
 
         <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)" />
+          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)"  />
         </div>
 
         <div class="media-card" data-category="fashion">
@@ -105,10 +107,10 @@
         </div>
 
         <div class="media-card" data-category="fashion">
-
-          <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
-            frameborder="0" scrolling="no" onclick="openLightbox(this.src)"></iframe>
-
+       
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
+              frameborder="0" scrolling="no" onclick="openLightbox(this.src)" ></iframe>
+         
         </div>
 
         <div class="media-card" data-category="contestant">
@@ -121,31 +123,83 @@
       </div>
     </div>
 
-    <script>
-      const tabs = document.querySelectorAll('#category-tabs span');
-      const cards = document.querySelectorAll('.media-card');
+      <script>
+        const tabs = document.querySelectorAll('#category-tabs span');
+        const cards = document.querySelectorAll('.media-card');
 
-      function filterCategory(category) {
-        cards.forEach(card => {
-          const match = card.getAttribute('data-category') === category || category === 'all';
-          card.style.display = match ? 'block' : 'none';
+        function filterCategory(category) {
+          cards.forEach(card => {
+            const match = card.getAttribute('data-category') === category || category === 'all';
+            card.style.display = match ? 'block' : 'none';
+          });
+        }
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const category = tab.getAttribute('data-category');
+            filterCategory(category);
+          });
         });
-      }
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          const category = tab.getAttribute('data-category');
-          filterCategory(category);
+        // Initialize to show all
+        filterCategory('all');
+      </script>
+
+      <!-- Galllery End -->
+
+
+
+      <!-- javascript -->
+      <script>
+        const toggleBtn = document.getElementById("toggle-theme");
+        const body = document.body;
+
+        toggleBtn.addEventListener("click", () => {
+          body.classList.toggle("dark");
+          toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
         });
-      });
 
-      // Initialize to show all
-      filterCategory('all');
-    </script>
+        // Sidebar Active State
+        const items = document.querySelectorAll(".nav-list li");
+        items.forEach(item => {
+          item.addEventListener("click", () => {
+            items.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+          });
+        });
 
-   
+         var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+      </script>
+
+
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="Full view">
+</div>
+
+
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = src;
+    lightbox.classList.add("active");
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+</script>
 
 
 </body>
