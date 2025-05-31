@@ -33,6 +33,7 @@
 </script>
 </body>
 </html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,15 +71,16 @@
       const username = document.getElementById('username').value.trim();
       const password = document.getElementById('password').value;
 
-      // Define valid admin credentials
+  
       const adminUsername = 'admin';
       const adminPassword = 'admin123';
 
       if (username === adminUsername && password === adminPassword) {
-        // Redirect to admin dashboard on successful login
-        window.location.href = '/Dashboard-Adminpanel/admin-dashboard.html';
+      
+       window.location.href = '/Dashboard-Adminpanel/HTML/admin-dashboard.html';
+
       } else {
-        // Show alert on invalid credentials
+      
         alert('Invalid username or password. Please try again.');
       }
     });
