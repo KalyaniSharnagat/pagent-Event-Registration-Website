@@ -45,9 +45,11 @@
           </a>
         </li>
       </ul>
-      <button id="toggle-theme" class="sun-icon">🌙</button>
+      <button id="toggle-theme" class="btn btn-light w-100 mt-5 d-flex align-items-center justify-content-center">
+        <span class="me-2" id="theme-icon">🌙</span>
+      </button>
     </aside>
-</div>
+  </div>
 
 
 
@@ -121,6 +123,14 @@
           <img src="/PUBLIC-IMAGES/contestant_4.jpg" draggable="false" onclick="openLightbox(this.src)" />
         </div>
       </div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs" id="category-tabs">
+      <span data-category="all" class="active">All</span>
+      <span data-category="fashion">Fashion</span>
+      <span data-category="event">Event</span>
+      <span data-category="contestant">Contestant</span>
     </div>
 
       <script>
@@ -201,7 +211,15 @@
   }
 </script>
 
+    filterCategory('all'); // Show all on load
 
+    // 🌙 Theme toggle logic
+    const themeToggle = document.getElementById('toggle-theme');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
 </body>
 
 </html>
