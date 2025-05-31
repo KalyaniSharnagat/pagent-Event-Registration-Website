@@ -60,14 +60,14 @@
 
           <!-- <input type="text" placeholder="Search...">
           <button><i class="fas fa-search"></i></button> -->
-          <div class="profile-menu">
+          <!-- <div class="profile-menu">
             <div class="profile-icon" onclick="toggleDropdown()">
               <i class="fas fa-user-circle"></i>
             </div>
             <div class="dropdown" id="dropdownMenu">
               <a href="#">Sign Out</a>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="profile-icon"><i class="fas fa-user-circle"></i>
          <a href="/index.html"><img src="/Dashboard-Userpanel/public/logout-btn-bgr.png" width="20" height="20"></a></div>
@@ -233,17 +233,17 @@
 
       <!-- javascript -->
       <script>
-        function toggleDropdown() {
-          const menu = document.getElementById('dropdownMenu');
-          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
+        // function toggleDropdown() {
+        //   const menu = document.getElementById('dropdownMenu');
+        //   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        // }
 
-        // Optional: Hide when clicked outside
-        window.addEventListener('click', function (event) {
-          if (!event.target.closest('.profile-menu')) {
-            document.getElementById('dropdownMenu').style.display = 'none';
-          }
-        });
+        // // Optional: Hide when clicked outside
+        // window.addEventListener('click', function (event) {
+        //   if (!event.target.closest('.profile-menu')) {
+        //     document.getElementById('dropdownMenu').style.display = 'none';
+        //   }
+        // });
 
         const toggleBtn = document.getElementById("toggle-theme");
         const body = document.body;

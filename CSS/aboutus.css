@@ -528,6 +528,11 @@
   padding: 2rem 0rem;
 }
 
+.font{
+
+  gap: 16px; font-size: 17px;
+}
+
 /* @media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;

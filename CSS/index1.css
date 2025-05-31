@@ -154,13 +154,14 @@ body {
   position: absolute;
   width: 100%;
   height: 108%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 30px;
 }
 
 .content .detail {
+  margin-right: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,36 +183,37 @@ body {
 
 .sci {
   position: relative;
-  display: flex;
-  margin-top: 5px;
+  /* display: flex; */
+  /* margin-top: 1px; */
 }
 
 .sci li {
 
   list-style: none;
   margin: 4px;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .sci li a {
-  /* margin-top: 100px; */
+  /* margin-top: 100px;  */
+  outline: #333;
   width: 45px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: transparent;
+  background: #f7a8c4;
   font-size: 1.5em;
-  color: white;
+  color: #fff;
   text-decoration: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: 0.5s;
 }
 
 .sci li a:hover {
-  background: black;
-  color: #fff;
+  background: rgb(19, 9, 10);
+ color:#fff
 }
 
 .text {
