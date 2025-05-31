@@ -23,38 +23,38 @@
 <body>
 
   <div class="sidebar">
- <div class="sidebar">
+    <div class="sidebar">
       <div class="sidebar-header text-center ms-5">
         <img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50" alt="Logo" /><br>
         <P class="h4 text-crownvista">CrownVista</P>
       </div>
-      <div class="menu-item "><a
-          href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label"><i class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i class="fa-solid fa-user icon-link"></i>Contestants</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html" class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
+      <div class="menu-item "><a href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html" class="menu-label"><i
+            class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i
+            class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i
+            class="fa-solid fa-user icon-link"></i>Contestants</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i
+            class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html"
+          class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
           Schedule</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link"><i class="fa-solid fa-photo-film icon-link"></i>Media</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/mediamanagepage.html" class="menu-label icon-link"><i
+            class="fa-solid fa-photo-film icon-link"></i>Media</a></div>
       <div class="menu">
-          <div class="menu-item active"><a
-          href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html" class="menu-label icon-link"><i class="fa-solid fa-bell icon-link"></i>Notifications</a>
+        <div class="menu-item active"><a href="/Dashboard-Adminpanel/HTML/Notifications-Manager.html"
+            class="menu-label icon-link"><i class="fa-solid fa-bell icon-link"></i>Notifications</a>
+        </div>
       </div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html"
+          class="menu-label icon-link"><i class="fa-solid fa-handshake-angle icon-link"></i>Sponsors</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html"
+          class="menu-label icon-link"><i class="fa-solid fa-newspaper icon-link"></i>Blog & News</a></div>
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/admin-login.html" class="menu-label icon-link"><i
+            class="fa-solid fa-arrow-right-from-bracket" style="color: #ec0909;"></i>Log Out</a>
       </div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/Sponsor-Management.html" class="menu-label icon-link"><i class="fa-solid fa-handshake-angle icon-link"></i>Sponsors</a></div>
-      <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/BlogNews-Management.html" class="menu-label icon-link"><i class="fa-solid fa-newspaper icon-link"></i>Blog & News</a></div>
-         <div class="menu-item"><a
-          href="/Dashboard-Adminpanel/HTML/admin-login.html" class="menu-label icon-link"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ec0909;"></i>Log Out</a>
-     </div>
-     </div>
-     </div>
+    </div>
+  </div>
 
 
   <div class="main-content">
@@ -65,20 +65,20 @@
         <span>Admin</span>
       </div>
     </div>
-   </div>
+
 
     <!-- navbar end -->
 
     <!-- modal button -->
-  
+
 
 
     <div class="container-fluid">
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn text-white btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn text-white btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
           Add Notification</button>
-        </div>
       </div>
+    </div>
 
     <!-- modal start-->
     <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
@@ -91,9 +91,13 @@
           <form id="blogForm" enctype="multipart/form-data">
             <div class="modal-body">
               <input type="file" class="form-control" name="image" accept="image/*">
-              <input type="text" class="form-control" name="title" placeholder="Enter Subject" required oninvalid="this.setCustomValidity('Please Fill out Subject')" oninput="this.setCustomValidity('')">
-              <input type="text" class="form-control" name="text" placeholder="Write your announcement here..."required oninvalid="this.setCustomValidity('Please Fill out Your Announcement')" oninput="this.setCustomValidity('')"/>
-              <select class="form-select" name="category" required oninvalid="this.setCustomValidity('Please Fill out Select Team')" oninput="this.setCustomValidity('')">
+              <input type="text" class="form-control" name="title" placeholder="Enter Subject" required
+                oninvalid="this.setCustomValidity('Please Fill out Subject')" oninput="this.setCustomValidity('')">
+              <input type="text" class="form-control" name="text" placeholder="Write your announcement here..." required
+                oninvalid="this.setCustomValidity('Please Fill out Your Announcement')"
+                oninput="this.setCustomValidity('')" />
+              <select class="form-select" name="category" required
+                oninvalid="this.setCustomValidity('Please Fill out Select Team')" oninput="this.setCustomValidity('')">
                 <option value="" disabled selected>Select team</option>
                 <option>Team A</option>
                 <option>Team B</option>
@@ -111,108 +115,100 @@
       </div>
 
     </div>
-<!-- modal end -->
-    <section class="judge-list  judges-body">
-      
+    <!-- modal end -->
+    <section class="judge-list judges-body container my-4">
       <table>
         <thead>
           <tr>
             <th>Subject</th>
-            <th>Messaage</th>
+            <th>Message</th>
             <th>Team Name</th>
             <th>Edit</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>New Registration: Sharvari Malve</td>
-            <td>Registration submitted by SharvariMalve@example.com</td>
-            <td>Team A</td>
-            <td>
-              <div>
-                <div class="d-flex">
-                  
-                   <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+            <td data-label="Subject">New Registration: Sharvari Malve</td>
+            <td data-label="Message">Registration submitted by SharvariMalve@example.com</td>
+            <td data-label="Team Name">Team A</td>
+            <td data-label="Edit">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
                 <i class="fas fa-edit icon edit"></i>
               </button>
-                
-                </div>
-              </div>
             </td>
           </tr>
-
           <tr>
-            <td>Payment Issue: Kalyani Sharnagat</td>
-            <td>john@example.com – Payment failed, please verify</td>
-            <td>Team B</td>
-            <td>
-              <div>
-                <div class="d-flex">
-                  
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+            <td data-label="Subject">Payment Issue: Kalyani Sharnagat</td>
+            <td data-label="Message">john@example.com – Payment failed, please verify</td>
+            <td data-label="Team Name">Team B</td>
+            <td data-label="Edit">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
                 <i class="fas fa-edit icon edit"></i>
               </button>
-            
-                </div>
-              </div>
-            </td>
-            </tr>
-
-            <tr>
-            <td>Approval Needed: Tanmay Joshi</td>
-            <td>tanmay.j@example.com – Awaiting review by jury.</td>
-            <td>Team B</td>
-            <td>
-              <div>
-                <div class="d-flex">
-                
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
-                <i class="fas fa-edit icon edit"></i>
-              </button>
-                
-                </div>
-              </div>
             </td>
           </tr>
-
+          <tr>
+            <td data-label="Subject">Approval Needed: Tanmay Joshi</td>
+            <td data-label="Message">tanmay.j@example.com – Awaiting review by jury.</td>
+            <td data-label="Team Name">Team B</td>
+            <td data-label="Edit">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#blogModal">
+                <i class="fas fa-edit icon edit"></i>
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
-    <script>
-      document.getElementById("blogForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+    <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blogModalLabel">Edit Message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Modal content goes here...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("blogForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-        Swal.fire({
-          title: '✨ Notification Added successfully!',
-          text: 'Your fashion post is now live.',
-          icon: 'success',
-          confirmButtonText: 'OK',
-          confirmButtonColor: '#ff4da6',
-          backdrop: `rgba(255, 192, 203, 0.3)`,
-          showClass: {
-            popup: 'animate__animated animate__zoomIn'
-          },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-          }
-        }).then(() => {
-          const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
-          modal.hide();
+      Swal.fire({
+        title: '✨ Notification Added successfully!',
+        text: 'Your fashion post is now live.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#ff4da6',
+        backdrop: `rgba(255, 192, 203, 0.3)`,
+        showClass: {
+          popup: 'animate__animated animate__zoomIn'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      }).then(() => {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
+        modal.hide();
 
-          this.reset();
+        this.reset();
 
-          location.reload();
-        });
+        location.reload();
       });
+    });
 
 
-    </script>
+  </script>
 
-    <!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- JS Dependencies (jQuery first, then Bootstrap JS) -->
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 </body>
 
