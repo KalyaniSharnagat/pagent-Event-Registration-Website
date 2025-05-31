@@ -26,13 +26,13 @@
         <img src="/Dashboard-Adminpanel/public-admin/crown-image-removebg.png" width="50" height="50" alt="Logo" /><br>
         <P class="h4">CrownVista</P>
       </div>
-      <div class="menu-item active"><a href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html"
+      <div class="menu-item "><a href="/Dashboard-Adminpanel/HTML/Admin-Login-Dashboard.html"
           class="menu-label"><i class="fa-solid fa-gauge-high icon-link"></i> Dashboard</a></div>
-      <div class="menu-item active"><a href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i
+      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/roleuser.html" class="menu-label icon-link"><i
             class="fa-solid fa-user-shield icon-link"></i>User Roles</a></div>
       <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Contestant-Management.html" class="menu-label"><i
             class="fa-solid fa-user icon-link"></i>Contestants</a></div>
-      <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i
+      <div class="menu-item  active"><a href="/Dashboard-Adminpanel/HTML/Judge-Profile-Management.html" class="menu-label"><i
             class="fa-solid fa-users-gear icon-link"></i>Judge Profiles</a></div>
       <div class="menu-item"><a href="/Dashboard-Adminpanel/HTML/Event-Schedule-Management.html"
           class="menu-label icon-link"><i class="fa-solid fa-calendar-days icon-link"></i>Event
@@ -56,7 +56,7 @@
 
     <!-- Header -->
 
-    <!-- <div class="main-content"> -->
+    <div class="main-content">
       <div class="header">
         <h1 class="header-heading">Judge Profile Management</h1>
         <div class="profile-info d-flex align-items-center gap-2">
@@ -69,7 +69,8 @@
       <div class="container-fluid" style="margin-top: 40px;">
         <div class="d-flex justify-content-end">
           <button type="button" class="btn text-white btn-add" data-bs-toggle="modal" data-bs-target="#blogModal">
-            <i class="bi bi-plus-circle me-1"></i>Add Judges</button>
+          Add Judges
+        </button>
         </div>
       </div>
 
@@ -108,7 +109,6 @@
       </div>
 
       <section class="judge-list">
-        <h2>All Judges</h2>
         <table>
           <thead>
             <tr>
@@ -219,6 +219,7 @@
           </tbody>
         </table>
       </section>
+    </div>
 
 
       <script>

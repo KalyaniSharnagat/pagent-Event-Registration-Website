@@ -5,23 +5,27 @@ section {
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
    margin-left: 250px;
+  
 }
 
 h2 {
   margin-bottom: 1rem;
   color: #333;
 }
-
+.text-crownvista{
+  margin-left: -60px;
+  margin-top: -80px;
+}
 /* Form Styling */
 .judge-form {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .judges-body {
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .form-group {
@@ -250,4 +254,81 @@ button:hover {
   font-size: 26px;
   color: rgb(246, 95, 120);
   margin: 30px 10px;
+}
+
+.judge-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.judge-list th, .judge-list td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #f5c6cb;
+}
+
+.judge-list th {
+  background-color: #f8d7da;
+  color: #333;
+  font-weight: 600;
+}
+
+.judge-list td {
+  background-color: #fff;
+}
+
+.icon.edit {
+  font-size: 18px;
+  color: #d63384;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon.edit:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .judge-list table,
+  .judge-list thead,
+  .judge-list tbody,
+  .judge-list th,
+  .judge-list td,
+  .judge-list tr {
+    display: block;
+    width: 100%;
+  }
+
+  .judge-list thead {
+    display: none;
+  }
+
+  .judge-list tr {
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1rem;
+    background: #fdfdfd;
+  }
+
+  .judge-list td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-bottom: 1px solid #f5c6cb;
+    text-align: right;
+    position: relative;
+  }
+
+  .judge-list td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    /* position: absolute; */
+    left: 1rem;
+    text-align: left;
+    color: #444;
+  }
 }

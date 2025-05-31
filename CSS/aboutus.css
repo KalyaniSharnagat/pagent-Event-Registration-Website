@@ -21,7 +21,7 @@
 
 .login-btn {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
-  color: white!important;
+  color: white !important;
 }
 
 /* .form-title {
@@ -370,7 +370,7 @@
   border-radius: 21px;
   color: #fffff2;
   display: inline-block;
-  font-size: 11px;
+  font-size: 20px;
   font-weight: 900;
   letter-spacing: .1em;
   line-height: 18px;
@@ -650,12 +650,16 @@
     /* position: relative; */
   }
 
-  .footer-logo{
-  display: flex;
-  justify-content: center;
-}
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
 
-.footer-menu-name{
-  font-size: 15px !important;
-}
+  .footer-menu-name {
+    font-size: 15px !important;
+  }
+
+  .footer-copyright-text {
+    font-size: 9px;
+  }
 }
