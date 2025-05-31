@@ -18,14 +18,8 @@ body.dark .card {
   background: #2a2a3d;
   color: white;
 }
-body.dark .sidebar {
-	background: linear-gradient(135deg, #2f3a57 10%, #3e2b47 100%);
-	color: #ffffff;
-}
-body.dark .topbar {
-  background: #2a2a3d;
-  color: #fff;
-}
+
+
 body.dark.dashboard-container{
    background: #2a2a3d;
     margin: 40px auto;
@@ -34,6 +28,21 @@ body.dark.dashboard-container{
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.sidebar h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  padding: 20px;
+  color:  #fff;
+  font-weight: bold; 
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the CrownVista text */
+}
+
 
 
 .card h3 {

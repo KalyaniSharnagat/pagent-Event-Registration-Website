@@ -45,109 +45,109 @@
       </ul>
       <button id="toggle-theme" class="sun-icon">🌙</button>
     </aside>
-</div>
+  </div>
 
-
-
-    <!-- Main Content -->
-    <div class="main">
-      <!-- Topbar -->
-      <nav class="topbar">
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <button><i class="fas fa-search"></i></button>
-        </div>
-        <div class="profile-icon"><i class="fas fa-user-circle"></i>
-         <a href="/index.html"><img src="/Dashboard-Userpanel/public/logout-btn-bgr.png" width="20" height="20"></a></div>
-      </nav>
-
-      <!-----gallary start------>
-
-      <!-- <h2>Gallery</h2> -->
-
-      <div class="tabs" id="category-tabs"></div>
-        <span data-category="all" class="active">All</span>
-        <span data-category="fashion">Fashion</span>
-        <span data-category="event">Event</span>
-        <span data-category="contestant">Contestant</span>
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Topbar -->
+    <nav class="topbar">
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
       </div>
-
-      <div class="gallery" id="media-gallery">
-        <div class="media-card" data-category="fashion">
-          <img src="/PUBLIC-IMAGES/fashion7.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-
-        <div class="media-card" data-category="event">
-          <img src="/PUBLIC-IMAGES/about1.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-
-        <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-
-        <div class="media-card" data-category="fashion">
-          <img src="/PUBLIC-IMAGES/fasshion5.jpeg" draggable="false" onclick="openLightbox(this.src)" />
-          <video>
-            <source src="/PUBLIC-IMAGES/fashionvideo1.mp4" type="video/tag">
-            <source src="/PUBLIC-IMAGES/fashionvideo1.ogg" type="video/ogg">
-          </video>
-
-        </div>
-        <div class="media-card" data-category="event">
-          <img src="/PUBLIC-IMAGES/abt3.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-        <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/contestant.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-
-        <div class="media-card" data-category="fashion">
-          <img src="/PUBLIC-IMAGES/fashion6.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-
-        <div class="media-card" data-category="fashion">
-
-          <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
-            frameborder="0" scrolling="no" onclick="openLightbox(this.src)"></iframe>
-
-        </div>
-
-        <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/contestant7.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
-
-        <div class="media-card" data-category="contestant">
-          <img src="/PUBLIC-IMAGES/contestant_4.jpg" draggable="false" onclick="openLightbox(this.src)" />
-        </div>
+      <div class="profile-icon"><i class="fas fa-user-circle"></i>
+        <a href="/index.html"><img src="/Dashboard-Userpanel/public/logout-btn-bgr.png" width="20" height="20"></a>
       </div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tabs" id="category-tabs">
+      <span data-category="all" class="active">All</span>
+      <span data-category="fashion">Fashion</span>
+      <span data-category="event">Event</span>
+      <span data-category="contestant">Contestant</span>
     </div>
 
-    <script>
-      const tabs = document.querySelectorAll('#category-tabs span');
-      const cards = document.querySelectorAll('.media-card');
+    <!-- Gallery -->
+    <div class="gallery" id="media-gallery">
+      <div class="media-card" data-category="fashion">
+        <img src="/PUBLIC-IMAGES/fashion7.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
 
-      function filterCategory(category) {
-        cards.forEach(card => {
-          const match = card.getAttribute('data-category') === category || category === 'all';
-          card.style.display = match ? 'block' : 'none';
-        });
-      }
+      <div class="media-card" data-category="event">
+        <img src="/PUBLIC-IMAGES/about1.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          const category = tab.getAttribute('data-category');
-          filterCategory(category);
-        });
+      <div class="media-card" data-category="contestant">
+        <img src="/PUBLIC-IMAGES/cntestant1.jpeg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
+
+      <div class="media-card" data-category="fashion">
+        <img src="/PUBLIC-IMAGES/fasshion5.jpeg" draggable="false" onclick="openLightbox(this.src)" />
+        <video>
+          <source src="/PUBLIC-IMAGES/fashionvideo1.mp4" type="video/mp4">
+          <source src="/PUBLIC-IMAGES/fashionvideo1.ogg" type="video/ogg">
+        </video>
+      </div>
+
+      <div class="media-card" data-category="event">
+        <img src="/PUBLIC-IMAGES/abt3.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
+
+      <div class="media-card" data-category="contestant">
+        <img src="/PUBLIC-IMAGES/contestant.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
+
+      <div class="media-card" data-category="fashion">
+        <img src="/PUBLIC-IMAGES/fashion6.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
+
+      <div class="media-card" data-category="fashion">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
+          frameborder="0" scrolling="no" onclick="openLightbox(this.src)"></iframe>
+      </div>
+
+      <div class="media-card" data-category="contestant">
+        <img src="/PUBLIC-IMAGES/contestant7.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
+
+      <div class="media-card" data-category="contestant">
+        <img src="/PUBLIC-IMAGES/contestant_4.jpg" draggable="false" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Category filter logic
+    const tabs = document.querySelectorAll('#category-tabs span');
+    const cards = document.querySelectorAll('.media-card');
+
+    function filterCategory(category) {
+      cards.forEach(card => {
+        const match = card.getAttribute('data-category') === category || category === 'all';
+        card.style.display = match ? 'block' : 'none';
       });
+    }
 
-      // Initialize to show all
-      filterCategory('all');
-    </script>
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const category = tab.getAttribute('data-category');
+        filterCategory(category);
+      });
+    });
 
-   
+    filterCategory('all'); // Show all on load
 
-
+    // 🌙 Theme toggle logic
+    const themeToggle = document.getElementById('toggle-theme');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
 </body>
 
 </html>
