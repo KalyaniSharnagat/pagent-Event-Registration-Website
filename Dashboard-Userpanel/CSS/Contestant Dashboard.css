@@ -283,3 +283,41 @@ body {
     transform: translateX(0);
   }
 }
+
+
+/*    --------------------------------------    */
+
+
+.profile-menu {
+  position: relative;
+  display: inline-block;
+ justify-content: left;
+}
+
+.profile-icon {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
+}
