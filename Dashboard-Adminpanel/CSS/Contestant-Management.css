@@ -6,7 +6,7 @@
 /* .container-fluid::-webkit-scrollbar {
     display: none;
 } */
- .btn-add {
+.btn-add {
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   color: white;
   padding: 12px 28px;
@@ -66,7 +66,7 @@ tbody tr:hover {
   box-shadow: 0 6px 15px rgba(197, 50, 100, 0.2);
 }
 
-.btn{
+.btn {
   background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   color: white;
   padding: 12px 28px;
@@ -184,4 +184,50 @@ tbody tr:hover {
   tbody td {
     padding: 10px;
   }
+}
+
+.pagination.fixed-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #3e0470;
+  margin-top: 10px;
+}
+
+.pagination-controls button {
+  background: #c94f9c;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+
+.pagination-controls button:disabled {
+  background: #d7a9cb;
+  cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background: #e574b7;
+}
+
+.pagination-controls select {
+  border: 1px solid #c94f9c;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: #3e0470;
+  font-weight: 600;
+  background: #fff0f7;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
 }

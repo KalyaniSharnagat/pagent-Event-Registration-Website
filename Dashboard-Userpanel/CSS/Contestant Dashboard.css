@@ -1,294 +1,248 @@
-
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 1.2rem;
-}
-
-.card {
-  background: white;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: justify;
-}
-
-body.dark .card {
-  background: #2a2a3d;
-  color: white;
-}
-
-
-body.dark.dashboard-container{
-   background: #2a2a3d;
-    margin: 40px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.sidebar h2 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1.5rem;
-  padding: 20px;
-  color:  #fff;
-  font-weight: bold; 
-}
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the CrownVista text */
-}
-
-
-
-.card h3 {
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.card button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: #ec407a;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.card .status.pending {
-  color: orange;
-}
-/* Dark Theme: Form Controls */
-body.dark .form-control,
-body.dark .form-select {
-  background-color: #3a3a4f;
-  color:white;
-  border: 1px solid #555;
-}
-
-body.dark .form-control::placeholder,
-body.dark .form-select::placeholder {
-  color: #ccc;
-}
-
-
-body.dark .form-label {
-  color: #ddd;
-}
-
-body.dark .list-group-item {
-  background-color: transparent;
-  color: white;
-  border-color: #4a4a4a;
-}
-
-
-body.dark .btn-outline-primary {
-  color: #fff;
-  border-color: #ec407a;
-   background-color: #ec407a;
-  
-}
-
-/* body.dark .btn-outline-primary:hover {
-  background-color: #ec407a;
-  color: #fff;
-  border-color: #ec407a;
-} */
-
-body.dark .accordion-button {
-  background-color: #3a3a4f;
-  color: #fff;
-}
-
-body.dark .accordion-body {
-  background-color: #2a2a3d;
-  color: #fff;
-}
-
-body.dark .status-badge {
-  background: #444;
-  color: #ffcccb;
-}
-
-/* Optional: Dark mode dashboard container */
-body.dark .dashboard-container {
-  background: #2a2a3d;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-
-
-/* Responsive: For devices smaller than 768px (phones) */
-@media screen and (max-width: 768px) {
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: space-around;
-  }
-
-  .main {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .topbar {
-    left: 0;
-    width: 100%;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-}
-
-/* Styling for your dashboard container and forms */
+/* Base styles */
 body {
   background: #f8f9fa;
   font-family: 'Segoe UI', sans-serif;
+  color: #2a2a3d;
 }
 
-.dashboard-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body.dark {
+  background: #2a2a3d;
+  color: #fff;
 }
 
-.dashboard-header {
-  text-align: center;
-  margin-bottom: 30px;
-  color:#ec407a;
+
+/* Topbar */
+.topbar {
+  background: transparent;
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: inherit;
 }
 
-.section-title {
-  font-weight: 600;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #dc4083;
+.topbar .profile-icon i {
+  font-size: 1.8rem;
+  margin-right: 8px;
 }
 
+.topbar .profile-icon img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Cards Grid */
+.fashion-show-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Card Styling */
+.fashion-card {
+  background-color: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fashion-card:hover {
+  transform: translateY(-5px);
+}
+
+.fashion-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #e91e63;
+}
+
+.event-date {
+  font-weight: 500;
+  color: #ff1493;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-text {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.apply-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #c2185b;
+}
+
+.instructions-btn {
+  border: 1px solid #6c757d;
+  color: #6c757d;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.instructions-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* Form controls and modal styling */
 .form-control,
 .form-select {
   border-radius: 10px;
 }
 
-.form-label{
-
-  color:#2a2a3d;
-}
-
-/* .btncolor{
-
-  background-color: #dc4083;
-} */
-
-.status-badge {
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 20px;
-  background: #ffe6ea;
-  color: #dc4083;
-}
-
-.accordion-button {
-  border-radius: 8px !important;
-  background-color: #fdf3f6;
-  color: #dc4083;
-}
-
-.accordion-body {
-  background-color: #fffafc;
-}
-/* Mobile devices: less than 768px */
-@media screen and (max-width: 767px) {
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: space-around;
-  }
-
-  .main {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .topbar {
-    left: 0;
-    width: 100%;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-}
-
-/* Tablet (768px and up) and desktop: same sidebar style */
-@media screen and (min-width: 768px) {
-  .sidebar {
-    width: 240px;
-    height: 100vh;
-    position: fixed;
-    flex-direction: column;
-  }
-
-  .main {
-    margin-left: 240px;
-    width: calc(100% - 240px);
-  }
-
-  .topbar {
-    left: 240px;
-    width: calc(100% - 240px);
-  }
-}
-
-.toast-message {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #28a745;
+body.dark .form-control,
+body.dark .form-select {
+  background-color: #3a3a4f;
   color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 15px;
-  z-index: 9999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  animation: slideIn 0.3s ease-out;
+  border: 1px solid #555;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+body.dark .form-control::placeholder {
+  color: #ccc;
 }
+
+/* Toast */
+#successToast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1050;
+}
+
+  #eventModal .modal-content,
+  #eventInstructionModal .modal-content {
+    border-radius: 15px;
+    background: #1a1a1a;
+    color: #eee;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Modal headers */
+  #eventModal .modal-header,
+  #eventInstructionModal .modal-header {
+    background: #5c2a9d; /* Deep purple */
+    color: #fff;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-weight: 700;
+  }
+
+  /* Close button white */
+  #eventModal .btn-close,
+  #eventInstructionModal .btn-close {
+    filter: invert(1);
+  }
+
+  /* Input fields */
+  #eventModal .form-control {
+    background: #2e2e2e;
+    border: 1.8px solid #5c2a9d;
+    color: #eee;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #eventModal .form-control::placeholder {
+    color: #aaa;
+  }
+
+  #eventModal .form-control:focus {
+    border-color: #a374d1;
+    box-shadow: 0 0 8px #a374d1;
+    background: #3c2e5e;
+    color: #fff;
+  }
+
+  /* Labels */
+  #eventModal label.form-label {
+    font-weight: 600;
+    color: #a374d1;
+  }
+
+  /* Buttons */
+  #eventModal .btn-primary {
+    background-color: #5c2a9d;
+    border: none;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 50px;
+    box-shadow: 0 0 12px #a374d1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+  }
+
+  #eventModal .btn-primary:hover {
+    background-color: #7e44c8;
+    box-shadow: 0 0 20px #d0b3ff;
+  }
+
+  /* Footer tweaks */
+  #eventModal .modal-footer {
+    border-top: none;
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  /* Instruction modal buttons */
+  #eventInstructionModal .btn-secondary {
+    background-color: #5c2a9d;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 26px;
+    font-weight: 600;
+    box-shadow: 0 0 10px #a374d1;
+    color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #eventInstructionModal .btn-secondary:hover {
+    background-color: #7e44c8;
+    box-shadow: 0 0 20px #d0b3ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 576px) {
+    #eventModal .modal-content,
+    #eventInstructionModal .modal-content {
+      border-radius: 10px;
+    }
+    #eventModal .btn-primary,
+    #eventInstructionModal .btn-secondary {
+      width: 100%;
+      padding: 14px 0;
+    }
+  }
