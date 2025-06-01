@@ -40,10 +40,10 @@ body {
   overflow: hidden;
 }
 
-.award-card:hover {
+/* .award-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .award-card img {
   height: 300px;
@@ -560,5 +560,13 @@ h1.section-title {
 
   .footer-copyright-text {
     font-size: 9px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
 }

@@ -1,5 +1,8 @@
+/* Global Scroll Behavior */
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Fixed pagination at the top */
@@ -17,19 +20,19 @@ body {
   gap: 0.5rem;
 }
 
-/* Container that scrolls table body */
+/* Scrollable table container */
 .table-container-fluid {
   position: relative;
   max-height: 480px;
-  /* adjust height as needed */
   overflow-y: auto;
   overflow-x: auto;
   border: 1px solid #ddd;
   border-radius: 6px;
   margin-top: 20px;
+  -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
 }
 
-/* Table full width with horizontal scroll if needed */
+/* Table styling */
 .scrollable-table {
   width: 100%;
   min-width: 100%;
@@ -38,15 +41,6 @@ body {
   font-weight: 600;
 }
 
-.table-container-fluid {
-  max-height: 480px;
-  overflow-x: auto;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  /* Smooth scrolling for iPads */
-}
-
-
 .scrollable-table thead th {
   background-color: #f0f0f0;
   color: #333;
@@ -54,45 +48,29 @@ body {
   text-align: left;
   font-weight: 700;
   position: sticky;
-  /* ✅ Correct for table headers */
   top: 0;
   border-bottom: 2px solid #ddd;
   z-index: 2;
+  transition: background-color 0.2s ease;
 }
 
-
-/* .sort-button {
-  background: none;
-  border: none;
-  font-weight: 700;
+.scrollable-table thead th:hover {
+  background-color: #f8f8f8;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
+}
+
+.scrollable-table thead th > div {
+  display: flex;
+  flex-direction: column;
   gap: 5px;
-  font-size: 1rem;
-  color: #555;
-  padding: 0;
-} */
-
-/* Sort icon style */
-.sort-icon {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
-  transition: transform 0.3s ease;
 }
 
-/* Input and select filter styling */
-.column-filter {
-  margin-top: 5px;
-  padding: 5px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-  font-size: 0.9rem;
-}
+/* Specific column widths */
+.scrollable-table thead th:nth-child(1) { width: 200px; }
+.scrollable-table thead th:nth-child(2) { width: 200px; }
+.scrollable-table thead th:nth-child(3) { width: 280px; }
 
-/* Table body rows */
+/* Table body */
 .scrollable-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -103,23 +81,71 @@ body {
   color: #000;
 }
 
+.scrollable-table tbody tr:focus {
+  outline: 2px solid #ff4da6;
+  background-color: #ffe9f3;
+}
+
 .scrollable-table tbody td {
   padding: 10px 15px;
   font-weight: 600;
   color: #444;
 }
 
-/* Pagination controls styling */
+/* Filter input */
+.column-filter {
+  margin-top: 5px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Sort buttons */
+.sort-button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+  gap: 6px;
+}
+
+.sort-button.active .sort-icon {
+  color: #ff4d9d;
+}
+
+.sort-icon {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.sort-icon.descending {
+  transform: rotate(180deg);
+}
+
+/* Pagination info */
 .pagination-info {
   font-weight: 600;
   color: #555;
   font-size: 1rem;
 }
 
+/* Pagination controls */
 .pagination-controls {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .pagination-controls button {
@@ -150,53 +176,96 @@ body {
   cursor: pointer;
 }
 
-.scrollable-table thead th>div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.column-filter {
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+/* Modal */
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
   width: 100%;
-  box-sizing: border-box;
-  max-width: 100%;
-  font-size: 14px;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.scrollable-table thead th:nth-child(1) {
-  width: 200px;
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
 }
 
-.scrollable-table thead th:nth-child(2) {
-  width: 200px;
+.close {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
 }
 
-.scrollable-table thead th:nth-child(3) {
-  width: 280px;
+.modal-content form input,
+.modal-content form select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.sort-button {
-  background: none;
+/* Modal buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ff4d9d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: #ff3385;
+}
+
+/* Gradient modal variant */
+.pageant-modal {
+  background: linear-gradient(45deg, #ff4da6, #ff85c1);
+  border-radius: 20px;
+  color: white;
+}
+
+/* Add button */
+.btn-add {
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  color: white !important;
+  padding: 12px 28px;
+  border-radius: 10px;
   border: none;
   font-weight: bold;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 0;
-  gap: 6px;
-  top: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  transition: 0.3s;
 }
 
-.sort-icon {
-  width: 14px;
-  height: 14px;
+.btn-add:hover {
+  background: linear-gradient(to right, #ff8c42, #ff3c7a);
+  box-shadow: 0 8px 20px rgba(238, 9, 121, 0.3);
 }
 
+/* Responsive styles */
 @media (max-width: 1024px) {
   .fixed-pagination {
     flex-direction: column;
@@ -223,8 +292,22 @@ body {
   }
 }
 
+/* Optional dark theme support */
+body.dark .fixed-pagination {
+  background-color: #1e1e1e;
+  color: #eee;
+}
 
+body.dark .scrollable-table thead th {
+  background-color: #333;
+  color: #fff;
+}
 
-.sort-icon.descending {
-  transform: rotate(180deg);
+body.dark .scrollable-table tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+body.dark .scrollable-table tbody tr:hover {
+  background-color: #3e3e3e;
+  color: #fff;
 }
