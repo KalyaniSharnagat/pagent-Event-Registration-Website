@@ -778,4 +778,8 @@ body {
   .footer-copyright-text {
     font-size: 9px;
   }
+
+  .image-center{
+    padding-left: 40px;
+  }
 }

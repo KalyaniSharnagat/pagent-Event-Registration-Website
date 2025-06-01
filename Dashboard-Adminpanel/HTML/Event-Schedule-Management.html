@@ -56,13 +56,28 @@
       </div>
     </div>
 
+  
+    <div class="pagination fixed-pagination">
+      <div class="pagination-info">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></div>
+      <div class="pagination-controls">
+        <button id="prevBtn" disabled><i class="fas fa-angle-left"></i> Previous</button>
+        <button id="nextBtn">Next <i class="fas fa-angle-right"></i></button>
+        <select id="rowsPerPageSelect">
+          <option value="5">5 Rows</option>
+          <option value="10" selected>10 Rows</option>
+          <option value="15">15 Rows</option>
+          <option value="20">20 Rows</option>
+        </select>
+      </div>
+    </div>
+
 
 
     <div class="container-fluid">
-    <!-- Export Button -->
-    <div class="text-end">
-      <button class="btn btn-add text-white" data-bs-toggle="modal" data-bs-target="#eventModal">Add Event</button>
-    </div>
+      <!-- Export Button -->
+      <div class="text-end">
+        <button class="btn btn-add text-white" data-bs-toggle="modal" data-bs-target="#eventModal">Add Event</button>
+      </div>
 
       <!-- Scheduled Events Card -->
       <div class="container-fluid px-2 px-md-4">
@@ -84,10 +99,10 @@
                         <th scope="col">Actions</th>
                       </tr>
                     </thead>
-                    <tbody id="eventBody"> 
+                    <tbody id="eventBody">
                       <tr id="noDataRow">
-                      <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
-                      </tr>   
+                        <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -98,9 +113,9 @@
       </div>
 
 
-   
-  <!-- Event Modal -->
-  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+
+      <!-- Event Modal -->
+      <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <form id="eventForm">
@@ -135,7 +150,7 @@
                         oninput="this.setCustomValidity('')" />
                       <label for="eventStage">Stage</label>
                     </div>
-                </div>
+                  </div>
                   <div class="col-md-6">
                     <div class="form-floating">
                       <input type="date" class="form-control" id="eventDeadline" required
@@ -148,129 +163,130 @@
               </div>
 
               <div class="modal-footer">
-                <button type="submit" class="btn w-100" style="background: linear-gradient(90deg, #ff4da6, #ff85c1);">Add Event</button>
+                <button type="submit" class="btn w-100"
+                  style="background: linear-gradient(90deg, #ff4da6, #ff85c1);">Add Event</button>
               </div>
             </form>
           </div>
         </div>
       </div>
 
-  <!-- Toast Container -->
-  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+      <!-- Toast Container -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
 
-    <!-- Bootstrap JS Bundle (with Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap JS Bundle (with Popper) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom Script -->
+      <!-- Custom Script -->
 
-    <script>
-    document.getElementById('eventForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+      <script>
+        document.getElementById('eventForm').addEventListener('submit', function (e) {
+          e.preventDefault();
 
-    // Get values
-    const name = document.getElementById('eventName').value;
-    const date = document.getElementById('eventDate').value;
-    const stage = document.getElementById('eventStage').value;
-    const deadline = document.getElementById('eventDeadline').value;
+          // Get values
+          const name = document.getElementById('eventName').value;
+          const date = document.getElementById('eventDate').value;
+          const stage = document.getElementById('eventStage').value;
+          const deadline = document.getElementById('eventDeadline').value;
 
-    // Add to table
-    const tableBody = document.getElementById('eventBody');
+          // Add to table
+          const tableBody = document.getElementById('eventBody');
 
-    // Remove "No data" row if it exists
-    const noDataRow = document.getElementById('noDataRow');
-    if (noDataRow) {
-      noDataRow.remove();
-    }
+          // Remove "No data" row if it exists
+          const noDataRow = document.getElementById('noDataRow');
+          if (noDataRow) {
+            noDataRow.remove();
+          }
 
-    const newRow = document.createElement('tr');
-    newRow.innerHTML = `
+          const newRow = document.createElement('tr');
+          newRow.innerHTML = `
       <td>${name}</td>
       <td>${date}</td>
       <td>${stage}</td>
       <td>${deadline}</td>
       <td><button class="btn btn-sm btn-danger" onclick="deleteRow(this)">Delete</button></td>
     `;
-    tableBody.appendChild(newRow);
+          tableBody.appendChild(newRow);
 
-    // Reset form
-    e.target.reset();
+          // Reset form
+          e.target.reset();
 
-    // Hide modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById('eventModal'));
-    modal.hide();
+          // Hide modal
+          const modal = bootstrap.Modal.getInstance(document.getElementById('eventModal'));
+          modal.hide();
 
-    // Show toast
-    showToast('Event added successfully!');
-  });
+          // Show toast
+          showToast('Event added successfully!');
+        });
 
-  function deleteRow(btn) {
-    const row = btn.closest('tr');
-    row.remove();
+        function deleteRow(btn) {
+          const row = btn.closest('tr');
+          row.remove();
 
-    const tableBody = document.getElementById('eventBody');
-    if (tableBody.rows.length === 0) {
-      const noDataRow = document.createElement('tr');
-      noDataRow.id = 'noDataRow';
-      noDataRow.innerHTML = `
+          const tableBody = document.getElementById('eventBody');
+          if (tableBody.rows.length === 0) {
+            const noDataRow = document.createElement('tr');
+            noDataRow.id = 'noDataRow';
+            noDataRow.innerHTML = `
         <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
       `;
-      tableBody.appendChild(noDataRow);
-    }
+            tableBody.appendChild(noDataRow);
+          }
 
-    showToast('Event deleted.', 'danger');
-  }
+          showToast('Event deleted.', 'danger');
+        }
 
-  function showToast(message, type = 'success') {
-    const toastEl = document.createElement('div');
-    toastEl.className = `toast align-items-center text-bg-${type} border-0 show`;
-    toastEl.setAttribute('role', 'alert');
-    toastEl.setAttribute('aria-live', 'assertive');
-    toastEl.setAttribute('aria-atomic', 'true');
+        function showToast(message, type = 'success') {
+          const toastEl = document.createElement('div');
+          toastEl.className = `toast align-items-center text-bg-${type} border-0 show`;
+          toastEl.setAttribute('role', 'alert');
+          toastEl.setAttribute('aria-live', 'assertive');
+          toastEl.setAttribute('aria-atomic', 'true');
 
-    toastEl.innerHTML = `
+          toastEl.innerHTML = `
       <div class="d-flex">
         <div class="toast-body">${message}</div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
     `;
 
-    document.getElementById('toastContainer').appendChild(toastEl);
+          document.getElementById('toastContainer').appendChild(toastEl);
 
-    setTimeout(() => {
-      toastEl.remove();
-    }, 3000);
-  }
+          setTimeout(() => {
+            toastEl.remove();
+          }, 3000);
+        }
 
-  function exportCSV() {
-    const table = document.getElementById("eventTable");
-    let csvContent = "";
-    for (let row of table.rows) {
-      const cols = [...row.cells].map(cell => `"${cell.innerText}"`).join(",");
-      csvContent += cols + "\n";
-    }
+        function exportCSV() {
+          const table = document.getElementById("eventTable");
+          let csvContent = "";
+          for (let row of table.rows) {
+            const cols = [...row.cells].map(cell => `"${cell.innerText}"`).join(",");
+            csvContent += cols + "\n";
+          }
 
-    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "scheduled_events.csv";
-    link.click();
-  }
+          const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "scheduled_events.csv";
+          link.click();
+        }
 
-  function loadEvents(events) {
-    const tbody = document.getElementById("eventBody");
-    tbody.innerHTML = "";
+        function loadEvents(events) {
+          const tbody = document.getElementById("eventBody");
+          tbody.innerHTML = "";
 
-    if (events.length === 0) {
-      const noDataRow = document.createElement("tr");
-      noDataRow.id = "noDataRow";
-      noDataRow.innerHTML = `
+          if (events.length === 0) {
+            const noDataRow = document.createElement("tr");
+            noDataRow.id = "noDataRow";
+            noDataRow.innerHTML = `
         <td colspan="5" class="text-center text-muted">No scheduled events available.</td>
       `;
-      tbody.appendChild(noDataRow);
-    } else {
-      events.forEach(event => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
+            tbody.appendChild(noDataRow);
+          } else {
+            events.forEach(event => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
           <td>${event.name}</td>
           <td>${event.date}</td>
           <td>${event.stage}</td>
@@ -279,14 +295,14 @@
             <button class="btn btn-sm btn-danger" onclick="deleteRow(this)">Delete</button>
           </td>
         `;
-        tbody.appendChild(row);
-      });
-    }
-  }
+              tbody.appendChild(row);
+            });
+          }
+        }
 
-  // Call this to start with empty or fetched data
-  loadEvents([]);
-</script>
+        // Call this to start with empty or fetched data
+        loadEvents([]);
+      </script>
 
 </body>
 
