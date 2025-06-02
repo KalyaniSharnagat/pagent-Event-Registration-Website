@@ -83,26 +83,40 @@
         <h1>Welcome, Contestant!</h1>
       </header>
 
-      <section class="cards">
-        <div class="card">
-          <h3><i class="fas fa-user-edit"></i> Edit Profile</h3>
-          <p>This allows the contestant to modify their personal details such as name, contact info, or address...</p>
-          <button>Edit</button>
+      <section class="cards d-flex flex-wrap justify-content-center">
+        <div class="card text-center m-3" style="background-color: #f0f8ff; width: 300px;">
+          <div class="card-body">
+            <h3><i class="fas fa-user-edit"></i> Edit Profile</h3>
+            <p>This allows the contestant to modify their personal details such as name, contact info, or address...</p>
+            <button class="btn btn-primary">Edit</button>
+          </div>
         </div>
-        <div class="card">
-          <h3><i class="fas fa-file-upload"></i> Application Form</h3>
-          <p>This section lets contestants fill out and submit their official pageant entry form...</p>
-          <button>Upload</button>
+        
+        <div class="card text-center m-3" style="background-color: #ffe4e1; width: 300px;">
+          <div class="card-body">
+            <h3><i class="fas fa-file-upload"></i> Application Form</h3>
+            <p>This section lets contestants fill out and submit their official pageant entry form...</p>
+            <button class="btn btn-primary">Upload</button>
+          </div>
         </div>
-        <div class="card">
-          <h3><i class="fas fa-info-circle"></i> Application Status</h3>
-          <p>This section shows the current progress of your submitted application...</p>
-          <button>Status</button>
+        
+        <div class="card text-center m-3" style="background-color: #e6e6fa; width: 300px;">
+          <div class="card-body">
+            <h3><i class="fas fa-info-circle"></i> Application Status</h3>
+            <p>This section shows the current progress of your submitted application...</p>
+            <div class="progress mb-2">
+              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            </div>
+            <button class="btn btn-primary">Status</button>
+          </div>
         </div>
-        <div class="card">
-          <h3><i class="fas fa-calendar-alt"></i> Schedule</h3>
-          <p>Stay informed about all the important dates and upcoming events related to the pageant...</p>
-          <button>View</button>
+        
+        <div class="card text-center m-3" style="background-color: #fffacd; width: 300px;">
+          <div class="card-body">
+            <h3><i class="fas fa-calendar-alt"></i> Schedule</h3>
+            <p>Stay informed about all the important dates and upcoming events related to the pageant...</p>
+            <button class="btn btn-primary">View</button>
+          </div>
         </div>
       </section>
     </div>
