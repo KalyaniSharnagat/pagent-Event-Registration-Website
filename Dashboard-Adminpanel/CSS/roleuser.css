@@ -6,7 +6,7 @@ body {
 }
 
 /* Fixed pagination at the top */
-.fixed-pagination {
+/* .fixed-pagination {
   position: sticky;
   top: 0;
   z-index: 10;
@@ -18,7 +18,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
+} */
 
 /* Scrollable table container */
 .table-container-fluid {
@@ -141,7 +141,7 @@ body {
 }
 
 /* Pagination controls */
-.pagination-controls {
+/* .pagination-controls {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -174,7 +174,7 @@ body {
   border: 1px solid #bbb;
   font-size: 0.9rem;
   cursor: pointer;
-}
+} */
 
 /* Modal */
 .custom-modal {
@@ -268,7 +268,7 @@ body {
 /* Responsive styles */
 @media (max-width: 1024px) {
   .fixed-pagination {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: stretch;
     gap: 0.75rem;
   }
@@ -319,6 +319,7 @@ body.dark .scrollable-table tbody tr:hover {
       margin-bottom: 1rem;
       font-weight: 600;
       color: #3e0470;
+      margin-top: 10px;
     }
 
     .pagination-controls button {

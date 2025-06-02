@@ -338,6 +338,7 @@ table th {
       margin-bottom: 1rem;
       font-weight: 600;
       color: #3e0470;
+      margin-top: 10px;
     }
 
     .pagination-controls button {
