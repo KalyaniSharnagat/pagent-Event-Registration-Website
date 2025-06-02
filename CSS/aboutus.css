@@ -228,6 +228,7 @@
   padding: 15px;
   text-align: center;
   height: 100%;
+  object-fit: cover;
 }
 
 .jury-card img {
