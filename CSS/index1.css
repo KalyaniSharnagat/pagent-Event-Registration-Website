@@ -782,4 +782,8 @@ body {
   .image-center{
     padding-left: 13px;
   }
+
+  .footer-call-to-action-button{
+    font-size: 11px;
+  }
 }
