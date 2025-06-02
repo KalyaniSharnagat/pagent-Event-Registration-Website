@@ -667,4 +667,8 @@ textarea {
   .footer-copyright-text {
     font-size: 9px;
   }
+
+  .footer-call-to-action-button {
+    font-size: 11px;
+  }
 }

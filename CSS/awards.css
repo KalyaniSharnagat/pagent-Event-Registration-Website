@@ -562,6 +562,10 @@ h1.section-title {
     font-size: 9px;
   }
 
+  .footer-call-to-action-button {
+    font-size: 11px;
+  }
+
 }
 
 @media (min-width: 768px) {
