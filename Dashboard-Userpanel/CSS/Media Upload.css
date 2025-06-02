@@ -1,5 +1,3 @@
-
-
 /* Main Content */
 .main {
 	flex: 1;
@@ -34,8 +32,6 @@
 
 .media-card {
 	background-color: #fff;
-
-	
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	height: 300px;
@@ -53,6 +49,16 @@
 
 }
 
+@media (min-width: 768px) {
+	.media-card:hover {
+		transform: scale(1.05);
+		transition: transform 0.5s ease;
+		cursor: pointer;
+	}
+
+}
+
+
 /* Dark Theme */
 body.dark {
 	background-color: #1e1e1e;
@@ -66,7 +72,7 @@ body.dark .tabs span.active {
 	color: #fff;
 }
 
-body.dark .tabs span{
+body.dark .tabs span {
 	color: black;
 	font-weight: bold;
 }
@@ -74,14 +80,17 @@ body.dark .tabs span{
 body.dark .media-card {
 	background-color: #2e2e2e;
 }
+
 body.dark .topbar {
-  background: #2a2a3d;
-  color: #fff;
+	background: #2a2a3d;
+	color: #fff;
 }
+
 body.dark .sidebar {
 	background: linear-gradient(135deg, #2f3a57 10%, #3e2b47 100%);
 	color: #ffffff;
 }
+
 /* Responsive Sidebar for Tab to Big Screen */
 @media (min-width: 768px) {
 	.dashboard {
