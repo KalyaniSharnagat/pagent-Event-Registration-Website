@@ -149,11 +149,15 @@
           <input type="text" id="city" class="form-control mb-3" placeholder="City" required
             oninvalid="this.setCustomValidity('Please fill out the city field')" oninput="this.setCustomValidity('')" />
           <label class="form-label">Upload Photo</label>
-          <input type="file" id="photo" class="form-control mb-3" accept="image/*" required
+          <input type="file" id="photo" class="form-control mb-2" accept="image/*" required
             oninvalid="this.setCustomValidity('Please upload a photo')" oninput="this.setCustomValidity('')" />
+          <div id="photoPreview" class="mb-3 text-center"></div>
+
           <label class="form-label">Upload Document</label>
-          <input type="file" id="document" class="form-control mb-3" required
+          <input type="file" id="document" class="form-control mb-2" required
             oninvalid="this.setCustomValidity('Please upload a document')" oninput="this.setCustomValidity('')" />
+          <div id="documentPreview" class="mb-3 text-center"></div>
+
         </div>
         <div class="modal-footer d-flex justify-content-center">
           <button type="submit" class="btn btn-primary px-4">Submit Application</button>
@@ -254,6 +258,35 @@
       const mainContent = document.getElementById('mainContent');
       loader.style.display = 'none';      // Loader chhupao
       mainContent.style.display = 'block'; // Main content dikhao
+    });
+
+    // Photo preview
+    document.getElementById('photo').addEventListener('change', function (e) {
+      const preview = document.getElementById('photoPreview');
+      preview.innerHTML = ''; // Clear previous
+      const file = e.target.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.alt = "Photo Preview";
+        img.className = "img-thumbnail";
+        img.style.maxWidth = '150px';
+        img.style.marginTop = '10px';
+        preview.appendChild(img);
+      }
+    });
+
+    // Document preview
+    document.getElementById('document').addEventListener('change', function (e) {
+      const preview = document.getElementById('documentPreview');
+      preview.innerHTML = ''; // Clear previous
+      const file = e.target.files[0];
+      if (file) {
+        const fileInfo = document.createElement('p');
+        fileInfo.textContent = `Selected File: ${file.name}`;
+        fileInfo.style.marginTop = '10px';
+        preview.appendChild(fileInfo);
+      }
     });
 
     // Optional: Get current page name

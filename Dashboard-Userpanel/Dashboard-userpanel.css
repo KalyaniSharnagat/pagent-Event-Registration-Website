@@ -316,3 +316,21 @@ body.dark .sidebar {
 #profileIcon {
   color: #eee;
 }
+
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #333;
+}
+
+.card p {
+  color: #555;
+}
+
+.progress {
+  height: 20px;
+}
