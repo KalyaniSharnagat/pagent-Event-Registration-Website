@@ -5,10 +5,10 @@
 		font-family: 'Poppins', sans-serif;
 	}
 
-body {
-	font-family: 'Poppins', sans-serif;
-	overflow-x: hidden;
-}
+	body {
+		font-family: 'Poppins', sans-serif;
+		overflow-x: hidden;
+	}
 
 	body.light {
 		background: #ffbbec7e;
@@ -20,12 +20,12 @@ body {
 		color: #fff;
 	}
 
-.dashboard {
-	display: flex;
-	flex-direction: row;
-	/* min-height: 100vh; */
-	/* margin-top: -700px; */
-}
+	.dashboard {
+		display: flex;
+		flex-direction: row;
+		/* min-height: 100vh; */
+		/* margin-top: -700px; */
+	}
 
 	/* Sidebar */
 	.sidebar {
@@ -54,11 +54,11 @@ body {
 		margin-bottom: 2rem !important;
 	}
 
-.nav-list {
-	list-style: none;
-	padding: 0;
-    margin-top: 10px !important;
-}
+	.nav-list {
+		list-style: none;
+		padding: 0;
+		margin-top: 10px !important;
+	}
 
 	.nav-list li {
 		display: flex;
@@ -251,7 +251,7 @@ body {
 
 	/* Dark mode toggle button style */
 	body.dark #toggle-theme {
-		background-color: #ffffff!important;
+		background-color: #ffffff !important;
 		color: white;
 	}
 
@@ -359,4 +359,26 @@ body {
 			margin-bottom: 1rem !important;
 		}
 
+	}
+
+	/* Default icon color (dark or black) */
+	.topbar .fa-user-circle {
+		color: #333;
+	}
+
+	/* Light color for dark mode */
+	body.dark-mode .topbar .fa-user-circle {
+		color: #f0f0f0;
+	}
+
+	:root {
+		--icon-color: #333;
+	}
+
+	body.dark-mode {
+		--icon-color: #f0f0f0;
+	}
+
+	.topbar .fa-user-circle {
+		color: var(--icon-color);
 	}

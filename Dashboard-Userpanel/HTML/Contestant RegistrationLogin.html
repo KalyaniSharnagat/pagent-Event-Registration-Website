@@ -25,40 +25,49 @@
         <div class="col-sm-6 form-group">
           <label for="name-f">First Name</label>
           <input type="text" class="form-control input" name="fname" id="name-f" placeholder="Enter your first name."
-            required>
+            required oninvalid="this.setCustomValidity('Please fill out the first name field.')"
+            oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="name-l">Last name</label>
           <input type="text" class="form-control input" name="lname" id="name-l" placeholder="Enter your last name."
-            required>
+            required oninvalid="this.setCustomValidity('Please fill out the last name field.')"
+            oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="email">Email</label>
           <input type="email" class="form-control input" name="email" id="email" placeholder="Enter your email."
-            required>
+            required oninvalid="this.setCustomValidity('Please fill out the email field.')"
+            oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="address-1">Address Line-1</label>
           <input type="address" class="form-control input" name="Locality" id="address-1"
-            placeholder="Locality/House/Street no." required>
+            placeholder="Locality/House/Street no." required
+            oninvalid="this.setCustomValidity('Please fill out the address-1')" oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="address-2">Address Line-2</label>
           <input type="address" class="form-control input" name="address" id="address-2"
-            placeholder="Village/City Name." required>
+            placeholder="Village/City Name." required
+            oninvalid="this.setCustomValidity('Please fill out the address-2')" oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-4 form-group">
           <label for="State">State</label>
           <input type="address" class="form-control input" name="State" id="State" placeholder="Enter your state name."
-            required>
+            required oninvalid="this.setCustomValidity('Please fill out the state field.')"
+            oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-2 form-group">
           <label for="zip">Postal-Code</label>
-          <input type="zip" class="form-control input" name="Zip" id="zip" placeholder="Postal-Code." required>
+          <input type="zip" class="form-control input" name="Zip" id="zip" placeholder="Postal-Code." required
+            oninvalid="this.setCustomValidity('Please fill out the postal code field.')"
+            oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="Country">Country</label>
-          <select class="form-control custom-select browser-default input">
+          <select class="form-control custom-select browser-default input" name="Country" id="Country" required
+            oninvalid="this.setCustomValidity('Please select your country.')" oninput="this.setCustomValidity('')">
             <option value="Vanuatu">Vanuatu</option>
             <option value="Venezuela">Venezuela</option>
             <option value="Viet Nam">Viet Nam</option>
@@ -73,11 +82,13 @@
         </div>
         <div class="col-sm-6 form-group">
           <label for="Date">Date Of Birth</label>
-          <input type="Date" name="dob" class="form-control input" id="Date" placeholder="" required>
+          <input type="Date" name="dob" class="form-control input" id="Date" placeholder="" required oninvalid="this.setCustomValidity('Please fill out the date of birth field.')"
+                    oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="sex">Gender</label>
-          <select id="sex" class="form-control browser-default custom-select input">
+          <select id="sex" class="form-control browser-default custom-select input" oninvalid="this.setCustomValidity('Please select your Gender')"
+                    oninput="this.setCustomValidity('')">
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="unspesified">Unspecified</option>
@@ -102,21 +113,25 @@
         <div class="col-sm-4 form-group">
           <label for="tel">Phone</label>
           <input type="tel" name="phone" class="form-control input" id="tel" placeholder="Enter Your Contact Number."
-            required>
+            required oninvalid="this.setCustomValidity('Please fill out the phone number field.')"
+                    oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="pass">Password</label>
           <input type="Password" name="password" class="form-control input" id="pass" placeholder="Enter your password."
-            required>
+            required oninvalid="this.setCustomValidity('Please fill out the password field.')"
+                    oninput="this.setCustomValidity('')">
         </div>
         <div class="col-sm-6 form-group">
           <label for="pass2">Confirm Password</label>
           <input type="Password" name="cnf-password" class="form-control input" id="pass2"
-            placeholder="Re-enter your password." required>
+            placeholder="Re-enter your password." required oninvalid="this.setCustomValidity('Please fill out the confirm password field.')"
+                    oninput="this.setCustomValidity('')">
         </div>
 
         <div class="col-sm-12">
-          <input type="checkbox" class="form-check d-inline input" id="chb" required><label for="chb"
+          <input type="checkbox" class="form-check d-inline input" id="chb" required oninvalid="this.setCustomValidity('Please accept the terms and conditions.')"
+                    oninput="this.setCustomValidity('')"><label for="chb"
             class="form-check-label">&nbsp;I accept all terms and conditions.
           </label>
         </div>
