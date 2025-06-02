@@ -132,7 +132,7 @@
 
 .quote-section {
   color: rgb(29, 27, 27);
-  padding: 60px 30px;
+  padding: 30px 30px;
   position: relative;
 }
 
@@ -371,7 +371,7 @@
   border-radius: 21px;
   color: #fffff2;
   display: inline-block;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: .1em;
   line-height: 18px;
@@ -661,5 +661,38 @@
 
   .footer-call-to-action-button {
     font-size: 11px;
+  }
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+
+  .quote-text,
+  .quote-author {
+    text-align: center;
+  }
+
+  .profile-img {
+    margin-bottom: 20px;
   }
 }
