@@ -15,8 +15,8 @@
 </head>
 
 <body class="light">
-  <div class="dashboard">
-    <!-- Sidebar -->
+  <div id="loader"></div>
+  <div class="dashboard" style="display:none;" id="mainContent">
     <aside class="sidebar">
       <h2>🎀 CrownVista</h2>
       <ul class="nav-list">
@@ -52,22 +52,19 @@
     </aside>
   </div>
 
-
-
-  <!-- Main Content -->
   <div class="main">
-    <!-- Topbar -->
     <nav class="topbar">
       <div class="search-bar">
         <input type="text" placeholder="Search...">
         <button><i class="fas fa-search"></i></button>
       </div>
-      <!-- Profile Icon with Dropdown -->
       <div class="dropdown">
-        <button class="btn border-0 bg-transparent dropdown-toggle d-flex align-items-center" type="button"
-          id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn border-0 bg-transparent d-flex align-items-center" type="button" id="profileDropdown"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-user-circle fs-4 text-dark me-1"></i>
+          <i class="fa-solid fa-chevron-down" id="dropdownArrow"></i>
         </button>
+
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
           <li>
             <a class="dropdown-item d-flex align-items-center gap-2" href="/index.html">
@@ -78,10 +75,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-----gallary start------>
-
-    <!-- <h2>Gallery</h2> -->
 
     <div class="tabs" id="category-tabs">
       <span data-category="all" class="active">All</span>
@@ -109,7 +102,6 @@
           <source src="/PUBLIC-IMAGES/fashionvideo1.mp4" type="video/tag">
           <source src="/PUBLIC-IMAGES/fashionvideo1.ogg" type="video/ogg">
         </video>
-
       </div>
       <div class="media-card" data-category="event">
         <img src="/PUBLIC-IMAGES/abt3.jpg" draggable="false" onclick="openLightbox(this.src)" />
@@ -123,10 +115,8 @@
       </div>
 
       <div class="media-card" data-category="fashion">
-
         <iframe src="https://assets.pinterest.com/ext/embed.html?id=49258189669458505" height="714" width="345"
           frameborder="0" scrolling="no" onclick="openLightbox(this.src)"></iframe>
-
       </div>
 
       <div class="media-card" data-category="contestant">
@@ -143,10 +133,7 @@
     <img id="lightbox-img" src="" alt="Full view">
   </div>
 
-
-  <!-- javascript -->
   <script>
-    // === Media Tab Filtering ===
     const tabs = document.querySelectorAll('#category-tabs span');
     const cards = document.querySelectorAll('.media-card');
 
@@ -166,9 +153,8 @@
       });
     });
 
-    filterCategory('all'); // Show all by default
+    filterCategory('all');
 
-    // === Theme Toggle ===
     const toggleBtn = document.getElementById("toggle-theme");
     const themeIcon = document.getElementById("theme-icon");
     const body = document.body;
@@ -193,9 +179,8 @@
       updateTheme(isDark);
     });
 
-    updateTheme(body.classList.contains("dark")); // Initialize on load
+    updateTheme(body.classList.contains("dark"));
 
-    // === Sidebar Active State ===
     const sidebarItems = document.querySelectorAll(".nav-list li");
     sidebarItems.forEach(item => {
       item.addEventListener("click", () => {
@@ -204,7 +189,6 @@
       });
     });
 
-    // === Button Active State in Header ===
     const header = document.getElementById("myDIV");
     if (header) {
       const btns = header.getElementsByClassName("btn");
@@ -217,7 +201,6 @@
       }
     }
 
-    // === Lightbox Functions ===
     function openLightbox(src) {
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = document.getElementById("lightbox-img");
@@ -228,8 +211,25 @@
     function closeLightbox() {
       document.getElementById("lightbox").classList.remove("active");
     }
-  </script>
 
+    const dropdown = document.getElementById('profileDropdown');
+    const arrowIcon = document.getElementById('dropdownArrow');
+
+    dropdown.addEventListener('click', () => {
+      setTimeout(() => {
+        const isExpanded = dropdown.getAttribute('aria-expanded') === 'true';
+        arrowIcon.classList.toggle('fa-chevron-down', !isExpanded);
+        arrowIcon.classList.toggle('fa-chevron-up', isExpanded);
+      }, 50);
+    });
+
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('loader');
+      const mainContent = document.getElementById('mainContent');
+      loader.style.display = 'none';      // Loader chhupao
+      mainContent.style.display = 'block'; // Main content dikhao
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -15,7 +15,8 @@
 </head>
 
 <body class="light">
-  <div class="dashboard">
+  <div id="loader"></div>
+  <div class="dashboard" style="display:none;" id="mainContent">
     <!-- Sidebar -->
     <aside class="sidebar">
       <h2>🎀CrownVista</h2>
@@ -65,10 +66,12 @@
 
       <!-- Profile Icon with Dropdown -->
       <div class="dropdown">
-        <button class="btn border-0 bg-transparent dropdown-toggle d-flex align-items-center" type="button"
-          id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn border-0 bg-transparent d-flex align-items-center" type="button" id="profileDropdown"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-user-circle fs-4 text-dark me-1"></i>
+          <i class="fa-solid fa-chevron-down" id="dropdownArrow"></i>
         </button>
+
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
           <li>
             <a class="dropdown-item d-flex align-items-center gap-2" href="/index.html">
@@ -80,9 +83,7 @@
       </div>
     </nav>
 
-
-
-    <div class="fashion-show-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 p-4">
+    <div class="fashion-show-cards row row-cols-1 row-cols-lg-3 g-4 p-4">
       <div class="col">
         <div class="card fashion-card h-100">
           <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80"
@@ -140,9 +141,11 @@
           <input type="email" id="email" class="form-control mb-3" placeholder="Email" required
             oninvalid="this.setCustomValidity('Please fill out the email field')"
             oninput="this.setCustomValidity('')" />
-          <input type="tel" id="phone" class="form-control mb-3" placeholder="Phone Number" required
-            oninvalid="this.setCustomValidity('Please fill out the phone number field')"
+          <input type="tel" id="phone" class="form-control mb-3" placeholder="Phone Number" required pattern="[0-9]{10}"
+            maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            oninvalid="this.setCustomValidity('Please enter a valid 10-digit phone number')"
             oninput="this.setCustomValidity('')" />
+
           <input type="text" id="city" class="form-control mb-3" placeholder="City" required
             oninvalid="this.setCustomValidity('Please fill out the city field')" oninput="this.setCustomValidity('')" />
           <label class="form-label">Upload Photo</label>
@@ -233,6 +236,24 @@
         items.forEach(i => i.classList.remove("active"));
         item.classList.add("active");
       });
+    });
+
+    const dropdown = document.getElementById('profileDropdown');
+    const arrowIcon = document.getElementById('dropdownArrow');
+
+    dropdown.addEventListener('click', () => {
+      setTimeout(() => {
+        const isExpanded = dropdown.getAttribute('aria-expanded') === 'true';
+        arrowIcon.classList.toggle('fa-chevron-down', !isExpanded);
+        arrowIcon.classList.toggle('fa-chevron-up', isExpanded);
+      }, 50); // Wait for Bootstrap to update aria-expanded
+    });
+
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('loader');
+      const mainContent = document.getElementById('mainContent');
+      loader.style.display = 'none';      // Loader chhupao
+      mainContent.style.display = 'block'; // Main content dikhao
     });
 
     // Optional: Get current page name

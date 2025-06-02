@@ -75,7 +75,8 @@
           <form id="blogForm">
             <div class="modal-body">
 
-              <select class="form-select" name="category" required>
+              <select class="form-select" name="category" required
+                oninvalid="this.setCustomValidity('Please select a category')" oninput="this.setCustomValidity('')">
                 <option value="" disabled selected>Select Category</option>
                 <option>Fashion</option>
                 <option>Event</option>
@@ -83,9 +84,8 @@
               </select>
 
 
-
-
-              <select class="form-select mb-2" id="mediaType" required>
+              <select class="form-select mb-2" id="mediaType" required
+                oninvalid="setCustomValidity('Please select a media type')" oninput="setCustomValidity('')">
                 <option value="" disabled selected>Select Media Type</option>
                 <option value="image">Image</option>
                 <option value="video">Video</option>
@@ -128,6 +128,7 @@
 
 
     <script>
+      // Show SweetAlert and close modal on submit
       document.getElementById("blogForm").addEventListener("submit", function (e) {
         e.preventDefault();
         Swal.fire({
@@ -136,29 +137,44 @@
           text: 'Your media has been successfully added.',
           confirmButtonColor: '#ff4da6'
         });
-        // Optionally reset form or close modal
+        // Reset form and hide modal
         this.reset();
+        toggleInputs(); // Reset input visibility
         const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
         modal.hide();
       });
 
-      document.getElementById('mediaType').addEventListener('change', function () {
-        const type = this.value;
+      // Toggle image/video inputs based on selection
+      function toggleInputs() {
+        const mediaType = document.getElementById('mediaType').value;
         const imageInput = document.getElementById('imageInput');
         const videoInput = document.getElementById('videoInput');
 
-        if (type === 'image') {
+        // Hide both by default
+        imageInput.style.display = 'none';
+        videoInput.style.display = 'none';
+        imageInput.required = false;
+        videoInput.required = false;
+
+        // Show inputs conditionally
+        if (mediaType === 'image') {
           imageInput.style.display = 'block';
-          videoInput.style.display = 'none';
-        } else if (type === 'video') {
-          imageInput.style.display = 'none';
+          imageInput.required = true;
+        } else if (mediaType === 'video') {
           videoInput.style.display = 'block';
-        } else if (type === 'both') {
+          videoInput.required = true;
+        } else if (mediaType === 'both') {
           imageInput.style.display = 'block';
           videoInput.style.display = 'block';
+          imageInput.required = true;
+          videoInput.required = true;
         }
-      });
+      }
+
+      // Attach event listener once on load
+      document.getElementById('mediaType').addEventListener('change', toggleInputs);
     </script>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
