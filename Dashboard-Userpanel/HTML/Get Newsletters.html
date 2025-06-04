@@ -8,16 +8,14 @@
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/Get Newsletters.css" />
   <link rel="stylesheet" href="/Dashboard-Userpanel/CSS/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-
-  <link rel="icon" type="image/x-icon" href="/PUBLIC-IMAGES/logo-bgr.png">
+  <link rel="icon" type="image/x-icon" href="/PUBLIC-IMAGES/logo-bgr.png" />
 </head>
 
 <body class="light">
   <div id="loader"></div>
   <div class="dashboard" style="display:none;" id="mainContent">
-    <!-- Sidebar -->
     <aside class="sidebar">
       <h2>🎀 CrownVista</h2>
       <ul class="nav-list">
@@ -53,23 +51,18 @@
     </aside>
   </div>
 
-
-  <!-- Main Content -->
   <div class="main">
-    <!-- Topbar -->
     <nav class="topbar">
       <div class="search-bar">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..." />
         <button><i class="fas fa-search"></i></button>
       </div>
-      <!-- Profile Icon with Dropdown -->
       <div class="dropdown">
         <button class="btn border-0 bg-transparent d-flex align-items-center" type="button" id="profileDropdown"
           data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-user-circle fs-4 text-dark me-1"></i>
           <i class="fa-solid fa-chevron-down" id="dropdownArrow"></i>
         </button>
-
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
           <li>
             <a class="dropdown-item d-flex align-items-center gap-2" href="/index.html">
@@ -81,29 +74,49 @@
       </div>
     </nav>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section content-wrapper">
-      <img src="/PUBLIC-IMAGES/gmail (1).ico" alt="Gmail Icon" class="gmail-icon" style="width: 60px;">
-      <h2>Subscribe to our Newsletter</h2>
-      <p>
-        Stay connected with the glamour and grace of Miss Pageant updates. Get exclusive insights,
-        behind-the-scenes moments, and highlights. Be the first to know about upcoming events, auditions,
-        and results. Receive beauty tips, style trends, and inspiration from the queens. Join our
-        community and celebrate confidence, charm, and elegance!
-      </p>
-      <div class="newsletter-form">
-        <form>
-          <input type="email" placeholder="Enter email address" required
-            oninvalid="this.setCustomValidity('Please enter a valid email address')"
-            oninput="this.setCustomValidity('')" />
-          <button type="submit">Subscribe</button>
+    <div class="row g-4 w-75 mx-auto mt-4">
+      <div class="fashion-box subscribe-box p-4">
+        <h4 class="box-title mb-4">📬 Subscribe to our Newsletter</h4>
+        <form class="newsletter-form d-flex flex-column flex-sm-row align-items-center"
+          onsubmit="subscribeNewsletter(event)" novalidate>
+          <input type="email" class="form-control" id="newsletterEmail" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-gradient ms-sm-3 mt-3 mt-sm-0">
+            Subscribe
+          </button>
         </form>
+        <small class="form-text text-muted mt-3">We’ll never share your email with anyone else.</small>
+        <div id="newsletterFeedback" class="mt-3"></div>
       </div>
 
-    </section>
+      <div class="fashion-box alerts-box p-4 mt-5 mb-5">
+        <h4 class="box-title mb-4">🔔 Your Alerts</h4>
+        <div class="alerts-list">
+          <div class="alert-item">
+            <strong>Fashion Show Update</strong>
+            <p>The spring fashion show will start at 6 PM on May 10th. Don't miss it!</p>
+            <small>2 hours ago</small>
+          </div>
+          <div class="alert-item">
+            <strong>New Designer Added</strong>
+            <p>We have added a new designer to this year's lineup: Aria Couture.</p>
+            <small>1 day ago</small>
+          </div>
+          <div class="alert-item">
+            <strong>Ticket Reminder</strong>
+            <p>Your ticket for the gala night is confirmed. Check your email for details.</p>
+            <small>3 days ago</small>
+          </div>
+          <div class="alert-item">
+            <strong>Profile Update</strong>
+            <p>Please update your profile information to personalize your experience.</p>
+            <small>5 days ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
-  <!-- JavaScript -->
   <script>
     const toggleBtn = document.getElementById("toggle-theme");
     const body = document.body;
@@ -128,10 +141,8 @@
       updateTheme(isDark);
     });
 
-    // Initialize on page load
     updateTheme(body.classList.contains('dark'));
 
-    // Sidebar Active State (optional)
     const items = document.querySelectorAll(".nav-list li");
     items.forEach(item => {
       item.addEventListener("click", () => {
@@ -148,15 +159,32 @@
         const isExpanded = dropdown.getAttribute('aria-expanded') === 'true';
         arrowIcon.classList.toggle('fa-chevron-down', !isExpanded);
         arrowIcon.classList.toggle('fa-chevron-up', isExpanded);
-      }, 50); // Wait for Bootstrap to update aria-expanded
+      }, 50);
     });
 
     window.addEventListener('load', function () {
       const loader = document.getElementById('loader');
       const mainContent = document.getElementById('mainContent');
-      loader.style.display = 'none';      // Loader chhupao
-      mainContent.style.display = 'block'; // Main content dikhao
+      loader.style.display = 'none';
+      mainContent.style.display = 'block';
     });
+
+    function subscribeNewsletter(event) {
+      event.preventDefault();
+      const emailInput = document.getElementById('newsletterEmail');
+      const feedback = document.getElementById('newsletterFeedback');
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        feedback.style.color = 'red';
+        feedback.textContent = 'Please enter a valid email.';
+        return;
+      }
+
+      feedback.style.color = '#28a745';
+      feedback.textContent = `Thanks for subscribing, ${email}! 🎉`;
+      emailInput.value = '';
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
