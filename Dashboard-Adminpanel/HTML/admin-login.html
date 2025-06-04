@@ -13,6 +13,7 @@
 <body>
 
   <div class="login-container">
+    <button class="close-btn" onclick="redirectToIndex()">&times;</button>
     <h2>Admin Login</h2>
     <form id="adminLoginForm">
       <div class="form-group input-wrapper">
@@ -55,6 +56,11 @@
         this.reset();
       }
     });
+
+    function redirectToIndex() {
+      window.location.href = "/index.html"; 
+    }
+
   </script>
 
 </body>
