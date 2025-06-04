@@ -696,3 +696,7 @@
     margin-bottom: 20px;
   }
 }
+
+.order-1 {
+  order: initial !important;
+}
