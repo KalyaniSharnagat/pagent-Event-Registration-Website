@@ -49,10 +49,18 @@ body {
   border: none;
   color: white;
   transition: 0.4s ease;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 15px 20px;
   border-radius: 20px;
+  width: 100%;
+  min-height: 100px; /* Ensures same height for all buttons */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
 }
+
 
 .gradient-btn:hover {
   background-image: linear-gradient(to right, #f27db6, #bc1060);
